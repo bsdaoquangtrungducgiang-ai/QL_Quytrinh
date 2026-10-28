@@ -457,7 +457,7 @@ function filterByNav(navKey) {
     switch (navKey) {
         case 'home':
             document.getElementById('navHome').classList.add('active');
-            topbarTitle.innerHTML = '<span>HỆ THỐNG QUẢN LÝ QUY TRÌNH XÉT NGHIỆM VI SINH</span>';
+            topbarTitle.innerHTML = '<span>📊 DASHBOARD - QUẢN LÝ QUY TRÌNH XÉT NGHIỆM VI SINH</span>';
             dashboardSection.style.display = 'block';
             AppState.selectedCategory = 'all';
             syncPillActive('all');
@@ -467,7 +467,7 @@ function filterByNav(navKey) {
 
         case 'quan-ly':
             document.getElementById('navQL').classList.add('active');
-            topbarTitle.innerHTML = '<span>📋 2. QUY TRÌNH QUẢN LÝ CHẤT LƯỢNG (XN.QL)</span>';
+            topbarTitle.innerHTML = '<span>📋 QUY TRÌNH QUẢN LÝ CHẤT LƯỢNG (XN.QL)</span>';
             dashboardSection.style.display = 'block';
             AppState.selectedCategory = 'Quản Lý Chất Lượng';
             syncPillActive('Quản Lý Chất Lượng');
@@ -477,7 +477,7 @@ function filterByNav(navKey) {
 
         case 'tech':
             document.getElementById('techGroup').classList.add('open');
-            topbarTitle.innerHTML = '<span>🧫 3. QUY TRÌNH KỸ THUẬT XÉT NGHIỆM VI SINH</span>';
+            topbarTitle.innerHTML = '<span>🧫 QUY TRÌNH KỸ THUẬT XÉT NGHIỆM VI SINH</span>';
             dashboardSection.style.display = 'block';
             AppState.selectedCategory = 'all';
             AppState.searchQuery = 'VS.';
@@ -490,7 +490,7 @@ function filterByNav(navKey) {
         case 'nhuom-soi':
             document.getElementById('navNhuomSoi').classList.add('active');
             document.getElementById('techGroup').classList.add('open');
-            topbarTitle.innerHTML = '<span>🔬 3.1. QUY TRÌNH NHUỘM SOI (VS.NS)</span>';
+            topbarTitle.innerHTML = '<span>🔬 QUY TRÌNH NHUỘM SOI (VS.NS)</span>';
             dashboardSection.style.display = 'none';
             AppState.selectedCategory = 'Nhuộm Soi';
             syncPillActive('Nhuộm Soi');
@@ -501,7 +501,7 @@ function filterByNav(navKey) {
         case 'nuoi-cay':
             document.getElementById('navNuoiCay').classList.add('active');
             document.getElementById('techGroup').classList.add('open');
-            topbarTitle.innerHTML = '<span>🦠 3.2. QUY TRÌNH NUÔI CẤY (VS.NC)</span>';
+            topbarTitle.innerHTML = '<span>🦠 QUY TRÌNH NUÔI CẤY (VS.NC)</span>';
             dashboardSection.style.display = 'none';
             AppState.selectedCategory = 'Nuôi Cấy';
             syncPillActive('Nuôi Cấy');
@@ -512,7 +512,7 @@ function filterByNav(navKey) {
         case 'mien-dich':
             document.getElementById('navMienDich').classList.add('active');
             document.getElementById('techGroup').classList.add('open');
-            topbarTitle.innerHTML = '<span>💉 3.3. QUY TRÌNH MIỄN DỊCH (VS.MD)</span>';
+            topbarTitle.innerHTML = '<span>💉 QUY TRÌNH MIỄN DỊCH (VS.MD)</span>';
             dashboardSection.style.display = 'none';
             AppState.selectedCategory = 'Miễn Dịch';
             syncPillActive('Miễn Dịch');
@@ -523,7 +523,7 @@ function filterByNav(navKey) {
         case 'sinh-hoc-pt':
             document.getElementById('navSHPT').classList.add('active');
             document.getElementById('techGroup').classList.add('open');
-            topbarTitle.innerHTML = '<span>🧬 3.4. QUY TRÌNH SINH HỌC PHÂN TỬ - PCR (VS.PCR)</span>';
+            topbarTitle.innerHTML = '<span>🧬 QUY TRÌNH SINH HỌC PHÂN TỬ - PCR (VS.PCR)</span>';
             dashboardSection.style.display = 'none';
             AppState.selectedCategory = 'Sinh Học Phân Tử (PCR)';
             syncPillActive('Sinh Học Phân Tử (PCR)');
@@ -533,7 +533,7 @@ function filterByNav(navKey) {
 
         case 'tim-kiem':
             document.getElementById('navTimKiem').classList.add('active');
-            topbarTitle.innerHTML = '<span>🔍 4. TÌM KIẾM THÔNG TIN QUY TRÌNH</span>';
+            topbarTitle.innerHTML = '<span>🔍 TÌM KIẾM THÔNG TIN QUY TRÌNH</span>';
             searchSection.scrollIntoView({ behavior: 'smooth' });
             setTimeout(() => {
                 searchInput.focus();
