@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initKPIs();
     initFilterOptions();
     initEventListeners();
+    initSidebarNavigation();
     initCharts();
     filterAndRender();
     initSupabaseData();
@@ -128,7 +129,7 @@ function initFilterOptions() {
     });
 }
 
-// 4. Biểu đồ Chart.js
+// 4. Biểu đồ Chart.js (Tone màu Xanh Da Trời)
 function initCharts() {
     if (typeof Chart === 'undefined') {
         console.warn('Chart.js not loaded');
@@ -154,11 +155,11 @@ function initCharts() {
                 datasets: [{
                     data: catData,
                     backgroundColor: [
-                        '#10b981', // Nuôi cấy - Green
-                        '#ef4444', // QLCL - Red/Rose
+                        '#10b981', // Nuôi cấy - Emerald Green
+                        '#ef4444', // QLCL - Rose Red
                         '#6366f1', // Miễn dịch - Indigo
                         '#f59e0b', // Nhuộm soi - Amber
-                        '#0284c7'  // PCR - Sky blue
+                        '#0284c7'  // PCR - Sky Blue
                     ],
                     borderWidth: 2,
                     hoverOffset: 6
@@ -197,6 +198,7 @@ function initCharts() {
                     label: 'Số lượng quy trình',
                     data: typeData,
                     backgroundColor: '#0284c7',
+                    hoverBackgroundColor: '#0369a1',
                     borderRadius: 6
                 }]
             },
@@ -226,8 +228,8 @@ function initCharts() {
 
 function updateChartTheme() {
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    const textColor = isDark ? '#94a3b8' : '#64748b';
-    const gridColor = isDark ? '#334155' : '#e2e8f0';
+    const textColor = isDark ? '#bae6fd' : '#0369a1';
+    const gridColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(2,132,199,0.1)';
 
     [AppState.charts.categoryChart, AppState.charts.typeChart].forEach(chart => {
         if (!chart) return;
@@ -244,7 +246,185 @@ function updateChartTheme() {
     });
 }
 
-// 5. Tìm kiếm & Lọc Quy Trình
+// 5. Khởi tạo Menu chính Phía Bên Trái (Left Sidebar Navigation)
+function initSidebarNavigation() {
+    // Accordion toggle cho mục 3. Quy trình kỹ thuật
+    const techBtn = document.getElementById('techGroupToggleBtn');
+    const techGroup = document.getElementById('techGroup');
+    if (techBtn && techGroup) {
+        techBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            techGroup.classList.toggle('open');
+        });
+    }
+
+    // Xử lý các liên kết Menu chính bên trái
+    const navLinks = [
+        { id: 'navHome', nav: 'home' },
+        { id: 'navQL', nav: 'quan-ly' },
+        { id: 'navNhuomSoi', nav: 'nhuom-soi' },
+        { id: 'navNuoiCay', nav: 'nuoi-cay' },
+        { id: 'navMienDich', nav: 'mien-dich' },
+        { id: 'navSHPT', nav: 'sinh-hoc-pt' },
+        { id: 'navTimKiem', nav: 'tim-kiem' },
+        { id: 'navTasks', nav: 'tasks' }
+    ];
+
+    navLinks.forEach(item => {
+        const el = document.getElementById(item.id);
+        if (el) {
+            el.addEventListener('click', (e) => {
+                e.preventDefault();
+                filterByNav(item.nav);
+                closeMobileSidebar();
+            });
+        }
+    });
+
+    // Mobile Drawer Open / Close
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const closeBtn = document.getElementById('sidebarCloseBtn');
+    const backdrop = document.getElementById('sidebarBackdrop');
+    const sidebar = document.getElementById('sidebar');
+
+    if (mobileBtn && sidebar && backdrop) {
+        mobileBtn.addEventListener('click', () => {
+            sidebar.classList.add('mobile-open');
+            backdrop.classList.add('active');
+        });
+    }
+
+    if (closeBtn && sidebar && backdrop) {
+        closeBtn.addEventListener('click', closeMobileSidebar);
+    }
+
+    if (backdrop) {
+        backdrop.addEventListener('click', closeMobileSidebar);
+    }
+}
+
+function closeMobileSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const backdrop = document.getElementById('sidebarBackdrop');
+    if (sidebar) sidebar.classList.remove('mobile-open');
+    if (backdrop) backdrop.classList.remove('active');
+}
+
+// Hàm kích hoạt lọc từ Menu chính
+function filterByNav(navKey) {
+    // Reset active class trên sidebar
+    document.querySelectorAll('.sidebar-nav .nav-link, .sidebar-nav .nav-sublink').forEach(el => {
+        el.classList.remove('active');
+    });
+
+    const topbarTitle = document.getElementById('topbarTitle');
+    const dashboardSection = document.getElementById('dashboardSection');
+    const searchSection = document.getElementById('searchControlsSection');
+    const searchInput = document.getElementById('searchInput');
+
+    switch (navKey) {
+        case 'home':
+            document.getElementById('navHome').classList.add('active');
+            topbarTitle.innerHTML = '<span>HỆ THỐNG QUẢN LÝ QUY TRÌNH XÉT NGHIỆM VI SINH</span>';
+            dashboardSection.style.display = 'block';
+            AppState.selectedCategory = 'all';
+            syncPillActive('all');
+            filterAndRender();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            break;
+
+        case 'quan-ly':
+            document.getElementById('navQL').classList.add('active');
+            topbarTitle.innerHTML = '<span>📋 2. QUY TRÌNH QUẢN LÝ CHẤT LƯỢNG (XN.QL)</span>';
+            dashboardSection.style.display = 'block';
+            AppState.selectedCategory = 'Quản Lý Chất Lượng';
+            syncPillActive('Quản Lý Chất Lượng');
+            filterAndRender();
+            searchSection.scrollIntoView({ behavior: 'smooth' });
+            break;
+
+        case 'tech':
+            // Khi bấm vào card kỹ thuật vi sinh
+            document.getElementById('techGroup').classList.add('open');
+            topbarTitle.innerHTML = '<span>🧫 3. QUY TRÌNH KỸ THUẬT XÉT NGHIỆM VI SINH</span>';
+            dashboardSection.style.display = 'block';
+            AppState.selectedCategory = 'all';
+            AppState.searchQuery = 'VS.';
+            searchInput.value = 'VS.';
+            document.getElementById('searchClearBtn').classList.add('visible');
+            filterAndRender();
+            searchSection.scrollIntoView({ behavior: 'smooth' });
+            break;
+
+        case 'nhuom-soi':
+            document.getElementById('navNhuomSoi').classList.add('active');
+            document.getElementById('techGroup').classList.add('open');
+            topbarTitle.innerHTML = '<span>🔬 3.1. QUY TRÌNH NHUỘM SOI (VS.NS)</span>';
+            dashboardSection.style.display = 'none';
+            AppState.selectedCategory = 'Nhuộm Soi';
+            syncPillActive('Nhuộm Soi');
+            filterAndRender();
+            searchSection.scrollIntoView({ behavior: 'smooth' });
+            break;
+
+        case 'nuoi-cay':
+            document.getElementById('navNuoiCay').classList.add('active');
+            document.getElementById('techGroup').classList.add('open');
+            topbarTitle.innerHTML = '<span>🦠 3.2. QUY TRÌNH NUÔI CẤY (VS.NC)</span>';
+            dashboardSection.style.display = 'none';
+            AppState.selectedCategory = 'Nuôi Cấy';
+            syncPillActive('Nuôi Cấy');
+            filterAndRender();
+            searchSection.scrollIntoView({ behavior: 'smooth' });
+            break;
+
+        case 'mien-dich':
+            document.getElementById('navMienDich').classList.add('active');
+            document.getElementById('techGroup').classList.add('open');
+            topbarTitle.innerHTML = '<span>💉 3.3. QUY TRÌNH MIỄN DỊCH (VS.MD)</span>';
+            dashboardSection.style.display = 'none';
+            AppState.selectedCategory = 'Miễn Dịch';
+            syncPillActive('Miễn Dịch');
+            filterAndRender();
+            searchSection.scrollIntoView({ behavior: 'smooth' });
+            break;
+
+        case 'sinh-hoc-pt':
+            document.getElementById('navSHPT').classList.add('active');
+            document.getElementById('techGroup').classList.add('open');
+            topbarTitle.innerHTML = '<span>🧬 3.4. QUY TRÌNH SINH HỌC PHÂN TỬ - PCR (VS.PCR)</span>';
+            dashboardSection.style.display = 'none';
+            AppState.selectedCategory = 'Sinh Học Phân Tử (PCR)';
+            syncPillActive('Sinh Học Phân Tử (PCR)');
+            filterAndRender();
+            searchSection.scrollIntoView({ behavior: 'smooth' });
+            break;
+
+        case 'tim-kiem':
+            document.getElementById('navTimKiem').classList.add('active');
+            topbarTitle.innerHTML = '<span>🔍 4. TÌM KIẾM THÔNG TIN QUY TRÌNH</span>';
+            searchSection.scrollIntoView({ behavior: 'smooth' });
+            setTimeout(() => {
+                searchInput.focus();
+                searchInput.select();
+            }, 300);
+            break;
+
+        case 'tasks':
+            document.getElementById('navTasks').classList.add('active');
+            topbarTitle.innerHTML = '<span>📝 SỔ GHI NHỚ & PHÂN CÔNG QUY TRÌNH</span>';
+            document.getElementById('tasksSection').scrollIntoView({ behavior: 'smooth' });
+            break;
+    }
+}
+
+function syncPillActive(category) {
+    document.querySelectorAll('.cat-pill').forEach(pill => {
+        pill.classList.toggle('active', pill.getAttribute('data-category') === category);
+    });
+}
+
+// 6. Tìm kiếm & Lọc Quy Trình
 function initEventListeners() {
     // Search input
     const searchInput = document.getElementById('searchInput');
@@ -267,10 +447,18 @@ function initEventListeners() {
     // Category pills
     document.querySelectorAll('.cat-pill').forEach(pill => {
         pill.addEventListener('click', () => {
-            document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
-            pill.classList.add('active');
-            AppState.selectedCategory = pill.getAttribute('data-category');
-            filterAndRender();
+            const cat = pill.getAttribute('data-category');
+            AppState.selectedCategory = cat;
+            syncPillActive(cat);
+
+            // Đồng bộ sidebar navigation
+            if (cat === 'all') filterByNav('home');
+            else if (cat === 'Quản Lý Chất Lượng') filterByNav('quan-ly');
+            else if (cat === 'Nuôi Cấy') filterByNav('nuoi-cay');
+            else if (cat === 'Miễn Dịch') filterByNav('mien-dich');
+            else if (cat === 'Nhuộm Soi') filterByNav('nhuom-soi');
+            else if (cat === 'Sinh Học Phân Tử (PCR)') filterByNav('sinh-hoc-pt');
+            else filterAndRender();
         });
     });
 
@@ -318,9 +506,7 @@ function initEventListeners() {
         AppState.selectedYear = 'all';
         AppState.sortBy = 'code_asc';
 
-        document.querySelectorAll('.cat-pill').forEach(p => {
-            p.classList.toggle('active', p.getAttribute('data-category') === 'all');
-        });
+        filterByNav('home');
         document.getElementById('typeFilterSelect').value = 'all';
         document.getElementById('yearFilterSelect').value = 'all';
         document.getElementById('sortFilterSelect').value = 'code_asc';
@@ -482,7 +668,7 @@ function renderProcedures() {
     }
 }
 
-// 6. Modal Chi tiết Quy Trình
+// 7. Modal Chi tiết Quy Trình
 function openProcedureDetail(procId) {
     const p = AppState.procedures.find(item => item.id === procId);
     if (!p) return;
@@ -507,10 +693,10 @@ function closeModal() {
     document.getElementById('detailModalBackdrop').classList.remove('active');
 }
 
-// 7. Đồng Bộ & Tương Tác Dữ Liệu Supabase
+// 8. Đồng Bộ & Tương Tác Dữ Liệu Supabase
 async function initSupabaseData() {
     const client = getSupabase();
-    const badge = document.getElementById('supabaseStatusBadge');
+    const badge = document.getElementById('supabaseSidebarBadge');
     
     if (!client) {
         console.warn('Supabase client not available, running in Local Cache mode.');
@@ -532,7 +718,6 @@ async function initSupabaseData() {
             AppState.employees = empData;
             populateAssigneeSelect(empData);
         } else {
-            // Mặc định bác sĩ Trung
             AppState.employees = [
                 { name: 'BS.CK2. Đào Quang Trung', position: 'Trưởng khoa Vi sinh' },
                 { name: 'BS. Chu Thị Huyền', position: 'Bác sĩ Vi sinh' }
@@ -654,7 +839,6 @@ async function handleAddTaskSubmit(e) {
             }
         } catch (err) {
             console.error('Lỗi khi ghi task vào Supabase:', err);
-            // Fallback lưu local
             newTask.id = Date.now();
             newTask.created_at = new Date().toISOString();
             AppState.tasks.unshift(newTask);

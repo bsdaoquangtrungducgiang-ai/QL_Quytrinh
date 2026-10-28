@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quản Lý Quy Trình Xét Nghiệm Vi Sinh - BVĐK Đức Giang</title>
   
-  <!-- CSS Styles -->
+  <!-- CSS Styles (Tone màu Xanh Da Trời) -->
   <link rel="stylesheet" href="css/style.css">
   
   <!-- Supabase CDN (@supabase/supabase-js) -->
@@ -16,240 +16,357 @@
 </head>
 <body>
 
-  <!-- 1. Header & Navigation -->
-  <header class="app-header">
-    <div class="container header-inner">
-      <div class="brand-wrapper">
-        <div class="brand-logo">🔬</div>
-        <div class="brand-titles">
-          <h1>
-            QUẢN LÝ QUY TRÌNH XÉT NGHIỆM VI SINH
-            <span>ISO 15189</span>
-          </h1>
-          <p>Khoa Vi Sinh • Bệnh Viện Đa Khoa Đức Giang</p>
+  <div class="app-layout">
+    
+    <!-- Mobile Backdrop -->
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <!-- ====================================================================
+         1. MENU CHÍNH PHÍA BÊN TRÁI (LEFT SIDEBAR)
+         ==================================================================== -->
+    <aside class="sidebar" id="sidebar">
+      <!-- Header Sidebar -->
+      <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <div class="sidebar-brand-logo">🔬</div>
+          <div class="sidebar-brand-text">
+            <h2>BVĐK ĐỨC GIANG</h2>
+            <p>KHOA VI SINH • ISO 15189</p>
+          </div>
         </div>
+        <button class="sidebar-close-btn" id="sidebarCloseBtn" title="Đóng menu">✕</button>
       </div>
 
-      <div class="header-actions">
-        <!-- Supabase Live Connection Badge -->
-        <div class="supabase-badge" id="supabaseStatusBadge" title="Trạng thái kết nối cơ sở dữ liệu Supabase">
+      <!-- Navigation Links -->
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">HỆ THỐNG QUẢN LÝ</div>
+
+        <!-- 1. Home -->
+        <a href="#home" class="nav-link active" id="navHome" data-nav="home">
+          <span class="nav-icon">🏠</span>
+          <span class="nav-text">1. Home</span>
+        </a>
+
+        <!-- 2. Quy trình quản lý -->
+        <a href="#quan-ly" class="nav-link" id="navQL" data-nav="quan-ly">
+          <span class="nav-icon">📋</span>
+          <span class="nav-text">2. Quy trình quản lý</span>
+          <span class="nav-badge">31</span>
+        </a>
+
+        <!-- 3. Quy trình kỹ thuật (Dropdown / Accordion) -->
+        <div class="nav-group open" id="techGroup">
+          <button class="nav-group-header" id="techGroupToggleBtn">
+            <span class="nav-icon">🧫</span>
+            <span class="nav-text">3. Quy trình kỹ thuật</span>
+            <span class="nav-arrow">▼</span>
+          </button>
+          
+          <div class="nav-subitems">
+            <!-- 3.1. QT Nhuộm soi -->
+            <a href="#nhuom-soi" class="nav-sublink" id="navNhuomSoi" data-nav="nhuom-soi">
+              <span class="sub-icon">🔬</span>
+              <span class="sub-text">QT Nhuộm soi</span>
+              <span class="sub-badge">15</span>
+            </a>
+
+            <!-- 3.2. QT Nuôi cấy -->
+            <a href="#nuoi-cay" class="nav-sublink" id="navNuoiCay" data-nav="nuoi-cay">
+              <span class="sub-icon">🦠</span>
+              <span class="sub-text">QT Nuôi cấy</span>
+              <span class="sub-badge">30</span>
+            </a>
+
+            <!-- 3.3. QT Miễn dịch -->
+            <a href="#mien-dich" class="nav-sublink" id="navMienDich" data-nav="mien-dich">
+              <span class="sub-icon">💉</span>
+              <span class="sub-text">QT Miễn dịch</span>
+              <span class="sub-badge">28</span>
+            </a>
+
+            <!-- 3.4. QT Sinh học PT -->
+            <a href="#sinh-hoc-pt" class="nav-sublink" id="navSHPT" data-nav="sinh-hoc-pt">
+              <span class="sub-icon">🧬</span>
+              <span class="sub-text">QT Sinh học PT</span>
+              <span class="sub-badge">10</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Tìm kiếm thông tin -->
+        <a href="#tim-kiem" class="nav-link" id="navTimKiem" data-nav="tim-kiem">
+          <span class="nav-icon">🔍</span>
+          <span class="nav-text">4. Tìm kiếm thông tin</span>
+        </a>
+
+        <div class="nav-section-title" style="margin-top:12px">CÔNG CỤ QUẢN TRỊ</div>
+
+        <!-- Sổ ghi nhớ Supabase -->
+        <a href="#tasksSection" class="nav-link" id="navTasks">
+          <span class="nav-icon">📝</span>
+          <span class="nav-text">Sổ ghi nhớ SOP</span>
+        </a>
+      </nav>
+
+      <!-- Footer Sidebar -->
+      <div class="sidebar-footer">
+        <div class="user-card-mini">
+          <div class="user-avatar">👨‍⚕️</div>
+          <div class="user-card-info">
+            <div class="user-card-name">BS.CK2. Đào Quang Trung</div>
+            <div class="user-card-role">Trưởng Khoa Vi Sinh</div>
+          </div>
+        </div>
+
+        <div class="supabase-live-badge" id="supabaseSidebarBadge" title="Trạng thái kết nối cơ sở dữ liệu Supabase">
           <span class="pulse-dot"></span>
-          <span>Supabase Live</span>
-        </div>
-
-        <!-- User Profile Badge -->
-        <div class="user-profile">
-          <span>👨‍⚕️</span>
-          <span>BS.CK2. Đào Quang Trung</span>
-        </div>
-
-        <!-- Dark / Light Mode Toggle -->
-        <button class="theme-toggle-btn" id="themeToggleBtn" title="Chuyển chế độ Sáng / Tối">
-          🌙
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- 2. Main Content Body -->
-  <main class="container hero-section">
-
-    <!-- KPI Metric Cards -->
-    <div class="kpi-grid">
-      <div class="kpi-card">
-        <div class="kpi-icon blue">📚</div>
-        <div class="kpi-details">
-          <h3 id="statTotalProcedures">114</h3>
-          <p>Tổng số Quy trình số hóa</p>
+          <span>Supabase Connected</span>
         </div>
       </div>
+    </aside>
 
-      <div class="kpi-card">
-        <div class="kpi-icon teal">🧫</div>
-        <div class="kpi-details">
-          <h3 id="statTechProcedures">83</h3>
-          <p>Kỹ thuật chuyên môn Vi sinh</p>
+    <!-- ====================================================================
+         2. MAIN WRAPPER (KHU VỰC NỘI DUNG PHÍA BÊN PHẢI)
+         ==================================================================== -->
+    <div class="main-wrapper">
+      
+      <!-- Topbar Header -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="mobile-menu-btn" id="mobileMenuBtn" title="Mở menu">☰</button>
+          <div class="topbar-title-block">
+            <h1 id="topbarTitle">
+              <span>HỆ THỐNG QUẢN LÝ QUY TRÌNH XÉT NGHIỆM VI SINH</span>
+            </h1>
+            <p id="topbarSubtitle">Khoa Vi Sinh • Bệnh Viện Đa Khoa Đức Giang</p>
+          </div>
         </div>
-      </div>
 
-      <div class="kpi-card">
-        <div class="kpi-icon indigo">📋</div>
-        <div class="kpi-details">
-          <h3 id="statQLProcedures">31</h3>
-          <p>Quy trình Quản lý Chất lượng</p>
-        </div>
-      </div>
-
-      <div class="kpi-card">
-        <div class="kpi-icon green">⚡</div>
-        <div class="kpi-details">
-          <h3 id="statRecentProcedures">48</h3>
-          <p>Hiệu lực mới (2025 - 2026)</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Charts Section (Chart.js) -->
-    <div class="charts-grid">
-      <!-- Chart 1: Nhóm chuyên môn -->
-      <div class="chart-card">
-        <div class="chart-header">
-          <h3>📊 Cơ cấu 5 nhóm chuyên môn</h3>
-          <span style="font-size:12px; color:var(--text-muted)">114 tài liệu</span>
-        </div>
-        <div class="chart-container">
-          <canvas id="categoryDoughnutChart"></canvas>
-        </div>
-      </div>
-
-      <!-- Chart 2: Phân loại theo loại hình -->
-      <div class="chart-card">
-        <div class="chart-header">
-          <h3>📈 Phân bố theo loại hình quy trình</h3>
-          <span style="font-size:12px; color:var(--text-muted)">Kỹ thuật & Quản lý</span>
-        </div>
-        <div class="chart-container">
-          <canvas id="typeBarChart"></canvas>
-        </div>
-      </div>
-    </div>
-
-    <!-- 3. Tra Cứu & Bộ Lọc Nâng Cao -->
-    <div class="controls-card">
-      <!-- Search Input -->
-      <div class="search-box-wrapper">
-        <span class="search-icon">🔍</span>
-        <input 
-          type="text" 
-          id="searchInput" 
-          class="search-input" 
-          placeholder="Tìm nhanh theo tên xét nghiệm, mã hiệu (VS.NC, XN.QL...), vi khuẩn, virus, nội kiểm, kháng sinh đồ..." 
-          autocomplete="off"
-        >
-        <button id="searchClearBtn" class="search-clear-btn" title="Xóa tìm kiếm">✕</button>
-      </div>
-
-      <!-- Category Filter Pills -->
-      <div class="category-pills">
-        <button class="cat-pill active" data-category="all">
-          <span>Tất cả</span>
-          <span class="count">114</span>
-        </button>
-        <button class="cat-pill" data-category="Quản Lý Chất Lượng">
-          <span>Quản Lý Chất Lượng</span>
-          <span class="count">31</span>
-        </button>
-        <button class="cat-pill" data-category="Nuôi Cấy">
-          <span>Nuôi Cấy</span>
-          <span class="count">30</span>
-        </button>
-        <button class="cat-pill" data-category="Miễn Dịch">
-          <span>Miễn Dịch</span>
-          <span class="count">28</span>
-        </button>
-        <button class="cat-pill" data-category="Nhuộm Soi">
-          <span>Nhuộm Soi</span>
-          <span class="count">15</span>
-        </button>
-        <button class="cat-pill" data-category="Sinh Học Phân Tử (PCR)">
-          <span>Sinh Học Phân Tử (PCR)</span>
-          <span class="count">10</span>
-        </button>
-      </div>
-
-      <!-- Secondary Filters Bar -->
-      <div class="secondary-filters">
-        <div class="filter-group">
-          <!-- Filter by Type -->
-          <select id="typeFilterSelect" class="select-filter">
-            <option value="all">Tất cả loại quy trình</option>
-          </select>
-
-          <!-- Filter by Year -->
-          <select id="yearFilterSelect" class="select-filter">
-            <option value="all">Tất cả năm hiệu lực</option>
-          </select>
-
-          <!-- Sort Order -->
-          <select id="sortFilterSelect" class="select-filter">
-            <option value="code_asc">Mã hiệu: A → Z</option>
-            <option value="code_desc">Mã hiệu: Z → A</option>
-            <option value="title_asc">Tên quy trình: A → Z</option>
-            <option value="year_desc">Năm: Mới nhất</option>
-            <option value="year_asc">Năm: Cũ nhất</option>
-          </select>
-
-          <button id="resetFilterBtn" class="btn btn-outline btn-sm">
-            🔄 Đặt lại
+        <div class="topbar-right">
+          <!-- Dark / Light Theme Button -->
+          <button class="theme-toggle-btn" id="themeToggleBtn" title="Chuyển chế độ Sáng / Tối">
+            🌙
           </button>
         </div>
+      </header>
 
-        <!-- View Switcher -->
-        <div class="view-modes">
-          <button id="viewGridBtn" class="view-btn active" title="Xem dạng lưới thẻ">🔲 Thẻ</button>
-          <button id="viewTableBtn" class="view-btn" title="Xem dạng bảng">📋 Bảng</button>
+      <!-- Page Content -->
+      <main class="page-content">
+
+        <!-- Section: Dashboard & KPI (Home) -->
+        <section id="dashboardSection">
+          <!-- KPI Metric Cards -->
+          <div class="kpi-grid">
+            <div class="kpi-card" onclick="filterByNav('home')">
+              <div class="kpi-icon blue">📚</div>
+              <div class="kpi-details">
+                <h3 id="statTotalProcedures">114</h3>
+                <p>Tổng số Quy trình số hóa</p>
+              </div>
+            </div>
+
+            <div class="kpi-card" onclick="filterByNav('quan-ly')">
+              <div class="kpi-icon indigo">📋</div>
+              <div class="kpi-details">
+                <h3 id="statQLProcedures">31</h3>
+                <p>Quy trình Quản lý Chất lượng</p>
+              </div>
+            </div>
+
+            <div class="kpi-card" onclick="filterByNav('tech')">
+              <div class="kpi-icon teal">🧫</div>
+              <div class="kpi-details">
+                <h3 id="statTechProcedures">83</h3>
+                <p>Kỹ thuật chuyên môn Vi sinh</p>
+              </div>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-icon green">⚡</div>
+              <div class="kpi-details">
+                <h3 id="statRecentProcedures">48</h3>
+                <p>Hiệu lực mới (2025 - 2026)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Charts Section (Chart.js) -->
+          <div class="charts-grid" id="chartsGrid">
+            <!-- Chart 1: 5 nhóm chuyên môn -->
+            <div class="chart-card">
+              <div class="chart-header">
+                <h3>📊 Cơ cấu 5 nhóm chuyên môn</h3>
+                <span style="font-size:12px; color:var(--text-muted)">114 tài liệu</span>
+              </div>
+              <div class="chart-container">
+                <canvas id="categoryDoughnutChart"></canvas>
+              </div>
+            </div>
+
+            <!-- Chart 2: Phân loại theo loại hình -->
+            <div class="chart-card">
+              <div class="chart-header">
+                <h3>📈 Phân bố theo loại hình quy trình</h3>
+                <span style="font-size:12px; color:var(--text-muted)">Kỹ thuật & Quản lý</span>
+              </div>
+              <div class="chart-container">
+                <canvas id="typeBarChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Tra Cứu & Bộ Lọc Nâng Cao -->
+        <section class="controls-card" id="searchControlsSection">
+          <!-- Search Input -->
+          <div class="search-box-wrapper">
+            <span class="search-icon">🔍</span>
+            <input 
+              type="text" 
+              id="searchInput" 
+              class="search-input" 
+              placeholder="Tìm nhanh theo tên xét nghiệm, mã hiệu (VS.NC, XN.QL, VS.MD, VS.NS, VS.PCR...), vi khuẩn, virus, kháng sinh đồ..." 
+              autocomplete="off"
+            >
+            <button id="searchClearBtn" class="search-clear-btn" title="Xóa tìm kiếm">✕</button>
+          </div>
+
+          <!-- Category Filter Pills -->
+          <div class="category-pills">
+            <button class="cat-pill active" data-category="all">
+              <span>Tất cả</span>
+              <span class="count">114</span>
+            </button>
+            <button class="cat-pill" data-category="Quản Lý Chất Lượng">
+              <span>Quản Lý Chất Lượng</span>
+              <span class="count">31</span>
+            </button>
+            <button class="cat-pill" data-category="Nuôi Cấy">
+              <span>Nuôi Cấy</span>
+              <span class="count">30</span>
+            </button>
+            <button class="cat-pill" data-category="Miễn Dịch">
+              <span>Miễn Dịch</span>
+              <span class="count">28</span>
+            </button>
+            <button class="cat-pill" data-category="Nhuộm Soi">
+              <span>Nhuộm Soi</span>
+              <span class="count">15</span>
+            </button>
+            <button class="cat-pill" data-category="Sinh Học Phân Tử (PCR)">
+              <span>Sinh Học Phân Tử (PCR)</span>
+              <span class="count">10</span>
+            </button>
+          </div>
+
+          <!-- Secondary Filters Bar -->
+          <div class="secondary-filters">
+            <div class="filter-group">
+              <!-- Filter by Type -->
+              <select id="typeFilterSelect" class="select-filter">
+                <option value="all">Tất cả loại quy trình</option>
+              </select>
+
+              <!-- Filter by Year -->
+              <select id="yearFilterSelect" class="select-filter">
+                <option value="all">Tất cả năm hiệu lực</option>
+              </select>
+
+              <!-- Sort Order -->
+              <select id="sortFilterSelect" class="select-filter">
+                <option value="code_asc">Mã hiệu: A → Z</option>
+                <option value="code_desc">Mã hiệu: Z → A</option>
+                <option value="title_asc">Tên quy trình: A → Z</option>
+                <option value="year_desc">Năm: Mới nhất</option>
+                <option value="year_asc">Năm: Cũ nhất</option>
+              </select>
+
+              <button id="resetFilterBtn" class="btn btn-outline btn-sm">
+                🔄 Đặt lại
+              </button>
+            </div>
+
+            <!-- View Switcher -->
+            <div class="view-modes">
+              <button id="viewGridBtn" class="view-btn active" title="Xem dạng lưới thẻ">🔲 Thẻ</button>
+              <button id="viewTableBtn" class="view-btn" title="Xem dạng bảng">📋 Bảng</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Danh Mục Quy Trình Kết Quả -->
+        <div class="results-meta">
+          <span id="resultsCount">Hiển thị 114 / 114 quy trình</span>
+          <span style="font-size:12px; color:var(--text-muted)">* Bấm "Mở File PDF" để xem tài liệu gốc</span>
         </div>
-      </div>
-    </div>
 
-    <!-- 4. Danh Mục Quy Trình Kết Quả -->
-    <div class="results-meta">
-      <span id="resultsCount">Hiển thị 114 / 114 quy trình</span>
-      <span style="font-size:12px; color:var(--text-muted)">* Bấm "Mở File PDF" để xem tài liệu gốc</span>
-    </div>
+        <!-- View 1: Card Grid -->
+        <div id="proceduresGrid" class="procedures-grid"></div>
 
-    <!-- View 1: Card Grid -->
-    <div id="proceduresGrid" class="procedures-grid"></div>
-
-    <!-- View 2: Table Data -->
-    <div id="proceduresTableWrapper" class="table-wrapper" style="display:none">
-      <table class="proc-table">
-        <thead>
-          <tr>
-            <th style="width:130px">Mã Hiệu</th>
-            <th>Tên Quy Trình Xét Nghiệm / Quản Lý</th>
-            <th style="width:160px">Chuyên Môn</th>
-            <th style="width:160px">Phân Loại</th>
-            <th style="width:90px">Năm</th>
-            <th style="width:130px">Thao Tác</th>
-          </tr>
-        </thead>
-        <tbody id="proceduresTableBody"></tbody>
-      </table>
-    </div>
-
-    <!-- Empty State -->
-    <div id="emptyState" class="empty-state" style="display:none">
-      <div class="empty-icon">🔎</div>
-      <h3>Không tìm thấy quy trình phù hợp</h3>
-      <p style="margin-top:6px; font-size:13px">Vui lòng thử từ khóa khác hoặc bấm nút "Đặt lại" để xem toàn bộ danh mục.</p>
-    </div>
-
-    <!-- 5. Sổ Ghi Nhớ & Phân Công Quy Trình (Supabase Live Integration) -->
-    <section class="tasks-section" id="tasksSection">
-      <div class="tasks-header">
-        <div>
-          <h2>📝 Sổ Ghi Nhớ & Phân Công Rà Soát Quy Trình</h2>
-          <p style="font-size:13px; color:var(--text-muted); margin-top:2px">
-            Dữ liệu đồng bộ trực tiếp với Supabase Database (Bs Trung Project)
-          </p>
+        <!-- View 2: Table Data -->
+        <div id="proceduresTableWrapper" class="table-wrapper" style="display:none">
+          <table class="proc-table">
+            <thead>
+              <tr>
+                <th style="width:130px">Mã Hiệu</th>
+                <th>Tên Quy Trình Xét Nghiệm / Quản Lý</th>
+                <th style="width:160px">Chuyên Môn</th>
+                <th style="width:160px">Phân Loại</th>
+                <th style="width:90px">Năm</th>
+                <th style="width:130px">Thao Tác</th>
+              </tr>
+            </thead>
+            <tbody id="proceduresTableBody"></tbody>
+          </table>
         </div>
-        <button id="openAddTaskModalBtn" class="btn btn-primary">
-          ➕ Thêm Ghi Nhớ / Nhiệm Vụ
-        </button>
-      </div>
 
-      <!-- Live Tasks List from Supabase -->
-      <div id="tasksListContainer" class="task-list">
-        <div style="text-align:center; padding:20px; color:var(--text-muted)">
-          Đang kết nối và tải ghi nhớ từ Supabase...
+        <!-- Empty State -->
+        <div id="emptyState" class="empty-state" style="display:none">
+          <div class="empty-icon">🔎</div>
+          <h3>Không tìm thấy quy trình phù hợp</h3>
+          <p style="margin-top:6px; font-size:13px">Vui lòng thử từ khóa khác hoặc bấm nút "Đặt lại" để xem toàn bộ danh mục.</p>
         </div>
-      </div>
-    </section>
 
-  </main>
+        <!-- Sổ Ghi Nhớ & Phân Công Quy Trình (Supabase Live Integration) -->
+        <section class="tasks-section" id="tasksSection">
+          <div class="tasks-header">
+            <div>
+              <h2>📝 Sổ Ghi Nhớ & Phân Công Rà Soát Quy Trình</h2>
+              <p style="font-size:13px; color:var(--text-muted); margin-top:2px">
+                Dữ liệu đồng bộ trực tiếp với Supabase Database (Bs Trung Project)
+              </p>
+            </div>
+            <button id="openAddTaskModalBtn" class="btn btn-primary">
+              ➕ Thêm Ghi Nhớ / Nhiệm Vụ
+            </button>
+          </div>
 
-  <!-- 6. Modal Chi Tiết Quy Trình -->
+          <!-- Live Tasks List from Supabase -->
+          <div id="tasksListContainer" class="task-list">
+            <div style="text-align:center; padding:20px; color:var(--text-muted)">
+              Đang kết nối và tải ghi nhớ từ Supabase...
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- Footer -->
+      <footer class="app-footer">
+        <div class="container footer-content">
+          <div>
+            <strong>Hệ Thống Quản Lý Quy Trình Xét Nghiệm Vi Sinh</strong> — Bệnh Viện Đa Khoa Đức Giang
+          </div>
+          <div>
+            Tiêu chuẩn ISO 15189 • Cơ sở dữ liệu: Supabase • Trực quan hóa: Chart.js
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- Modal Chi Tiết Quy Trình -->
   <div class="modal-backdrop" id="detailModalBackdrop">
     <div class="modal-box">
       <div class="modal-header">
@@ -297,7 +414,7 @@
     </div>
   </div>
 
-  <!-- 7. Modal Thêm Ghi Nhớ / Nhiệm Vụ Quy Trình (Supabase) -->
+  <!-- Modal Thêm Ghi Nhớ / Nhiệm Vụ Quy Trình (Supabase) -->
   <div class="modal-backdrop" id="addTaskModalBackdrop">
     <div class="modal-box">
       <div class="modal-header">
@@ -346,18 +463,6 @@
       </form>
     </div>
   </div>
-
-  <!-- 8. Footer -->
-  <footer class="app-footer">
-    <div class="container footer-content">
-      <div>
-        <strong>Hệ Thống Quản Lý Quy Trình Xét Nghiệm Vi Sinh</strong> — Bệnh Viện Đa Khoa Đức Giang
-      </div>
-      <div>
-        Tiêu chuẩn ISO 15189 • Cơ sở dữ liệu: Supabase • Trực quan hóa: Chart.js
-      </div>
-    </div>
-  </footer>
 
   <!-- Scripts -->
   <script src="js/data.js"></script>
