@@ -1228,6 +1228,75 @@ button, input, select, textarea {
 .status-progress { background-color: var(--warning-light); color: var(--warning); }
 .status-todo { background-color: var(--sky-200); color: var(--sky-800); }
 
+/* Database Metrics Bar */
+.db-metrics-bar {
+  display: flex;
+  gap: 16px;
+  background-color: var(--sky-50);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+[data-theme="dark"] .db-metrics-bar {
+  background-color: #1e293b;
+}
+
+.db-metric-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.db-metric-label {
+  color: var(--text-muted);
+}
+
+.db-metric-val {
+  font-weight: 700;
+  color: var(--sky-900);
+}
+
+[data-theme="dark"] .db-metric-val {
+  color: #fff;
+}
+
+.action-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.action-btn-sm {
+  padding: 5px 9px;
+  font-size: 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.action-btn-sm:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background-color: var(--sky-50);
+}
+
+.action-btn-sm.delete-btn:hover {
+  border-color: #ef4444;
+  color: #ef4444;
+  background-color: #fef2f2;
+}
+
 /* Footer */
 .app-footer {
   margin-top: auto;

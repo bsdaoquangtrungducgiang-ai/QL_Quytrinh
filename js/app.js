@@ -370,8 +370,7 @@ function initSidebarNavigation() {
         { id: 'navMienDich', nav: 'mien-dich' },
         { id: 'navSHPT', nav: 'sinh-hoc-pt' },
         { id: 'navTimKiem', nav: 'tim-kiem' },
-        { id: 'navStorage', nav: 'storage' },
-        { id: 'navTasks', nav: 'tasks' }
+        { id: 'navDbManager', nav: 'db-manager' }
     ];
 
     navLinks.forEach(item => {
@@ -510,17 +509,12 @@ function filterByNav(navKey) {
             }, 300);
             break;
 
-        case 'storage':
-            document.getElementById('navStorage').classList.add('active');
-            topbarTitle.innerHTML = '<span>☁️ KHO LƯU TRỮ SUPABASE STORAGE BUCKET</span>';
-            const banner = document.getElementById('storageNoticeBanner');
-            if (banner) banner.scrollIntoView({ behavior: 'smooth' });
-            break;
-
-        case 'tasks':
-            document.getElementById('navTasks').classList.add('active');
-            topbarTitle.innerHTML = '<span>📝 SỔ GHI NHỚ & PHÂN CÔNG QUY TRÌNH</span>';
-            document.getElementById('tasksSection').scrollIntoView({ behavior: 'smooth' });
+        case 'db-manager':
+            const navDb = document.getElementById('navDbManager');
+            if (navDb) navDb.classList.add('active');
+            topbarTitle.innerHTML = '<span>🗄️ QUẢN LÝ CSDL KHO LƯU TRỮ TỆP (tai-lieu)</span>';
+            const dbSec = document.getElementById('storageDatabaseSection');
+            if (dbSec) dbSec.scrollIntoView({ behavior: 'smooth' });
             break;
 
         case 'recent':
@@ -635,20 +629,28 @@ function initEventListeners() {
         if (e.target.id === 'detailModalBackdrop') closeModal();
     });
 
-    // Add Task Modal
-    document.getElementById('openAddTaskModalBtn').addEventListener('click', () => {
-        document.getElementById('addTaskModalBackdrop').classList.add('active');
-    });
-    document.getElementById('closeAddTaskModalBtn').addEventListener('click', () => {
-        document.getElementById('addTaskModalBackdrop').classList.remove('active');
-    });
-    document.getElementById('addTaskModalBackdrop').addEventListener('click', (e) => {
-        if (e.target.id === 'addTaskModalBackdrop') {
-            document.getElementById('addTaskModalBackdrop').classList.remove('active');
-        }
-    });
+    // CSDL Kho Tệp: Nút tải lên từ CSDL section & Làm mới
+    const openUploadDbBtn = document.getElementById('openUploadFromDbBtn');
+    if (openUploadDbBtn) {
+        openUploadDbBtn.addEventListener('click', () => {
+            const backdrop = document.getElementById('uploadDocModalBackdrop');
+            if (backdrop) backdrop.classList.add('active');
+        });
+    }
 
-    document.getElementById('addTaskForm').addEventListener('submit', handleAddTaskSubmit);
+    const refreshBtn = document.getElementById('refreshDbBtn');
+    if (refreshBtn) {
+        refreshBtn.addEventListener('click', async () => {
+            refreshBtn.disabled = true;
+            refreshBtn.textContent = '⏳ Đang đồng bộ...';
+            await fetchDocumentsFromSupabase();
+            showToast('🔄 Đã làm mới danh mục tệp từ CSDL Supabase!');
+            refreshBtn.disabled = false;
+            refreshBtn.textContent = '🔄 Làm Mới';
+        });
+    }
+
+    initEditDocModal();
 }
 
 function filterAndRender() {
@@ -1014,19 +1016,50 @@ async function handleUploadSubmit(e) {
         filename: file.name,
         path: uploadedStorageUrl,
         storageUrl: uploadedStorageUrl,
+        storageKey: remotePath,
         sizeFormatted: sizeFormatted,
         department: category === 'Quản Lý Chất Lượng' ? 'Khối Xét Nghiệm • BVĐK Đức Giang' : 'Khoa Vi Sinh • BVĐK Đức Giang',
         lead: 'BS.CK2. Đào Quang Trung'
     };
 
+    // Lưu vào bảng documents trên Supabase PostgreSQL nếu có kết nối
+    if (client) {
+        try {
+            const newDocDb = {
+                code: code || 'SOP.NEW',
+                title: title.toUpperCase(),
+                category: category,
+                type: type,
+                year: parseInt(year) || 2024,
+                filename: file.name,
+                storage_key: remotePath,
+                storage_url: uploadedStorageUrl,
+                file_format: getFileFormatInfo(file.name).type,
+                file_size_formatted: sizeFormatted,
+                department: newProc.department,
+                lead: newProc.lead
+            };
+            const { data: dbData, error: dbErr } = await client
+                .from('documents')
+                .insert([newDocDb])
+                .select();
+            if (!dbErr && dbData && dbData[0]) {
+                newProc.id = dbData[0].id;
+            }
+        } catch (e) {
+            console.warn('Lỗi lưu CSDL documents:', e);
+        }
+    }
+
     // Đưa vào State đầu danh sách
     AppState.procedures.unshift(newProc);
     saveCustomProcedure(newProc);
 
-    // Cập nhật lại số lượng và biểu đồ
+    // Cập nhật lại số lượng, biểu đồ và bảng quản lý kho
     initKPIs();
     updateChartsData();
     filterAndRender();
+    renderStorageDbTable();
 
     // Đóng modal và reset
     setTimeout(() => {
@@ -1083,196 +1116,277 @@ async function checkStorageBucketStatus() {
     }
 }
 
-// 10. Đồng Bộ & Tương Tác Dữ Liệu Supabase (Tasks)
+// 10. ĐỒNG BỘ & QUẢN LÝ CƠ SỞ DỮ LIỆU POSTGRESQL (bảng documents) & STORAGE 'tai-lieu'
 async function initSupabaseData() {
     const client = getSupabase();
     const badge = document.getElementById('supabaseSidebarBadge');
     
     if (!client) {
         if (badge) badge.innerHTML = '<span class="pulse-dot" style="background-color:#f59e0b"></span> Local Mode';
-        loadTasksFromLocalStorage();
+        renderStorageDbTable();
         return;
     }
 
     try {
-        const { data: empData, error: empErr } = await client
-            .from('employees')
-            .select('*')
-            .eq('active', true);
-            
-        if (!empErr && empData && empData.length > 0) {
-            AppState.employees = empData;
-            populateAssigneeSelect(empData);
-        } else {
-            AppState.employees = [
-                { name: 'BS.CK2. Đào Quang Trung', position: 'Trưởng khoa Vi sinh' },
-                { name: 'BS. Chu Thị Huyền', position: 'Bác sĩ Vi sinh' }
-            ];
-            populateAssigneeSelect(AppState.employees);
-        }
-
-        await fetchTasksFromSupabase();
-
         if (badge) {
             badge.innerHTML = '<span class="pulse-dot"></span> Supabase Connected';
         }
+        await checkStorageBucketStatus();
+        await fetchDocumentsFromSupabase();
     } catch (err) {
         console.error('Lỗi khi kết nối Supabase:', err);
         if (badge) badge.innerHTML = '<span class="pulse-dot" style="background-color:#f59e0b"></span> Offline Mode';
-        loadTasksFromLocalStorage();
+        renderStorageDbTable();
     }
 }
 
-function populateAssigneeSelect(employees) {
-    const select = document.getElementById('taskAssigneeSelect');
-    if (!select) return;
-    select.innerHTML = employees.map(e => `<option value="${e.name}">${e.name} (${e.position || 'Khoa Vi sinh'})</option>`).join('');
-}
-
-async function fetchTasksFromSupabase() {
+// Nạp danh mục tài liệu từ bảng 'documents' trên Supabase PostgreSQL
+async function fetchDocumentsFromSupabase() {
     const client = getSupabase();
-    if (!client) return;
+    const statusBadge = document.getElementById('dbStatusBadge');
+    const totalCountEl = document.getElementById('dbTotalDocsCount');
+
+    if (!client) {
+        if (statusBadge) statusBadge.innerHTML = '<span class="pulse-dot" style="background-color:#f59e0b"></span> CSDL Nội Bộ (Offline)';
+        renderStorageDbTable();
+        return;
+    }
 
     try {
         const { data, error } = await client
-            .from('tasks')
+            .from('documents')
             .select('*')
-            .order('created_at', { ascending: false });
+            .order('id', { ascending: false });
 
-        if (error) throw error;
+        if (!error && data && data.length > 0) {
+            // Đồng bộ dữ liệu CSDL PostgreSQL vào AppState
+            AppState.procedures = data.map(d => ({
+                id: d.id,
+                code: d.code,
+                title: d.title,
+                category: d.category,
+                type: d.type,
+                year: d.year,
+                filename: d.filename,
+                path: d.storage_url || d.path,
+                storageUrl: d.storage_url,
+                storageKey: d.storage_key,
+                sizeFormatted: d.file_size_formatted || 'PDF',
+                department: d.department || 'Khoa Vi Sinh • BVĐK Đức Giang',
+                lead: d.lead || 'BS.CK2. Đào Quang Trung'
+            }));
 
-        AppState.tasks = data || [];
-        renderTasks();
+            if (statusBadge) {
+                statusBadge.innerHTML = `<span class="pulse-dot"></span> Đã Kết Nối CSDL (documents)`;
+                statusBadge.style.color = 'var(--success)';
+            }
+            if (totalCountEl) {
+                totalCountEl.textContent = `${data.length} tệp`;
+            }
+
+            // Cập nhật lại giao diện và biểu đồ
+            initKPIs();
+            updateChartsData();
+            filterAndRender();
+        } else {
+            // Bảng documents chưa tạo hoặc đang trống -> Sử dụng danh mục 114 quy trình chuẩn
+            if (statusBadge) {
+                statusBadge.innerHTML = '<span class="pulse-dot" style="background-color:#0284c7"></span> Sẵn sàng (Kho tai-lieu)';
+            }
+            if (totalCountEl) {
+                totalCountEl.textContent = `${AppState.procedures.length} tệp`;
+            }
+        }
     } catch (err) {
-        console.error('Lỗi tải tasks từ Supabase:', err);
-        loadTasksFromLocalStorage();
+        console.warn('Lỗi đọc bảng documents từ Supabase:', err);
+        if (statusBadge) statusBadge.innerHTML = '<span class="pulse-dot" style="background-color:#f59e0b"></span> Ngoại Tuyến (Offline)';
     }
+
+    renderStorageDbTable();
 }
 
-function renderTasks() {
-    const container = document.getElementById('tasksListContainer');
-    if (!container) return;
+// Hiển thị bảng Quản Lý CSDL Kho Lưu Trữ Tệp (tai-lieu)
+function renderStorageDbTable() {
+    const tbody = document.getElementById('storageDbTableBody');
+    if (!tbody) return;
 
-    if (AppState.tasks.length === 0) {
-        container.innerHTML = `
-            <div style="text-align:center; padding:30px 10px; color:var(--text-muted)">
-                <p>Chưa có ghi nhớ hoặc nhiệm vụ quy trình nào được lưu trên Supabase.</p>
-                <p style="font-size:12px; margin-top:4px">Bấm <strong>"+ Thêm Ghi Nhớ Quy Trình"</strong> ở trên để tạo nhiệm vụ rà soát hoặc phân công.</p>
-            </div>
+    if (AppState.procedures.length === 0) {
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="6" style="text-align:center; padding:30px; color:var(--text-muted)">
+                    Chưa có tài liệu nào trong kho. Bấm "Tải Tệp Mới Lên Kho" để bắt đầu lưu trữ.
+                </td>
+            </tr>
         `;
         return;
     }
 
-    container.innerHTML = AppState.tasks.map(t => {
-        let statusClass = 'status-todo';
-        if (t.status === 'Đã hoàn thành') statusClass = 'status-done';
-        else if (t.status === 'Đang thực hiện') statusClass = 'status-progress';
+    tbody.innerHTML = AppState.procedures.map(p => {
+        const fmt = getFileFormatInfo(p.filename);
+        const docUrl = getDocumentUrl(p);
 
         return `
-            <div class="task-item">
-                <div class="task-info">
-                    <div class="task-title">${t.Title || t.title || 'Nhiệm vụ'}</div>
-                    <div class="task-meta">
-                        <span>👤 ${t.assignee || 'BS.CK2. Đào Quang Trung'}</span>
-                        <span>📅 Hạn: ${t.due_date || 'Không có'}</span>
-                        <span>📊 Tiến độ: ${t.progress || 0}%</span>
+            <tr>
+                <td>
+                    <span class="code-badge">${escapeHtml(p.code)}</span>
+                </td>
+                <td>
+                    <div style="font-weight:700; color:var(--sky-950); margin-bottom:2px">
+                        ${escapeHtml(p.title)}
                     </div>
-                </div>
-                <div style="display:flex; align-items:center; gap:10px">
-                    <span class="task-status ${statusClass}">${t.status || 'Chờ thực hiện'}</span>
-                    <button onclick="handleDeleteTask(${t.id})" class="btn btn-outline btn-sm" style="color:var(--danger); border-color:var(--danger)" title="Xoá ghi nhớ">
-                        🗑️
-                    </button>
-                </div>
-            </div>
+                    <div style="font-size:11px; color:var(--text-muted); font-family:monospace">
+                        📁 ${escapeHtml(p.storageKey || p.filename)}
+                    </div>
+                </td>
+                <td>
+                    <span class="category-pill" style="font-size:11px; padding:3px 8px">${escapeHtml(p.category)}</span>
+                </td>
+                <td>
+                    <span class="format-badge ${fmt.cssClass}">${fmt.icon} ${fmt.label}</span>
+                </td>
+                <td style="font-size:12px; color:var(--text-muted)">
+                    ${escapeHtml(p.sizeFormatted || 'N/A')}
+                </td>
+                <td style="text-align:center">
+                    <div class="action-btn-group" style="justify-content:center">
+                        <a href="${docUrl}" target="_blank" class="action-btn-sm" title="Mở xem tài liệu từ Supabase Storage">
+                            👁️ Mở
+                        </a>
+                        <button onclick="handleEditDoc(${p.id})" class="action-btn-sm" title="Sửa thông tin tệp trong CSDL">
+                            ✏️ Sửa
+                        </button>
+                        <button onclick="handleDeleteDoc(${p.id})" class="action-btn-sm delete-btn" title="Xóa tài liệu khỏi CSDL & Kho Storage">
+                            🗑️ Xóa
+                        </button>
+                    </div>
+                </td>
+            </tr>
         `;
     }).join('');
 }
 
-async function handleAddTaskSubmit(e) {
+// Khởi tạo Modal Chỉnh Sửa Thông Tin Tài Liệu CSDL
+function initEditDocModal() {
+    const modal = document.getElementById('editDocModalBackdrop');
+    const closeBtn = document.getElementById('closeEditDocModalBtn');
+    const cancelBtn = document.getElementById('cancelEditDocBtn');
+    const form = document.getElementById('editDocForm');
+
+    function closeEditModal() {
+        if (modal) modal.classList.remove('active');
+        if (form) form.reset();
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closeEditModal);
+    if (cancelBtn) cancelBtn.addEventListener('click', closeEditModal);
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target.id === 'editDocModalBackdrop') closeEditModal();
+        });
+    }
+
+    if (form) {
+        form.addEventListener('submit', handleSaveEditDoc);
+    }
+}
+
+// Mở modal sửa thông tin tài liệu
+function handleEditDoc(docId) {
+    const doc = AppState.procedures.find(p => p.id === docId);
+    if (!doc) return;
+
+    document.getElementById('editDocId').value = doc.id;
+    document.getElementById('editDocCodeInput').value = doc.code || '';
+    document.getElementById('editDocTitleInput').value = doc.title || '';
+    document.getElementById('editDocCategorySelect').value = doc.category || 'Quản Lý Chất Lượng';
+    document.getElementById('editDocYearInput').value = doc.year || 2024;
+    document.getElementById('editDocLeadInput').value = doc.lead || 'BS.CK2. Đào Quang Trung';
+
+    const modal = document.getElementById('editDocModalBackdrop');
+    if (modal) modal.classList.add('active');
+}
+
+// Lưu thông tin sau khi chỉnh sửa lên Supabase Database
+async function handleSaveEditDoc(e) {
     e.preventDefault();
 
-    const title = document.getElementById('taskTitleInput').value.trim();
-    const assignee = document.getElementById('taskAssigneeSelect').value;
-    const dueDate = document.getElementById('taskDueDateInput').value;
-    const status = document.getElementById('taskStatusSelect').value;
-    const progress = parseInt(document.getElementById('taskProgressInput').value) || 0;
+    const id = document.getElementById('editDocId').value;
+    const code = document.getElementById('editDocCodeInput').value.trim();
+    const title = document.getElementById('editDocTitleInput').value.trim();
+    const category = document.getElementById('editDocCategorySelect').value;
+    const year = parseInt(document.getElementById('editDocYearInput').value) || 2024;
+    const lead = document.getElementById('editDocLeadInput').value.trim();
 
-    if (!title) return;
+    const docIndex = AppState.procedures.findIndex(p => p.id == id);
+    if (docIndex !== -1) {
+        AppState.procedures[docIndex].code = code;
+        AppState.procedures[docIndex].title = title.toUpperCase();
+        AppState.procedures[docIndex].category = category;
+        AppState.procedures[docIndex].year = year;
+        AppState.procedures[docIndex].lead = lead;
+    }
 
     const client = getSupabase();
-    const newTask = {
-        Title: title,
-        assignee: assignee,
-        due_date: dueDate || null,
-        status: status,
-        progress: progress
-    };
-
     if (client) {
         try {
-            const { data, error } = await client
-                .from('tasks')
-                .insert([newTask])
-                .select();
+            await client
+                .from('documents')
+                .update({
+                    code: code,
+                    title: title.toUpperCase(),
+                    category: category,
+                    year: year,
+                    lead: lead,
+                    updated_at: new Date().toISOString()
+                })
+                .eq('id', id);
+        } catch (err) {
+            console.warn('Lỗi cập nhật CSDL Supabase:', err);
+        }
+    }
 
-            if (error) throw error;
-            if (data && data[0]) {
-                AppState.tasks.unshift(data[0]);
+    document.getElementById('editDocModalBackdrop').classList.remove('active');
+    filterAndRender();
+    renderStorageDbTable();
+    showToast(`✅ Đã cập nhật thành công tài liệu "${code}" trong CSDL!`);
+}
+
+// Xóa tài liệu khỏi Cơ sở dữ liệu và Storage Bucket 'tai-lieu'
+async function handleDeleteDoc(docId) {
+    const doc = AppState.procedures.find(p => p.id === docId);
+    if (!doc) return;
+
+    const confirmMsg = `Bạn có chắc chắn muốn xóa tài liệu:\n"${doc.code} - ${doc.title}"\nkhỏi Cơ sở dữ liệu và Kho lưu trữ tệp 'tai-lieu'?`;
+    if (!confirm(confirmMsg)) return;
+
+    const client = getSupabase();
+    if (client) {
+        try {
+            // 1. Xóa bản ghi trong CSDL PostgreSQL
+            await client
+                .from('documents')
+                .delete()
+                .eq('id', docId);
+
+            // 2. Xóa tệp vật lý trong Storage Bucket 'tai-lieu'
+            if (doc.storageKey) {
+                await client.storage
+                    .from(BUCKET_NAME)
+                    .remove([doc.storageKey]);
             }
         } catch (err) {
-            console.error('Lỗi khi ghi task vào Supabase:', err);
-            newTask.id = Date.now();
-            newTask.created_at = new Date().toISOString();
-            AppState.tasks.unshift(newTask);
-            saveTasksToLocalStorage();
-        }
-    } else {
-        newTask.id = Date.now();
-        newTask.created_at = new Date().toISOString();
-        AppState.tasks.unshift(newTask);
-        saveTasksToLocalStorage();
-    }
-
-    renderTasks();
-    document.getElementById('addTaskModalBackdrop').classList.remove('active');
-    document.getElementById('addTaskForm').reset();
-}
-
-async function handleDeleteTask(taskId) {
-    if (!confirm('Bạn có chắc chắn muốn xóa ghi nhớ này khỏi Supabase?')) return;
-
-    const client = getSupabase();
-    if (client) {
-        try {
-            const { error } = await client
-                .from('tasks')
-                .delete()
-                .eq('id', taskId);
-
-            if (error) throw error;
-        } catch (err) {
-            console.error('Lỗi xoá task trên Supabase:', err);
+            console.warn('Lỗi xóa trên Supabase:', err);
         }
     }
 
-    AppState.tasks = AppState.tasks.filter(t => t.id !== taskId);
-    saveTasksToLocalStorage();
-    renderTasks();
-}
+    // Xóa khỏi State cục bộ
+    AppState.procedures = AppState.procedures.filter(p => p.id !== docId);
 
-function loadTasksFromLocalStorage() {
-    try {
-        const saved = localStorage.getItem('sop_tasks_cache');
-        if (saved) {
-            AppState.tasks = JSON.parse(saved);
-        }
-    } catch (e) {}
-    renderTasks();
-}
+    // Cập nhật lại KPIs, biểu đồ và các bảng
+    initKPIs();
+    updateChartsData();
+    filterAndRender();
+    renderStorageDbTable();
 
-function saveTasksToLocalStorage() {
-    try {
-        localStorage.setItem('sop_tasks_cache', JSON.stringify(AppState.tasks));
-    } catch (e) {}
+    showToast(`🗑️ Đã xóa tài liệu "${doc.code}" khỏi CSDL và Kho Storage!`);
 }

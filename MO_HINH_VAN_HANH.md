@@ -88,10 +88,8 @@ Dự án sử dụng cơ sở hạ tầng đám mây của **Supabase** (Project
 
 | Loại dữ liệu | Nơi lưu trữ thực tế | Cơ chế hoạt động & Định dạng |
 | :--- | :--- | :--- |
-| **114 Tệp tài liệu gốc** | Supabase Storage Bucket `tai-lieu` | Các file PDF số hóa được lưu vào các thư mục tương ứng theo chuẩn S3. |
-| **Tài liệu tải mới** | Supabase Storage Bucket `tai-lieu` | Hỗ trợ đa định dạng: Word (`.docx`), Excel (`.xlsx`), PDF (`.pdf`), Ảnh (`.jpg`, `.png`). |
-| **Ghi nhớ & Nhiệm vụ** | Supabase PostgreSQL Table `tasks` | Lưu trạng thái công việc, người phụ trách, hạn xử lý, tiến độ hoàn thành. |
-| **Danh mục nhân sự** | Supabase PostgreSQL Table `employees` | Lưu danh sách bác sĩ, kỹ thuật viên phụ trách quy trình. |
+| **Kho tệp số hóa** | Supabase Storage Bucket `tai-lieu` | Lưu trữ toàn bộ 114 tệp SOP gốc và các tệp mới tải lên (PDF, Word, Excel, Ảnh). |
+| **CSDL Quản lý tệp** | Supabase PostgreSQL Table `documents` | Lưu thông tin chi tiết từng tệp: Mã quy trình, tên, nhóm chuyên môn, định dạng, dung lượng, đường dẫn Storage (`storage_key`), ngày cập nhật. |
 | **Bộ đệm Offline** | Trình duyệt `localStorage` | Giúp ứng dụng vẫn xem và tra cứu được dữ liệu ngay cả khi mất mạng internet. |
 
 ---
