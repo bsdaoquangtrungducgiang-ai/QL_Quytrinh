@@ -1602,3 +1602,293 @@ button, input, select, textarea {
   from { transform: translateY(100%); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+
+/* ==========================================================================
+   PHÂN QUYỀN TRUY CẬP (RBAC - ROLE BASED ACCESS CONTROL)
+   ========================================================================== */
+body:not(.is-admin) .admin-only {
+  display: none !important;
+}
+
+.badge-role {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.badge-role.admin {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
+}
+
+.badge-role.user {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+
+.logout-btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: var(--transition);
+  color: var(--text-muted);
+}
+
+.logout-btn:hover {
+  background-color: #fee2e2;
+  color: #dc2626;
+  border-color: #fca5a5;
+}
+
+/* ==========================================================================
+   MÀN HÌNH ĐĂNG NHẬP (LOGIN SCREEN OVERLAY)
+   ========================================================================== */
+.login-screen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.95), rgba(3, 105, 161, 0.98));
+  backdrop-filter: blur(8px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-screen-overlay.hidden {
+  display: none !important;
+}
+
+.login-box {
+  background-color: #ffffff;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  width: 100%;
+  max-width: 460px;
+  padding: 36px 32px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: modalScaleUp 0.3s ease;
+}
+
+[data-theme="dark"] .login-box {
+  background-color: #0f172a;
+  border-color: #334155;
+  color: #f8fafc;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.login-logo-circle {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--sky-500), var(--sky-700));
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin: 0 auto 14px auto;
+  box-shadow: 0 10px 15px -3px rgba(14, 165, 233, 0.4);
+}
+
+.login-header h2 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--sky-950);
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+[data-theme="dark"] .login-header h2 {
+  color: #fff;
+}
+
+.login-sub {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.login-badge {
+  display: inline-block;
+  background-color: var(--sky-100);
+  color: var(--sky-900);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+[data-theme="dark"] .login-badge {
+  background-color: #1e293b;
+  color: var(--sky-300);
+}
+
+.login-form-group {
+  margin-bottom: 18px;
+}
+
+.login-form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.login-input {
+  width: 100%;
+  height: 46px;
+  padding: 0 42px 0 38px;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  outline: none;
+  transition: var(--transition);
+  background-color: var(--bg-card);
+  color: var(--text-main);
+}
+
+.login-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+}
+
+.toggle-password-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+.login-submit-btn {
+  width: 100%;
+  height: 46px;
+  background: linear-gradient(135deg, var(--sky-600), var(--sky-700));
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.3);
+  margin-top: 8px;
+}
+
+.login-submit-btn:hover {
+  background: linear-gradient(135deg, var(--sky-500), var(--sky-600));
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px -2px rgba(14, 165, 233, 0.4);
+}
+
+.login-error-msg {
+  background-color: #fee2e2;
+  border: 1px solid #fca5a5;
+  color: #b91c1c;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.login-footer-links {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.btn-link-help {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: var(--transition);
+}
+
+.btn-link-help:hover {
+  color: var(--sky-800);
+}
+
+/* ==========================================================================
+   BẢNG EXCEL TÀI KHOẢN NHÂN VIÊN
+   ========================================================================== */
+.staff-table-excel {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.staff-table-excel th,
+.staff-table-excel td {
+  border: 1px solid #cbd5e1;
+  padding: 10px 14px;
+  font-size: 13px;
+}
+
+.staff-table-excel tr:hover td {
+  background-color: #f0f9ff !important;
+}
+
+.staff-email-red {
+  color: #dc2626 !important;
+  font-weight: 700;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.staff-role-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.staff-role-badge.admin {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #f87171;
+}
+
+.staff-role-badge.user {
+  background-color: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #86efac;
+}

@@ -95,6 +95,7 @@ function getDocumentUrl(proc) {
 
 // State Quản lý ứng dụng
 const AppState = {
+    currentUser: null,
     procedures: typeof PROCEDURES_DATA !== 'undefined' ? PROCEDURES_DATA : [],
     filteredProcedures: [],
     selectedCategory: 'all',
@@ -115,6 +116,8 @@ const AppState = {
 
 // Khởi chạy khi DOM sẵn sàng
 document.addEventListener('DOMContentLoaded', () => {
+    initAuth();
+    renderStaffAccountsTable();
     loadCustomProcedures();
     initTheme();
     initKPIs();
@@ -122,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initEventListeners();
     initSidebarNavigation();
     initUploadModal();
+    initEditDocModal();
     initCharts();
     filterAndRender();
     initSupabaseData();
@@ -397,7 +401,8 @@ function initSidebarNavigation() {
         { id: 'navMienDich', nav: 'mien-dich' },
         { id: 'navSHPT', nav: 'sinh-hoc-pt' },
         { id: 'navTimKiem', nav: 'tim-kiem' },
-        { id: 'navDbManager', nav: 'db-manager' }
+        { id: 'navDbManager', nav: 'db-manager' },
+        { id: 'navAccounts', nav: 'accounts' }
     ];
 
     navLinks.forEach(item => {
@@ -537,11 +542,24 @@ function filterByNav(navKey) {
             break;
 
         case 'db-manager':
+            if (!AppState.currentUser || AppState.currentUser.role !== 'Admin') {
+                showToast('⚠️ Chỉ tài khoản Admin mới có quyền truy cập Quản lý CSDL kho tệp!');
+                filterByNav('home');
+                return;
+            }
             const navDb = document.getElementById('navDbManager');
             if (navDb) navDb.classList.add('active');
             topbarTitle.innerHTML = '<span>🗄️ QUẢN LÝ CSDL KHO LƯU TRỮ TỆP (tai-lieu)</span>';
             const dbSec = document.getElementById('storageDatabaseSection');
             if (dbSec) dbSec.scrollIntoView({ behavior: 'smooth' });
+            break;
+
+        case 'accounts':
+            const navAcc = document.getElementById('navAccounts');
+            if (navAcc) navAcc.classList.add('active');
+            topbarTitle.innerHTML = '<span>👥 DANH SÁCH TÀI KHOẢN VÀ PHÂN QUYỀN TRUY CẬP</span>';
+            const accSec = document.getElementById('accountsSection');
+            if (accSec) accSec.scrollIntoView({ behavior: 'smooth' });
             break;
 
         case 'recent':
@@ -1264,6 +1282,15 @@ function renderStorageDbTable() {
         tbody.innerHTML = AppState.procedures.map(p => {
             const fmt = getFileFormatInfo(p.filename);
             const docUrl = getDocumentUrl(p);
+            const isAdmin = !!(AppState.currentUser && AppState.currentUser.role === 'Admin');
+            const adminButtons = isAdmin ? `
+                <button onclick="handleEditDoc('${p.id}')" class="action-btn-sm" title="Sửa thông tin tệp trong CSDL">
+                    ✏️ Sửa
+                </button>
+                <button onclick="handleDeleteDoc('${p.id}')" class="action-btn-sm delete-btn" title="Xóa tài liệu khỏi CSDL & Kho Storage">
+                    🗑️ Xóa
+                </button>
+            ` : '';
 
             return `
                 <tr>
@@ -1292,12 +1319,7 @@ function renderStorageDbTable() {
                             <a href="${docUrl}" target="_blank" class="action-btn-sm" title="Mở xem tài liệu từ Supabase Storage">
                                 👁️ Mở
                             </a>
-                            <button onclick="handleEditDoc('${p.id}')" class="action-btn-sm" title="Sửa thông tin tệp trong CSDL">
-                                ✏️ Sửa
-                            </button>
-                            <button onclick="handleDeleteDoc('${p.id}')" class="action-btn-sm delete-btn" title="Xóa tài liệu khỏi CSDL & Kho Storage">
-                                🗑️ Xóa
-                            </button>
+                            ${adminButtons}
                         </div>
                     </td>
                 </tr>
@@ -1342,6 +1364,10 @@ function initEditDocModal() {
 
 // Mở modal sửa thông tin tài liệu
 function handleEditDoc(docId) {
+    if (!AppState.currentUser || AppState.currentUser.role !== 'Admin') {
+        alert('⚠️ Chỉ tài khoản Admin (Trưởng Khoa) mới có quyền chỉnh sửa tài liệu!');
+        return;
+    }
     const doc = AppState.procedures.find(p => String(p.id) === String(docId));
     if (!doc) return;
 
@@ -1403,6 +1429,10 @@ async function handleSaveEditDoc(e) {
 
 // Xóa tài liệu khỏi Cơ sở dữ liệu và Storage Bucket 'tai-lieu'
 async function handleDeleteDoc(docId) {
+    if (!AppState.currentUser || AppState.currentUser.role !== 'Admin') {
+        alert('⚠️ Chỉ tài khoản Admin (Trưởng Khoa) mới có quyền xóa tài liệu khỏi hệ thống!');
+        return;
+    }
     const doc = AppState.procedures.find(p => String(p.id) === String(docId));
     if (!doc) return;
 
@@ -1440,3 +1470,219 @@ async function handleDeleteDoc(docId) {
 
     showToast(`🗑️ Đã xóa tài liệu "${doc.code}" khỏi CSDL và Kho Storage!`);
 }
+
+// ============================================================================
+// HỆ THỐNG XÁC THỰC VÀ PHÂN QUYỀN (AUTHENTICATION & RBAC)
+// ============================================================================
+
+function initAuth() {
+    const loginOverlay = document.getElementById('loginScreenOverlay');
+    const loginForm = document.getElementById('loginForm');
+    const emailInput = document.getElementById('loginEmailInput');
+    const passwordInput = document.getElementById('loginPasswordInput');
+    const errorMsg = document.getElementById('loginErrorMsg');
+    const togglePasswordBtn = document.getElementById('togglePasswordBtn');
+    const logoutBtn = document.getElementById('logoutBtn');
+    const openGuideBtn = document.getElementById('openQuickAccountGuideBtn');
+    const closeGuideBtn = document.getElementById('closeQuickAccountModalBtn');
+    const guideModal = document.getElementById('quickAccountModalBackdrop');
+
+    // 1. Kiểm tra phiên đăng nhập đã lưu trong LocalStorage
+    try {
+        const savedUserJson = localStorage.getItem('currentUser_v1');
+        if (savedUserJson) {
+            const savedUser = JSON.parse(savedUserJson);
+            if (savedUser && savedUser.gmail) {
+                AppState.currentUser = savedUser;
+                if (loginOverlay) loginOverlay.classList.add('hidden');
+                applyUserPermissions();
+            }
+        }
+    } catch (e) {
+        console.warn('Lỗi đọc currentUser_v1:', e);
+    }
+
+    // Nếu chưa đăng nhập, đảm bảo màn hình đăng nhập hiển thị
+    if (!AppState.currentUser) {
+        if (loginOverlay) loginOverlay.classList.remove('hidden');
+        document.body.classList.remove('is-admin');
+    }
+
+    // 2. Hiện / Ẩn mật khẩu
+    if (togglePasswordBtn && passwordInput) {
+        togglePasswordBtn.addEventListener('click', () => {
+            const isPassword = passwordInput.type === 'password';
+            passwordInput.type = isPassword ? 'text' : 'password';
+            togglePasswordBtn.textContent = isPassword ? '🙈' : '👁️';
+        });
+    }
+
+    // 3. Xử lý Đăng Nhập
+    if (loginForm) {
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = (emailInput.value || '').trim().toLowerCase();
+            const password = (passwordInput.value || '').trim();
+
+            if (errorMsg) errorMsg.style.display = 'none';
+
+            const accounts = typeof STAFF_ACCOUNTS !== 'undefined' ? STAFF_ACCOUNTS : [];
+            const user = accounts.find(a => (a.gmail || '').trim().toLowerCase() === email);
+
+            if (!user) {
+                if (errorMsg) {
+                    errorMsg.textContent = '❌ Không tìm thấy địa chỉ Gmail này trong danh sách nhân viên Khoa Vi Sinh!';
+                    errorMsg.style.display = 'block';
+                }
+                return;
+            }
+
+            // Kiểm tra mật khẩu: thông tin trong cột vai trò từng người ('Admin' hoặc 'User')
+            // So sánh không phân biệt hoa thường để tiện cho người dùng gõ 'Admin', 'admin', 'User', 'user'
+            if (password.toLowerCase() !== user.role.toLowerCase()) {
+                if (errorMsg) {
+                    errorMsg.textContent = `❌ Mật khẩu không đúng! Mật khẩu là giá trị trong cột vai trò của bạn (${user.role}).`;
+                    errorMsg.style.display = 'block';
+                }
+                return;
+            }
+
+            // Đăng nhập thành công
+            AppState.currentUser = user;
+            try {
+                localStorage.setItem('currentUser_v1', JSON.stringify(user));
+            } catch (err) {}
+
+            if (loginOverlay) loginOverlay.classList.add('hidden');
+            loginForm.reset();
+            applyUserPermissions();
+
+            const roleTitle = user.role === 'Admin' ? 'Trưởng Khoa (Admin)' : 'Nhân Viên (User)';
+            showToast(`👋 Chào mừng ${user.name} (${roleTitle}) đã đăng nhập thành công!`);
+        });
+    }
+
+    // 4. Xử lý Đăng Xuất
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', () => {
+            if (confirm('Bạn có chắc chắn muốn đăng xuất khỏi hệ thống?')) {
+                localStorage.removeItem('currentUser_v1');
+                AppState.currentUser = null;
+                document.body.classList.remove('is-admin');
+                applyUserPermissions();
+                if (loginOverlay) {
+                    loginOverlay.classList.remove('hidden');
+                    if (emailInput) {
+                        emailInput.value = '';
+                        emailInput.focus();
+                    }
+                    if (passwordInput) passwordInput.value = '';
+                }
+                showToast('👋 Đã đăng xuất khỏi hệ thống.');
+            }
+        });
+    }
+
+    // 5. Mở modal tra cứu nhanh tài khoản
+    if (openGuideBtn && guideModal) {
+        openGuideBtn.addEventListener('click', () => {
+            guideModal.classList.add('active');
+        });
+    }
+    if (closeGuideBtn && guideModal) {
+        closeGuideBtn.addEventListener('click', () => {
+            guideModal.classList.remove('active');
+        });
+    }
+    if (guideModal) {
+        guideModal.addEventListener('click', (e) => {
+            if (e.target.id === 'quickAccountModalBackdrop') {
+                guideModal.classList.remove('active');
+            }
+        });
+    }
+}
+
+// Áp dụng quyền hạn người dùng dựa trên vai trò (RBAC)
+function applyUserPermissions() {
+    const user = AppState.currentUser;
+    const isAdmin = !!(user && user.role === 'Admin');
+
+    // Thêm/Xóa class is-admin trên <body> để điều khiển hiển thị CSS
+    document.body.classList.toggle('is-admin', isAdmin);
+
+    // Cập nhật thông tin góc trái dưới Sidebar
+    const nameEl = document.getElementById('sidebarUserName');
+    const badgeEl = document.getElementById('sidebarRoleBadge');
+    const avatarEl = document.getElementById('sidebarUserAvatar');
+
+    if (nameEl) {
+        nameEl.textContent = user ? `${user.name} (${user.title})` : 'Chưa đăng nhập';
+        nameEl.title = user ? `${user.name} - ${user.gmail}` : '';
+    }
+
+    if (badgeEl) {
+        if (isAdmin) {
+            badgeEl.className = 'badge-role admin';
+            badgeEl.textContent = 'Admin (Trưởng Khoa)';
+        } else if (user) {
+            badgeEl.className = 'badge-role user';
+            badgeEl.textContent = 'User (Nhân viên)';
+        } else {
+            badgeEl.className = 'badge-role';
+            badgeEl.textContent = 'Khách';
+        }
+    }
+
+    if (avatarEl) {
+        avatarEl.textContent = isAdmin ? '🛡️' : '👨‍⚕️';
+    }
+
+    // Cập nhật lại bảng CSDL để hiển thị hoặc ẩn nút Sửa/Xóa
+    renderStorageDbTable();
+}
+
+// Hiển thị danh sách 12 tài khoản nhân viên (theo ảnh đính kèm)
+function renderStaffAccountsTable() {
+    const accounts = typeof STAFF_ACCOUNTS !== 'undefined' ? STAFF_ACCOUNTS : [];
+    const mainTbody = document.getElementById('staffAccountsTableBody');
+    const modalTbody = document.getElementById('quickAccountModalTableBody');
+
+    const html = accounts.map(acc => {
+        const isAdmin = acc.role === 'Admin';
+        const roleBadge = isAdmin
+            ? '<span class="staff-role-badge admin">Admin</span>'
+            : '<span class="staff-role-badge user">User</span>';
+        
+        return `
+            <tr style="cursor:pointer" onclick="quickFillLogin('${escapeHtml(acc.gmail)}', '${escapeHtml(acc.role)}')" title="Nhấp để điền nhanh thông tin đăng nhập">
+                <td style="text-align:center; font-weight:700">${acc.stt}</td>
+                <td style="font-weight:700; color:var(--sky-950)">${escapeHtml(acc.name)}</td>
+                <td style="color:var(--text-main)">${escapeHtml(acc.title)}</td>
+                <td class="staff-email-red">${escapeHtml(acc.gmail)}</td>
+                <td style="text-align:center">${roleBadge}</td>
+            </tr>
+        `;
+    }).join('');
+
+    if (mainTbody) mainTbody.innerHTML = html;
+    if (modalTbody) modalTbody.innerHTML = html;
+}
+
+// Tiện ích click vào dòng tài khoản để điền nhanh form đăng nhập
+function quickFillLogin(gmail, role) {
+    const emailInput = document.getElementById('loginEmailInput');
+    const passwordInput = document.getElementById('loginPasswordInput');
+    const guideModal = document.getElementById('quickAccountModalBackdrop');
+
+    if (emailInput) emailInput.value = gmail;
+    if (passwordInput) passwordInput.value = role;
+    if (guideModal) guideModal.classList.remove('active');
+
+    const loginOverlay = document.getElementById('loginScreenOverlay');
+    if (loginOverlay && !loginOverlay.classList.contains('hidden')) {
+        const submitBtn = document.getElementById('loginSubmitBtn');
+        if (submitBtn) submitBtn.focus();
+    }
+}
+

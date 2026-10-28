@@ -37,8 +37,8 @@
         <button class="sidebar-close-btn" id="sidebarCloseBtn" title="Đóng menu">✕</button>
       </div>
 
-      <!-- Quick Action: Upload Document Button -->
-      <div style="padding: 14px 14px 0 14px;">
+      <!-- Quick Action: Upload Document Button (Chỉ dành cho Admin) -->
+      <div class="admin-only" style="padding: 14px 14px 0 14px;">
         <button id="sidebarUploadBtn" class="btn btn-upload-sidebar" style="width:100%" title="Tải file Word, Excel, PDF hoặc Ảnh mới lên kho quy trình">
           📤 TẢI TÀI LIỆU MỚI
         </button>
@@ -106,23 +106,32 @@
           <span class="nav-text">4. Tìm kiếm thông tin</span>
         </a>
 
-        <div class="nav-section-title" style="margin-top:12px">KHO LƯU TRỮ ĐÁM MÂY</div>
+        <div class="nav-section-title" style="margin-top:12px">HỆ THỐNG & TÀI KHOẢN</div>
 
-        <!-- Quản lý CSDL Kho Lưu Trữ (PostgreSQL & tai-lieu) -->
-        <a href="#storageDatabaseSection" class="nav-link" id="navDbManager">
+        <!-- Quản lý CSDL Kho Lưu Trữ (Chỉ Admin) -->
+        <a href="#storageDatabaseSection" class="nav-link admin-only" id="navDbManager">
           <span class="nav-icon">🗄️</span>
           <span class="nav-text">Quản Lý CSDL Kho Tệp</span>
         </a>
+
+        <!-- Danh Sách Tài Khoản & Phân Quyền -->
+        <a href="#accountsSection" class="nav-link" id="navAccounts">
+          <span class="nav-icon">👥</span>
+          <span class="nav-text">Danh Sách Tài Khoản</span>
+        </a>
       </nav>
 
-      <!-- Footer Sidebar -->
+      <!-- Footer Sidebar: Người Dùng Đang Đăng Nhập & Đăng Xuất -->
       <div class="sidebar-footer">
         <div class="user-card-mini">
-          <div class="user-avatar">👨‍⚕️</div>
-          <div class="user-card-info">
-            <div class="user-card-name">BS.CK2. Đào Quang Trung</div>
-            <div class="user-card-role">Trưởng Khoa Vi Sinh</div>
+          <div class="user-avatar" id="sidebarUserAvatar">👨‍⚕️</div>
+          <div class="user-card-info" style="flex-grow:1; min-width:0">
+            <div class="user-card-name" id="sidebarUserName" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis">Đang tải...</div>
+            <div class="user-card-role" id="sidebarUserRole" style="display:flex; align-items:center; gap:6px; margin-top:2px">
+              <span id="sidebarRoleBadge" class="badge-role admin">Admin</span>
+            </div>
           </div>
+          <button id="logoutBtn" class="logout-btn" title="Đăng xuất khỏi hệ thống">🚪</button>
         </div>
 
         <div class="supabase-live-badge" id="supabaseSidebarBadge" title="Trạng thái kết nối cơ sở dữ liệu và kho lưu trữ Supabase">
@@ -150,8 +159,8 @@
         </div>
 
         <div class="topbar-right">
-          <!-- Button: Tải tài liệu mới -->
-          <button id="topbarUploadBtn" class="btn btn-primary" title="Tải file Word, Excel, PDF hoặc Ảnh mới lên kho quy trình">
+          <!-- Button: Tải tài liệu mới (Chỉ dành cho Admin) -->
+          <button id="topbarUploadBtn" class="btn btn-primary admin-only" title="Tải file Word, Excel, PDF hoặc Ảnh mới lên kho quy trình">
             📤 Tải tài liệu mới
           </button>
 
@@ -362,8 +371,8 @@
           <p style="margin-top:6px; font-size:13px">Vui lòng thử từ khóa khác hoặc bấm nút "Đặt lại" để xem toàn bộ danh mục.</p>
         </div>
 
-        <!-- QUẢN LÝ CSDL KHO LƯU TRỮ TỆP (SUPABASE POSTGRESQL & STORAGE 'tai-lieu') -->
-        <section class="tasks-section" id="storageDatabaseSection">
+        <!-- QUẢN LÝ CSDL KHO LƯU TRỮ TỆP (Chỉ dành cho Admin) -->
+        <section class="tasks-section admin-only" id="storageDatabaseSection">
           <div class="tasks-header">
             <div>
               <h2 style="display:flex; align-items:center; gap:8px">
@@ -420,6 +429,37 @@
                   </td>
                 </tr>
               </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- BẢNG THÔNG TIN TÀI KHOẢN ĐĂNG NHẬP & PHÂN QUYỀN (12 NHÂN VIÊN) -->
+        <section class="tasks-section" id="accountsSection">
+          <div class="tasks-header">
+            <div>
+              <h2 style="display:flex; align-items:center; gap:8px">
+                <span>👥</span>
+                <span>Bảng Danh Sách Tài Khoản Đăng Nhập & Phân Quyền</span>
+              </h2>
+              <p style="font-size:13px; color:var(--text-muted); margin-top:2px">
+                Khoa Vi Sinh • Bệnh Viện Đa Khoa Đức Giang — <em>Tên đăng nhập là Gmail, Mật khẩu là thông tin trong cột Vai trò (Admin hoặc User)</em>
+              </p>
+            </div>
+          </div>
+
+          <!-- Bảng 12 tài khoản nhân viên theo mẫu ảnh Excel -->
+          <div class="table-wrapper" style="margin-top:14px; border: 2px solid #ca8a04; border-radius: 8px; overflow: hidden;">
+            <table class="proc-table staff-table-excel">
+              <thead>
+                <tr style="background-color: #fef08a; border-bottom: 2px solid #ca8a04;">
+                  <th style="width:55px; text-align:center; font-weight:800; color:#000; font-size:14px; border-right: 1px solid #eab308;">STT</th>
+                  <th style="font-weight:800; color:#000; font-size:14px; border-right: 1px solid #eab308;">Họ Và Tên</th>
+                  <th style="width:140px; font-weight:800; color:#000; font-size:14px; border-right: 1px solid #eab308;">Chức Danh</th>
+                  <th style="font-weight:800; color:#000; font-size:14px; border-right: 1px solid #eab308;">Gmail (Tên Đăng Nhập)</th>
+                  <th style="width:140px; text-align:center; font-weight:800; color:#000; font-size:14px;">vai trò (Mật Khẩu)</th>
+                </tr>
+              </thead>
+              <tbody id="staffAccountsTableBody"></tbody>
             </table>
           </div>
         </section>
@@ -699,10 +739,99 @@
     </div>
   </div>
 
+  <!-- ====================================================================
+       MÀN HÌNH ĐĂNG NHẬP BẮT BUỘC (LOGIN SCREEN OVERLAY)
+       ==================================================================== -->
+  <div class="login-screen-overlay" id="loginScreenOverlay">
+    <div class="login-box">
+      <div class="login-header">
+        <div class="login-logo-circle">🔬</div>
+        <h2>BỆNH VIỆN ĐA KHOA ĐỨC GIANG</h2>
+        <div class="login-sub">KHOA VI SINH • TIÊU CHUẨN ISO 15189</div>
+        <div class="login-badge">🔐 ĐĂNG NHẬP HỆ THỐNG QUẢN LÝ QUY TRÌNH</div>
+      </div>
+
+      <form id="loginForm" class="login-form">
+        <div class="login-form-group">
+          <label for="loginEmailInput">Tên Đăng Nhập (Địa chỉ Gmail):</label>
+          <div class="input-with-icon">
+            <span class="input-icon">📧</span>
+            <input 
+              type="text" 
+              id="loginEmailInput" 
+              class="login-input" 
+              placeholder="Ví dụ: bsdaoquangtrung@gmail.com" 
+              required 
+              autocomplete="username"
+            >
+          </div>
+        </div>
+
+        <div class="login-form-group">
+          <label for="loginPasswordInput">Mật Khẩu (Thông tin trong cột Vai Trò):</label>
+          <div class="input-with-icon">
+            <span class="input-icon">🔑</span>
+            <input 
+              type="password" 
+              id="loginPasswordInput" 
+              class="login-input" 
+              placeholder="Nhập 'Admin' hoặc 'User'..." 
+              required 
+              autocomplete="current-password"
+            >
+            <button type="button" class="toggle-password-btn" id="togglePasswordBtn" title="Hiện/Ẩn mật khẩu">👁️</button>
+          </div>
+        </div>
+
+        <div id="loginErrorMsg" class="login-error-msg" style="display:none"></div>
+
+        <button type="submit" class="login-submit-btn" id="loginSubmitBtn">
+          🚀 Đăng Nhập Vào Hệ Thống
+        </button>
+
+        <div class="login-footer-links">
+          <button type="button" class="btn-link-help" id="openQuickAccountGuideBtn">
+            📋 Xem Bảng Tra Cứu Tài Khoản Nhân Viên
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: TRA CỨU NHANH TÀI KHOẢN NHÂN VIÊN -->
+  <div class="modal-backdrop" id="quickAccountModalBackdrop">
+    <div class="modal-box" style="max-width: 750px;">
+      <div class="modal-header">
+        <h3>📋 Bảng Tra Cứu Tài Khoản Đăng Nhập (Khoa Vi Sinh)</h3>
+        <button class="modal-close-btn" id="closeQuickAccountModalBtn">✕</button>
+      </div>
+      <div class="modal-body" style="padding: 16px;">
+        <p style="font-size:13px; color:var(--text-muted); margin-bottom:12px">
+          💡 <strong>Quy ước đăng nhập:</strong> Tên đăng nhập là địa chỉ <strong>Gmail</strong>, Mật khẩu là <strong>Vai trò</strong> (<code>Admin</code> hoặc <code>User</code>).
+        </p>
+        <div class="table-wrapper" style="max-height: 420px; overflow-y: auto; border: 2px solid #ca8a04; border-radius: 6px;">
+          <table class="proc-table staff-table-excel">
+            <thead>
+              <tr style="background-color: #fef08a;">
+                <th style="width:50px; text-align:center; color:#000; font-weight:800; border-right: 1px solid #eab308;">STT</th>
+                <th style="color:#000; font-weight:800; border-right: 1px solid #eab308;">Họ Và Tên</th>
+                <th style="width:110px; color:#000; font-weight:800; border-right: 1px solid #eab308;">Chức Danh</th>
+                <th style="color:#000; font-weight:800; border-right: 1px solid #eab308;">Gmail</th>
+                <th style="width:100px; text-align:center; color:#000; font-weight:800;">vai trò</th>
+              </tr>
+            </thead>
+            <tbody id="quickAccountModalTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Toast Notification -->
   <div id="toastNotification" class="toast-notification"></div>
 
   <!-- Scripts -->
+  <script src="js/accounts.js"></script>
   <script src="js/data.js"></script>
   <script src="js/supabase-config.js"></script>
   <script src="js/app.js"></script>
