@@ -23,6 +23,17 @@ function removeVietnameseTones(str) {
     return str.trim();
 }
 
+// Thoát ký tự HTML an toàn chống lỗi hiển thị
+function escapeHtml(str) {
+    if (str === null || str === undefined) return '';
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
 // Phân loại định dạng tệp từ tên file
 function getFileFormatInfo(filename) {
     if (!filename) return { type: 'pdf', label: 'PDF', icon: '📄', cssClass: 'format-pdf' };
@@ -1210,59 +1221,70 @@ function renderStorageDbTable() {
     const tbody = document.getElementById('storageDbTableBody');
     if (!tbody) return;
 
-    if (AppState.procedures.length === 0) {
+    try {
+        if (!AppState.procedures || AppState.procedures.length === 0) {
+            tbody.innerHTML = `
+                <tr>
+                    <td colspan="6" style="text-align:center; padding:30px; color:var(--text-muted)">
+                        Chưa có tài liệu nào trong kho. Bấm "Tải Tệp Mới Lên Kho" để bắt đầu lưu trữ.
+                    </td>
+                </tr>
+            `;
+            return;
+        }
+
+        tbody.innerHTML = AppState.procedures.map(p => {
+            const fmt = getFileFormatInfo(p.filename);
+            const docUrl = getDocumentUrl(p);
+
+            return `
+                <tr>
+                    <td>
+                        <span class="code-badge">${escapeHtml(p.code)}</span>
+                    </td>
+                    <td>
+                        <div style="font-weight:700; color:var(--sky-950); margin-bottom:2px">
+                            ${escapeHtml(p.title)}
+                        </div>
+                        <div style="font-size:11px; color:var(--text-muted); font-family:monospace">
+                            📁 ${escapeHtml(p.storageKey || p.filename)}
+                        </div>
+                    </td>
+                    <td>
+                        <span class="category-pill" style="font-size:11px; padding:3px 8px">${escapeHtml(p.category)}</span>
+                    </td>
+                    <td>
+                        <span class="format-badge ${fmt.cssClass}">${fmt.icon} ${fmt.label}</span>
+                    </td>
+                    <td style="font-size:12px; color:var(--text-muted)">
+                        ${escapeHtml(p.sizeFormatted || 'N/A')}
+                    </td>
+                    <td style="text-align:center">
+                        <div class="action-btn-group" style="justify-content:center">
+                            <a href="${docUrl}" target="_blank" class="action-btn-sm" title="Mở xem tài liệu từ Supabase Storage">
+                                👁️ Mở
+                            </a>
+                            <button onclick="handleEditDoc('${p.id}')" class="action-btn-sm" title="Sửa thông tin tệp trong CSDL">
+                                ✏️ Sửa
+                            </button>
+                            <button onclick="handleDeleteDoc('${p.id}')" class="action-btn-sm delete-btn" title="Xóa tài liệu khỏi CSDL & Kho Storage">
+                                🗑️ Xóa
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `;
+        }).join('');
+    } catch (err) {
+        console.error('Lỗi khi hiển thị bảng storageDbTable:', err);
         tbody.innerHTML = `
             <tr>
-                <td colspan="6" style="text-align:center; padding:30px; color:var(--text-muted)">
-                    Chưa có tài liệu nào trong kho. Bấm "Tải Tệp Mới Lên Kho" để bắt đầu lưu trữ.
+                <td colspan="6" style="text-align:center; padding:20px; color:var(--danger)">
+                    ⚠️ Đã nạp dữ liệu nhưng có lỗi giao diện: ${escapeHtml(err.message)}
                 </td>
             </tr>
         `;
-        return;
     }
-
-    tbody.innerHTML = AppState.procedures.map(p => {
-        const fmt = getFileFormatInfo(p.filename);
-        const docUrl = getDocumentUrl(p);
-
-        return `
-            <tr>
-                <td>
-                    <span class="code-badge">${escapeHtml(p.code)}</span>
-                </td>
-                <td>
-                    <div style="font-weight:700; color:var(--sky-950); margin-bottom:2px">
-                        ${escapeHtml(p.title)}
-                    </div>
-                    <div style="font-size:11px; color:var(--text-muted); font-family:monospace">
-                        📁 ${escapeHtml(p.storageKey || p.filename)}
-                    </div>
-                </td>
-                <td>
-                    <span class="category-pill" style="font-size:11px; padding:3px 8px">${escapeHtml(p.category)}</span>
-                </td>
-                <td>
-                    <span class="format-badge ${fmt.cssClass}">${fmt.icon} ${fmt.label}</span>
-                </td>
-                <td style="font-size:12px; color:var(--text-muted)">
-                    ${escapeHtml(p.sizeFormatted || 'N/A')}
-                </td>
-                <td style="text-align:center">
-                    <div class="action-btn-group" style="justify-content:center">
-                        <a href="${docUrl}" target="_blank" class="action-btn-sm" title="Mở xem tài liệu từ Supabase Storage">
-                            👁️ Mở
-                        </a>
-                        <button onclick="handleEditDoc(${p.id})" class="action-btn-sm" title="Sửa thông tin tệp trong CSDL">
-                            ✏️ Sửa
-                        </button>
-                        <button onclick="handleDeleteDoc(${p.id})" class="action-btn-sm delete-btn" title="Xóa tài liệu khỏi CSDL & Kho Storage">
-                            🗑️ Xóa
-                        </button>
-                    </div>
-                </td>
-            </tr>
-        `;
-    }).join('');
 }
 
 // Khởi tạo Modal Chỉnh Sửa Thông Tin Tài Liệu CSDL
@@ -1292,7 +1314,7 @@ function initEditDocModal() {
 
 // Mở modal sửa thông tin tài liệu
 function handleEditDoc(docId) {
-    const doc = AppState.procedures.find(p => p.id === docId);
+    const doc = AppState.procedures.find(p => String(p.id) === String(docId));
     if (!doc) return;
 
     document.getElementById('editDocId').value = doc.id;
@@ -1317,7 +1339,7 @@ async function handleSaveEditDoc(e) {
     const year = parseInt(document.getElementById('editDocYearInput').value) || 2024;
     const lead = document.getElementById('editDocLeadInput').value.trim();
 
-    const docIndex = AppState.procedures.findIndex(p => p.id == id);
+    const docIndex = AppState.procedures.findIndex(p => String(p.id) === String(id));
     if (docIndex !== -1) {
         AppState.procedures[docIndex].code = code;
         AppState.procedures[docIndex].title = title.toUpperCase();
@@ -1353,7 +1375,7 @@ async function handleSaveEditDoc(e) {
 
 // Xóa tài liệu khỏi Cơ sở dữ liệu và Storage Bucket 'tai-lieu'
 async function handleDeleteDoc(docId) {
-    const doc = AppState.procedures.find(p => p.id === docId);
+    const doc = AppState.procedures.find(p => String(p.id) === String(docId));
     if (!doc) return;
 
     const confirmMsg = `Bạn có chắc chắn muốn xóa tài liệu:\n"${doc.code} - ${doc.title}"\nkhỏi Cơ sở dữ liệu và Kho lưu trữ tệp 'tai-lieu'?`;
@@ -1380,7 +1402,7 @@ async function handleDeleteDoc(docId) {
     }
 
     // Xóa khỏi State cục bộ
-    AppState.procedures = AppState.procedures.filter(p => p.id !== docId);
+    AppState.procedures = AppState.procedures.filter(p => String(p.id) !== String(docId));
 
     // Cập nhật lại KPIs, biểu đồ và các bảng
     initKPIs();
