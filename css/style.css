@@ -1296,3 +1296,240 @@ button, input, select, textarea {
     display: block;
   }
 }
+
+/* ==========================================================================
+   Bổ sung CSS cho Kho Lưu Trữ Supabase Storage & Upload Tài Liệu Mới
+   ========================================================================== */
+
+/* Nút Tải Tài Liệu Sidebar */
+.btn-upload-sidebar {
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: var(--transition);
+}
+
+.btn-upload-sidebar:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(14, 165, 233, 0.5);
+}
+
+/* Storage Badge trên Topbar */
+.storage-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--sky-100);
+  border: 1px solid var(--border-color);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--sky-900);
+}
+
+[data-theme="dark"] .storage-badge {
+  background-color: #1e293b;
+  color: var(--sky-200);
+}
+
+/* Banner thông báo kho đám mây */
+.storage-notice-banner {
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+  border: 1.5px solid var(--sky-300);
+  border-radius: var(--radius-lg);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="dark"] .storage-notice-banner {
+  background: linear-gradient(135deg, #0c4a6e 0%, #082f49 100%);
+  border-color: #0284c7;
+}
+
+.banner-icon {
+  font-size: 26px;
+  flex-shrink: 0;
+}
+
+.banner-text {
+  font-size: 13.5px;
+  color: var(--sky-950);
+  line-height: 1.45;
+}
+
+[data-theme="dark"] .banner-text {
+  color: #f0f9ff;
+}
+
+.banner-text code {
+  background: var(--sky-200);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-weight: 700;
+  color: var(--sky-900);
+}
+
+[data-theme="dark"] .banner-text code {
+  background: #075985;
+  color: #bae6fd;
+}
+
+/* File Upload Dropzone */
+.file-upload-dropzone {
+  border: 2px dashed var(--sky-300);
+  border-radius: var(--radius-lg);
+  background-color: var(--sky-50);
+  padding: 24px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+[data-theme="dark"] .file-upload-dropzone {
+  background-color: #1e293b;
+  border-color: #0284c7;
+}
+
+.file-upload-dropzone:hover, .file-upload-dropzone.dragover {
+  border-color: var(--primary);
+  background-color: var(--sky-100);
+}
+
+.dropzone-icon {
+  font-size: 38px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.dropzone-content p {
+  font-size: 14px;
+  color: var(--sky-900);
+  margin-bottom: 4px;
+}
+
+[data-theme="dark"] .dropzone-content p {
+  color: #e2e8f0;
+}
+
+.selected-file-preview {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+[data-theme="dark"] .selected-file-preview {
+  background-color: #0f172a;
+}
+
+.file-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.file-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.file-info strong {
+  font-size: 14px;
+  word-break: break-all;
+  color: var(--sky-950);
+}
+
+[data-theme="dark"] .file-info strong {
+  color: #fff;
+}
+
+.file-info span {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Format Badges */
+.format-badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  text-transform: uppercase;
+}
+
+.format-pdf { background-color: #fee2e2; color: #b91c1c; border: 1px solid #fecaca; }
+.format-word { background-color: #dbeafe; color: #1d4ed8; border: 1px solid #bfdbfe; }
+.format-excel { background-color: #d1fae5; color: #047857; border: 1px solid #a7f3d0; }
+.format-image { background-color: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
+
+/* Storage Source Tag */
+.storage-tag {
+  background-color: var(--sky-100);
+  color: var(--sky-800);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+[data-theme="dark"] .storage-tag {
+  background-color: rgba(14, 165, 233, 0.2);
+  color: var(--sky-300);
+}
+
+/* Toast Notification */
+.toast-notification {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: var(--sky-900);
+  color: #ffffff;
+  padding: 14px 20px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 5000;
+  display: none;
+  align-items: center;
+  gap: 10px;
+  animation: slideInUp 0.3s ease;
+  border-left: 4px solid var(--success);
+}
+
+.toast-notification.active {
+  display: flex;
+}
+
+@keyframes slideInUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

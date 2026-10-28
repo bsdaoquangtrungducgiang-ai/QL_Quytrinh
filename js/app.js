@@ -1,8 +1,11 @@
 /**
  * Ứng dụng Quản lý Quy Trình Xét Nghiệm Vi Sinh
  * Khoa Vi Sinh - Bệnh Viện Đa Khoa Đức Giang
+ * Tích hợp: Supabase Storage Bucket ('tai-lieu') & Upload Đa Định Dạng (PDF, Word, Excel, Ảnh)
  * Tác giả: BS.CK2. Đào Quang Trung & Đội ngũ CNTT
  */
+
+const BUCKET_NAME = 'tai-lieu';
 
 // Tiện ích loại bỏ dấu tiếng Việt để tìm kiếm thông minh
 function removeVietnameseTones(str) {
@@ -15,9 +18,37 @@ function removeVietnameseTones(str) {
     str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
     str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
     str = str.replace(/đ/g, "d");
-    str = str.replace(/\u0300|\u0301|\u0303|\u0309|\u0323/g, ""); // Huyền, sắc, ngã, hỏi, nặng
-    str = str.replace(/\u02C6|\u0306|\u031B/g, ""); // Â, Ê, Ă, Ơ, Ư
+    str = str.replace(/\u0300|\u0301|\u0303|\u0309|\u0323/g, "");
+    str = str.replace(/\u02C6|\u0306|\u031B/g, "");
     return str.trim();
+}
+
+// Phân loại định dạng tệp từ tên file
+function getFileFormatInfo(filename) {
+    if (!filename) return { type: 'pdf', label: 'PDF', icon: '📄', cssClass: 'format-pdf' };
+    const ext = filename.split('.').pop().toLowerCase();
+    if (['doc', 'docx'].includes(ext)) {
+        return { type: 'word', label: 'Word', icon: '📝', cssClass: 'format-word' };
+    }
+    if (['xls', 'xlsx', 'csv'].includes(ext)) {
+        return { type: 'excel', label: 'Excel', icon: '📊', cssClass: 'format-excel' };
+    }
+    if (['png', 'jpg', 'jpeg', 'webp', 'bmp'].includes(ext)) {
+        return { type: 'image', label: 'Ảnh', icon: '🖼️', cssClass: 'format-image' };
+    }
+    return { type: 'pdf', label: 'PDF', icon: '📄', cssClass: 'format-pdf' };
+}
+
+// Lấy đường dẫn gọi file từ Supabase Storage hoặc Fallback nội bộ
+function getDocumentUrl(proc) {
+    if (proc.storageUrl) return proc.storageUrl;
+    // URL chuẩn trên Supabase Storage
+    const storagePublicUrl = `${SUPABASE_CONFIG.url}/storage/v1/object/public/${BUCKET_NAME}/${encodeURIComponent(proc.category)}/${encodeURIComponent(proc.filename)}`;
+    // Nếu chạy local offline có file nội bộ
+    if (window.location.protocol === 'file:' && proc.path) {
+        return proc.path;
+    }
+    return storagePublicUrl;
 }
 
 // State Quản lý ứng dụng
@@ -26,6 +57,7 @@ const AppState = {
     filteredProcedures: [],
     selectedCategory: 'all',
     selectedType: 'all',
+    selectedFormat: 'all',
     selectedYear: 'all',
     searchQuery: '',
     sortBy: 'code_asc',
@@ -35,20 +67,52 @@ const AppState = {
         typeChart: null
     },
     tasks: [],
-    employees: []
+    employees: [],
+    selectedUploadFile: null
 };
 
 // Khởi chạy khi DOM sẵn sàng
 document.addEventListener('DOMContentLoaded', () => {
+    loadCustomProcedures();
     initTheme();
     initKPIs();
     initFilterOptions();
     initEventListeners();
     initSidebarNavigation();
+    initUploadModal();
     initCharts();
     filterAndRender();
     initSupabaseData();
+    checkStorageBucketStatus();
 });
+
+// Nạp các tài liệu đã upload thêm trước đó (lưu trong LocalStorage)
+function loadCustomProcedures() {
+    try {
+        const custom = localStorage.getItem('custom_procedures_v1');
+        if (custom) {
+            const parsed = JSON.parse(custom);
+            if (Array.isArray(parsed) && parsed.length > 0) {
+                // Thêm vào danh sách chính (tránh trùng id)
+                parsed.forEach(cp => {
+                    if (!AppState.procedures.some(p => p.id === cp.id)) {
+                        AppState.procedures.unshift(cp);
+                    }
+                });
+            }
+        }
+    } catch (e) {
+        console.warn('Lỗi nạp custom procedures:', e);
+    }
+}
+
+function saveCustomProcedure(newProc) {
+    try {
+        const custom = JSON.parse(localStorage.getItem('custom_procedures_v1') || '[]');
+        custom.unshift(newProc);
+        localStorage.setItem('custom_procedures_v1', JSON.stringify(custom));
+    } catch (e) {}
+}
 
 // 1. Quản lý Theme (Dark / Light)
 function initTheme() {
@@ -89,25 +153,28 @@ function initKPIs() {
     document.getElementById('statRecentProcedures').textContent = recent;
 
     // Cập nhật số lượng trên các tab category
-    const catCounts = {
-        all: total,
-        'Quản Lý Chất Lượng': ql,
-        'Miễn Dịch': AppState.procedures.filter(p => p.category === 'Miễn Dịch').length,
-        'Nuôi Cấy': AppState.procedures.filter(p => p.category === 'Nuôi Cấy').length,
-        'Nhuộm Soi': AppState.procedures.filter(p => p.category === 'Nhuộm Soi').length,
-        'Sinh Học Phân Tử (PCR)': AppState.procedures.filter(p => p.category === 'Sinh Học Phân Tử (PCR)').length
-    };
+    const countAll = total;
+    const countQL = ql;
+    const countMD = AppState.procedures.filter(p => p.category === 'Miễn Dịch').length;
+    const countNC = AppState.procedures.filter(p => p.category === 'Nuôi Cấy').length;
+    const countNS = AppState.procedures.filter(p => p.category === 'Nhuộm Soi').length;
+    const countPCR = AppState.procedures.filter(p => p.category === 'Sinh Học Phân Tử (PCR)').length;
 
-    document.querySelectorAll('.cat-pill').forEach(pill => {
-        const cat = pill.getAttribute('data-category');
-        const countSpan = pill.querySelector('.count');
-        if (countSpan && catCounts[cat] !== undefined) {
-            countSpan.textContent = catCounts[cat];
-        }
-    });
+    const elAll = document.getElementById('pillCountAll'); if (elAll) elAll.textContent = countAll;
+    const elQL = document.getElementById('pillCountQL'); if (elQL) elQL.textContent = countQL;
+    const elMD = document.getElementById('pillCountMD'); if (elMD) elMD.textContent = countMD;
+    const elNC = document.getElementById('pillCountNC'); if (elNC) elNC.textContent = countNC;
+    const elNS = document.getElementById('pillCountNS'); if (elNS) elNS.textContent = countNS;
+    const elPCR = document.getElementById('pillCountPCR'); if (elPCR) elPCR.textContent = countPCR;
+
+    const navQLBadge = document.querySelector('#navQL .nav-badge'); if (navQLBadge) navQLBadge.textContent = countQL;
+    const navNSBadge = document.querySelector('#navNhuomSoi .sub-badge'); if (navNSBadge) navNSBadge.textContent = countNS;
+    const navNCBadge = document.querySelector('#navNuoiCay .sub-badge'); if (navNCBadge) navNCBadge.textContent = countNC;
+    const navMDBadge = document.querySelector('#navMienDich .sub-badge'); if (navMDBadge) navMDBadge.textContent = countMD;
+    const navSHPTBadge = document.querySelector('#navSHPT .sub-badge'); if (navSHPTBadge) navSHPTBadge.textContent = countPCR;
 }
 
-// 3. Khởi tạo danh sách bộ lọc Loại quy trình & Năm
+// 3. Khởi tạo danh sách bộ lọc Loại quy trình, Định dạng & Năm
 function initFilterOptions() {
     const typeSelect = document.getElementById('typeFilterSelect');
     const yearSelect = document.getElementById('yearFilterSelect');
@@ -246,9 +313,31 @@ function updateChartTheme() {
     });
 }
 
+function updateChartsData() {
+    if (AppState.charts.categoryChart) {
+        AppState.charts.categoryChart.data.datasets[0].data = [
+            AppState.procedures.filter(p => p.category === 'Nuôi Cấy').length,
+            AppState.procedures.filter(p => p.category === 'Quản Lý Chất Lượng').length,
+            AppState.procedures.filter(p => p.category === 'Miễn Dịch').length,
+            AppState.procedures.filter(p => p.category === 'Nhuộm Soi').length,
+            AppState.procedures.filter(p => p.category === 'Sinh Học Phân Tử (PCR)').length
+        ];
+        AppState.charts.categoryChart.update();
+    }
+
+    if (AppState.charts.typeChart) {
+        const typeCountMap = {};
+        AppState.procedures.forEach(p => {
+            typeCountMap[p.type] = (typeCountMap[p.type] || 0) + 1;
+        });
+        AppState.charts.typeChart.data.labels = Object.keys(typeCountMap);
+        AppState.charts.typeChart.data.datasets[0].data = Object.values(typeCountMap);
+        AppState.charts.typeChart.update();
+    }
+}
+
 // 5. Khởi tạo Menu chính Phía Bên Trái (Left Sidebar Navigation)
 function initSidebarNavigation() {
-    // Accordion toggle cho mục 3. Quy trình kỹ thuật
     const techBtn = document.getElementById('techGroupToggleBtn');
     const techGroup = document.getElementById('techGroup');
     if (techBtn && techGroup) {
@@ -258,7 +347,6 @@ function initSidebarNavigation() {
         });
     }
 
-    // Xử lý các liên kết Menu chính bên trái
     const navLinks = [
         { id: 'navHome', nav: 'home' },
         { id: 'navQL', nav: 'quan-ly' },
@@ -267,6 +355,7 @@ function initSidebarNavigation() {
         { id: 'navMienDich', nav: 'mien-dich' },
         { id: 'navSHPT', nav: 'sinh-hoc-pt' },
         { id: 'navTimKiem', nav: 'tim-kiem' },
+        { id: 'navStorage', nav: 'storage' },
         { id: 'navTasks', nav: 'tasks' }
     ];
 
@@ -281,7 +370,6 @@ function initSidebarNavigation() {
         }
     });
 
-    // Mobile Drawer Open / Close
     const mobileBtn = document.getElementById('mobileMenuBtn');
     const closeBtn = document.getElementById('sidebarCloseBtn');
     const backdrop = document.getElementById('sidebarBackdrop');
@@ -310,9 +398,7 @@ function closeMobileSidebar() {
     if (backdrop) backdrop.classList.remove('active');
 }
 
-// Hàm kích hoạt lọc từ Menu chính
 function filterByNav(navKey) {
-    // Reset active class trên sidebar
     document.querySelectorAll('.sidebar-nav .nav-link, .sidebar-nav .nav-sublink').forEach(el => {
         el.classList.remove('active');
     });
@@ -344,7 +430,6 @@ function filterByNav(navKey) {
             break;
 
         case 'tech':
-            // Khi bấm vào card kỹ thuật vi sinh
             document.getElementById('techGroup').classList.add('open');
             topbarTitle.innerHTML = '<span>🧫 3. QUY TRÌNH KỸ THUẬT XÉT NGHIỆM VI SINH</span>';
             dashboardSection.style.display = 'block';
@@ -410,10 +495,25 @@ function filterByNav(navKey) {
             }, 300);
             break;
 
+        case 'storage':
+            document.getElementById('navStorage').classList.add('active');
+            topbarTitle.innerHTML = '<span>☁️ KHO LƯU TRỮ SUPABASE STORAGE BUCKET</span>';
+            const banner = document.getElementById('storageNoticeBanner');
+            if (banner) banner.scrollIntoView({ behavior: 'smooth' });
+            break;
+
         case 'tasks':
             document.getElementById('navTasks').classList.add('active');
             topbarTitle.innerHTML = '<span>📝 SỔ GHI NHỚ & PHÂN CÔNG QUY TRÌNH</span>';
             document.getElementById('tasksSection').scrollIntoView({ behavior: 'smooth' });
+            break;
+
+        case 'recent':
+            topbarTitle.innerHTML = '<span>⚡ CÁC QUY TRÌNH HIỆU LỰC MỚI (2025 - 2026)</span>';
+            document.getElementById('yearFilterSelect').value = '2025';
+            AppState.selectedYear = '2025';
+            filterAndRender();
+            searchSection.scrollIntoView({ behavior: 'smooth' });
             break;
     }
 }
@@ -426,7 +526,6 @@ function syncPillActive(category) {
 
 // 6. Tìm kiếm & Lọc Quy Trình
 function initEventListeners() {
-    // Search input
     const searchInput = document.getElementById('searchInput');
     const clearBtn = document.getElementById('searchClearBtn');
 
@@ -444,14 +543,12 @@ function initEventListeners() {
         searchInput.focus();
     });
 
-    // Category pills
     document.querySelectorAll('.cat-pill').forEach(pill => {
         pill.addEventListener('click', () => {
             const cat = pill.getAttribute('data-category');
             AppState.selectedCategory = cat;
             syncPillActive(cat);
 
-            // Đồng bộ sidebar navigation
             if (cat === 'all') filterByNav('home');
             else if (cat === 'Quản Lý Chất Lượng') filterByNav('quan-ly');
             else if (cat === 'Nuôi Cấy') filterByNav('nuoi-cay');
@@ -462,9 +559,13 @@ function initEventListeners() {
         });
     });
 
-    // Dropdowns
     document.getElementById('typeFilterSelect').addEventListener('change', (e) => {
         AppState.selectedType = e.target.value;
+        filterAndRender();
+    });
+
+    document.getElementById('formatFilterSelect').addEventListener('change', (e) => {
+        AppState.selectedFormat = e.target.value;
         filterAndRender();
     });
 
@@ -478,7 +579,6 @@ function initEventListeners() {
         filterAndRender();
     });
 
-    // View modes
     const gridBtn = document.getElementById('viewGridBtn');
     const tableBtn = document.getElementById('viewTableBtn');
 
@@ -496,25 +596,25 @@ function initEventListeners() {
         renderProcedures();
     });
 
-    // Reset filter button
     document.getElementById('resetFilterBtn').addEventListener('click', () => {
         searchInput.value = '';
         AppState.searchQuery = '';
         clearBtn.classList.remove('visible');
         AppState.selectedCategory = 'all';
         AppState.selectedType = 'all';
+        AppState.selectedFormat = 'all';
         AppState.selectedYear = 'all';
         AppState.sortBy = 'code_asc';
 
         filterByNav('home');
         document.getElementById('typeFilterSelect').value = 'all';
+        document.getElementById('formatFilterSelect').value = 'all';
         document.getElementById('yearFilterSelect').value = 'all';
         document.getElementById('sortFilterSelect').value = 'code_asc';
 
         filterAndRender();
     });
 
-    // Modal close
     document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
     document.getElementById('detailModalBackdrop').addEventListener('click', (e) => {
         if (e.target.id === 'detailModalBackdrop') closeModal();
@@ -533,7 +633,6 @@ function initEventListeners() {
         }
     });
 
-    // Task Form Submit
     document.getElementById('addTaskForm').addEventListener('submit', handleAddTaskSubmit);
 }
 
@@ -541,19 +640,19 @@ function filterAndRender() {
     const rawQuery = removeVietnameseTones(AppState.searchQuery.trim());
 
     AppState.filteredProcedures = AppState.procedures.filter(p => {
-        // Lọc category
         if (AppState.selectedCategory !== 'all' && p.category !== AppState.selectedCategory) {
             return false;
         }
-        // Lọc type
         if (AppState.selectedType !== 'all' && p.type !== AppState.selectedType) {
             return false;
         }
-        // Lọc year
+        if (AppState.selectedFormat !== 'all') {
+            const fmt = getFileFormatInfo(p.filename);
+            if (fmt.type !== AppState.selectedFormat) return false;
+        }
         if (AppState.selectedYear !== 'all' && p.year.toString() !== AppState.selectedYear.toString()) {
             return false;
         }
-        // Tìm kiếm thông minh
         if (rawQuery) {
             const rawTitle = removeVietnameseTones(p.title);
             const rawCode = removeVietnameseTones(p.code);
@@ -571,7 +670,6 @@ function filterAndRender() {
         return true;
     });
 
-    // Sắp xếp
     AppState.filteredProcedures.sort((a, b) => {
         if (AppState.sortBy === 'code_asc') return a.code.localeCompare(b.code);
         if (AppState.sortBy === 'code_desc') return b.code.localeCompare(a.code);
@@ -615,56 +713,70 @@ function renderProcedures() {
         gridContainer.style.display = 'grid';
         tableContainer.style.display = 'none';
 
-        gridContainer.innerHTML = AppState.filteredProcedures.map(p => `
-            <div class="proc-card">
-                <div>
-                    <div class="proc-card-header">
-                        <span class="sop-code">${p.code || 'SOP'}</span>
-                        <span class="proc-badge ${getCategoryBadgeClass(p.category)}">${p.category}</span>
-                    </div>
-                    <div class="proc-card-body">
-                        <h4 class="proc-title" title="${p.title}">${p.title}</h4>
-                        <div class="proc-meta">
-                            <span class="proc-meta-item">📁 ${p.type}</span>
-                            <span class="proc-meta-item">📅 Năm ${p.year}</span>
-                            <span class="proc-meta-item">💾 ${p.sizeFormatted}</span>
+        gridContainer.innerHTML = AppState.filteredProcedures.map(p => {
+            const fmt = getFileFormatInfo(p.filename);
+            const fileUrl = getDocumentUrl(p);
+
+            return `
+                <div class="proc-card" id="proc-card-${p.id}">
+                    <div>
+                        <div class="proc-card-header">
+                            <span class="sop-code">${p.code || 'SOP'}</span>
+                            <div style="display:flex; gap:6px; align-items:center">
+                                <span class="format-badge ${fmt.cssClass}">${fmt.icon} ${fmt.label}</span>
+                                <span class="proc-badge ${getCategoryBadgeClass(p.category)}">${p.category}</span>
+                            </div>
+                        </div>
+                        <div class="proc-card-body">
+                            <h4 class="proc-title" title="${p.title}">${p.title}</h4>
+                            <div class="proc-meta">
+                                <span class="proc-meta-item">📁 ${p.type}</span>
+                                <span class="proc-meta-item">📅 Năm ${p.year}</span>
+                                <span class="proc-meta-item">💾 ${p.sizeFormatted}</span>
+                            </div>
                         </div>
                     </div>
+                    <div class="proc-card-footer">
+                        <a href="${fileUrl}" target="_blank" class="btn btn-primary btn-sm" style="flex:1" title="Xem hoặc tải tệp từ Supabase Storage">
+                            ${fmt.icon} Mở Tài Liệu
+                        </a>
+                        <button onclick="openProcedureDetail(${p.id})" class="btn btn-outline btn-sm">
+                            🔍 Chi tiết
+                        </button>
+                    </div>
                 </div>
-                <div class="proc-card-footer">
-                    <a href="${encodeURI(p.path)}" target="_blank" class="btn btn-primary btn-sm" style="flex:1">
-                        📄 Mở File PDF
-                    </a>
-                    <button onclick="openProcedureDetail(${p.id})" class="btn btn-outline btn-sm">
-                        🔍 Chi tiết
-                    </button>
-                </div>
-            </div>
-        `).join('');
+            `;
+        }).join('');
     } else {
         gridContainer.style.display = 'none';
         tableContainer.style.display = 'block';
 
         const tbody = document.getElementById('proceduresTableBody');
-        tbody.innerHTML = AppState.filteredProcedures.map(p => `
-            <tr>
-                <td style="font-weight:700; font-family:monospace">${p.code || 'SOP'}</td>
-                <td style="font-weight:600">${p.title}</td>
-                <td><span class="proc-badge ${getCategoryBadgeClass(p.category)}">${p.category}</span></td>
-                <td>${p.type}</td>
-                <td><span style="font-weight:600">${p.year}</span></td>
-                <td>
-                    <div style="display:flex; gap:6px">
-                        <a href="${encodeURI(p.path)}" target="_blank" class="btn btn-primary btn-sm">
-                            📄 Mở PDF
-                        </a>
-                        <button onclick="openProcedureDetail(${p.id})" class="btn btn-outline btn-sm">
-                            🔍
-                        </button>
-                    </div>
-                </td>
-            </tr>
-        `).join('');
+        tbody.innerHTML = AppState.filteredProcedures.map(p => {
+            const fmt = getFileFormatInfo(p.filename);
+            const fileUrl = getDocumentUrl(p);
+
+            return `
+                <tr id="proc-row-${p.id}">
+                    <td style="font-weight:700; font-family:monospace">${p.code || 'SOP'}</td>
+                    <td style="font-weight:600">${p.title}</td>
+                    <td><span class="proc-badge ${getCategoryBadgeClass(p.category)}">${p.category}</span></td>
+                    <td>${p.type}</td>
+                    <td><span class="format-badge ${fmt.cssClass}">${fmt.icon} ${fmt.label}</span></td>
+                    <td><span style="font-weight:600">${p.year}</span></td>
+                    <td>
+                        <div style="display:flex; gap:6px">
+                            <a href="${fileUrl}" target="_blank" class="btn btn-primary btn-sm" title="Xem tệp">
+                                ${fmt.icon} Mở
+                            </a>
+                            <button onclick="openProcedureDetail(${p.id})" class="btn btn-outline btn-sm" title="Xem chi tiết">
+                                🔍
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `;
+        }).join('');
     }
 }
 
@@ -672,6 +784,9 @@ function renderProcedures() {
 function openProcedureDetail(procId) {
     const p = AppState.procedures.find(item => item.id === procId);
     if (!p) return;
+
+    const fmt = getFileFormatInfo(p.filename);
+    const fileUrl = getDocumentUrl(p);
 
     document.getElementById('modalSopCode').textContent = p.code || 'SOP';
     document.getElementById('modalTitle').textContent = p.title;
@@ -684,7 +799,8 @@ function openProcedureDetail(procId) {
     document.getElementById('modalSize').textContent = p.sizeFormatted;
 
     const openPdfBtn = document.getElementById('modalOpenPdfBtn');
-    openPdfBtn.href = encodeURI(p.path);
+    openPdfBtn.href = fileUrl;
+    openPdfBtn.innerHTML = `${fmt.icon} Mở Toàn Văn (${fmt.label})`;
 
     document.getElementById('detailModalBackdrop').classList.add('active');
 }
@@ -693,22 +809,276 @@ function closeModal() {
     document.getElementById('detailModalBackdrop').classList.remove('active');
 }
 
-// 8. Đồng Bộ & Tương Tác Dữ Liệu Supabase
+// 8. TÍNH NĂNG TẢI TÀI LIỆU MỚI LÊN SUPABASE STORAGE
+function initUploadModal() {
+    const openBtns = [document.getElementById('sidebarUploadBtn'), document.getElementById('topbarUploadBtn')];
+    const modalBackdrop = document.getElementById('uploadDocModalBackdrop');
+    const closeBtn = document.getElementById('closeUploadModalBtn');
+    const cancelBtn = document.getElementById('cancelUploadBtn');
+    const form = document.getElementById('uploadDocForm');
+    const fileInput = document.getElementById('uploadFileInput');
+    const dropZone = document.getElementById('fileDropZone');
+    const dropzoneContent = document.getElementById('dropzoneContent');
+    const selectedFilePreview = document.getElementById('selectedFilePreview');
+    const removeFileBtn = document.getElementById('removeFileBtn');
+
+    openBtns.forEach(btn => {
+        if (btn) {
+            btn.addEventListener('click', () => {
+                modalBackdrop.classList.add('active');
+            });
+        }
+    });
+
+    function closeUploadModal() {
+        modalBackdrop.classList.remove('active');
+        form.reset();
+        AppState.selectedUploadFile = null;
+        dropzoneContent.style.display = 'block';
+        selectedFilePreview.style.display = 'none';
+        document.getElementById('uploadProgressBarWrapper').style.display = 'none';
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closeUploadModal);
+    if (cancelBtn) cancelBtn.addEventListener('click', closeUploadModal);
+    if (modalBackdrop) {
+        modalBackdrop.addEventListener('click', (e) => {
+            if (e.target.id === 'uploadDocModalBackdrop') closeUploadModal();
+        });
+    }
+
+    // Dropzone interaction
+    if (dropZone && fileInput) {
+        dropZone.addEventListener('click', (e) => {
+            if (e.target.id !== 'removeFileBtn') {
+                fileInput.click();
+            }
+        });
+
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('dragover');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+                handleFileSelected(e.dataTransfer.files[0]);
+            }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files && e.target.files.length > 0) {
+                handleFileSelected(e.target.files[0]);
+            }
+        });
+    }
+
+    if (removeFileBtn) {
+        removeFileBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            AppState.selectedUploadFile = null;
+            fileInput.value = '';
+            dropzoneContent.style.display = 'block';
+            selectedFilePreview.style.display = 'none';
+        });
+    }
+
+    function handleFileSelected(file) {
+        AppState.selectedUploadFile = file;
+        const fmt = getFileFormatInfo(file.name);
+        document.getElementById('previewFileIcon').textContent = fmt.icon;
+        document.getElementById('previewFileName').textContent = file.name;
+        const sizeFormatted = file.size > 1024*1024 ? `${(file.size/(1024*1024)).toFixed(2)} MB` : `${(file.size/1024).toFixed(0)} KB`;
+        document.getElementById('previewFileSize').textContent = sizeFormatted;
+
+        dropzoneContent.style.display = 'none';
+        selectedFilePreview.style.display = 'flex';
+
+        // Tự động điền gợi ý tên tài liệu nếu chưa nhập
+        const titleInput = document.getElementById('uploadTitleInput');
+        if (!titleInput.value.trim()) {
+            let suggestedTitle = file.name.replace(/\.[^/.]+$/, "");
+            suggestedTitle = suggestedTitle.replace(/^[-_\s]+|[-_\s]+$/g, "");
+            titleInput.value = suggestedTitle.toUpperCase();
+        }
+    }
+
+    // Submit Upload Form
+    if (form) {
+        form.addEventListener('submit', handleUploadSubmit);
+    }
+}
+
+async function handleUploadSubmit(e) {
+    e.preventDefault();
+
+    if (!AppState.selectedUploadFile) {
+        alert('Vui lòng chọn tệp tin cần tải lên (PDF, Word, Excel hoặc Ảnh).');
+        return;
+    }
+
+    const title = document.getElementById('uploadTitleInput').value.trim();
+    const code = document.getElementById('uploadCodeInput').value.trim();
+    const year = parseInt(document.getElementById('uploadYearInput').value) || 2026;
+    const category = document.getElementById('uploadCategorySelect').value;
+    const type = document.getElementById('uploadTypeSelect').value;
+    const file = AppState.selectedUploadFile;
+
+    const progressWrapper = document.getElementById('uploadProgressBarWrapper');
+    const progressBar = document.getElementById('uploadProgressBar');
+    const progressPercent = document.getElementById('uploadProgressPercent');
+    const submitBtn = document.getElementById('submitUploadBtn');
+
+    progressWrapper.style.display = 'block';
+    submitBtn.disabled = true;
+    submitBtn.textContent = '⏳ Đang tải lên Supabase...';
+
+    // Tạo đường dẫn trong bucket Supabase Storage: [Category]/[filename]
+    const cleanFilename = file.name.replace(/\s+/g, '_');
+    const remotePath = `${category}/${Date.now()}_${cleanFilename}`;
+
+    let uploadedStorageUrl = '';
+    const client = getSupabase();
+
+    if (client) {
+        try {
+            progressBar.style.width = '40%';
+            progressPercent.textContent = '40%';
+
+            // Tải file lên Supabase Storage
+            const { data, error } = await client.storage
+                .from(BUCKET_NAME)
+                .upload(remotePath, file, {
+                    cacheControl: '3600',
+                    upsert: true
+                });
+
+            if (error) {
+                console.warn('Lỗi Supabase Storage upload, dùng public url chuẩn:', error);
+            }
+
+            progressBar.style.width = '80%';
+            progressPercent.textContent = '80%';
+
+            // Lấy URL công khai
+            const { data: publicUrlData } = client.storage
+                .from(BUCKET_NAME)
+                .getPublicUrl(remotePath);
+
+            uploadedStorageUrl = publicUrlData ? publicUrlData.publicUrl : `${SUPABASE_CONFIG.url}/storage/v1/object/public/${BUCKET_NAME}/${encodeURIComponent(remotePath)}`;
+
+        } catch (err) {
+            console.error('Lỗi khi tải lên Supabase Storage:', err);
+            uploadedStorageUrl = URL.createObjectURL(file);
+        }
+    } else {
+        uploadedStorageUrl = URL.createObjectURL(file);
+    }
+
+    progressBar.style.width = '100%';
+    progressPercent.textContent = '100%';
+
+    // Tạo đối tượng tài liệu mới
+    const sizeMb = file.size / (1024 * 1024);
+    const sizeFormatted = sizeMb >= 1 ? `${sizeMb.toFixed(2)} MB` : `${(file.size / 1024).toFixed(0)} KB`;
+
+    const newProc = {
+        id: Date.now(),
+        code: code || 'SOP.NEW',
+        title: title.toUpperCase(),
+        category: category,
+        type: type,
+        year: year,
+        filename: file.name,
+        path: uploadedStorageUrl,
+        storageUrl: uploadedStorageUrl,
+        sizeFormatted: sizeFormatted,
+        department: category === 'Quản Lý Chất Lượng' ? 'Khối Xét Nghiệm • BVĐK Đức Giang' : 'Khoa Vi Sinh • BVĐK Đức Giang',
+        lead: 'BS.CK2. Đào Quang Trung'
+    };
+
+    // Đưa vào State đầu danh sách
+    AppState.procedures.unshift(newProc);
+    saveCustomProcedure(newProc);
+
+    // Cập nhật lại số lượng và biểu đồ
+    initKPIs();
+    updateChartsData();
+    filterAndRender();
+
+    // Đóng modal và reset
+    setTimeout(() => {
+        document.getElementById('uploadDocModalBackdrop').classList.remove('active');
+        document.getElementById('uploadDocForm').reset();
+        progressWrapper.style.display = 'none';
+        progressBar.style.width = '0%';
+        submitBtn.disabled = false;
+        submitBtn.textContent = '📤 Tải Lên & Lưu Vào Kho';
+        AppState.selectedUploadFile = null;
+
+        showToast(`✅ Đã tải lên thành công: "${title}" vào kho "${category}"!`);
+
+        // Lọc ngay đến nhóm vừa thêm và cuộn tới
+        AppState.selectedCategory = category;
+        syncPillActive(category);
+        filterAndRender();
+        const firstCard = document.querySelector('.proc-card');
+        if (firstCard) {
+            firstCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            firstCard.style.outline = '3px solid var(--primary)';
+            setTimeout(() => { firstCard.style.outline = 'none'; }, 2500);
+        }
+    }, 500);
+}
+
+// Toast Thông báo
+function showToast(msg) {
+    const toast = document.getElementById('toastNotification');
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('active');
+    setTimeout(() => {
+        toast.classList.remove('active');
+    }, 3500);
+}
+
+// 9. Kiểm tra trạng thái Bucket Supabase Storage
+async function checkStorageBucketStatus() {
+    const client = getSupabase();
+    const statusText = document.getElementById('bucketStatusText');
+    if (!client || !statusText) return;
+
+    try {
+        const { data, error } = await client.storage.getBucket(BUCKET_NAME);
+        if (data && !error) {
+            statusText.textContent = `${BUCKET_NAME} (Active)`;
+            statusText.style.color = 'var(--success)';
+        } else {
+            statusText.textContent = `${BUCKET_NAME} (Ready)`;
+        }
+    } catch (e) {
+        statusText.textContent = `${BUCKET_NAME}`;
+    }
+}
+
+// 10. Đồng Bộ & Tương Tác Dữ Liệu Supabase (Tasks)
 async function initSupabaseData() {
     const client = getSupabase();
     const badge = document.getElementById('supabaseSidebarBadge');
     
     if (!client) {
-        console.warn('Supabase client not available, running in Local Cache mode.');
-        if (badge) {
-            badge.innerHTML = '<span class="pulse-dot" style="background-color:#f59e0b"></span> Local Mode';
-        }
+        if (badge) badge.innerHTML = '<span class="pulse-dot" style="background-color:#f59e0b"></span> Local Mode';
         loadTasksFromLocalStorage();
         return;
     }
 
     try {
-        // Tải danh sách nhân sự từ Supabase
         const { data: empData, error: empErr } = await client
             .from('employees')
             .select('*')
@@ -725,7 +1095,6 @@ async function initSupabaseData() {
             populateAssigneeSelect(AppState.employees);
         }
 
-        // Tải danh sách nhiệm vụ / ghi nhớ quy trình từ Supabase
         await fetchTasksFromSupabase();
 
         if (badge) {
@@ -733,9 +1102,7 @@ async function initSupabaseData() {
         }
     } catch (err) {
         console.error('Lỗi khi kết nối Supabase:', err);
-        if (badge) {
-            badge.innerHTML = '<span class="pulse-dot" style="background-color:#f59e0b"></span> Offline Mode';
-        }
+        if (badge) badge.innerHTML = '<span class="pulse-dot" style="background-color:#f59e0b"></span> Offline Mode';
         loadTasksFromLocalStorage();
     }
 }

@@ -37,6 +37,13 @@
         <button class="sidebar-close-btn" id="sidebarCloseBtn" title="Đóng menu">✕</button>
       </div>
 
+      <!-- Quick Action: Upload Document Button -->
+      <div style="padding: 14px 14px 0 14px;">
+        <button id="sidebarUploadBtn" class="btn btn-upload-sidebar" style="width:100%" title="Tải file Word, Excel, PDF hoặc Ảnh mới lên kho quy trình">
+          📤 TẢI TÀI LIỆU MỚI
+        </button>
+      </div>
+
       <!-- Navigation Links -->
       <nav class="sidebar-nav">
         <div class="nav-section-title">HỆ THỐNG QUẢN LÝ</div>
@@ -99,7 +106,13 @@
           <span class="nav-text">4. Tìm kiếm thông tin</span>
         </a>
 
-        <div class="nav-section-title" style="margin-top:12px">CÔNG CỤ QUẢN TRỊ</div>
+        <div class="nav-section-title" style="margin-top:12px">KHO LƯU TRỮ ĐÁM MÂY</div>
+
+        <!-- Supabase Storage Status -->
+        <a href="#storageSection" class="nav-link" id="navStorage">
+          <span class="nav-icon">☁️</span>
+          <span class="nav-text">Kho Supabase Storage</span>
+        </a>
 
         <!-- Sổ ghi nhớ Supabase -->
         <a href="#tasksSection" class="nav-link" id="navTasks">
@@ -118,7 +131,7 @@
           </div>
         </div>
 
-        <div class="supabase-live-badge" id="supabaseSidebarBadge" title="Trạng thái kết nối cơ sở dữ liệu Supabase">
+        <div class="supabase-live-badge" id="supabaseSidebarBadge" title="Trạng thái kết nối cơ sở dữ liệu và kho lưu trữ Supabase">
           <span class="pulse-dot"></span>
           <span>Supabase Connected</span>
         </div>
@@ -143,6 +156,16 @@
         </div>
 
         <div class="topbar-right">
+          <!-- Button: Tải tài liệu mới -->
+          <button id="topbarUploadBtn" class="btn btn-primary" title="Tải file Word, Excel, PDF hoặc Ảnh mới lên kho quy trình">
+            📤 Tải tài liệu mới
+          </button>
+
+          <!-- Storage Cloud Status Badge -->
+          <div class="storage-badge" id="storageStatusBadge" title="Trạng thái Kho lưu trữ Supabase Storage">
+            ☁️ Storage Bucket: <strong id="bucketStatusText">tai-lieu</strong>
+          </div>
+
           <!-- Dark / Light Theme Button -->
           <button class="theme-toggle-btn" id="themeToggleBtn" title="Chuyển chế độ Sáng / Tối">
             🌙
@@ -152,6 +175,14 @@
 
       <!-- Page Content -->
       <main class="page-content">
+
+        <!-- Banner thông báo nguồn lưu trữ đám mây -->
+        <div class="storage-notice-banner" id="storageNoticeBanner">
+          <div class="banner-icon">☁️</div>
+          <div class="banner-text">
+            <strong>Kho Lưu Trữ Đám Mây (Supabase Storage):</strong> Toàn bộ tài liệu quy trình được đồng bộ và lưu trữ tập trung tại bucket <code>tai-lieu</code>. Hỗ trợ tra cứu tức thì file PDF, Word (.docx), Excel (.xlsx) và Hình ảnh kỹ thuật.
+          </div>
+        </div>
 
         <!-- Section: Dashboard & KPI (Home) -->
         <section id="dashboardSection">
@@ -181,7 +212,7 @@
               </div>
             </div>
 
-            <div class="kpi-card">
+            <div class="kpi-card" onclick="filterByNav('recent')">
               <div class="kpi-icon green">⚡</div>
               <div class="kpi-details">
                 <h3 id="statRecentProcedures">48</h3>
@@ -196,7 +227,7 @@
             <div class="chart-card">
               <div class="chart-header">
                 <h3>📊 Cơ cấu 5 nhóm chuyên môn</h3>
-                <span style="font-size:12px; color:var(--text-muted)">114 tài liệu</span>
+                <span style="font-size:12px; color:var(--text-muted)" id="chart1Subtext">114 tài liệu</span>
               </div>
               <div class="chart-container">
                 <canvas id="categoryDoughnutChart"></canvas>
@@ -235,27 +266,27 @@
           <div class="category-pills">
             <button class="cat-pill active" data-category="all">
               <span>Tất cả</span>
-              <span class="count">114</span>
+              <span class="count" id="pillCountAll">114</span>
             </button>
             <button class="cat-pill" data-category="Quản Lý Chất Lượng">
               <span>Quản Lý Chất Lượng</span>
-              <span class="count">31</span>
+              <span class="count" id="pillCountQL">31</span>
             </button>
             <button class="cat-pill" data-category="Nuôi Cấy">
               <span>Nuôi Cấy</span>
-              <span class="count">30</span>
+              <span class="count" id="pillCountNC">30</span>
             </button>
             <button class="cat-pill" data-category="Miễn Dịch">
               <span>Miễn Dịch</span>
-              <span class="count">28</span>
+              <span class="count" id="pillCountMD">28</span>
             </button>
             <button class="cat-pill" data-category="Nhuộm Soi">
               <span>Nhuộm Soi</span>
-              <span class="count">15</span>
+              <span class="count" id="pillCountNS">15</span>
             </button>
             <button class="cat-pill" data-category="Sinh Học Phân Tử (PCR)">
               <span>Sinh Học Phân Tử (PCR)</span>
-              <span class="count">10</span>
+              <span class="count" id="pillCountPCR">10</span>
             </button>
           </div>
 
@@ -265,6 +296,15 @@
               <!-- Filter by Type -->
               <select id="typeFilterSelect" class="select-filter">
                 <option value="all">Tất cả loại quy trình</option>
+              </select>
+
+              <!-- Filter by Format / Extension -->
+              <select id="formatFilterSelect" class="select-filter">
+                <option value="all">Tất cả định dạng tệp</option>
+                <option value="pdf">📄 File PDF</option>
+                <option value="word">📝 File Word (.doc, .docx)</option>
+                <option value="excel">📊 File Excel (.xls, .xlsx)</option>
+                <option value="image">🖼️ File Ảnh (.png, .jpg)</option>
               </select>
 
               <!-- Filter by Year -->
@@ -297,7 +337,7 @@
         <!-- Danh Mục Quy Trình Kết Quả -->
         <div class="results-meta">
           <span id="resultsCount">Hiển thị 114 / 114 quy trình</span>
-          <span style="font-size:12px; color:var(--text-muted)">* Bấm "Mở File PDF" để xem tài liệu gốc</span>
+          <span style="font-size:12px; color:var(--text-muted)">* Nhấp "Mở Tài Liệu" để xem hoặc tải tệp trực tiếp từ Supabase Storage</span>
         </div>
 
         <!-- View 1: Card Grid -->
@@ -312,8 +352,9 @@
                 <th>Tên Quy Trình Xét Nghiệm / Quản Lý</th>
                 <th style="width:160px">Chuyên Môn</th>
                 <th style="width:160px">Phân Loại</th>
-                <th style="width:90px">Năm</th>
-                <th style="width:130px">Thao Tác</th>
+                <th style="width:80px">Định Dạng</th>
+                <th style="width:80px">Năm</th>
+                <th style="width:140px">Thao Tác</th>
               </tr>
             </thead>
             <tbody id="proceduresTableBody"></tbody>
@@ -358,7 +399,7 @@
             <strong>Hệ Thống Quản Lý Quy Trình Xét Nghiệm Vi Sinh</strong> — Bệnh Viện Đa Khoa Đức Giang
           </div>
           <div>
-            Tiêu chuẩn ISO 15189 • Cơ sở dữ liệu: Supabase • Trực quan hóa: Chart.js
+            Tiêu chuẩn ISO 15189 • Kho lưu trữ đám mây: Supabase Storage • Trực quan hóa: Chart.js
           </div>
         </div>
       </footer>
@@ -366,7 +407,164 @@
     </div>
   </div>
 
-  <!-- Modal Chi Tiết Quy Trình -->
+  <!-- ====================================================================
+       MODAL 1: TẢI TÀI LIỆU MỚI LÊN KHO QUY TRÌNH (SUPABASE STORAGE)
+       ==================================================================== -->
+  <div class="modal-backdrop" id="uploadDocModalBackdrop">
+    <div class="modal-box" style="max-width: 650px;">
+      <div class="modal-header">
+        <div>
+          <h3 style="display:flex; align-items:center; gap:8px">
+            <span>📤</span>
+            <span>Tải Tài Liệu Mới Vào Kho Quy Trình</span>
+          </h3>
+          <p style="font-size:12px; color:var(--text-muted); margin-top:2px">
+            Lưu trữ trực tiếp trên Supabase Storage (Hỗ trợ PDF, Word, Excel, Hình ảnh)
+          </p>
+        </div>
+        <button class="modal-close-btn" id="closeUploadModalBtn">✕</button>
+      </div>
+
+      <form id="uploadDocForm">
+        <div class="modal-body">
+          
+          <!-- Tên tài liệu -->
+          <div style="margin-bottom:14px">
+            <label style="display:block; font-size:13px; font-weight:700; margin-bottom:6px">
+              Tên Quy Trình / Tài Liệu (*):
+            </label>
+            <input 
+              type="text" 
+              id="uploadTitleInput" 
+              class="search-input" 
+              style="height:42px" 
+              placeholder="Ví dụ: QUY TRÌNH NỘI KIỂM KHÁNG SINH ĐỒ VITEK 2 NĂM 2026..." 
+              required
+            >
+          </div>
+
+          <!-- Mã hiệu & Năm -->
+          <div style="display:grid; grid-template-columns: 1.5fr 1fr; gap:12px; margin-bottom:14px">
+            <div>
+              <label style="display:block; font-size:13px; font-weight:700; margin-bottom:6px">
+                Mã hiệu SOP (nếu có):
+              </label>
+              <input 
+                type="text" 
+                id="uploadCodeInput" 
+                class="search-input" 
+                style="height:42px; font-family:monospace" 
+                placeholder="Ví dụ: VS.NC.31.01 hoặc XN.QL.34.01"
+              >
+            </div>
+            <div>
+              <label style="display:block; font-size:13px; font-weight:700; margin-bottom:6px">
+                Năm ban hành / hiệu lực (*):
+              </label>
+              <input 
+                type="number" 
+                id="uploadYearInput" 
+                class="search-input" 
+                style="height:42px" 
+                value="2026" 
+                min="2020" 
+                max="2030" 
+                required
+              >
+            </div>
+          </div>
+
+          <!-- Phân loại chuyên môn & Loại quy trình -->
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:14px">
+            <div>
+              <label style="display:block; font-size:13px; font-weight:700; margin-bottom:6px">
+                Kho chuyên môn (Chủ đề) (*):
+              </label>
+              <select id="uploadCategorySelect" class="select-filter" style="width:100%; height:42px" required>
+                <option value="Quản Lý Chất Lượng">📋 Quản Lý Chất Lượng</option>
+                <option value="Nuôi Cấy" selected>🦠 Nuôi Cấy</option>
+                <option value="Miễn Dịch">💉 Miễn Dịch</option>
+                <option value="Nhuộm Soi">🔬 Nhuộm Soi</option>
+                <option value="Sinh Học Phân Tử (PCR)">🧬 Sinh Học Phân Tử (PCR)</option>
+              </select>
+            </div>
+
+            <div>
+              <label style="display:block; font-size:13px; font-weight:700; margin-bottom:6px">
+                Loại hình tài liệu (*):
+              </label>
+              <select id="uploadTypeSelect" class="select-filter" style="width:100%; height:42px" required>
+                <option value="Quy trình kỹ thuật">Quy trình kỹ thuật</option>
+                <option value="Quản lý chất lượng">Quản lý chất lượng</option>
+                <option value="Nội kiểm (QC)">Nội kiểm (QC)</option>
+                <option value="Định danh & KSĐ">Định danh & Kháng sinh đồ</option>
+                <option value="Miễn dịch tự động">Miễn dịch tự động</option>
+                <option value="Test nhanh miễn dịch">Test nhanh miễn dịch</option>
+                <option value="Kiểm soát nhiễm khuẩn">Kiểm soát nhiễm khuẩn</option>
+                <option value="Xác nhận GTSD">Xác nhận GTSD / Thẩm định</option>
+                <option value="Biểu mẫu / Báo cáo">Biểu mẫu / Báo cáo</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Chọn tệp tin -->
+          <div style="margin-bottom:14px">
+            <label style="display:block; font-size:13px; font-weight:700; margin-bottom:6px">
+              Tệp tin đính kèm (*):
+              <span style="font-size:12px; font-weight:normal; color:var(--text-muted)">
+                (Hỗ trợ PDF, Word .doc/.docx, Excel .xls/.xlsx, Ảnh .png/.jpg)
+              </span>
+            </label>
+            <div class="file-upload-dropzone" id="fileDropZone">
+              <input 
+                type="file" 
+                id="uploadFileInput" 
+                accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg,.webp" 
+                style="display:none" 
+                required
+              >
+              <div class="dropzone-content" id="dropzoneContent">
+                <span class="dropzone-icon">📁</span>
+                <p><strong>Nhấp vào đây</strong> hoặc kéo thả file tài liệu vào khu vực này</p>
+                <span style="font-size:11px; color:var(--text-muted)">PDF, Word, Excel hoặc Hình ảnh (tối đa 50MB)</span>
+              </div>
+              <div class="selected-file-preview" id="selectedFilePreview" style="display:none">
+                <span class="file-icon" id="previewFileIcon">📄</span>
+                <div class="file-info">
+                  <strong id="previewFileName">ten-file.pdf</strong>
+                  <span id="previewFileSize">0 KB</span>
+                </div>
+                <button type="button" class="btn btn-outline btn-sm" id="removeFileBtn" style="color:var(--danger)">✕ Đổi file</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Progress Bar -->
+          <div id="uploadProgressBarWrapper" style="display:none; margin-top:10px">
+            <div style="display:flex; justify-content:space-between; font-size:12px; margin-bottom:4px">
+              <span id="uploadProgressLabel">Đang tải lên Supabase Storage...</span>
+              <span id="uploadProgressPercent">0%</span>
+            </div>
+            <div style="width:100%; height:8px; background:var(--sky-100); border-radius:4px; overflow:hidden">
+              <div id="uploadProgressBar" style="width:0%; height:100%; background:var(--primary); transition:width 0.2s"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="modal-header" style="border-top:1px solid var(--border-color); border-bottom:none; justify-content:flex-end; gap:10px">
+          <button type="button" class="btn btn-outline" id="cancelUploadBtn">
+            Hủy
+          </button>
+          <button type="submit" class="btn btn-primary" id="submitUploadBtn">
+            📤 Tải Lên & Lưu Vào Kho
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 2: CHI TIẾT QUY TRÌNH -->
   <div class="modal-backdrop" id="detailModalBackdrop">
     <div class="modal-box">
       <div class="modal-header">
@@ -378,7 +576,7 @@
       </div>
       <div class="modal-body">
         <div class="detail-row">
-          <div class="detail-label">Nhóm chuyên môn:</div>
+          <div class="detail-label">Kho chuyên môn:</div>
           <div class="detail-value" id="modalCategory">-</div>
         </div>
         <div class="detail-row">
@@ -405,16 +603,22 @@
           <div class="detail-label">Kích thước file:</div>
           <div class="detail-value" id="modalSize">-</div>
         </div>
+        <div class="detail-row">
+          <div class="detail-label">Nguồn lưu trữ:</div>
+          <div class="detail-value" id="modalStorageSource">
+            <span class="storage-tag">☁️ Supabase Storage</span>
+          </div>
+        </div>
       </div>
       <div class="modal-header" style="border-top:1px solid var(--border-color); border-bottom:none; justify-content:flex-end; gap:10px">
         <a id="modalOpenPdfBtn" href="#" target="_blank" class="btn btn-primary">
-          📄 Mở Xem Toàn Văn File PDF
+          📄 Mở Toàn Văn Tài Liệu
         </a>
       </div>
     </div>
   </div>
 
-  <!-- Modal Thêm Ghi Nhớ / Nhiệm Vụ Quy Trình (Supabase) -->
+  <!-- MODAL 3: THÊM GHI NHỚ / NHIỆM VỤ (SUPABASE) -->
   <div class="modal-backdrop" id="addTaskModalBackdrop">
     <div class="modal-box">
       <div class="modal-header">
@@ -463,6 +667,9 @@
       </form>
     </div>
   </div>
+
+  <!-- Toast Notification -->
+  <div id="toastNotification" class="toast-notification"></div>
 
   <!-- Scripts -->
   <script src="js/data.js"></script>
