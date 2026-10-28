@@ -14,7 +14,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.01.03.File PDF.071435.2024.pdf",
     "sizeFormatted": "10.45 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.01.03.File_PDF.071435.2024.pdf"
   },
   {
     "id": 2,
@@ -27,7 +28,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.02.02.File PDF.030609.2025.pdf",
     "sizeFormatted": "3.38 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.02.02.File_PDF.030609.2025.pdf"
   },
   {
     "id": 3,
@@ -40,7 +42,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.03.01.File PDF.033837.2024.pdf",
     "sizeFormatted": "3.52 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.03.01.File_PDF.033837.2024.pdf"
   },
   {
     "id": 4,
@@ -53,7 +56,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.04.01.File PDF.073500.2024.pdf",
     "sizeFormatted": "2.59 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.04.01.File_PDF.073500.2024.pdf"
   },
   {
     "id": 5,
@@ -66,7 +70,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.05.02.File PDF.083906.2502182025.pdf",
     "sizeFormatted": "10.41 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.05.02.File_PDF.083906.2502182025.pdf"
   },
   {
     "id": 6,
@@ -79,7 +84,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.06.01.File PDF.073418.2024.pdf",
     "sizeFormatted": "1.95 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.06.01.File_PDF.073418.2024.pdf"
   },
   {
     "id": 7,
@@ -92,7 +98,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.07.01.File PDF.072716.2024.pdf",
     "sizeFormatted": "2.06 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.07.01.File_PDF.072716.2024.pdf"
   },
   {
     "id": 8,
@@ -105,7 +112,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.08.01.File PDF.035254.2024.pdf",
     "sizeFormatted": "3.34 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.08.01.File_PDF.035254.2024.pdf"
   },
   {
     "id": 9,
@@ -118,7 +126,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.09.02.File PDF.023354.2025.pdf",
     "sizeFormatted": "4.86 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.09.02.File_PDF.023354.2025.pdf"
   },
   {
     "id": 10,
@@ -131,7 +140,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.10.01.File PDF.032334.2024.pdf",
     "sizeFormatted": "3.17 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.10.01.File_PDF.032334.2024.pdf"
   },
   {
     "id": 11,
@@ -144,7 +154,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.11.01.File PDF.035231.2024.pdf",
     "sizeFormatted": "2.39 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.11.01.File_PDF.035231.2024.pdf"
   },
   {
     "id": 12,
@@ -157,7 +168,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.12.01.File PDF.035207.2024.pdf",
     "sizeFormatted": "4.85 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.12.01.File_PDF.035207.2024.pdf"
   },
   {
     "id": 13,
@@ -170,7 +182,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.13.02.File PDF.083341.2502182025.pdf",
     "sizeFormatted": "7.48 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.13.02.File_PDF.083341.2502182025.pdf"
   },
   {
     "id": 14,
@@ -183,7 +196,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.14.01.File PDF.072657.2024.pdf",
     "sizeFormatted": "3.63 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.14.01.File_PDF.072657.2024.pdf"
   },
   {
     "id": 15,
@@ -196,7 +210,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.15.02.File PDF.074802.26.pdf",
     "sizeFormatted": "15.50 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.15.02.File_PDF.074802.26.pdf"
   },
   {
     "id": 16,
@@ -209,7 +224,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.17.03.File PDF.110359.03 quy trình báo cáo kết quả 09102026.pdf",
     "sizeFormatted": "3.57 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.17.03.File_PDF.110359.03_quy_trinh_bao_cao_ket_qua_09102026.pdf"
   },
   {
     "id": 17,
@@ -222,7 +238,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.18.02.File PDF.021653.2025.pdf",
     "sizeFormatted": "5.77 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.18.02.File_PDF.021653.2025.pdf"
   },
   {
     "id": 18,
@@ -235,7 +252,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.19.02.File PDF.033229.02 QT quản lý sinh phẩm vật tư hóa chất.pdf",
     "sizeFormatted": "12.96 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.19.02.File_PDF.033229.02_QT_quan_ly_sinh_pham_vat_tu_hoa_chat.pdf"
   },
   {
     "id": 19,
@@ -248,7 +266,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.20.02.File PDF.024445.2025.pdf",
     "sizeFormatted": "3.97 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.20.02.File_PDF.024445.2025.pdf"
   },
   {
     "id": 20,
@@ -261,7 +280,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.22.02.File PDF.025455.2025.pdf",
     "sizeFormatted": "12.34 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.22.02.File_PDF.025455.2025.pdf"
   },
   {
     "id": 21,
@@ -274,7 +294,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.23.01.File PDF.042000.2024.pdf",
     "sizeFormatted": "6.37 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.23.01.File_PDF.042000.2024.pdf"
   },
   {
     "id": 22,
@@ -287,7 +308,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.24.02.File PDF.033814.2026.pdf",
     "sizeFormatted": "75.21 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.24.02.File_PDF.033814.2026.pdf"
   },
   {
     "id": 23,
@@ -300,7 +322,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.25.01.File PDF.100754.2024.pdf",
     "sizeFormatted": "3.68 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.25.01.File_PDF.100754.2024.pdf"
   },
   {
     "id": 24,
@@ -313,7 +336,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.26.01.File PDF.035111.2024.pdf",
     "sizeFormatted": "2.31 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.26.01.File_PDF.035111.2024.pdf"
   },
   {
     "id": 25,
@@ -326,7 +350,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.27.02.File PDF.020211.02 quản lý hồ sơ 02062025.pdf",
     "sizeFormatted": "6.22 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.27.02.File_PDF.020211.02_quan_ly_ho_so_02062025.pdf"
   },
   {
     "id": 26,
@@ -339,7 +364,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.28.01.File PDF.035048.2024.pdf",
     "sizeFormatted": "4.48 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.28.01.File_PDF.035048.2024.pdf"
   },
   {
     "id": 27,
@@ -352,7 +378,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.29.01.File PDF.035025.2024.pdf",
     "sizeFormatted": "4.04 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.29.01.File_PDF.035025.2024.pdf"
   },
   {
     "id": 28,
@@ -365,7 +392,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.30.01.File PDF.043907.2024.pdf",
     "sizeFormatted": "8.72 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.30.01.File_PDF.043907.2024.pdf"
   },
   {
     "id": 29,
@@ -378,7 +406,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.31.01.File PDF.021930.01 Quy trình lựa chọn và chuyển gửi mẫu ngoại viện.pdf",
     "sizeFormatted": "4.80 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.31.01.File_PDF.021930.01_Quy_trinh_lua_chon_va_chuyen_gui_mau_ngoai_vien.pdf"
   },
   {
     "id": 30,
@@ -391,7 +420,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.32.01.File PDF.074845.2025.pdf",
     "sizeFormatted": "5.98 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.32.01.File_PDF.074845.2025.pdf"
   },
   {
     "id": 31,
@@ -404,7 +434,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Quản Lý Chất Lượng/XN.QL.33.01.File PDF.014603.26.pdf",
     "sizeFormatted": "4.57 MB",
     "department": "Khối Xét nghiệm - Bệnh viện Đa khoa Đức Giang",
-    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL"
+    "lead": "Lãnh đạo Khối Xét nghiệm & Phòng QLCL",
+    "storageKey": "Quan_Ly_Chat_Luong/XN.QL.33.01.File_PDF.014603.26.pdf"
   },
   {
     "id": 32,
@@ -417,7 +448,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.01.03.File PDF.091434.2024.pdf",
     "sizeFormatted": "2.11 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.01.03.File_PDF.091434.2024.pdf"
   },
   {
     "id": 33,
@@ -430,7 +462,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.02.03.File PDF.092015.2024.pdf",
     "sizeFormatted": "1.73 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.02.03.File_PDF.092015.2024.pdf"
   },
   {
     "id": 34,
@@ -443,7 +476,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.03.03.File PDF.090242.2024.pdf",
     "sizeFormatted": "1.82 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.03.03.File_PDF.090242.2024.pdf"
   },
   {
     "id": 35,
@@ -456,7 +490,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.04.03.File PDF.090044.2024.pdf",
     "sizeFormatted": "1.76 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.04.03.File_PDF.090044.2024.pdf"
   },
   {
     "id": 36,
@@ -469,7 +504,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.05.03.File PDF.090345.2024.pdf",
     "sizeFormatted": "1.74 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.05.03.File_PDF.090345.2024.pdf"
   },
   {
     "id": 37,
@@ -482,7 +518,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.06.03.File PDF.091802.2024.pdf",
     "sizeFormatted": "1.84 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.06.03.File_PDF.091802.2024.pdf"
   },
   {
     "id": 38,
@@ -495,7 +532,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.07.03.File PDF.090144.2024.pdf",
     "sizeFormatted": "1.77 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.07.03.File_PDF.090144.2024.pdf"
   },
   {
     "id": 39,
@@ -508,7 +546,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.08.03.File PDF.090642.2024.pdf",
     "sizeFormatted": "2.05 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.08.03.File_PDF.090642.2024.pdf"
   },
   {
     "id": 40,
@@ -521,7 +560,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.09.03.File PDF.090439.2024.pdf",
     "sizeFormatted": "1.81 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.09.03.File_PDF.090439.2024.pdf"
   },
   {
     "id": 41,
@@ -534,7 +574,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.10.03.File PDF.090744.2024.pdf",
     "sizeFormatted": "1.78 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.10.03.File_PDF.090744.2024.pdf"
   },
   {
     "id": 42,
@@ -547,7 +588,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.11.03.File PDF.091919.2024.pdf",
     "sizeFormatted": "2.09 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.11.03.File_PDF.091919.2024.pdf"
   },
   {
     "id": 43,
@@ -560,7 +602,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.12.03.File PDF.091701.2024.pdf",
     "sizeFormatted": "1.93 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.12.03.File_PDF.091701.2024.pdf"
   },
   {
     "id": 44,
@@ -573,7 +616,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.13.03.File PDF.091555.2024.pdf",
     "sizeFormatted": "1.81 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.13.03.File_PDF.091555.2024.pdf"
   },
   {
     "id": 45,
@@ -586,7 +630,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.14.03.File PDF.091210.2024.pdf",
     "sizeFormatted": "2.01 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.14.03.File_PDF.091210.2024.pdf"
   },
   {
     "id": 46,
@@ -599,7 +644,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.15.03.File PDF.090917.2024.pdf",
     "sizeFormatted": "2.40 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.15.03.File_PDF.090917.2024.pdf"
   },
   {
     "id": 47,
@@ -612,7 +658,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.17.01.File PDF.020031.01 NỘI KIỂM RAPID ANTI HIV 01,03,21.pdf",
     "sizeFormatted": "2.48 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.17.01.File_PDF.020031.01_NOI_KIEM_RAPID_ANTI_HIV_01_03_21.pdf"
   },
   {
     "id": 48,
@@ -625,7 +672,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.18.01.File PDF.020520.01 NỘI KIỂM TEST NHANH ONSITE HBsAg 01,03,21.pdf",
     "sizeFormatted": "2.35 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.18.01.File_PDF.020520.01_NOI_KIEM_TEST_NHANH_ONSITE_HBsAg_01_03_21.pdf"
   },
   {
     "id": 49,
@@ -638,7 +686,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.19.01.File PDF.020533.01 NỘI KIỂM TEST NHANH ONSITE HCV RAPID TEST01,03,21.pdf",
     "sizeFormatted": "2.72 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.19.01.File_PDF.020533.01_NOI_KIEM_TEST_NHANH_ONSITE_HCV_RAPID_TEST01_03_21.pdf"
   },
   {
     "id": 50,
@@ -651,7 +700,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.22.02.File PDF.091052.2024.pdf",
     "sizeFormatted": "1.68 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.22.02.File_PDF.091052.2024.pdf"
   },
   {
     "id": 51,
@@ -664,7 +714,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.23.02.File PDF.090540.2024.pdf",
     "sizeFormatted": "1.69 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.23.02.File_PDF.090540.2024.pdf"
   },
   {
     "id": 52,
@@ -677,7 +728,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.24.01.File PDF.075854.2025.pdf",
     "sizeFormatted": "2.84 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.24.01.File_PDF.075854.2025.pdf"
   },
   {
     "id": 53,
@@ -690,7 +742,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.25.01.File PDF.075936.2025.pdf",
     "sizeFormatted": "2.87 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.25.01.File_PDF.075936.2025.pdf"
   },
   {
     "id": 54,
@@ -703,7 +756,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.26.01.File PDF.080005.2025.pdf",
     "sizeFormatted": "2.92 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.26.01.File_PDF.080005.2025.pdf"
   },
   {
     "id": 55,
@@ -716,7 +770,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.27.01.File PDF.080021.2025.pdf",
     "sizeFormatted": "2.80 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.27.01.File_PDF.080021.2025.pdf"
   },
   {
     "id": 56,
@@ -729,7 +784,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.28.01.File PDF.080038.2025.pdf",
     "sizeFormatted": "2.87 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.28.01.File_PDF.080038.2025.pdf"
   },
   {
     "id": 57,
@@ -742,7 +798,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.29.01.File PDF.080054.2025.pdf",
     "sizeFormatted": "2.88 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.29.01.File_PDF.080054.2025.pdf"
   },
   {
     "id": 58,
@@ -755,7 +812,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.30.01.File PDF.080110.2025.pdf",
     "sizeFormatted": "2.67 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.30.01.File_PDF.080110.2025.pdf"
   },
   {
     "id": 59,
@@ -768,7 +826,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Miễn Dịch/VS.MD.31.01.File PDF.071149.2025.pdf",
     "sizeFormatted": "2.53 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Mien_Dich/VS.MD.31.01.File_PDF.071149.2025.pdf"
   },
   {
     "id": 60,
@@ -781,7 +840,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.01.02-Quy-trinh-cay-phan-vung.pdf",
     "sizeFormatted": "394 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.01.02-Quy-trinh-cay-phan-vung.pdf"
   },
   {
     "id": 61,
@@ -794,7 +854,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.02.02 Quy trình cấy trên thạch lỏng, thạch mềm, thạch nghiêng.pdf",
     "sizeFormatted": "351 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.02.02_Quy_trinh_cay_tren_thach_long_thach_mem_thach_nghieng.pdf"
   },
   {
     "id": 62,
@@ -807,7 +868,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.03.02 Quy trình thử nghiệm camptest.pdf",
     "sizeFormatted": "288 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.03.02_Quy_trinh_thu_nghiem_camptest.pdf"
   },
   {
     "id": 63,
@@ -820,7 +882,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.04.02 Quy trình thử nghiệm catalase.pdf",
     "sizeFormatted": "264 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.04.02_Quy_trinh_thu_nghiem_catalase.pdf"
   },
   {
     "id": 64,
@@ -833,7 +896,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.05.02 Quy trình thử nghiệm coagulase.pdf",
     "sizeFormatted": "281 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.05.02_Quy_trinh_thu_nghiem_coagulase.pdf"
   },
   {
     "id": 65,
@@ -846,7 +910,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.06.02 Quy trình thử nghiệm tính chất di dộng.pdf",
     "sizeFormatted": "266 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.06.02_Quy_trinh_thu_nghiem_tinh_chat_di_dong.pdf"
   },
   {
     "id": 66,
@@ -859,7 +924,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.07.02 Quy trình thử nghiệm trên thạch KIA.pdf",
     "sizeFormatted": "405 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.07.02_Quy_trinh_thu_nghiem_tren_thach_KIA.pdf"
   },
   {
     "id": 67,
@@ -872,7 +938,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.08.02 Quy trình thử nghiệm optochin.pdf",
     "sizeFormatted": "355 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.08.02_Quy_trinh_thu_nghiem_optochin.pdf"
   },
   {
     "id": 68,
@@ -885,7 +952,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.09.02 Quy trình thử nghiệm oxidase.pdf",
     "sizeFormatted": "318 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.09.02_Quy_trinh_thu_nghiem_oxidase.pdf"
   },
   {
     "id": 69,
@@ -898,7 +966,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.10.02 Quy trình thử nghiệm vệ tinh.pdf",
     "sizeFormatted": "312 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.10.02_Quy_trinh_thu_nghiem_ve_tinh.pdf"
   },
   {
     "id": 70,
@@ -911,7 +980,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.11.02 Quy trình hướng dẫn cấy chuyển chủng bệnh nhân.pdf",
     "sizeFormatted": "396 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.11.02_Quy_trinh_huong_dan_cay_chuyen_chung_benh_nhan.pdf"
   },
   {
     "id": 71,
@@ -924,7 +994,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.12.02 Quy trình hướng dẫn lưu giữ chủng bệnh nhân.pdf",
     "sizeFormatted": "398 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.12.02_Quy_trinh_huong_dan_luu_giu_chung_benh_nhan.pdf"
   },
   {
     "id": 72,
@@ -937,7 +1008,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.13.02 Quy trình cấy máu bằng máy cấy máu tự động.pdf",
     "sizeFormatted": "339 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.13.02_Quy_trinh_cay_mau_bang_may_cay_mau_tu_dong.pdf"
   },
   {
     "id": 73,
@@ -950,7 +1022,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.14.02 Quy trình nuôi cấy dịch não tủy.pdf",
     "sizeFormatted": "362 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.14.02_Quy_trinh_nuoi_cay_dich_nao_tuy.pdf"
   },
   {
     "id": 74,
@@ -963,7 +1036,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.15.02 Quy trình nuôi cấy các loại dịch.pdf",
     "sizeFormatted": "347 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.15.02_Quy_trinh_nuoi_cay_cac_loai_dich.pdf"
   },
   {
     "id": 75,
@@ -976,7 +1050,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.16.02 Quy trình nuôi cấy bệnh phẩm catherter.pdf",
     "sizeFormatted": "431 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.16.02_Quy_trinh_nuoi_cay_benh_pham_catherter.pdf"
   },
   {
     "id": 76,
@@ -989,7 +1064,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.17.02 Quy trình nuôi cấy bệnh phẩm mủ.pdf",
     "sizeFormatted": "424 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.17.02_Quy_trinh_nuoi_cay_benh_pham_mu.pdf"
   },
   {
     "id": 77,
@@ -1002,7 +1078,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.18.02 Quy trình nuôi cấy bệnh phẩm đờm.pdf",
     "sizeFormatted": "424 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.18.02_Quy_trinh_nuoi_cay_benh_pham_dom.pdf"
   },
   {
     "id": 78,
@@ -1015,7 +1092,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.19.02 Quy trình nuôi cấy bệnh phẩm nước tiểu.pdf",
     "sizeFormatted": "478 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.19.02_Quy_trinh_nuoi_cay_benh_pham_nuoc_tieu.pdf"
   },
   {
     "id": 79,
@@ -1028,7 +1106,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.20.02 Quy trình nuôi cấy bệnh phẩm phân.pdf",
     "sizeFormatted": "423 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.20.02_Quy_trinh_nuoi_cay_benh_pham_phan.pdf"
   },
   {
     "id": 80,
@@ -1041,7 +1120,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.21.02 Quy trình nuôi cấy phân lập liên cầu B.pdf",
     "sizeFormatted": "308 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.21.02_Quy_trinh_nuoi_cay_phan_lap_lien_cau_B.pdf"
   },
   {
     "id": 81,
@@ -1054,7 +1134,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.22.02 Quy trình định danh vi khuẩn bằng máy vitek2.pdf",
     "sizeFormatted": "452 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.22.02_Quy_trinh_dinh_danh_vi_khuan_bang_may_vitek2.pdf"
   },
   {
     "id": 82,
@@ -1067,7 +1148,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.23.02 Quy trình làm kháng sinh đồ bằng khoanh giấy khuếch tán.pdf",
     "sizeFormatted": "379 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.23.02_Quy_trinh_lam_khang_sinh_do_bang_khoanh_giay_khuech_tan.pdf"
   },
   {
     "id": 83,
@@ -1080,7 +1162,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.24.02 Quy trình làm kháng sinh đồ bằng máy vitek2.pdf",
     "sizeFormatted": "521 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.24.02_Quy_trinh_lam_khang_sinh_do_bang_may_vitek2.pdf"
   },
   {
     "id": 84,
@@ -1093,7 +1176,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.25.01 Quy trình nội kiểm khoanh giấy kháng sinh.pdf",
     "sizeFormatted": "453 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.25.01_Quy_trinh_noi_kiem_khoanh_giay_khang_sinh.pdf"
   },
   {
     "id": 85,
@@ -1106,7 +1190,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.26.02 Quy trình QC card định danh và card kháng sinh ok.pdf",
     "sizeFormatted": "395 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.26.02_Quy_trinh_QC_card_dinh_danh_va_card_khang_sinh_ok.pdf"
   },
   {
     "id": 86,
@@ -1119,7 +1204,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.27.01 quy trình cấy khuẩn không khí.pdf",
     "sizeFormatted": "459 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.27.01_quy_trinh_cay_khuan_khong_khi.pdf"
   },
   {
     "id": 87,
@@ -1132,7 +1218,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.28.01 quy trình cấy kiểm tra bàn tay.pdf",
     "sizeFormatted": "260 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.28.01_quy_trinh_cay_kiem_tra_ban_tay.pdf"
   },
   {
     "id": 88,
@@ -1145,7 +1232,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.29.01 quy trình cấy kiểm tra bề mặt.pdf",
     "sizeFormatted": "260 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.29.01_quy_trinh_cay_kiem_tra_be_mat.pdf"
   },
   {
     "id": 89,
@@ -1158,7 +1246,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nuôi Cấy/VS.NC.30.01 quy trình cấy kiểm tra dụng cụ đã tiệt trùng.pdf",
     "sizeFormatted": "262 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nuoi_Cay/VS.NC.30.01_quy_trinh_cay_kiem_tra_dung_cu_da_tiet_trung.pdf"
   },
   {
     "id": 90,
@@ -1171,7 +1260,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nhuộm Soi/VS.NS.01.02 Quy trình nhuộm gram (2024 new).pdf",
     "sizeFormatted": "335 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nhuom_Soi/VS.NS.01.02_Quy_trinh_nhuom_gram_2024_new_.pdf"
   },
   {
     "id": 91,
@@ -1184,7 +1274,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nhuộm Soi/VS.NS.02.01 Quy trình xét nghiệm tìm hồng cầu, bạch cầu trong phân soi tươi.pdf",
     "sizeFormatted": "287 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nhuom_Soi/VS.NS.02.01_Quy_trinh_xet_nghiem_tim_hong_cau_bach_cau_trong_phan_soi_tuoi.pdf"
   },
   {
     "id": 92,
@@ -1197,7 +1288,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nhuộm Soi/VS.NS.03.01 Quy trình xét nghiệm vi khuẩn chí.pdf",
     "sizeFormatted": "298 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nhuom_Soi/VS.NS.03.01_Quy_trinh_xet_nghiem_vi_khuan_chi.pdf"
   },
   {
     "id": 93,
@@ -1210,7 +1302,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nhuộm Soi/VS.NS.04.01 Quy trình xét nghiệm dịch âm đạo.pdf",
     "sizeFormatted": "295 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nhuom_Soi/VS.NS.04.01_Quy_trinh_xet_nghiem_dich_am_dao.pdf"
   },
   {
     "id": 94,
@@ -1223,7 +1316,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nhuộm Soi/VS.NS.05.01 Quy trình xét nghiệm mủ sinh dục (mủ niệu đạo ở nam giới).pdf",
     "sizeFormatted": "314 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nhuom_Soi/VS.NS.05.01_Quy_trinh_xet_nghiem_mu_sinh_duc_mu_nieu_dao_o_nam_gioi_.pdf"
   },
   {
     "id": 95,
@@ -1236,7 +1330,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nhuộm Soi/VS.NS.06.02 Quy trình AFB trực tiếp nhuộm Zielh-Neelsen.pdf",
     "sizeFormatted": "381 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nhuom_Soi/VS.NS.06.02_Quy_trinh_AFB_truc_tiep_nhuom_Zielh-Neelsen.pdf"
   },
   {
     "id": 96,
@@ -1249,7 +1344,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nhuộm Soi/VS.NS.07.01 Quy trình xét nghiệm soi tươi tìm nấm.pdf",
     "sizeFormatted": "304 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nhuom_Soi/VS.NS.07.01_Quy_trinh_xet_nghiem_soi_tuoi_tim_nam.pdf"
   },
   {
     "id": 97,
@@ -1262,7 +1358,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nhuộm Soi/VS.NS.08.01 Quy trình xét nghiệm soi phân trực tiếp tìm trứng giun, sán.pdf",
     "sizeFormatted": "326 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nhuom_Soi/VS.NS.08.01_Quy_trinh_xet_nghiem_soi_phan_truc_tiep_tim_trung_giun_san.pdf"
   },
   {
     "id": 98,
@@ -1275,7 +1372,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nhuộm Soi/VS.NS.09.01 Quy trình xét nghiệm máu tìm ký sính trùng sốt rét.pdf",
     "sizeFormatted": "356 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nhuom_Soi/VS.NS.09.01_Quy_trinh_xet_nghiem_mau_tim_ky_sinh_trung_sot_ret.pdf"
   },
   {
     "id": 99,
@@ -1288,7 +1386,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nhuộm Soi/VS.NS.10.01 Quy trình xét nghiệm soi tươi tìm demodex.pdf",
     "sizeFormatted": "290 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nhuom_Soi/VS.NS.10.01_Quy_trinh_xet_nghiem_soi_tuoi_tim_demodex.pdf"
   },
   {
     "id": 100,
@@ -1301,7 +1400,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nhuộm Soi/VS.NS.11.01 Quy trình xét nghiệm lấy bệnh phẩm bờ mi.pdf",
     "sizeFormatted": "295 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nhuom_Soi/VS.NS.11.01_Quy_trinh_xet_nghiem_lay_benh_pham_bo_mi.pdf"
   },
   {
     "id": 101,
@@ -1314,7 +1414,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nhuộm Soi/VS.NS.12.01 Quy trình xét nghiệm lấy bệnh phẩm giác mạc.pdf",
     "sizeFormatted": "298 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nhuom_Soi/VS.NS.12.01_Quy_trinh_xet_nghiem_lay_benh_pham_giac_mac.pdf"
   },
   {
     "id": 102,
@@ -1327,7 +1428,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nhuộm Soi/VS.NS.13.01 Quy trình lấy bệnh phẩm kết mạc.pdf",
     "sizeFormatted": "295 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nhuom_Soi/VS.NS.13.01_Quy_trinh_lay_benh_pham_ket_mac.pdf"
   },
   {
     "id": 103,
@@ -1340,7 +1442,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nhuộm Soi/VS.NS.14.02 Quy trình nội kiểm gram.pdf",
     "sizeFormatted": "337 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nhuom_Soi/VS.NS.14.02_Quy_trinh_noi_kiem_gram.pdf"
   },
   {
     "id": 104,
@@ -1353,7 +1456,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Nhuộm Soi/VS.NS.15.02-nội kiểm ziehl-neelsen.pdf",
     "sizeFormatted": "380 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Nhuom_Soi/VS.NS.15.02-noi_kiem_ziehl-neelsen.pdf"
   },
   {
     "id": 105,
@@ -1366,7 +1470,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Sinh Học Phân Tử (PCR)/ VS.PCR.08.01. QT Xét nghiệm đa mồi HH Virus.pdf",
     "sizeFormatted": "2.74 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Sinh_Hoc_Phan_Tu_PCR/VS.PCR.08.01._QT_Xet_nghiem_da_moi_HH_Virus.pdf"
   },
   {
     "id": 106,
@@ -1379,7 +1484,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Sinh Học Phân Tử (PCR)/2026. Xác nhânGTSD đa mồi vr.pdf",
     "sizeFormatted": "6.62 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Sinh_Hoc_Phan_Tu_PCR/2026._Xac_nhanGTSD_da_moi_vr.pdf"
   },
   {
     "id": 107,
@@ -1392,7 +1498,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Sinh Học Phân Tử (PCR)/QT PCR tổng hợp.pdf",
     "sizeFormatted": "14.88 MB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Sinh_Hoc_Phan_Tu_PCR/QT_PCR_tong_hop.pdf"
   },
   {
     "id": 108,
@@ -1405,7 +1512,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Sinh Học Phân Tử (PCR)/VS.PCR.01.01 quy trình thu thập, vận chuyển và bảo quản mẫu bệnh phẩm nghi nhiễm covid-19.pdf",
     "sizeFormatted": "471 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Sinh_Hoc_Phan_Tu_PCR/VS.PCR.01.01_quy_trinh_thu_thap_van_chuyen_va_bao_quan_mau_benh_pham_nghi_nhiem_covid-19.pdf"
   },
   {
     "id": 109,
@@ -1418,7 +1526,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Sinh Học Phân Tử (PCR)/VS.PCR.02.01 quy trình xét nghiệm định tính chủng virus corona 2 (sars-cov-2) trên hệ thống máy Realtime PCR tự động.pdf",
     "sizeFormatted": "694 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Sinh_Hoc_Phan_Tu_PCR/VS.PCR.02.01_quy_trinh_xet_nghiem_dinh_tinh_chung_virus_corona_2_sars-cov-2_tren_he_thong_may_Realtime_PCR_tu_dong.pdf"
   },
   {
     "id": 110,
@@ -1431,7 +1540,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Sinh Học Phân Tử (PCR)/VS.PCR.03.01 Quy trình xét nghiệm đo tải lượng HBV hệ thống tự động.pdf",
     "sizeFormatted": "507 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Sinh_Hoc_Phan_Tu_PCR/VS.PCR.03.01_Quy_trinh_xet_nghiem_do_tai_luong_HBV_he_thong_tu_dong.pdf"
   },
   {
     "id": 111,
@@ -1444,7 +1554,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Sinh Học Phân Tử (PCR)/VS.PCR.05.01 quy trình khử nhiễm phòng xét nghiệm SHPT.pdf",
     "sizeFormatted": "437 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Sinh_Hoc_Phan_Tu_PCR/VS.PCR.05.01_quy_trinh_khu_nhiem_phong_xet_nghiem_SHPT.pdf"
   },
   {
     "id": 112,
@@ -1457,7 +1568,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Sinh Học Phân Tử (PCR)/VS.PCR.06.01 Quy trình xử lý rác thải COVID.pdf",
     "sizeFormatted": "433 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Sinh_Hoc_Phan_Tu_PCR/VS.PCR.06.01_Quy_trinh_xu_ly_rac_thai_COVID.pdf"
   },
   {
     "id": 113,
@@ -1470,7 +1582,8 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Sinh Học Phân Tử (PCR)/VS.PCR.07.01 Quy trình xét nghiệm HPV Realtime-pCR.pdf",
     "sizeFormatted": "506 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Sinh_Hoc_Phan_Tu_PCR/VS.PCR.07.01_Quy_trinh_xet_nghiem_HPV_Realtime-pCR.pdf"
   },
   {
     "id": 114,
@@ -1483,6 +1596,7 @@ const PROCEDURES_DATA = [
     "path": "Tài Liệu/Sinh Học Phân Tử (PCR)/VS.QL.33.01 QT xác nhận GTSD đa mồi hô hấp.pdf",
     "sizeFormatted": "410 KB",
     "department": "Khoa Vi sinh - Bệnh viện Đa khoa Đức Giang",
-    "lead": "BS.CK2. Đào Quang Trung"
+    "lead": "BS.CK2. Đào Quang Trung",
+    "storageKey": "Sinh_Hoc_Phan_Tu_PCR/VS.QL.33.01_QT_xac_nhan_GTSD_da_moi_ho_hap.pdf"
   }
 ];

@@ -39,11 +39,26 @@ function getFileFormatInfo(filename) {
     return { type: 'pdf', label: 'PDF', icon: '📄', cssClass: 'format-pdf' };
 }
 
+// Chuyển chuỗi thành Storage Key chuẩn ASCII cho Supabase S3
+function toSafeStorageKey(text) {
+    if (!text) return '';
+    return removeVietnameseTones(text)
+        .replace(/[^a-zA-Z0-9._/-]/g, '_')
+        .replace(/_+/g, '_')
+        .replace(/^_+|_+$/g, '');
+}
+
 // Lấy đường dẫn gọi file từ Supabase Storage hoặc Fallback nội bộ
 function getDocumentUrl(proc) {
     if (proc.storageUrl) return proc.storageUrl;
+    // Nếu có storageKey chuẩn từ data.js
+    if (proc.storageKey) {
+        return `${SUPABASE_CONFIG.url}/storage/v1/object/public/${BUCKET_NAME}/${proc.storageKey}`;
+    }
     // URL chuẩn trên Supabase Storage
-    const storagePublicUrl = `${SUPABASE_CONFIG.url}/storage/v1/object/public/${BUCKET_NAME}/${encodeURIComponent(proc.category)}/${encodeURIComponent(proc.filename)}`;
+    const safeCategory = toSafeStorageKey(proc.category);
+    const safeFilename = toSafeStorageKey(proc.filename);
+    const storagePublicUrl = `${SUPABASE_CONFIG.url}/storage/v1/object/public/${BUCKET_NAME}/${safeCategory}/${safeFilename}`;
     // Nếu chạy local offline có file nội bộ
     if (window.location.protocol === 'file:' && proc.path) {
         return proc.path;
@@ -939,9 +954,10 @@ async function handleUploadSubmit(e) {
     submitBtn.disabled = true;
     submitBtn.textContent = '⏳ Đang tải lên Supabase...';
 
-    // Tạo đường dẫn trong bucket Supabase Storage: [Category]/[filename]
-    const cleanFilename = file.name.replace(/\s+/g, '_');
-    const remotePath = `${category}/${Date.now()}_${cleanFilename}`;
+    // Tạo đường dẫn chuẩn ASCII trong bucket Supabase Storage: [Category]/[filename]
+    const safeCategory = toSafeStorageKey(category);
+    const safeFilename = toSafeStorageKey(file.name);
+    const remotePath = `${safeCategory}/${Date.now()}_${safeFilename}`;
 
     let uploadedStorageUrl = '';
     const client = getSupabase();
