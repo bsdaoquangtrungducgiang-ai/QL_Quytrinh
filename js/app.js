@@ -59,6 +59,22 @@ function toSafeStorageKey(text) {
         .replace(/^_+|_+$/g, '');
 }
 
+// Ánh xạ chính xác nhóm chuyên môn tới thư mục trong Bucket 'tai-lieu' trên Supabase
+function getStorageFolderForCategory(cat) {
+    if (!cat) return 'Quan_Ly_Chat_Luong';
+    const map = {
+        'Quản Lý Chất Lượng': 'Quan_Ly_Chat_Luong',
+        'Nuôi Cấy': 'Nuoi_Cay',
+        'Nuôi cấy': 'Nuoi_Cay',
+        'Miễn Dịch': 'Mien_Dich',
+        'Miễn dịch': 'Mien_Dich',
+        'Nhuộm Soi': 'Nhuom_Soi',
+        'Sinh Học Phân Tử (PCR)': 'Sinh_Hoc_Phan_Tu_PCR',
+        'Sinh học PT': 'Sinh_Hoc_Phan_Tu_PCR'
+    };
+    return map[cat] || toSafeStorageKey(cat);
+}
+
 // Lấy đường dẫn gọi file từ Supabase Storage hoặc Fallback nội bộ
 function getDocumentUrl(proc) {
     if (proc.storageUrl) return proc.storageUrl;
@@ -967,18 +983,18 @@ async function handleUploadSubmit(e) {
     submitBtn.disabled = true;
     submitBtn.textContent = '⏳ Đang tải lên Supabase...';
 
-    // Tạo đường dẫn chuẩn ASCII trong bucket Supabase Storage: [Category]/[filename]
-    const safeCategory = toSafeStorageKey(category);
+    // Tạo đường dẫn chuẩn trong bucket Supabase Storage: [Thư_Mục_Chuẩn]/[Timestamp]_[filename]
+    const targetFolder = getStorageFolderForCategory(category);
     const safeFilename = toSafeStorageKey(file.name);
-    const remotePath = `${safeCategory}/${Date.now()}_${safeFilename}`;
+    const remotePath = `${targetFolder}/${Date.now()}_${safeFilename}`;
 
     let uploadedStorageUrl = '';
     const client = getSupabase();
 
     if (client) {
         try {
-            progressBar.style.width = '40%';
-            progressPercent.textContent = '40%';
+            progressBar.style.width = '35%';
+            progressPercent.textContent = '35%';
 
             // Tải file lên Supabase Storage
             const { data, error } = await client.storage
@@ -989,22 +1005,34 @@ async function handleUploadSubmit(e) {
                 });
 
             if (error) {
-                console.warn('Lỗi Supabase Storage upload, dùng public url chuẩn:', error);
+                console.error('Lỗi tải file lên Supabase Storage:', error);
+                progressWrapper.style.display = 'none';
+                progressBar.style.width = '0%';
+                submitBtn.disabled = false;
+                submitBtn.textContent = '📤 Tải Lên & Lưu Vào Kho';
+                
+                alert(`⚠️ KHÔNG THỂ LƯU TỆP VÀO KHO STORAGE '${BUCKET_NAME}'!\n\nChi tiết lỗi từ Supabase: ${error.message || JSON.stringify(error)}\n\n👉 NGUYÊN NHÂN: Bucket '${BUCKET_NAME}' trên Supabase chưa được cấp quyền tải lên (Policy INSERT cho anon).\nVui lòng thêm Policy cho bucket 'tai-lieu' trên Supabase Dashboard.`);
+                return;
             }
 
-            progressBar.style.width = '80%';
-            progressPercent.textContent = '80%';
+            progressBar.style.width = '75%';
+            progressPercent.textContent = '75%';
 
             // Lấy URL công khai
             const { data: publicUrlData } = client.storage
                 .from(BUCKET_NAME)
                 .getPublicUrl(remotePath);
 
-            uploadedStorageUrl = publicUrlData ? publicUrlData.publicUrl : `${SUPABASE_CONFIG.url}/storage/v1/object/public/${BUCKET_NAME}/${encodeURIComponent(remotePath)}`;
+            uploadedStorageUrl = publicUrlData ? publicUrlData.publicUrl : `${SUPABASE_CONFIG.url}/storage/v1/object/public/${BUCKET_NAME}/${remotePath}`;
 
         } catch (err) {
-            console.error('Lỗi khi tải lên Supabase Storage:', err);
-            uploadedStorageUrl = URL.createObjectURL(file);
+            console.error('Lỗi ngoại lệ khi tải lên Supabase Storage:', err);
+            progressWrapper.style.display = 'none';
+            progressBar.style.width = '0%';
+            submitBtn.disabled = false;
+            submitBtn.textContent = '📤 Tải Lên & Lưu Vào Kho';
+            alert(`⚠️ Lỗi ngoại lệ khi tải lên Storage: ${err.message}`);
+            return;
         }
     } else {
         uploadedStorageUrl = URL.createObjectURL(file);
