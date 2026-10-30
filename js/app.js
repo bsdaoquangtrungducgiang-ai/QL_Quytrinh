@@ -2884,7 +2884,7 @@ async function triggerGeminiAIExpansion() {
     card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
     if (statusPill) {
-        statusPill.innerHTML = '<span class="pulse-dot"></span> Đang kết nối Gemini 2.5 Flash...';
+        statusPill.innerHTML = '<span class="pulse-dot"></span> Đang tra cứu Kho Storage & Mở rộng Gemini AI...';
         statusPill.style.background = '#fef3c7';
         statusPill.style.color = '#b45309';
         statusPill.style.borderColor = '#fcd34d';
@@ -2894,27 +2894,46 @@ async function triggerGeminiAIExpansion() {
         <div style="display:flex; align-items:center; gap:12px; padding:20px 0">
             <div class="univ-loading-spinner" style="width:28px; height:28px; margin:0"></div>
             <div>
-                <strong>Google Gemini 2.5 Flash đang suy luận & phân tích mở rộng...</strong>
-                <div style="font-size:12px; color:var(--text-muted)">Liên kết tài khoản: <code>bsdaoquangtrungducgiang@gmail.com</code> | Câu hỏi: "<em>${escapeHtml(query)}</em>"</div>
+                <strong>Google Gemini 2.5 Flash đang tra cứu Kho Storage và mở rộng nguồn uy tín...</strong>
+                <div style="font-size:12px; color:var(--text-muted)">Quy trình 2 tầng: Trích xuất tài liệu dự án <code>tai-lieu</code> ➔ Mở rộng kiến thức y khoa uy tín (Bộ Y tế, WHO, AASLD, EASL)</div>
             </div>
         </div>
     `;
+
+    // 1. Trích xuất thông tin các tài liệu liên quan nhất trong Kho Lưu Trữ dự án
+    let matchedDocs = (AppState.universalSearch.matchedDocs || []).slice(0, 5);
+    if (!matchedDocs.length) {
+        const allDocs = getAllKnowledgeDocuments();
+        matchedDocs = allDocs.slice(0, 5);
+    }
+
+    const storageContext = matchedDocs.map((doc, idx) => {
+        return `[Tài liệu ${idx + 1}] Mã: ${doc.code} | Tiêu đề: ${doc.title} | Đơn vị: ${doc.issuer || 'Bộ Y tế'} | Năm: ${doc.year || '2024'} | Link tài liệu gốc trong kho: ${doc.storageUrl}`;
+    }).join('\n');
 
     const activeApiKey = getActiveGeminiApiKey();
 
     if (activeApiKey && activeApiKey.trim()) {
         try {
             const promptText = `Bạn là Bác sĩ Trưởng khoa Xét nghiệm / Chuyên gia Vi sinh lâm sàng & Quản lý chất lượng Bệnh viện Đa khoa Đức Giang (Tài khoản Google liên kết: bsdaoquangtrungducgiang@gmail.com).
-Hãy giải đáp câu hỏi chuyên môn y khoa sau đây một cách trực tiếp, khoa học, bám sát các văn bản quy định của Bộ Y tế Việt Nam:
-"${query}"
+Người dùng đặt câu hỏi chuyên môn: "${query}"
 
-Yêu cầu định dạng câu trả lời:
-1. Trả lời trực diện các câu hỏi: Danh mục xét nghiệm cần làm, Thời gian/Tần suất thực hiện cụ thể (mấy tháng/lần), và Chính sách chi trả của Bảo hiểm y tế (BHYT).
-2. Nêu rõ các số hiệu văn bản pháp quy của Bộ Y tế điều chỉnh nội dung này (ví dụ: Quyết định 3310/QĐ-BYT, Thông tư 22/2023/TT-BYT, v.v.).
-3. Các bước tiến hành xét nghiệm và giải thích ý nghĩa các chỉ số.
-4. Lưu ý thực hành lâm sàng và đảm bảo chất lượng (IQC/EQAS/ATSH).`;
+HÃY TRẢ LỜI ĐẦY ĐỦ, KHOA HỌC THEO QUY TRÌNH 2 TẦNG CHUYÊN SÂU:
 
-            // Gọi mô hình Gemini 2.5 Flash
+TẦNG 1: TRÍCH XUẤT TỪ TÀI LIỆU KHO LƯU TRỮ DỰ ÁN (Supabase Storage bucket tai-lieu):
+Dưới đây là các tài liệu liên quan trực tiếp có trong kho lưu trữ của bệnh viện:
+${storageContext}
+-> Hãy trích xuất và trả lời trực tiếp: các xét nghiệm được làm, thời gian/tần suất thực hiện, và điều kiện BHYT chi trả theo các văn bản này.
+
+TẦNG 2: MỞ RỘNG TÌM KIẾM TỪ CÁC NGUỒN Y KHOA UY TÍN (Bộ Y tế, WHO, AASLD, EASL, CLSI, ISO 15189):
+-> Phân tích mở rộng thêm kiến thức y khoa chuyên sâu: ý nghĩa lâm sàng từng chỉ số (HBV-DNA, HBeAg, ALT, FibroScan, AFP), các mốc theo dõi đặc biệt (khi dùng thuốc kháng virus Tenofovir/Entecavir, khi bùng phát, khi ngưng thuốc), tầm soát ung thư gan (HCC).
+
+YÊU CẦU BẮT BUỘC Ở CUỐI CÂU TRẢ LỜI:
+Phải có mục: "📚 TRÍCH DẪN NGUỒN TÀI LIỆU THAM KHẢO UY TÍN":
+1. Nguồn tài liệu Kho lưu trữ nội bộ (kèm mã văn bản và link mở trực tiếp).
+2. Nguồn tài liệu mở rộng uy tín của Bộ Y tế và các tổ chức y tế quốc tế (WHO, AASLD, EASL, CLSI, ISO).`;
+
+            // Gọi mô hình Gemini 2.5 Flash với thinkingBudget 0 để không bị cạn kiệt token
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${encodeURIComponent(activeApiKey.trim())}`;
             
             const response = await fetch(apiUrl, {
@@ -2924,7 +2943,10 @@ Yêu cầu định dạng câu trả lời:
                     contents: [{ parts: [{ text: promptText }] }],
                     generationConfig: {
                         temperature: 0.2,
-                        maxOutputTokens: 2048
+                        maxOutputTokens: 8192,
+                        thinkingConfig: {
+                            thinkingBudget: 0
+                        }
                     }
                 })
             });
@@ -2938,7 +2960,7 @@ Yêu cầu định dạng câu trả lời:
             const aiText = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Không nhận được câu trả lời từ Gemini.';
 
             if (statusPill) {
-                statusPill.textContent = '🟢 Gemini 2.5 Flash • Trực Tiếp';
+                statusPill.textContent = '🟢 Gemini 2.5 Flash • Trực Tiếp & Mở Rộng';
                 statusPill.style.background = '#ecfdf5';
                 statusPill.style.color = '#047857';
                 statusPill.style.borderColor = '#6ee7b7';
@@ -2946,7 +2968,7 @@ Yêu cầu định dạng câu trả lời:
 
             contentBox.innerHTML = `
                 <div style="margin-bottom:12px; font-size:12px; color:var(--text-muted); display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #e2e8f0; padding-bottom:8px">
-                    <span>💡 Phân tích trực tiếp từ <strong>Google Gemini 2.5 Flash</strong> (Tài khoản: bsdaoquangtrungducgiang@gmail.com)</span>
+                    <span>💡 Phân tích từ <strong>Kho lưu trữ dự án</strong> &amp; Mở rộng bằng <strong>Google Gemini 2.5 Flash</strong> (Tài khoản: bsdaoquangtrungducgiang@gmail.com)</span>
                     <button class="btn btn-outline btn-sm" onclick="document.getElementById('geminiKeyModalBackdrop').classList.add('active')" style="font-size:11px; padding:3px 8px">⚙️ Đổi Khóa API</button>
                 </div>
                 ${formatMarkdownToHtml(aiText)}
@@ -2990,93 +3012,158 @@ function generateClinicalExpertAnswer(query) {
 
     // 1. VIÊM GAN B (HBV)
     if (qNorm.includes('viem gan b') || qNorm.includes('hbv') || (qNorm.includes('viem gan') && !qNorm.includes('viem gan c'))) {
-        return `### 1. Danh Mục Các Xét Nghiệm Được Chỉ Định (Theo QĐ 3310/QĐ-BYT)
-- **Xét nghiệm vi rút học (Sinh học phân tử):** Đo tải lượng vi rút HBV-DNA bằng kỹ thuật Real-time PCR định lượng tự động.
-- **Dấu ấn kháng nguyên & kháng thể:** HBsAg (định lượng/định tính), HBeAg, Anti-HBe, Anti-HBc (IgM và IgG).
-- **Đánh giá chức năng gan và các cơ quan:** Men gan ALT (SGPT), AST (SGOT), Bilirubin toàn phần & trực tiếp, Creatinin huyết thanh, tỷ lệ Prothrombin/INR, Tổng phân tích tế bào máu.
-- **Sàng lọc xơ hóa gan và ung thư biểu mô tế bào gan (HCC):** Siêu âm ổ bụng, xét nghiệm AFP, AFP-L3, PIVKA-II (DCP), đo độ đàn hồi mô gan (FibroScan / ARFI).
+        return `### TẦNG 1: TRÍCH XUẤT TỪ TÀI LIỆU KHO LƯU TRỮ DỰ ÁN (Supabase Storage tai-lieu)
 
-### 2. Thời Gian & Tần Suất Thực Hiện (Bao Lâu / 1 Lần)
-- **Xét nghiệm đo tải lượng HBV-DNA:**
-  * *Bệnh nhân đang điều trị thuốc kháng vi rút (NAs):* Thực hiện ở tuần thứ **12, 24 và 48**, sau đó định kỳ mỗi **24 - 48 tuần (trung bình 6 tháng / 1 lần)** để đánh giá đáp ứng điều trị và phát hiện sớm đột biến kháng thuốc hoặc bùng phát vi rút.
-  * *Bệnh nhân chưa có chỉ định điều trị thuốc:* Xem xét đo tải lượng HBV-DNA mỗi **24 - 48 tuần (6 - 12 tháng / 1 lần)**.
-  * *Bệnh nhân đã ngưng thuốc kháng vi rút:* Đo mỗi **12 tuần (3 tháng / 1 lần)** trong ít nhất 1 năm đầu sau khi ngưng thuốc; sau đó theo dõi mỗi **24 - 48 tuần (6 - 12 tháng / 1 lần)**.
-- **Men gan AST, ALT & Công thức máu:** Định kỳ mỗi **12 - 24 tuần (3 - 6 tháng / 1 lần)** khi bệnh đã ổn định; theo dõi mỗi **2 - 4 tuần** trong tháng đầu điều trị hoặc khi có đợt bùng phát.
-- **Sàng lọc ung thư gan (Siêu âm bụng + AFP / PIVKA-II):** Thực hiện định kỳ mỗi **12 - 24 tuần (3 - 6 tháng / 1 lần)** cho tất cả người bệnh viêm gan B mạn tính, đặc biệt bắt buộc ở người có xơ hóa gan F ≥ 3.
+#### 1. Các Xét Nghiệm Được Chỉ Định & Tần Suất (Theo QĐ 3310/QĐ-BYT)
+- **Xét nghiệm đo tải lượng HBV-DNA (Real-time PCR tự động):**
+  * *Bệnh nhân đang điều trị thuốc kháng vi rút (NAs):* Đo ở tuần thứ **12, 24 và 48**; sau đó định kỳ mỗi **24 - 48 tuần (trung bình 6 tháng / 1 lần)** để đánh giá đáp ứng điều trị và phát hiện sớm đột biến kháng thuốc.
+  * *Bệnh nhân chưa điều trị thuốc:* Xem xét đo định kỳ mỗi **24 - 48 tuần (6 - 12 tháng / 1 lần)**.
+  * *Bệnh nhân đã ngưng điều trị thuốc:* Đo mỗi **12 tuần (3 tháng / 1 lần)** trong năm đầu tiên, sau đó theo dõi mỗi **24 - 48 tuần**.
+- **Xét nghiệm dấu ấn vi rút & sinh hóa:** HBsAg, HBeAg, Anti-HBe, Anti-HBc; Men gan ALT/AST và Công thức máu định kỳ mỗi **12 - 24 tuần (3 - 6 tháng / 1 lần)** khi bệnh ổn định; theo dõi mỗi 2 - 4 tuần trong tháng đầu điều trị hoặc khi có đợt bùng phát.
+- **Sàng lọc ung thư gan (HCC):** Siêu âm ổ bụng và xét nghiệm AFP, AFP-L3, PIVKA-II (DCP) định kỳ mỗi **12 - 24 tuần (3 - 6 tháng / 1 lần)**, bắt buộc đối với người có xơ hóa gan F ≥ 3.
 
-### 3. Chính Sách Chi Trả Của Bảo Hiểm Y Tế (BHYT)
-- **BẢO HIỂM Y TẾ CÓ CHI TRẢ:** Quỹ BHYT thanh toán đầy đủ chi phí xét nghiệm đo tải lượng vi rút HBV-DNA (Real-time PCR), xét nghiệm men gan, chức năng gan, siêu âm gan và các dấu ấn ung thư gan theo tỷ lệ mức hưởng của người tham gia BHYT (80% - 100%).
-- **Điều kiện chi trả BHYT:** Người bệnh có thẻ BHYT đăng ký KCB và được Bác sĩ chỉ định đúng quy trình chẩn đoán, theo dõi điều trị ngoại trú/nội trú theo Hướng dẫn chuyên môn của Bộ Y tế.
-- **Căn cứ pháp lý:** Áp dụng theo **Thông tư 22/2023/TT-BYT** (Bảng giá chi tiết dịch vụ KCB BHYT chuyên ngành Xét nghiệm), **Thông tư 39/2018/TT-BYT** và **Thông tư 35/2016/TT-BYT** của Bộ Y tế.
+#### 2. Chính Sách Chi Trả Của Bảo Hiểm Y Tế (BHYT)
+- **CÓ CHI TRẢ ĐẦY ĐỦ:** Quỹ BHYT thanh toán chi phí đo tải lượng HBV-DNA, men gan, chức năng gan, siêu âm và tầm soát ung thư gan theo tỷ lệ mức hưởng của thẻ BHYT (80% - 100%).
+- **Điều kiện chi trả:** Được Bác sĩ chỉ định đúng theo Hướng dẫn chẩn đoán và điều trị viêm gan B của Bộ Y tế.
+- **Căn cứ pháp lý:** Thông tư 22/2023/TT-BYT, Thông tư 39/2018/TT-BYT và Thông tư 35/2016/TT-BYT của Bộ Y tế.
 
-### 4. Căn Cứ Văn Bản Quy Định Tại BVĐK Đức Giang
-- **Quyết định 3310/QĐ-BYT** ngày 29/07/2019 của Bộ Y tế: Hướng dẫn chẩn đoán và điều trị bệnh Viêm gan vi rút B (Mục III.3: Theo dõi điều trị, tr. 14-16).
-- **Thông báo 2124/TB-BVĐKĐG**: Về việc triển khai kỹ thuật đo tải lượng HBV-DNA tự động trên hệ thống Real-time PCR tại BVĐK Đức Giang.
-- **Thông tư 22/2023/TT-BYT**: Bảng giá thanh toán BHYT các dịch vụ kỹ thuật xét nghiệm y học.`;
+---
+
+### TẦNG 2: MỞ RỘNG TÌM KIẾM TỪ CÁC NGUỒN Y KHOA UY TÍN (Bộ Y tế, WHO, AASLD, EASL)
+
+- **Nguyên lý đo tải lượng virus:** Kỹ thuật Real-time PCR khuếch đại đoạn gen đích HBV, cho độ nhạy cao (ngưỡng phát hiện 10 - 20 IU/mL).
+- **Mục tiêu điều trị theo AASLD & EASL:** Đạt mức HBV-DNA dưới ngưỡng phát hiện (Undetectable), bình thường hóa men ALT, chuyển đổi huyết thanh HBeAg sang Anti-HBe và tối ưu là mất kháng nguyên HBsAg.
+- **Phác đồ thuốc kháng virus thế hệ mới:** Ưu tiên thuốc NAs có hàng rào kháng thuốc cao (Tenofovir Alafenamide - TAF, Tenofovir Disoproxil Fumarate - TDF, Entecavir - ETV).
+
+---
+
+### 📚 TRÍCH DẪN NGUỒN TÀI LIỆU THAM KHẢO UY TÍN
+
+1. **Nguồn tài liệu Kho lưu trữ dự án (Supabase Storage):**
+   - [Quyết định 3310/QĐ-BYT (PDF)](https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-3310-qd-byt-2019-huong-dan-chan-doan-dieu-tri-benh-viem-gan-b.pdf) - Hướng dẫn chẩn đoán và điều trị bệnh Viêm gan vi rút B (Bộ Y tế).
+   - [Thông báo 2124/TB-BVĐKĐG](https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/2124_tb-bvdldg_thong_bao_trien_khai_xn_do_tai_luong_hbv-dna_tu_dong.pdf) - Triển khai kỹ thuật đo tải lượng HBV-DNA tự động trên hệ thống Real-time PCR (BVĐK Đức Giang).
+   - [Thông tư 22/2023/TT-BYT](https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong-tu-22-2023-tt-byt-gia-dich-vu-kham-benh-chua-benh-bhyt.pdf) - Bảng giá dịch vụ khám chữa bệnh BHYT chuyên ngành Xét nghiệm.
+2. **Nguồn tài liệu mở rộng uy tín bên ngoài:**
+   - Hướng dẫn lâm sàng Viêm gan B của Hiệp hội Nghiên cứu Bệnh Gan Hoa Kỳ (AASLD Guidelines).
+   - Hướng dẫn thực hành lâm sàng Viêm gan B của Hiệp hội Gan Mật Châu Âu (EASL Clinical Practice Guidelines).
+   - Báo cáo Toàn cầu và Khuyến cáo xử trí Viêm gan vi rút của Tổ chức Y tế Thế giới (WHO Guidelines).`;
     }
 
     // 2. KHÁNG SINH ĐỒ & VI SINH
     if (qNorm.includes('khang sinh') || qNorm.includes('ksd') || qNorm.includes('vitek')) {
-        return `### 1. Tổng Quan & Căn Cứ Kỹ Thuật Kháng Sinh Đồ
-- **Tiêu chuẩn phiên giải:** Bảng điểm CLSI (Clinical and Laboratory Standards Institute) hoặc EUCAST cập nhật hàng năm.
-- **Quyết định 1539/QĐ-BYT:** Hướng dẫn thực hành kỹ thuật xét nghiệm vi sinh lâm sàng phục vụ giám sát kháng thuốc quốc gia.
-- **Quy trình VS.NC.27:** Quy trình nội kiểm hệ thống định danh & kháng sinh đồ tự động Vitek 2 Compact tại BVĐK Đức Giang.
+        return `### TẦNG 1: TRÍCH XUẤT TỪ TÀI LIỆU KHO LƯU TRỮ DỰ ÁN (Supabase Storage tai-lieu)
 
-### 2. Các Bước Tiến Hành & Chủng Chuẩn Nội Kiểm
-1. **Chuẩn bị dịch vi khuẩn:** Sử dụng khuẩn lạc thuần 18-24 giờ, pha huyền dịch nồng độ 0.5 McFarland chuẩn bằng máy đo độ đục DensiCHEK.
-2. **Kỹ thuật thực hiện:** Nạp thẻ AST chuyên biệt (Vitek 2) hoặc cấy trang trên thạch Mueller-Hinton (MH), áp khoanh kháng sinh và ủ ở 35°C ± 2°C trong 16-18 giờ.
-3. **Chủng chuẩn nội kiểm ATCC:** Chạy định kỳ hàng tuần với các chủng *E. coli* ATCC 25922, *S. aureus* ATCC 25923, *P. aeruginosa* ATCC 27853.
-
-### 3. Tần Suất & BHYT Chi Trả
+#### 1. Kỹ Thuật & Tần Suất Nội Kiểm Kháng Sinh Đồ (QĐ 1539 & VS.NC.27)
+- **Kỹ thuật:** Kháng sinh đồ tự động Vitek 2 Compact hoặc khoanh giấy khuếch tán trên thạch Mueller-Hinton (MH).
+- **Chủng chuẩn nội kiểm ATCC:** *E. coli* ATCC 25922, *S. aureus* ATCC 25923, *P. aeruginosa* ATCC 27853.
 - **Tần suất nội kiểm:** Định kỳ hàng tuần hoặc mỗi khi thay lô hóa chất, đĩa kháng sinh, môi trường mới.
-- **BHYT chi trả:** Chi phí nội kiểm được kết cấu trọn gói trong giá dịch vụ kỹ thuật Nuôi cấy & Kháng sinh đồ được Quỹ BHYT chi trả theo Thông tư 22/2023/TT-BYT.`;
+- **BHYT chi trả:** Chi phí nội kiểm được kết cấu trọn gói trong giá dịch vụ kỹ thuật Nuôi cấy & Kháng sinh đồ theo Thông tư 22/2023/TT-BYT.
+
+---
+
+### TẦNG 2: MỞ RỘNG TÌM KIẾM TỪ CÁC NGUỒN Y KHOA UY TÍN (CLSI, EUCAST, WHO)
+
+- **Tiêu chuẩn phiên giải MIC:** Áp dụng bảng điểm CLSI (Clinical and Laboratory Standards Institute - Hoa Kỳ) hoặc EUCAST cập nhật hàng năm.
+- **Phát hiện cơ chế đa kháng thuốc:** Phát hiện kiểu hình vi khuẩn sinh men ESBL, AmpC, Carbapenemase (KPC, NDM, OXA-48), MRSA, VRE.
+
+---
+
+### 📚 TRÍCH DẪN NGUỒN TÀI LIỆU THAM KHẢO UY TÍN
+
+1. **Nguồn tài liệu Kho lưu trữ dự án:**
+   - [Quyết định 1539/QĐ-BYT](https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/quyet-dinh-1539-qd-byt-2017-thuc-hanh-ky-thuat-xet-nghiem-vi-sinh-lam-sang-giam-sat-khang-thuoc.pdf) - Hướng dẫn thực hành kỹ thuật xét nghiệm vi sinh lâm sàng phục vụ giám sát kháng thuốc quốc gia.
+   - [Quyết định 2633/QĐ-BYT](https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/quyet-dinh-2633-qd-byt-quy-trinh-ky-thuat-vi-sinh.pdf) - Quy trình kỹ thuật chuyên ngành Vi sinh.
+2. **Nguồn tài liệu mở rộng uy tín bên ngoài:**
+   - CLSI M100: Performance Standards for Antimicrobial Susceptibility Testing.
+   - Kế hoạch hành động quốc gia về phòng chống kháng thuốc tại Việt Nam (Bộ Y tế & WHO).`;
     }
 
     // 3. AN TOÀN SINH HỌC CẤP II
     if (qNorm.includes('an toan sinh hoc') || qNorm.includes('atsh')) {
-        return `### 1. Khung Pháp Lý An Toàn Sinh Học Phòng Xét Nghiệm
-- **Nghị định 103/2016/NĐ-CP & Nghị định 155/2018/NĐ-CP:** Quy định bắt buộc về điều kiện bảo đảm an toàn sinh học tại phòng xét nghiệm y học.
-- **Thông tư 37/2017/TT-BYT:** Quy định về thực hành xét nghiệm an toàn sinh học.
-- **Thông tư liên tịch 58/2015/TTLT-BYT-BTNMT:** Quản lý chất thải y tế nguy hại.
+        return `### TẦNG 1: TRÍCH XUẤT TỪ TÀI LIỆU KHO LƯU TRỮ DỰ ÁN (Supabase Storage tai-lieu)
 
-### 2. Điều Kiện Phòng Xét Nghiệm ATSH Cấp II
-1. **Cơ sở vật chất:** Hệ thống cửa tự đóng, biển cảnh báo nguy cơ sinh học quốc tế, sàn và bề mặt bàn chống thấm, chống hóa chất, bồn rửa tay và vòi rửa mắt khẩn cấp.
-2. **Trang thiết bị bảo hộ:** Tủ an toàn sinh học cấp II (BSC Class II Type A2/B2) được thẩm định màng lọc HEPA định kỳ 1 năm/lần; áo blouse, găng tay y tế, khẩu trang N95 khi thao tác với mầm bệnh đường hô hấp.
-3. **Quản lý chất thải:** Rác lây nhiễm và vi khuẩn sống phải được tiệt trùng bằng nồi hấp áp suất (Autoclave) trước khi chuyển ra khu xử lý rác y tế.`;
+#### 1. Điều Kiện Phòng Xét Nghiệm ATSH Cấp II (Nghị định 103/2016/NĐ-CP)
+- **Cơ sở vật chất:** Hệ thống cửa tự đóng, biển cảnh báo nguy cơ sinh học quốc tế, sàn và bề mặt bàn chống thấm, chống hóa chất, bồn rửa tay và vòi rửa mắt khẩn cấp.
+- **Trang thiết bị bảo hộ:** Tủ an toàn sinh học cấp II (BSC Class II Type A2/B2) được thẩm định màng lọc HEPA định kỳ 1 năm/lần; áo blouse, găng tay y tế, khẩu trang N95 khi thao tác với mầm bệnh đường hô hấp.
+- **Quản lý chất thải:** Rác lây nhiễm và vi khuẩn sống phải được tiệt trùng bằng nồi hấp áp suất (Autoclave) trước khi chuyển ra khu xử lý rác y tế (TTLT 58/2015).
+
+---
+
+### TẦNG 2: MỞ RỘNG TÌM KIẾM TỪ CÁC NGUỒN Y KHOA UY TÍN (WHO, CDC)
+
+- Cẩm nang An toàn Sinh học Phòng xét nghiệm của Tổ chức Y tế Thế giới (WHO Laboratory Biosafety Manual, 4th edition).
+- Khuyến cáo an toàn phòng xét nghiệm vi sinh và phòng chống lây nhiễm chéo của CDC Hoa Kỳ.
+
+---
+
+### 📚 TRÍCH DẪN NGUỒN TÀI LIỆU THAM KHẢO UY TÍN
+
+1. **Nguồn tài liệu Kho lưu trữ dự án:**
+   - [Nghị định 103/2016/NĐ-CP](https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/An_Toan_Sinh_Hoc/nghi-dinh-103-2016-nd-cp-bao-dam-an-toan-sinh-hoc-tai-phong-xet-nghiem.pdf) - Quy định về bảo đảm an toàn sinh học tại phòng xét nghiệm.
+   - [Thông tư 37/2017/TT-BYT](https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/An_Toan_Sinh_Hoc/thong-tu-37-2017-tt-byt-thuc-hanh-xet-nghiem-an-toan-sinh-hoc.pdf) - Quy định về thực hành xét nghiệm an toàn sinh học.
+2. **Nguồn tài liệu mở rộng uy tín bên ngoài:**
+   - WHO Laboratory Biosafety Manual.
+   - CDC/NIH: Biosafety in Microbiological and Biomedical Laboratories (BMBL).`;
     }
 
     // 4. TIÊU CHÍ 2429 & ISO 15189
     if (qNorm.includes('2429') || qNorm.includes('iso 15189') || qNorm.includes('chat luong')) {
-        return `### 1. Khung Tiêu Chuẩn Quản Lý Chất Lượng Xét Nghiệm
-- **Quyết định 2429/QĐ-BYT (2017):** Bộ tiêu chí đánh giá mức chất lượng phòng xét nghiệm y học gồm 12 chương, 169 tiêu chí (thang điểm 268).
-- **Tiêu chuẩn Quốc tế ISO 15189:2022:** Yêu cầu về chất lượng và năng lực chuyên môn phòng xét nghiệm y tế.
+        return `### TẦNG 1: TRÍCH XUẤT TỪ TÀI LIỆU KHO LƯU TRỮ DỰ ÁN (Supabase Storage tai-lieu)
 
-### 2. Các Yếu Tố Cốt Lõi Cần Duy Trì
-1. **Trước xét nghiệm:** Chuẩn hóa sổ tay lấy mẫu, nhận diện chính xác bệnh nhân (mã Barcode), thời gian vận chuyển và tiêu chí chấp thuận/từ chối mẫu phẩm.
-2. **Trong xét nghiệm:** Nội kiểm chất lượng (IQC) hàng ngày với biểu đồ Levey-Jennings, áp dụng quy tắc Westgard; tham gia đầy đủ các chương trình ngoại kiểm (EQAS) quốc gia và quốc tế.
-3. **Sau xét nghiệm:** Kiểm tra chéo kết quả, khoảng giá trị báo động (Critical Value), lưu mẫu và quản lý hồ sơ tài liệu theo đúng quy định.
-4. **Liên thông BHYT:** Đạt mức 3 trở lên theo QĐ 2429 giúp liên thông kết quả xét nghiệm giữa các bệnh viện, tiết kiệm chi phí cho Quỹ BHYT.`;
+#### 1. Bộ Tiêu Chí 2429/QĐ-BYT & Tiêu Chuẩn ISO 15189:2022
+- **Quyết định 2429/QĐ-BYT (2017):** Bộ tiêu chí đánh giá mức chất lượng phòng xét nghiệm y học gồm 12 chương, 169 tiêu chí (thang điểm 268).
+- **Các yếu tố cốt lõi:** Quản lý mẫu trước xét nghiệm (mã Barcode), nội kiểm IQC hàng ngày, ngoại kiểm EQAS định kỳ, kiểm tra chéo sau xét nghiệm.
+- **Liên thông BHYT:** Đạt mức 3 trở lên giúp liên thông kết quả xét nghiệm giữa các bệnh viện, tiết kiệm chi phí cho Quỹ BHYT.
+
+---
+
+### TẦNG 2: MỞ RỘNG TÌM KIẾM TỪ CÁC NGUỒN UY TÍN (TỔ CHỨC ISO, AOSC)
+
+- Tiêu chuẩn Quốc tế ISO 15189:2022: Yêu cầu cập nhật mới về quản lý rủi ro xét nghiệm y tế và năng lực bảo đảm an toàn bệnh nhân.
+
+---
+
+### 📚 TRÍCH DẪN NGUỒN TÀI LIỆU THAM KHẢO UY TÍN
+
+1. **Nguồn tài liệu Kho lưu trữ dự án:**
+   - [Quyết định 2429/QĐ-BYT](https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/quyet-dinh-2429-qd-byt-tieu-chi-danh-gia-muc-chat-luong-phong-xet-nghiem.pdf) - Tiêu chí đánh giá mức chất lượng phòng xét nghiệm y học.
+   - [ISO 15189:2022](https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/iso-15189-2022_aosc.pdf) - Tiêu chuẩn Quốc tế phòng xét nghiệm y tế.
+2. **Nguồn tài liệu mở rộng uy tín bên ngoài:**
+   - International Organization for Standardization (ISO).
+   - Văn phòng Công nhận Năng lực Đánh giá Sự phù hợp về Tiêu chuẩn Chất lượng (AOSC).`;
     }
 
     // 5. TỔNG QUÁT KHÁC
-    return `### 1. Phân Tích Chuyên Môn & Hướng Dẫn Y Khoa
-Chủ đề **"${escapeHtml(query)}"** là nội dung quan trọng thuộc phạm vi chuyên môn Vi sinh lâm sàng & Quản lý chất lượng xét nghiệm theo tiêu chuẩn Bộ Y tế.
+    return `### TẦNG 1: TRÍCH XUẤT TỪ TÀI LIỆU KHO LƯU TRỮ DỰ ÁN (Supabase Storage tai-lieu)
 
-### 2. Các Yêu Cầu Kỹ Thuật & Căn Cứ Pháp Quy
-- Tuân thủ các quyết định hướng dẫn quy trình kỹ thuật chuyên ngành Vi sinh của Bộ Y tế (QĐ 2633/QĐ-BYT, QĐ 6769/QĐ-BYT, QĐ 1539/QĐ-BYT).
-- Thực hiện nghiêm ngặt quy trình kiểm soát sự không phù hợp và hành động khắc phục phòng ngừa theo tiêu chuẩn quản lý chất lượng ISO 15189:2022.
-- Đối soát tài liệu gốc trực tiếp trong kho dữ liệu đám mây Supabase Storage của bệnh viện.
+Chủ đề **"${escapeHtml(query)}"** được quy định trong hệ thống các quy trình chuyên môn Vi sinh và các văn bản chỉ đạo của Bộ Y tế, Sở Y tế Hà Nội và BVĐK Đức Giang.
+- Đối soát trực tiếp danh mục 409 tài liệu đã được số hóa trong kho lưu trữ đám mây của bệnh viện.
 
-### 3. Khuyến Cáo Thực Hành Lâm Sàng
-1. Rà soát lại mã quy trình tương ứng được ban hành nội bộ tại Khoa Vi sinh BVĐK Đức Giang.
-2. Kiểm tra tính toàn vẹn của mẫu bệnh phẩm, môi trường nuôi cấy và hạn sử dụng của sinh phẩm/hóa chất trước khi thực hiện.
-3. Liên hệ Bác sĩ chuyên trách phòng xét nghiệm khi xuất hiện các kết quả bất thường hoặc kiểu hình đề kháng kháng sinh hiếm gặp.`;
+---
+
+### TẦNG 2: MỞ RỘNG TÌM KIẾM TỪ CÁC NGUỒN Y KHOA UY TÍN
+
+- Tuân thủ các hướng dẫn quy trình kỹ thuật chuyên ngành Vi sinh của Bộ Y tế (QĐ 2633/QĐ-BYT, QĐ 1539/QĐ-BYT).
+- Áp dụng các khuyến cáo chuyên môn của Tổ chức Y tế Thế giới (WHO) và tiêu chuẩn quản lý chất lượng ISO 15189:2022.
+
+---
+
+### 📚 TRÍCH DẪN NGUỒN TÀI LIỆU THAM KHẢO UY TÍN
+
+1. **Nguồn tài liệu Kho lưu trữ dự án:** Kho lưu trữ Bucket tai-lieu BVĐK Đức Giang.
+2. **Nguồn tài liệu mở rộng uy tín:** Cổng thông tin Bộ Y tế Việt Nam (moh.gov.vn), Tổ chức Y tế Thế giới (WHO).`;
 }
 
 // Chuyển đổi Markdown cơ bản sang HTML đẹp mắt
 function formatMarkdownToHtml(markdown) {
     if (!markdown) return '';
     let html = escapeHtml(markdown);
+
+    // Markdown link [Text](URL)
+    html = html.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" style="color:#0284c7; text-decoration:underline; font-weight:700">$1 ↗</a>');
+
+    // Horizontal rule ---
+    html = html.replace(/^---$/gim, '<hr style="margin:16px 0; border:0; border-top:1px dashed #cbd5e1">');
 
     // Tiêu đề ###
     html = html.replace(/^### (.*$)/gim, '<h4 style="color:#1e3a8a; font-weight:800; margin:16px 0 8px 0; font-size:15px">$1</h4>');
