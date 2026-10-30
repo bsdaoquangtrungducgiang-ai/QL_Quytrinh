@@ -388,157 +388,130 @@
              ================================================================ -->
         <section class="universal-search-section" id="universalSearchSection" style="display:none">
           
-          <!-- Universal Search Hero Header -->
-          <div class="univ-hero-card">
-            <div class="univ-hero-badge">
-              <span class="pulse-dot"></span>
-              <span>GOOGLE &amp; GEMINI AI SEARCH ENGINE • KHO TÀI LIỆU SUPABASE</span>
+          <!-- Hộp Tìm Kiếm Tinh Gọn (Google & AI Style) -->
+          <div class="univ-hero-card" style="padding: 24px; margin-bottom: 20px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom: 12px;">
+              <h2 style="font-size:20px; font-weight:800; margin:0; display:flex; align-items:center; gap:8px">
+                <span>🔍</span>
+                <span>Tìm Kiếm &amp; Hỏi Đáp Trực Tiếp Theo Văn Bản Kho Lưu Trữ</span>
+              </h2>
+              <div class="gemini-account-badge" id="openGeminiKeyModalBtn" title="Khóa API Gemini đã kích hoạt">
+                <span class="gemini-sparkle">✨</span>
+                <span>Gemini AI (bsdaoquangtrungducgiang@gmail.com)</span>
+                <span>⚙️</span>
+              </div>
             </div>
-            <h2>🔍 Tìm Kiếm Tổng Thể &amp; Hỏi Đáp AI Thông Minh</h2>
-            <p>
-              Tra cứu thông tin toàn diện trên <strong>409 tài liệu</strong> (114 quy trình xét nghiệm + 295 văn bản y tế) trong kho lưu trữ đám mây.
-              Hệ thống tổng hợp câu trả lời tự động chuẩn <strong>Google AI Overview</strong> và hỗ trợ <strong>Mở rộng tìm kiếm bằng Google Gemini AI</strong>.
+
+            <p style="font-size:13px; color:var(--text-muted); margin-bottom: 14px;">
+              Hệ thống trả lời trực tiếp nội dung quy định, danh mục xét nghiệm, tần suất và chế độ BHYT chi trả từ <strong>409 tài liệu</strong> trong kho lưu trữ.
             </p>
 
-            <!-- Search Bar Wrapper -->
-            <div class="univ-search-bar-wrapper">
-              <div class="univ-search-bar">
-                <span class="univ-search-icon">🔍</span>
-                <input 
-                  type="text" 
-                  id="univSearchInput" 
-                  class="univ-search-input" 
-                  placeholder="Hỏi bất kỳ điều gì (ví dụ: Quy trình nội kiểm kháng sinh đồ, Tiêu chuẩn an toàn sinh học cấp II, Tiêu chí 2429 đánh giá PXN...)" 
-                  autocomplete="off"
-                >
-                <button type="button" class="univ-clear-btn" id="univClearBtn" title="Xóa tìm kiếm">✕</button>
-                <button type="button" class="univ-submit-btn" id="univSearchBtn">
-                  <span>Hỏi AI &amp; Tìm Kiếm</span>
-                  <span>🚀</span>
-                </button>
-              </div>
-
-              <!-- Scope filter pills -->
-              <div class="univ-scope-bar">
-                <div class="univ-scope-pills">
-                  <button type="button" class="univ-scope-pill active" data-scope="all">
-                    <span>🌐 Tất cả tài liệu</span>
-                    <span class="count" id="univCountAll">409</span>
-                  </button>
-                  <button type="button" class="univ-scope-pill" data-scope="procedures">
-                    <span>🧫 Quy trình xét nghiệm</span>
-                    <span class="count">114</span>
-                  </button>
-                  <button type="button" class="univ-scope-pill" data-scope="medical">
-                    <span>📜 Văn bản y tế &amp; Pháp quy</span>
-                    <span class="count">295</span>
-                  </button>
-                </div>
-
-                <!-- Gemini Account Status & Key Settings -->
-                <div class="gemini-account-badge" id="openGeminiKeyModalBtn" title="Cài đặt khóa API Google Gemini cho tài khoản bsdaoquangtrungducgiang@gmail.com">
-                  <span class="gemini-sparkle">✨</span>
-                  <span class="gemini-acc-text">Gemini AI (bsdaoquangtrungducgiang@gmail.com)</span>
-                  <span class="gemini-gear-btn">⚙️</span>
-                </div>
-              </div>
-
-              <!-- Quick Prompt Suggestions -->
-              <div class="univ-prompt-chips">
-                <span class="prompt-chip-label">Gợi ý câu hỏi:</span>
-                <button type="button" class="prompt-chip" data-prompt="Quy trình nội kiểm kháng sinh đồ Vitek 2">🔬 Nội kiểm kháng sinh đồ</button>
-                <button type="button" class="prompt-chip" data-prompt="Tiêu chuẩn an toàn sinh học cấp II phòng xét nghiệm">☣️ An toàn sinh học cấp II</button>
-                <button type="button" class="prompt-chip" data-prompt="Tiêu chí 2429 đánh giá mức chất lượng phòng xét nghiệm">📋 Tiêu chí 2429 PXN</button>
-                <button type="button" class="prompt-chip" data-prompt="Quy trình xét nghiệm cấy khuẩn nước chạy thận nhân tạo">🦠 Cấy khuẩn nước lọc thận</button>
-                <button type="button" class="prompt-chip" data-prompt="Kỹ thuật Real-time PCR đo tải lượng HBV-DNA">🧬 Đo tải lượng HBV PCR</button>
-                <button type="button" class="prompt-chip" data-prompt="Thông tư 32/2023 hướng dẫn Luật Khám bệnh chữa bệnh">📜 Thông tư 32/2023 BYT</button>
-                <button type="button" class="prompt-chip" data-prompt="Chẩn đoán và xét nghiệm Sốt xuất huyết Dengue">🩺 Chẩn đoán Sốt xuất huyết</button>
-                <button type="button" class="prompt-chip" data-prompt="Tiêu chuẩn ISO 15189:2022 phòng xét nghiệm y tế">🧪 ISO 15189:2022</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Loading State Animation -->
-          <div class="univ-loading-card" id="univLoadingCard" style="display:none">
-            <div class="univ-loading-spinner"></div>
-            <div class="univ-loading-text">
-              <h4>Đang đối soát &amp; tổng hợp thông tin từ Kho lưu trữ...</h4>
-              <p>Phân tích 409 quy trình &amp; văn bản y tế để trích xuất câu trả lời chuẩn xác nhất</p>
-            </div>
-          </div>
-
-          <!-- AI Synthesized Answer Card (AI Overview từ Kho Lưu Trữ) -->
-          <div class="univ-ai-answer-card" id="univAiOverviewCard" style="display:none">
-            <div class="ai-card-header">
-              <div class="ai-card-title">
-                <span class="ai-glow-icon">🤖</span>
-                <div>
-                  <h3>AI Overview • Trả Lời Tổng Hợp Từ Kho Lưu Trữ</h3>
-                  <p id="aiOverviewSubtitle">Tổng hợp tự động từ các quy trình &amp; văn bản y tế đã số hóa</p>
-                </div>
-              </div>
-              <div class="ai-confidence-badge" id="aiConfidenceBadge">
-                <span>⚡ Trích xuất từ kho nội bộ</span>
-              </div>
+            <!-- Ô tìm kiếm tối giản -->
+            <div class="univ-search-bar" style="margin-bottom: 12px;">
+              <span class="univ-search-icon">🔍</span>
+              <input 
+                type="text" 
+                id="univSearchInput" 
+                class="univ-search-input" 
+                placeholder="Nhập câu hỏi (ví dụ: Bệnh viêm gan B mạn tính được làm xét nghiệm gì? Bao lâu 1 lần? BHYT chi trả không?...)" 
+                autocomplete="off"
+              >
+              <button type="button" class="univ-clear-btn" id="univClearBtn" title="Xóa">✕</button>
+              <button type="button" class="univ-submit-btn" id="univSearchBtn">
+                <span>Tìm kiếm</span>
+              </button>
             </div>
 
-            <div class="ai-card-body" id="aiOverviewContent">
-              <!-- Dynamically populated -->
-            </div>
-
-            <!-- Nút / Khu vực: Mở rộng tìm kiếm bằng AI Gemini -->
-            <div class="gemini-expansion-banner" id="geminiExpansionBanner">
-              <div class="gemini-banner-left">
-                <div class="gemini-icon-circle">✨</div>
-                <div>
-                  <h4>Mở rộng tìm kiếm &amp; hỏi đáp chuyên sâu với Google Gemini AI</h4>
-                  <p>Phân tích sâu rộng kiến thức y khoa, nguyên lý vi sinh và hướng dẫn thực hành lâm sàng liên kết tài khoản <code>bsdaoquangtrungducgiang@gmail.com</code></p>
-                </div>
-              </div>
-              <button type="button" class="btn-gemini-expand" id="btnTriggerGeminiExpand">
-                <span>✨ Mở Rộng Bằng Gemini AI</span>
+            <!-- Gợi ý câu hỏi mẫu nhanh -->
+            <div class="univ-prompt-chips">
+              <span class="prompt-chip-label">Câu hỏi mẫu:</span>
+              <button type="button" class="prompt-chip" data-prompt="Bệnh viêm gan B mạn tính được làm xét nghiệm gì? Thời gian bao lâu? Bảo hiểm y tế chi trả không?">
+                🩺 Viêm gan B: XN gì, bao lâu, BHYT chi trả?
+              </button>
+              <button type="button" class="prompt-chip" data-prompt="Quy trình nội kiểm kháng sinh đồ Vitek 2 thực hiện thế nào? Chủng chuẩn nào?">
+                🔬 Nội kiểm kháng sinh đồ Vitek 2
+              </button>
+              <button type="button" class="prompt-chip" data-prompt="Tiêu chuẩn an toàn sinh học cấp II phòng xét nghiệm gồm những điều kiện gì?">
+                ☣️ Điều kiện an toàn sinh học cấp II
+              </button>
+              <button type="button" class="prompt-chip" data-prompt="Tiêu chí 2429 đánh giá mức chất lượng phòng xét nghiệm gồm những gì?">
+                📋 Tiêu chí đánh giá mức CLPXN 2429
+              </button>
+              <button type="button" class="prompt-chip" data-prompt="Xét nghiệm cấy khuẩn nước chạy thận nhân tạo làm những gì và bao lâu 1 lần?">
+                🦠 Xét nghiệm nước lọc thận RO
               </button>
             </div>
           </div>
 
-          <!-- Gemini Deep AI Result Card -->
-          <div class="gemini-result-card" id="geminiResultCard" style="display:none">
-            <div class="gemini-card-header">
-              <div style="display:flex; align-items:center; gap:10px">
-                <span style="font-size:24px">✨</span>
+          <!-- Trạng thái tải -->
+          <div class="univ-loading-card" id="univLoadingCard" style="display:none; padding:24px">
+            <div class="univ-loading-spinner" style="width:36px; height:36px"></div>
+            <div class="univ-loading-text">
+              <h4 style="font-size:15px">Đang trích xuất nội dung từ các văn bản trong Kho lưu trữ...</h4>
+            </div>
+          </div>
+
+          <!-- Khối Câu Trả Lời Trực Tiếp Từ Kho Lưu Trữ (Direct Answer Box) -->
+          <div class="univ-ai-answer-card" id="univAiOverviewCard" style="display:none">
+            <div class="ai-card-header" style="margin-bottom:14px; padding-bottom:10px">
+              <div class="ai-card-title">
+                <span style="font-size:24px">🎯</span>
                 <div>
-                  <h3 style="color:#1e3a8a; font-size:16px">Phân Tích Chuyên Sâu Của Google Gemini AI</h3>
-                  <p style="font-size:12px; color:var(--text-muted)">Mô hình Gemini 1.5 Flash • Tài khoản: bsdaoquangtrungducgiang@gmail.com</p>
+                  <h3 style="font-size:16px; margin:0">Trả Lời Trực Tiếp Theo Văn Bản Quy Định (Kho Lưu Trữ)</h3>
+                  <p id="aiOverviewSubtitle" style="margin:2px 0 0 0; font-size:12px; color:var(--text-muted)">Trích xuất trực tiếp các quy định y tế hiện hành trong kho lưu trữ</p>
                 </div>
               </div>
-              <span class="gemini-live-status-pill" id="geminiStatusPill">🟢 Gemini Ready</span>
+              <span class="ai-confidence-badge" style="background:#ecfdf5; color:#047857; border:1px solid #6ee7b7">
+                ✓ Trích xuất từ tài liệu kho
+              </span>
             </div>
-            <div class="gemini-card-body" id="geminiAiContent">
-              <!-- Dynamically filled -->
+
+            <!-- Nội dung trả lời chi tiết đúng trọng tâm câu hỏi -->
+            <div class="ai-card-body" id="aiOverviewContent"></div>
+
+            <!-- Nút Mở Rộng Bằng AI Gemini -->
+            <div style="margin-top:16px; padding-top:14px; border-top:1px dashed #cbd5e1; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px">
+              <div style="font-size:13px; color:var(--text-muted)">
+                Cần thêm thông tin chuyên sâu hoặc tư vấn lâm sàng?
+              </div>
+              <button type="button" class="btn-gemini-expand" id="btnTriggerGeminiExpand">
+                <span>✨ Mở Rộng Tìm Kiếm Bằng AI (Gemini)</span>
+              </button>
             </div>
           </div>
 
-          <!-- Document Results List from Storage -->
+          <!-- Khối Kết Quả Mở Rộng AI Gemini -->
+          <div class="gemini-result-card" id="geminiResultCard" style="display:none">
+            <div class="gemini-card-header">
+              <div style="display:flex; align-items:center; gap:8px">
+                <span style="font-size:22px">✨</span>
+                <div>
+                  <h3 style="color:#1e3a8a; font-size:15px; margin:0">Thông Tin Mở Rộng Chuyên Sâu Từ Google Gemini AI</h3>
+                  <p style="font-size:11.5px; color:var(--text-muted); margin:2px 0 0 0">Mô hình: Gemini 2.5 Flash • Tài khoản: bsdaoquangtrungducgiang@gmail.com</p>
+                </div>
+              </div>
+              <span class="gemini-live-status-pill" id="geminiStatusPill">🟢 Gemini AI Connected</span>
+            </div>
+            <div class="gemini-card-body" id="geminiAiContent"></div>
+          </div>
+
+          <!-- Danh sách văn bản căn cứ trong Kho Lưu Trữ -->
           <div class="univ-results-section" id="univResultsSection" style="display:none">
             <div class="univ-results-header">
-              <h3 id="univResultsCountText">Các tài liệu liên quan trong Kho Lưu Trữ (0)</h3>
-              <span style="font-size:12px; color:var(--text-muted)">Đồng bộ trực tiếp từ Supabase Storage Bucket tai-lieu</span>
+              <h3 id="univResultsCountText" style="font-size:15px">Tài liệu văn bản căn cứ trong Kho Lưu Trữ (0)</h3>
             </div>
-
-            <div class="univ-docs-grid" id="univDocsGrid">
-              <!-- Cards rendered by JS -->
-            </div>
+            <div class="univ-docs-grid" id="univDocsGrid"></div>
           </div>
 
-          <!-- Empty State -->
-          <div class="univ-empty-state" id="univEmptyState" style="display:none">
-            <div style="font-size:46px; margin-bottom:12px">🔎</div>
-            <h3>Kho lưu trữ chưa có thông tin khớp chính xác với từ khóa này</h3>
-            <p style="color:var(--text-muted); max-width:550px; margin:8px auto">
-              Bạn có thể sử dụng tính năng <strong>"Mở rộng tìm kiếm bằng AI"</strong> bên dưới để Gemini AI tra cứu và giải đáp chi tiết theo chuẩn Bộ Y tế.
+          <!-- Trạng thái không tìm thấy -->
+          <div class="univ-empty-state" id="univEmptyState" style="display:none; padding:36px 20px">
+            <div style="font-size:38px; margin-bottom:8px">🔎</div>
+            <h3 style="font-size:16px">Kho lưu trữ chưa có văn bản khớp chính xác với câu hỏi này</h3>
+            <p style="color:var(--text-muted); font-size:13px; margin:6px 0 16px 0">
+              Bạn có thể sử dụng tính năng <strong>"Mở rộng tìm kiếm bằng AI"</strong> để Gemini AI giải đáp chi tiết theo hướng dẫn y khoa.
             </p>
-            <button type="button" class="btn-gemini-expand" id="btnEmptyTriggerGemini" style="margin-top:16px">
-              <span>✨ Mở Rộng Bằng AI (Gemini) Ngay</span>
+            <button type="button" class="btn-gemini-expand" id="btnEmptyTriggerGemini">
+              <span>✨ Mở Rộng Bằng Gemini AI Ngay</span>
             </button>
           </div>
 
