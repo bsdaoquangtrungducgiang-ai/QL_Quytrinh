@@ -106,6 +106,13 @@
           <span class="nav-text">Tìm kiếm thông tin</span>
         </a>
 
+        <!-- Thông tin văn bản y tế -->
+        <a href="#medicalDocsSection" class="nav-link" id="navMedicalDocs" data-nav="medical-docs">
+          <span class="nav-icon">📜</span>
+          <span class="nav-text">Văn bản y tế</span>
+          <span class="nav-badge" id="sidebarMedicalDocsBadge">295</span>
+        </a>
+
         <div class="nav-section-title" style="margin-top:12px">HỆ THỐNG & TÀI KHOẢN</div>
 
         <!-- Quản lý CSDL Kho Lưu Trữ (Chỉ Admin) -->
@@ -430,6 +437,121 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             KHU VỰC THÔNG TIN VĂN BẢN Y TẾ & QUY ĐỊNH CHUYÊN MÔN
+             ================================================================ -->
+        <section class="medical-docs-section" id="medicalDocsSection">
+          <div class="tasks-header" style="flex-wrap:wrap; gap:16px; margin-bottom:18px">
+            <div>
+              <h2 style="display:flex; align-items:center; gap:10px">
+                <span style="font-size:26px">📜</span>
+                <span>Thông Tin Văn Bản Y Tế &amp; Quy Định Chuyên Môn</span>
+              </h2>
+              <p style="font-size:13.5px; color:var(--text-muted); margin-top:4px">
+                Kho lưu trữ số hóa tập trung: Quyết định kỹ thuật vi sinh, Tiêu chuẩn ISO 15189, Phác đồ điều trị, An toàn sinh học &amp; Văn bản pháp quy Bộ Y tế
+              </p>
+            </div>
+            <div style="display:flex; gap:10px; align-items:center">
+              <span class="storage-tag" style="background:#e0f2fe; color:#0369a1; border:1px solid #bae6fd; font-weight:700">
+                ☁️ Supabase Storage: tai-lieu/Van_Ban_Y_Te
+              </span>
+            </div>
+          </div>
+
+          <!-- Quick Stats Cards (8 Nhóm chuyên môn) -->
+          <div class="med-stats-grid" id="medStatsGrid">
+            <!-- Rendered by JS -->
+          </div>
+
+          <!-- Interactive Search & Filter Toolbar -->
+          <div class="med-search-toolbar">
+            <!-- Main Live Instant Search Input -->
+            <div class="med-search-box-wrap">
+              <span class="med-search-icon">🔍</span>
+              <input 
+                type="text" 
+                id="medSearchInput" 
+                class="med-search-input" 
+                placeholder="Nhập bất kỳ thông tin cần tìm (ví dụ: QĐ 2633, Thông tư 32, Kháng sinh đồ, Đấu thầu, Covid, An toàn sinh học, Lao, ISO 15189...)"
+                autocomplete="off"
+              >
+              <button type="button" class="search-clear-btn" id="medSearchClearBtn" title="Xóa tìm kiếm">✕</button>
+            </div>
+
+            <div class="med-filter-controls">
+              <!-- Select Filter: Định dạng -->
+              <select id="medFormatFilter" class="select-filter" style="height:44px; min-width:145px">
+                <option value="all">📁 Tất cả định dạng</option>
+                <option value="pdf">📄 File PDF</option>
+                <option value="word">📝 File Word (.doc/.docx)</option>
+                <option value="excel">📊 File Excel (.xls/.xlsx)</option>
+                <option value="image">🖼️ File Ảnh</option>
+              </select>
+
+              <!-- Select Filter: Năm ban hành -->
+              <select id="medYearFilter" class="select-filter" style="height:44px; min-width:145px">
+                <option value="all">📅 Tất cả các năm</option>
+                <option value="2025-2026">2025 - 2026 (Mới)</option>
+                <option value="2024">Năm 2024</option>
+                <option value="2023">Năm 2023</option>
+                <option value="2020-2022">2020 - 2022</option>
+                <option value="older">Trước 2020</option>
+              </select>
+
+              <!-- Sort Filter -->
+              <select id="medSortFilter" class="select-filter" style="height:44px; min-width:145px">
+                <option value="year_desc">Mới nhất trước</option>
+                <option value="year_asc">Cũ nhất trước</option>
+                <option value="title_asc">Tên A → Z</option>
+                <option value="size_desc">Dung lượng giảm dần</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Category Filter Tabs / Pills -->
+          <div class="med-category-pills" id="medCategoryPills">
+            <!-- Rendered by JS -->
+          </div>
+
+          <!-- Live Search Status & Result Summary -->
+          <div class="med-result-meta" id="medResultMeta">
+            <span id="medResultCount">Đang nạp danh mục văn bản y tế từ kho lưu trữ...</span>
+            <span id="medSearchIndicator" class="med-search-live-badge" style="display:none">⚡ Trả lời tìm kiếm tức thì</span>
+          </div>
+
+          <!-- Documents Table -->
+          <div class="table-wrapper med-docs-table-wrapper">
+            <table class="proc-table med-docs-table">
+              <thead>
+                <tr>
+                  <th style="width:55px; text-align:center">STT</th>
+                  <th style="width:140px">Số Hiệu / Mã</th>
+                  <th>Tên Văn Bản Y Tế &amp; Nội Dung</th>
+                  <th style="width:170px">Nhóm Chuyên Môn</th>
+                  <th style="width:130px">Cơ Quan • Năm</th>
+                  <th style="width:110px; text-align:center">Định Dạng</th>
+                  <th style="width:140px; text-align:center">Thao Tác</th>
+                </tr>
+              </thead>
+              <tbody id="medDocsTableBody">
+                <!-- Rendered dynamically by JS -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Empty search state -->
+          <div class="med-empty-state" id="medEmptyState" style="display:none">
+            <div style="font-size:42px; margin-bottom:10px">🔎</div>
+            <h3>Không tìm thấy văn bản phù hợp</h3>
+            <p style="color:var(--text-muted); font-size:13.5px">
+              Không có văn bản nào khớp với từ khóa tìm kiếm. Vui lòng thử từ khóa khác hoặc bấm đặt lại bộ lọc.
+            </p>
+            <button class="btn btn-outline btn-sm" id="medResetFilterBtn" style="margin-top:12px">
+              🔄 Đặt lại bộ lọc
+            </button>
           </div>
         </section>
 
@@ -833,6 +955,7 @@
   <!-- Scripts -->
   <script src="js/accounts.js"></script>
   <script src="js/data.js"></script>
+  <script src="js/medical-documents-data.js"></script>
   <script src="js/supabase-config.js"></script>
   <script src="js/app.js"></script>
 </body>

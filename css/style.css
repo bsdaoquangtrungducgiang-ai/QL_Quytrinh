@@ -1892,3 +1892,276 @@ body:not(.is-admin) .admin-only {
   color: #15803d;
   border: 1px solid #86efac;
 }
+
+/* ==========================================================================
+   KHU VỰC THÔNG TIN VĂN BẢN Y TẾ & QUY ĐỊNH CHUYÊN MÔN
+   ========================================================================== */
+.medical-docs-section {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 30px;
+}
+
+.med-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.med-stat-card {
+  background: var(--bg-main);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.med-stat-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.med-stat-card.active {
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+  border-color: var(--primary);
+  box-shadow: 0 4px 10px rgba(14, 165, 233, 0.2);
+}
+
+[data-theme="dark"] .med-stat-card.active {
+  background: linear-gradient(135deg, #0c4a6e 0%, #082f49 100%);
+  border-color: #0284c7;
+}
+
+.med-stat-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.med-stat-info {
+  min-width: 0;
+}
+
+.med-stat-count {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--sky-950);
+  line-height: 1.2;
+}
+
+[data-theme="dark"] .med-stat-count {
+  color: #fff;
+}
+
+.med-stat-name {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 2px;
+  font-weight: 600;
+}
+
+.med-search-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.med-search-box-wrap {
+  position: relative;
+  flex: 1 1 360px;
+  display: flex;
+  align-items: center;
+}
+
+.med-search-icon {
+  position: absolute;
+  left: 14px;
+  font-size: 16px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.med-search-input {
+  width: 100%;
+  height: 44px;
+  padding: 0 42px 0 42px;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  outline: none;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: var(--transition);
+}
+
+.med-search-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+}
+
+.med-filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.med-category-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 6px;
+}
+
+.med-cat-pill {
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  padding: 6px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.med-cat-pill:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.med-cat-pill.active {
+  background-color: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.35);
+}
+
+.med-cat-pill .pill-badge {
+  background: rgba(0, 0, 0, 0.08);
+  padding: 1px 6px;
+  border-radius: 10px;
+  font-size: 11px;
+}
+
+.med-cat-pill.active .pill-badge {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.med-result-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  padding: 0 4px;
+}
+
+.med-search-live-badge {
+  background-color: #dcfce7;
+  color: #15803d;
+  border: 1px solid #86efac;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 11.5px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  animation: pulse 2s infinite;
+}
+
+.med-docs-table-wrapper {
+  max-height: 650px;
+  overflow-y: auto;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+}
+
+.med-docs-table th {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: var(--sky-100);
+}
+
+[data-theme="dark"] .med-docs-table th {
+  background-color: #1e293b;
+}
+
+.med-cat-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.tag-chuyen-mon { background: #f3e8ff; color: #7e22ce; border: 1px solid #d8b4fe; }
+.tag-qlcl { background: #fef3c7; color: #b45309; border: 1px solid #fcd34d; }
+.tag-atsh { background: #ffe4e6; color: #be123c; border: 1px solid #fda4af; }
+.tag-phac-do { background: #d1fae5; color: #047857; border: 1px solid #6ee7b7; }
+.tag-phap-quy { background: #e0f2fe; color: #0369a1; border: 1px solid #7dd3fc; }
+.tag-benh-vien { background: #ccfbf1; color: #0f766e; border: 1px solid #5eead4; }
+.tag-covid { background: #ffedd5; color: #c2410c; border: 1px solid #fdba74; }
+
+.search-highlight {
+  background-color: #fef08a;
+  color: #000;
+  font-weight: 800;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+.btn-view-doc {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: var(--transition);
+}
+
+.btn-view-doc:hover {
+  background-color: var(--sky-600);
+  transform: translateY(-1px);
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(14, 165, 233, 0.3);
+}
+
+.med-empty-state {
+  text-align: center;
+  padding: 48px 20px;
+  background-color: var(--bg-main);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--border-color);
+  margin-top: 10px;
+}
+

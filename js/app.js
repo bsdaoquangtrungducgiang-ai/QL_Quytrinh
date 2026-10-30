@@ -111,7 +111,15 @@ const AppState = {
     },
     tasks: [],
     employees: [],
-    selectedUploadFile: null
+    selectedUploadFile: null,
+    // Văn Bản Y Tế State
+    medicalDocs: typeof MEDICAL_DOCUMENTS_DATA !== 'undefined' ? MEDICAL_DOCUMENTS_DATA : [],
+    filteredMedicalDocs: [],
+    selectedMedCategory: 'all',
+    medSearchQuery: '',
+    selectedMedFormat: 'all',
+    selectedMedYear: 'all',
+    selectedMedSort: 'year_desc'
 };
 
 // Khởi chạy khi DOM sẵn sàng
@@ -124,6 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initFilterOptions();
     initEventListeners();
     initSidebarNavigation();
+    initMedicalDocs();
     initUploadModal();
     initEditDocModal();
     initCharts();
@@ -401,6 +410,7 @@ function initSidebarNavigation() {
         { id: 'navMienDich', nav: 'mien-dich' },
         { id: 'navSHPT', nav: 'sinh-hoc-pt' },
         { id: 'navTimKiem', nav: 'tim-kiem' },
+        { id: 'navMedicalDocs', nav: 'medical-docs' },
         { id: 'navDbManager', nav: 'db-manager' },
         { id: 'navAccounts', nav: 'accounts' }
     ];
@@ -552,6 +562,23 @@ function filterByNav(navKey) {
             topbarTitle.innerHTML = '<span>🗄️ QUẢN LÝ CSDL KHO LƯU TRỮ TỆP (tai-lieu)</span>';
             const dbSec = document.getElementById('storageDatabaseSection');
             if (dbSec) dbSec.scrollIntoView({ behavior: 'smooth' });
+            break;
+
+        case 'medical-docs':
+            const navMed = document.getElementById('navMedicalDocs');
+            if (navMed) navMed.classList.add('active');
+            topbarTitle.innerHTML = '<span>📜 THÔNG TIN VĂN BẢN Y TẾ & QUY ĐỊNH CHUYÊN MÔN</span>';
+            const medSec = document.getElementById('medicalDocsSection');
+            if (medSec) {
+                medSec.scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => {
+                    const medSearch = document.getElementById('medSearchInput');
+                    if (medSearch) {
+                        medSearch.focus();
+                        medSearch.select();
+                    }
+                }, 350);
+            }
             break;
 
         case 'accounts':
@@ -1685,4 +1712,324 @@ function quickFillLogin(gmail, role) {
         if (submitBtn) submitBtn.focus();
     }
 }
+
+// ============================================================================
+// KHU VỰC QUẢN LÝ VÀ TRA CỨU VĂN BẢN Y TẾ (MEDICAL DOCUMENTS)
+// ============================================================================
+
+function initMedicalDocs() {
+    const searchInput = document.getElementById('medSearchInput');
+    const clearBtn = document.getElementById('medSearchClearBtn');
+    const formatFilter = document.getElementById('medFormatFilter');
+    const yearFilter = document.getElementById('medYearFilter');
+    const sortFilter = document.getElementById('medSortFilter');
+    const resetBtn = document.getElementById('medResetFilterBtn');
+
+    if (!document.getElementById('medicalDocsSection')) return;
+
+    // Render Stats & Category Pills
+    renderMedicalStatsGrid();
+    renderMedicalCategoryPills();
+
+    // 1. Live Instant Search as user types
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            AppState.medSearchQuery = e.target.value.trim();
+            if (clearBtn) clearBtn.classList.toggle('visible', !!AppState.medSearchQuery);
+            const liveBadge = document.getElementById('medSearchIndicator');
+            if (liveBadge) liveBadge.style.display = AppState.medSearchQuery ? 'inline-flex' : 'none';
+            filterAndRenderMedicalDocs();
+        });
+    }
+
+    if (clearBtn && searchInput) {
+        clearBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            AppState.medSearchQuery = '';
+            clearBtn.classList.remove('visible');
+            const liveBadge = document.getElementById('medSearchIndicator');
+            if (liveBadge) liveBadge.style.display = 'none';
+            filterAndRenderMedicalDocs();
+            searchInput.focus();
+        });
+    }
+
+    // 2. Format filter
+    if (formatFilter) {
+        formatFilter.addEventListener('change', (e) => {
+            AppState.selectedMedFormat = e.target.value;
+            filterAndRenderMedicalDocs();
+        });
+    }
+
+    // 3. Year filter
+    if (yearFilter) {
+        yearFilter.addEventListener('change', (e) => {
+            AppState.selectedMedYear = e.target.value;
+            filterAndRenderMedicalDocs();
+        });
+    }
+
+    // 4. Sort filter
+    if (sortFilter) {
+        sortFilter.addEventListener('change', (e) => {
+            AppState.selectedMedSort = e.target.value;
+            filterAndRenderMedicalDocs();
+        });
+    }
+
+    // 5. Reset filter button
+    if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+            AppState.selectedMedCategory = 'all';
+            AppState.medSearchQuery = '';
+            AppState.selectedMedFormat = 'all';
+            AppState.selectedMedYear = 'all';
+            AppState.selectedMedSort = 'year_desc';
+
+            if (searchInput) {
+                searchInput.value = '';
+                if (clearBtn) clearBtn.classList.remove('visible');
+            }
+            if (formatFilter) formatFilter.value = 'all';
+            if (yearFilter) yearFilter.value = 'all';
+            if (sortFilter) sortFilter.value = 'year_desc';
+
+            renderMedicalCategoryPills();
+            renderMedicalStatsGrid();
+            filterAndRenderMedicalDocs();
+        });
+    }
+
+    // Initial render
+    filterAndRenderMedicalDocs();
+}
+
+function renderMedicalStatsGrid() {
+    const grid = document.getElementById('medStatsGrid');
+    if (!grid) return;
+
+    const docs = AppState.medicalDocs || [];
+    const categories = typeof MEDICAL_DOC_CATEGORIES !== 'undefined' ? MEDICAL_DOC_CATEGORIES : [
+        { id: 'all', name: 'Tất Cả Văn Bản', icon: '📚' }
+    ];
+
+    grid.innerHTML = categories.map(cat => {
+        const count = cat.id === 'all'
+            ? docs.length
+            : docs.filter(d => d.category === cat.id).length;
+        const isActive = AppState.selectedMedCategory === cat.id;
+
+        return `
+            <div class="med-stat-card ${isActive ? 'active' : ''}" onclick="selectMedCategory('${cat.id}')">
+                <span class="med-stat-icon">${cat.icon}</span>
+                <div class="med-stat-info">
+                    <div class="med-stat-count">${count}</div>
+                    <div class="med-stat-name" title="${escapeHtml(cat.name)}">${escapeHtml(cat.name)}</div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+function renderMedicalCategoryPills() {
+    const pillsContainer = document.getElementById('medCategoryPills');
+    if (!pillsContainer) return;
+
+    const docs = AppState.medicalDocs || [];
+    const categories = typeof MEDICAL_DOC_CATEGORIES !== 'undefined' ? MEDICAL_DOC_CATEGORIES : [
+        { id: 'all', name: 'Tất Cả Văn Bản', icon: '📚' }
+    ];
+
+    pillsContainer.innerHTML = categories.map(cat => {
+        const count = cat.id === 'all'
+            ? docs.length
+            : docs.filter(d => d.category === cat.id).length;
+        const isActive = AppState.selectedMedCategory === cat.id;
+
+        return `
+            <button type="button" class="med-cat-pill ${isActive ? 'active' : ''}" onclick="selectMedCategory('${cat.id}')">
+                <span>${cat.icon}</span>
+                <span>${escapeHtml(cat.name)}</span>
+                <span class="pill-badge">${count}</span>
+            </button>
+        `;
+    }).join('');
+}
+
+function selectMedCategory(catId) {
+    AppState.selectedMedCategory = catId;
+    renderMedicalCategoryPills();
+    renderMedicalStatsGrid();
+    filterAndRenderMedicalDocs();
+}
+
+function filterAndRenderMedicalDocs() {
+    const tbody = document.getElementById('medDocsTableBody');
+    const resultCountEl = document.getElementById('medResultCount');
+    const emptyState = document.getElementById('medEmptyState');
+    if (!tbody) return;
+
+    let list = [...(AppState.medicalDocs || [])];
+
+    // 1. Lọc theo Nhóm chuyên môn
+    if (AppState.selectedMedCategory && AppState.selectedMedCategory !== 'all') {
+        list = list.filter(d => d.category === AppState.selectedMedCategory);
+    }
+
+    // 2. Tìm kiếm nhanh trực tiếp (Live Instant Search)
+    const q = (AppState.medSearchQuery || '').trim();
+    if (q) {
+        const qNorm = removeVietnameseTones(q);
+        const qParts = qNorm.split(/\s+/).filter(Boolean);
+
+        list = list.filter(d => {
+            const rawTarget = `${d.title} ${d.code} ${d.categoryName} ${d.issuer} ${d.year} ${d.keywords || ''}`;
+            const targetNorm = removeVietnameseTones(rawTarget);
+            return qParts.every(part => targetNorm.includes(part));
+        });
+    }
+
+    // 3. Lọc theo Định dạng
+    if (AppState.selectedMedFormat && AppState.selectedMedFormat !== 'all') {
+        list = list.filter(d => d.format === AppState.selectedMedFormat);
+    }
+
+    // 4. Lọc theo Năm ban hành
+    if (AppState.selectedMedYear && AppState.selectedMedYear !== 'all') {
+        if (AppState.selectedMedYear === '2025-2026') {
+            list = list.filter(d => d.year >= 2025);
+        } else if (AppState.selectedMedYear === '2024') {
+            list = list.filter(d => d.year === 2024);
+        } else if (AppState.selectedMedYear === '2023') {
+            list = list.filter(d => d.year === 2023);
+        } else if (AppState.selectedMedYear === '2020-2022') {
+            list = list.filter(d => d.year >= 2020 && d.year <= 2022);
+        } else if (AppState.selectedMedYear === 'older') {
+            list = list.filter(d => d.year < 2020);
+        }
+    }
+
+    // 5. Sắp xếp
+    if (AppState.selectedMedSort === 'year_desc') {
+        list.sort((a, b) => (b.year || 0) - (a.year || 0) || a.title.localeCompare(b.title));
+    } else if (AppState.selectedMedSort === 'year_asc') {
+        list.sort((a, b) => (a.year || 0) - (b.year || 0) || a.title.localeCompare(b.title));
+    } else if (AppState.selectedMedSort === 'title_asc') {
+        list.sort((a, b) => a.title.localeCompare(b.title));
+    } else if (AppState.selectedMedSort === 'size_desc') {
+        list.sort((a, b) => (b.size || 0) - (a.size || 0));
+    }
+
+    AppState.filteredMedicalDocs = list;
+
+    // Cập nhật kết quả đếm
+    const totalAll = (AppState.medicalDocs || []).length;
+    if (resultCountEl) {
+        if (q) {
+            resultCountEl.innerHTML = `⚡ Tìm kiếm siêu tốc: Tìm thấy <strong>${list.length}</strong> / ${totalAll} văn bản khớp với từ khóa "<em>${escapeHtml(q)}</em>"`;
+        } else if (AppState.selectedMedCategory !== 'all') {
+            const catObj = (typeof MEDICAL_DOC_CATEGORIES !== 'undefined' ? MEDICAL_DOC_CATEGORIES : []).find(c => c.id === AppState.selectedMedCategory);
+            resultCountEl.innerHTML = `Hiển thị <strong>${list.length}</strong> văn bản thuộc nhóm <strong>${escapeHtml(catObj ? catObj.name : AppState.selectedMedCategory)}</strong>`;
+        } else {
+            resultCountEl.innerHTML = `Tổng cộng <strong>${list.length}</strong> văn bản y tế đã số hóa & lưu trữ trên Supabase Storage`;
+        }
+    }
+
+    // Hiển thị trạng thái rỗng nếu không khớp
+    if (list.length === 0) {
+        tbody.innerHTML = '';
+        if (emptyState) emptyState.style.display = 'block';
+        return;
+    }
+    if (emptyState) emptyState.style.display = 'none';
+
+    // 6. Render các hàng văn bản
+    tbody.innerHTML = list.map((doc, idx) => {
+        const catTag = getMedCategoryTag(doc.category, doc.categoryName);
+        const highlightedTitle = highlightSearchQuery(doc.title, q);
+
+        return `
+            <tr>
+                <td style="text-align:center; font-weight:700; color:var(--text-muted)">
+                    ${idx + 1}
+                </td>
+                <td>
+                    <span class="code-badge" style="font-size:12px; font-weight:700; background:#f1f5f9; border:1px solid #cbd5e1; color:#0f172a">
+                        ${escapeHtml(doc.code || 'VBYT')}
+                    </span>
+                </td>
+                <td>
+                    <div style="font-weight:700; color:var(--sky-950); margin-bottom:4px; line-height:1.4">
+                        ${highlightedTitle}
+                    </div>
+                    <div style="font-size:11.5px; color:var(--text-muted); font-family:monospace">
+                        📁 ${escapeHtml(doc.filename)}
+                    </div>
+                </td>
+                <td>
+                    ${catTag}
+                </td>
+                <td style="font-size:12.5px">
+                    <div style="font-weight:600; color:var(--text-main)">${escapeHtml(doc.issuer || 'Bộ Y tế')}</div>
+                    <div style="font-size:11.5px; color:var(--text-muted)">Năm ${doc.year || '2024'}</div>
+                </td>
+                <td style="text-align:center">
+                    <span class="format-badge ${doc.formatClass || 'format-pdf'}" style="font-size:11px">
+                        ${doc.formatIcon || '📄'} ${doc.formatLabel || 'PDF'}
+                    </span>
+                    <div style="font-size:10.5px; color:var(--text-muted); margin-top:2px">
+                        ${doc.sizeFormatted || ''}
+                    </div>
+                </td>
+                <td style="text-align:center">
+                    <div class="action-btn-group" style="justify-content:center">
+                        <a 
+                            href="${doc.storageUrl}" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            class="btn-view-doc" 
+                            title="Mở xem văn bản gốc toàn văn từ Supabase Storage"
+                        >
+                            👁️ Xem Gốc
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        `;
+    }).join('');
+}
+
+function getMedCategoryTag(category, categoryName) {
+    const classMap = {
+        'Chuyen_Mon_Vi_Sinh': 'tag-chuyen-mon',
+        'Quan_Ly_Chat_Luong_ISO': 'tag-qlcl',
+        'An_Toan_Sinh_Hoc': 'tag-atsh',
+        'Phac_Do_Dieu_Tri': 'tag-phac-do',
+        'Van_Ban_Phap_Quy': 'tag-phap-quy',
+        'Benh_Vien_Va_So_Y_Te': 'tag-benh-vien',
+        'Phong_Chong_Dich_Covid': 'tag-covid'
+    };
+    const cssClass = classMap[category] || 'tag-phap-quy';
+    return `<span class="med-cat-tag ${cssClass}">${escapeHtml(categoryName)}</span>`;
+}
+
+function highlightSearchQuery(text, query) {
+    if (!text) return '';
+    if (!query) return escapeHtml(text);
+    
+    try {
+        const words = query.trim().split(/\s+/).filter(w => w.length > 0);
+        let escaped = escapeHtml(text);
+        
+        words.forEach(word => {
+            const regex = new RegExp(`(${word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+            escaped = escaped.replace(regex, '<span class="search-highlight">$1</span>');
+        });
+        return escaped;
+    } catch (e) {
+        return escapeHtml(text);
+    }
+}
+
 
