@@ -1988,6 +1988,7 @@ function filterAndRenderMedicalDocs() {
     tbody.innerHTML = list.map((doc, idx) => {
         const catTag = getMedCategoryTag(doc.category, doc.categoryName);
         const highlightedTitle = highlightSearchQuery(doc.title, q);
+        const highlightedCode = highlightSearchQuery(doc.code || 'VBYT', q);
 
         return `
             <tr>
@@ -1996,7 +1997,7 @@ function filterAndRenderMedicalDocs() {
                 </td>
                 <td>
                     <span class="code-badge" style="font-size:12px; font-weight:700; background:#f1f5f9; border:1px solid #cbd5e1; color:#0f172a">
-                        ${escapeHtml(doc.code || 'VBYT')}
+                        ${highlightedCode}
                     </span>
                 </td>
                 <td>

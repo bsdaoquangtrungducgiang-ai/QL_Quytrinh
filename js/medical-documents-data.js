@@ -1,14 +1,14 @@
 /**
  * Danh Mục Văn Bản Y Tế - Khoa Vi Sinh BVĐK Đức Giang
- * Tổng số văn bản: 295 văn bản đã được phân loại khoa học
+ * Tổng số văn bản: 295 văn bản đã được chuẩn hóa số hiệu & tên nội dung
  * Đồng bộ: Supabase Storage Bucket ('tai-lieu/Van_Ban_Y_Te')
  */
 
 const MEDICAL_DOCUMENTS_DATA = [
   {
     "id": "vb_001",
-    "code": "QĐ 2633",
-    "title": "QĐ 2633. HD quy trình kỹ thuật vi sinh",
+    "code": "2633/QĐ-BYT",
+    "title": "Quyết định 2633/QĐ-BYT: Hướng dẫn quy trình kỹ thuật về Vi sinh (Tập 1 - Gồm 455 quy trình kỹ thuật vi sinh)",
     "filename": "QĐ 2633. HD quy trình kỹ thuật vi sinh.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.0. CV. Chuyên nghành Vi sinh/2025. QĐ 2633. Quy trình vi sinh 2025/ QĐ 2633. HD quy trình kỹ thuật vi sinh.pdf",
     "category": "Chuyen_Mon_Vi_Sinh",
@@ -24,12 +24,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/qd_2633._hd_quy_trinh_ky_thuat_vi_sinh.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/qd_2633._hd_quy_trinh_ky_thuat_vi_sinh.pdf",
-    "keywords": "môn nghiem & bo qđ te trình nghiệm tế thuat vi sinh quy xét qd pdf kỹ 2025 thuật y 2633. 2633 chuyên trinh ky bộ hd mon xet chuyen"
+    "keywords": "quyet 455 ky về 2633/qd-byt định 1 sinh) qd huong thuật 2025 (tap hd 2633/qd-byt: y trinh dinh vi gồm 2633/qđ-byt hướng sinh dan kỹ qđ tế 2633/qđ-byt: (tập bộ te quy thuat gom sinh.pdf dẫn pdf 2633. bo trình - ve quyết"
   },
   {
     "id": "vb_002",
-    "code": "QĐ 2633",
-    "title": "QĐ 2633. HD quy trình kỹ thuật vi sinh",
+    "code": "2633/QĐ-BYT",
+    "title": "Quyết định 2633/QĐ-BYT: Hướng dẫn quy trình kỹ thuật về Vi sinh (Tập 1 - Gồm 455 quy trình kỹ thuật vi sinh)",
     "filename": "QĐ 2633. HD quy trình kỹ thuật vi sinh.pdf.docx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.0. CV. Chuyên nghành Vi sinh/2025. QĐ 2633. Quy trình vi sinh 2025/ QĐ 2633. HD quy trình kỹ thuật vi sinh.pdf.docx",
     "category": "Chuyen_Mon_Vi_Sinh",
@@ -45,19 +45,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/qd_2633._hd_quy_trinh_ky_thuat_vi_sinh.pdf.docx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/qd_2633._hd_quy_trinh_ky_thuat_vi_sinh.pdf.docx",
-    "keywords": "môn nghiem & bo qđ te trình nghiệm tế thuat vi sinh quy xét qd kỹ 2025 word thuật y 2633. 2633 chuyên trinh ky bộ hd mon xet chuyen"
+    "keywords": "quyet 455 ky về 2633/qd-byt định 1 sinh) qd huong thuật 2025 (tap hd 2633/qd-byt: y trinh dinh vi gồm 2633/qđ-byt hướng sinh dan kỹ qđ tế 2633/qđ-byt: (tập bộ te quy thuat gom sinh.pdf.docx dẫn word 2633. bo trình - ve quyết"
   },
   {
     "id": "vb_003",
-    "code": "QĐ.1539",
-    "title": "1539QĐ BYT",
+    "code": "1539/QĐ-BYT",
+    "title": "Quyết định 1539/QĐ-BYT: Hướng dẫn thực hành kỹ thuật xét nghiệm vi sinh lâm sàng phục vụ giám sát kháng thuốc",
     "filename": "1539QĐ-BYT.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.0. CV. Chuyên nghành Vi sinh/QĐ.1539.HD thực hành XN vi sinh lâm sàng/1539QĐ-BYT.pdf",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2017,
     "size": 6598551,
     "sizeFormatted": "6.3 MB",
     "format": "pdf",
@@ -66,19 +66,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/1539qd-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/1539qd-byt.pdf",
-    "keywords": "qđ.1539 môn nghiem & bo te 1539qđ nghiệm tế 2024 thuat vi sinh xét pdf kỹ thuật y chuyên ky bộ 1539qd mon byt xet chuyen"
+    "keywords": "thanh quyet sàng ky lam 1539/qđ-byt: định hành toán huong thuật 1539/qd-byt thuoc sát 1539/qd-byt: dịch kháng thuc y nghiem sat bhyt phí sang dinh vi vu bảo thực hướng sinh vụ thuốc clsi chi kỹ phục khung tế giám phuc xet giam mức lâm 1539qđ-byt.pdf bộ nghiệm te 1539qd-byt.pdf hanh 1539/qđ-byt thuat 2017 hiểm xét dẫn pdf giá khang bo ksd dan quyết"
   },
   {
     "id": "vb_004",
-    "code": "QĐ.1539",
-    "title": "1539 QD BYT 402282",
+    "code": "1539/QĐ-BYT",
+    "title": "Quyết định 1539/QĐ-BYT: Hướng dẫn thực hành kỹ thuật xét nghiệm vi sinh lâm sàng phục vụ giám sát kháng thuốc",
     "filename": "1539_QD-BYT_402282.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.0. CV. Chuyên nghành Vi sinh/QĐ.1539.HD thực hành XN vi sinh lâm sàng/1539_QD-BYT_402282.doc",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2017,
     "size": 6402560,
     "sizeFormatted": "6.1 MB",
     "format": "word",
@@ -87,12 +87,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/1539_qd-byt_402282.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/1539_qd-byt_402282.doc",
-    "keywords": "qđ.1539 402282 môn nghiem & bo te nghiệm tế 2024 thuat vi sinh 1539 xét qd kỹ word thuật y chuyên ky bộ mon byt xet chuyen"
+    "keywords": "thanh quyet sàng ky lam 1539/qđ-byt: định hành toán huong thuật 1539/qd-byt thuoc sát 1539/qd-byt: dịch kháng thuc y nghiem sat bhyt phí 1539_qd-byt_402282.doc sang dinh vi vu bảo thực hướng sinh vụ thuốc clsi chi kỹ phục khung tế giám phuc xet giam mức lâm bộ te nghiệm 2017 hiểm hanh 1539/qđ-byt thuat xét dẫn giá word khang bo ksd dan quyết"
   },
   {
     "id": "vb_005",
-    "code": "QĐ.26",
-    "title": "26QĐ BYT",
+    "code": "26/QĐ-BYT",
+    "title": "Quyết định 26/QĐ-BYT: Ban hành hướng dẫn quy trình kỹ thuật chuyên ngành Vi sinh Y học",
     "filename": "26QĐ-BYT.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.0. CV. Chuyên nghành Vi sinh/QĐ.26. 2013. Quy trình XN vi sinh/26QĐ-BYT.doc",
     "category": "Chuyen_Mon_Vi_Sinh",
@@ -108,12 +108,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/26qd-byt.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/26qd-byt.doc",
-    "keywords": "môn nghiem & bo te nghiệm tế thuat vi sinh xét kỹ 26qđ word thuật y 26qd qđ.26 chuyên 2013 ky bộ mon byt xet chuyen"
+    "keywords": "quyet ky 26qđ-byt.doc 26/qđ-byt định hành huong thuật 26/qd-byt 26/qđ-byt: 26/qd-byt: nganh 26qd-byt.doc y trinh ban dinh vi hoc hướng sinh dan kỹ tế bộ te quy hanh thuat chuyen dẫn học ngành word bo 2013 trình chuyên quyết"
   },
   {
     "id": "vb_006",
-    "code": "QĐ.26",
-    "title": "QTKT chuan Vi sinh BYT",
+    "code": "26/QĐ-BYT",
+    "title": "Quyết định 26/QĐ-BYT: Tài liệu hướng dẫn quy trình kỹ thuật chuyên ngành Vi sinh Y học",
     "filename": "QTKT chuan Vi sinh-BYT.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.0. CV. Chuyên nghành Vi sinh/QĐ.26. 2013. Quy trình XN vi sinh/QTKT chuan Vi sinh-BYT.pdf",
     "category": "Chuyen_Mon_Vi_Sinh",
@@ -129,19 +129,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/qtkt_chuan_vi_sinh-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/qtkt_chuan_vi_sinh-byt.pdf",
-    "keywords": "chuan môn nghiem & bo te nghiệm tế thuat vi sinh xét pdf kỹ thuật y qđ.26 chuyên 2013 ky bộ mon byt qtkt xet chuyen"
+    "keywords": "quyet ky 26/qđ-byt chuan định lieu huong thuật 26/qd-byt 26/qđ-byt: 26/qd-byt: nganh qtkt y trinh dinh vi hoc hướng sinh tai dan kỹ tế liệu bộ tài quy te thuat chuyen dẫn pdf học ngành bo 2013 trình chuyên quyết sinh-byt.pdf"
   },
   {
     "id": "vb_007",
-    "code": "QĐ.26",
-    "title": "quyet dinh 3916 qd byt bo y te",
+    "code": "3916/QĐ-BYT",
+    "title": "Quyết định 3916/QĐ-BYT: Hướng dẫn giám sát nhiễm khuẩn bệnh viện trong các cơ sở khám bệnh, chữa bệnh",
     "filename": "quyet-dinh-3916-qd-byt-bo-y-te.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.0. CV. Chuyên nghành Vi sinh/QĐ.26. 2013. Quy trình XN vi sinh/quyet-dinh-3916-qd-byt-bo-y-te.pdf",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
     "issuer": "Bộ Y tế",
-    "year": 2013,
+    "year": 2017,
     "size": 3449362,
     "sizeFormatted": "3.3 MB",
     "format": "pdf",
@@ -150,12 +150,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/quyet-dinh-3916-qd-byt-bo-y-te.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/quyet-dinh-3916-qd-byt-bo-y-te.pdf",
-    "keywords": "môn quyet nghiem bo & 3916 te nghiệm tế thuat vi sinh xét qd pdf kỹ thuật y qđ.26 chuyên 2013 ky bộ dinh mon byt xet chuyen"
+    "keywords": "kham hiếu quyet thanh chữa viện benh, endotoxin thận định chua lọc toán máu khuan huong bệnh, sát bệnh dịch tố benh nhiễm y sat bhyt phí nước bảo dinh vi độc nhiem 3916/qđ-byt: hướng trong vụ khí tai chi so cac nội tế khung các co giám 3916/qd-byt ro giam mức bộ sở khám te 2017 hiểm vien khuẩn quyet-dinh-3916-qd-byt-bo-y-te.pdf cấy dẫn pdf giá 3916/qd-byt: 3916/qđ-byt bo cơ biến dan chạy quyết"
   },
   {
     "id": "vb_008",
-    "code": "QĐ. 6769",
-    "title": "6769 :QĐ BYT",
+    "code": "6769/QĐ-BYT",
+    "title": "Quyết định 6769/QĐ-BYT: Hướng dẫn quy trình kỹ thuật chuyên ngành Vi sinh (Tập 1 - Ban hành 83 quy trình chuẩn)",
     "filename": "6769 :QĐ-BYT.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.0. CV. Chuyên nghành Vi sinh/QĐ. 6769. 2018. QUy trình kỹ thuật vi sihh/6769 :QĐ-BYT.pdf",
     "category": "Chuyen_Mon_Vi_Sinh",
@@ -171,12 +171,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/6769_qd-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/6769_qd-byt.pdf",
-    "keywords": "môn nghiem :qđ & bo te nghiệm tế thuat vi sinh xét pdf kỹ thuật y :qd 6769 chuyên 2018 ky bộ qđ. mon byt xet chuyen"
+    "keywords": "quyet 83 chuan) ky định 1 hành huong thuật (tap nganh :qd-byt.pdf y trinh :qđ-byt.pdf dinh vi chuyên 6769/qđ-byt: 6769/qd-byt: hướng sinh dan kỹ tế chuẩn) 6769 (tập 6769/qđ-byt bộ quy te thuat chuyen hanh 6769/qd-byt dẫn pdf ngành bo trình - ban 2018 quyết"
   },
   {
     "id": "vb_009",
-    "code": "QĐ. 2429",
-    "title": "2429QĐ BYT",
+    "code": "2429/QĐ-BYT",
+    "title": "Quyết định 2429/QĐ-BYT: Ban hành Tiêu chí đánh giá mức chất lượng phòng xét nghiệm y học",
     "filename": "2429QĐ-BYT.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.0. CV. Chuyên nghành Vi sinh/QĐ. 2429.2017. Đánh giá CLXN phòng XN /2429QĐ-BYT.pdf",
     "category": "Quan_Ly_Chat_Luong_ISO",
@@ -192,12 +192,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/2429qd-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/2429qd-byt.pdf",
-    "keywords": "chất & bo te 2429qđ tế quan 15189 pdf 2429 lý iso ly chat luong 2429qd lượng 2017 bộ qđ. byt quản y"
+    "keywords": "thanh đánh quyet qlcl chat quản định hành phòng toán chí iqc 2429/qđ-byt luong dịch y nghiem danh bhyt ban 2429/qd-byt 15189 dinh hoc bảo 2429 2429qđ-byt.pdf eqas 2429/qd-byt: ngoại iso chất phong 2429/qđ-byt: muc vụ chi khung nội gia tế tiêu xet mức bộ te nghiệm 2017 hiểm hanh 2429qd-byt.pdf xét lý pdf giá học kiểm tieu bo phí lượng chuẩn quyết"
   },
   {
     "id": "vb_010",
-    "code": "QĐ. 2429",
-    "title": "BANG KIEM MẪU ĐÁNH GIA Tieu chi danh gia muc CLPXBN",
+    "code": "BM-2429",
+    "title": "Bảng kiểm đánh giá mức chất lượng phòng xét nghiệm y học (Theo QĐ 2429/QĐ-BYT)",
     "filename": "BANG KIEM MẪU ĐÁNH GIA -Tieu chi danh gia muc CLPXBN.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.0. CV. Chuyên nghành Vi sinh/QĐ. 2429.2017. Đánh giá CLXN phòng XN /BANG KIEM MẪU ĐÁNH GIA -Tieu chi danh gia muc CLPXBN.doc",
     "category": "Quan_Ly_Chat_Luong_ISO",
@@ -213,12 +213,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/bang_kiem_mau_danh_gia_-tieu_chi_danh_gia_muc_clpxbn.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/bang_kiem_mau_danh_gia_-tieu_chi_danh_gia_muc_clpxbn.doc",
-    "keywords": "kiem chất tieu & bo te mẫu tế quan 15189 mau bang 2429 lý iso word muc ly chat gia luong danh clpxbn lượng 2017 bộ qđ. đánh quản y chi"
+    "keywords": "thanh đánh -tieu qlcl chat quản phòng toán định chí qd iqc luong (theo dịch y bang danh nghiem bhyt kiem hoc 15189 bảo 2429 eqas ngoại iso chất phong muc vụ chi khung bảng nội qđ gia tế tiêu xet mức mau bộ clpxbn.doc nghiệm te 2017 hiểm xét lý giá học kiểm word bm-2429 bo 2429/qđ-byt) mẫu phí lượng chuẩn 2429/qd-byt)"
   },
   {
     "id": "vb_011",
-    "code": "QĐ. 2429",
-    "title": "DS lien thong XN",
+    "code": "LT-XN-VS",
+    "title": "Danh mục các kỹ thuật xét nghiệm Vi sinh được công nhận liên thông kết quả giữa các cơ sở khám chữa bệnh",
     "filename": "DS lien thong XN.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.0. CV. Chuyên nghành Vi sinh/QĐ. 2429.2017. Đánh giá CLXN phòng XN /DS lien thong XN.pdf",
     "category": "Chuyen_Mon_Vi_Sinh",
@@ -234,12 +234,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/ds_lien_thong_xn.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/ds_lien_thong_xn.pdf",
-    "keywords": "môn nghiem & bo te thong nghiệm xn tế thuat vi sinh ds xét pdf kỹ 2429 thuật y lien chuyên 2017 ky bộ qđ. mon xet chuyen"
+    "keywords": "kham quả cong qua ky chữa ket chua thong ds thuật giua bệnh thông benh nghiem danh y được liên vi xn.pdf nhận công kết sinh muc kỹ so cac nhan tế các co duoc xet bộ sở nghiệm khám te thuat lien 2017 xét pdf bo giữa cơ mục lt-xn-vs"
   },
   {
     "id": "vb_012",
-    "code": "QĐ. 2429",
-    "title": "Danh sách xét nghiệm Vi sinh liên thông",
+    "code": "LT-XN-VS",
+    "title": "Danh mục các kỹ thuật xét nghiệm Vi sinh được công nhận liên thông kết quả giữa các cơ sở khám chữa bệnh",
     "filename": "Danh sách xét nghiệm Vi sinh liên thông.xlsx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.0. CV. Chuyên nghành Vi sinh/QĐ. 2429.2017. Đánh giá CLXN phòng XN /Danh sách xét nghiệm Vi sinh liên thông.xlsx",
     "category": "Quan_Ly_Chat_Luong_ISO",
@@ -255,12 +255,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-excel",
     "storageKey": "Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/danh_sach_xet_nghiem_vi_sinh_lien_thong.xlsx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/danh_sach_xet_nghiem_vi_sinh_lien_thong.xlsx",
-    "keywords": "sách liên thông chất nghiem & bo te thong quản nghiệm tế vi quan 15189 sinh xét excel 2429 lý iso ly chat lien sach luong danh lượng 2017 bộ qđ. xet y"
+    "keywords": "kham quả cong qua ky chữa ket chua thong sách thuật giua sach bệnh excel thông benh nghiem danh y được liên vi nhận công kết sinh muc thông.xlsx thong.xlsx kỹ so cac nhan tế các co duoc xet bộ sở nghiệm khám te thuat lien 2017 xét bo giữa cơ mục lt-xn-vs"
   },
   {
     "id": "vb_013",
-    "code": "QĐ. 2429",
-    "title": "SO TAY HUONG DAN DANH GIA THUC HIEN TIEU PXN ban cuoi up 2",
+    "code": "ST-CLPXN-2429",
+    "title": "Sổ tay hướng dẫn đánh giá việc thực hiện Tiêu chí đánh giá mức chất lượng phòng xét nghiệm y học",
     "filename": "SO TAY HUONG DAN DANH GIA THUC HIEN TIEU PXN_ban cuoi_up_2.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.0. CV. Chuyên nghành Vi sinh/QĐ. 2429.2017. Đánh giá CLXN phòng XN /SO TAY HUONG DAN DANH GIA THUC HIEN TIEU PXN_ban cuoi_up_2.pdf",
     "category": "Quan_Ly_Chat_Luong_ISO",
@@ -276,12 +276,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/so_tay_huong_dan_danh_gia_thuc_hien_tieu_pxn_ban_cuoi_up_2.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/so_tay_huong_dan_danh_gia_thuc_hien_tieu_pxn_ban_cuoi_up_2.pdf",
-    "keywords": "tay chất tieu up & bo te tế quan 15189 cuoi 2 so pdf 2429 lý iso ly chat ban gia hien pxn luong danh lượng 2017 bộ thuc qđ. dan huong quản y"
+    "keywords": "thanh đánh qlcl chat quản phòng toán định chí huong tay sổ luong dịch thuc y nghiem danh bhyt phí pxn_ban 15189 hoc bảo 2429 eqas ngoại thực iso chất hướng muc phong vụ chi so viec st-clpxn-2429 gia tế nội khung tiêu xet mức bộ cuoi_up_2.pdf nghiệm te hiện 2017 hiểm xét dẫn pdf giá học lý việc tieu hien bo kiểm dan lượng chuẩn iqc"
   },
   {
     "id": "vb_014",
-    "code": "QĐ.3612",
-    "title": "QĐ ban hành HD chỉ định và sử dụng XN Vi sinh lâm sàng. 2025.11.21.Ban hành",
+    "code": "3612/QĐ-BYT",
+    "title": "Quyết định 3612/QĐ-BYT: Hướng dẫn chỉ định và sử dụng xét nghiệm Vi sinh lâm sàng trong chẩn đoán, điều trị",
     "filename": "QĐ ban hành HD chỉ định và sử dụng XN Vi sinh lâm sàng. 2025.11.21.Ban hành.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.0. CV. Chuyên nghành Vi sinh/QĐ.3612 HD Xét nghiệm Vi sinh/QĐ ban hành HD chỉ định và sử dụng XN Vi sinh lâm sàng. 2025.11.21.Ban hành.pdf",
     "category": "Chuyen_Mon_Vi_Sinh",
@@ -297,12 +297,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/qd_ban_hanh_hd_chi_dinh_va_su_dung_xn_vi_sinh_lam_sang._2025.11.21.ban_hanh.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/qd_ban_hanh_hd_chi_dinh_va_su_dung_xn_vi_sinh_lam_sang._2025.11.21.ban_hanh.pdf",
-    "keywords": "lâm sàng. hanh môn & nghiem qđ bo te dụng nghiệm xn tế thuat và vi 2025.11.21.ban sinh chỉ xét qd va pdf kỹ hành 2025 thuật y định qđ.3612 lam ban sử dung su chuyên ky bộ sang. hd dinh mon xet chuyen chi"
+    "keywords": "và hiếu điều quyet sàng sàng. lam chan thận định hành lọc endotoxin 2025.11.21.ban máu qd huong 2025 hd doan, chỉ tố y nghiem ban 3612/qđ-byt nước dụng sang dinh vi 3612/qđ-byt: độc đoán, hướng sinh trong su khí chi xn tai nội qđ tế chẩn 3612/qd-byt ro dung xet sang. hanh.pdf lâm trị bộ nghiệm te hanh sử khuẩn 3612/qd-byt: xét cấy dẫn tri pdf va bo biến dan dieu hành.pdf chạy quyết"
   },
   {
     "id": "vb_015",
-    "code": "QĐ.5530",
-    "title": "Quyết định 5530 QĐ BYT",
+    "code": "5530/QĐ-BYT",
+    "title": "Quyết định 5530/QĐ-BYT: Hướng dẫn xây dựng quy trình thực hành chuẩn (SOP) trong quản lý chất lượng xét nghiệm",
     "filename": "Quyết định-5530-QĐ-BYT.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.0. CV. Chuyên nghành Vi sinh/QĐ.5530.2015.Hướng dẫn xây dựng quy trình thực hành chuẩn trong quản lý chất lượng xét nghiệm/Quyết định-5530-QĐ-BYT.doc",
     "category": "Quan_Ly_Chat_Luong_ISO",
@@ -318,12 +318,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/quyet_dinh-5530-qd-byt.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/quyet_dinh-5530-qd-byt.doc",
-    "keywords": "chất quyet & bo qđ te quản tế 5530 quan 15189 quyết qd lý iso word ly định chat 2015 luong lượng bộ dinh byt qđ.5530 y"
+    "keywords": "hiếu quyet qlcl quản 5530/qd-byt 5530/qd-byt: chat dựng 2015 chuan endotoxin thận định hành lọc chí máu iqc huong chạy ly luong thuc tố y nghiem 5530/qđ-byt trinh nước 5530/qđ-byt: 15189 dinh vi 2429 eqas độc (sop) ngoại thực quan chất hướng trong iso định-5530-qđ-byt.doc khí dan tai nội tế tiêu ro dung xet bộ te quy nghiệm hanh xây khuẩn xét cấy dẫn lý dinh-5530-qd-byt.doc word kiểm bo biến trình xay lượng chuẩn quyết"
   },
   {
     "id": "vb_016",
-    "code": "QĐ.5530",
-    "title": "Quyết định 5530 QĐ BYT",
+    "code": "5530/QĐ-BYT",
+    "title": "Quyết định 5530/QĐ-BYT: Hướng dẫn xây dựng quy trình thực hành chuẩn (SOP) trong quản lý chất lượng xét nghiệm",
     "filename": "Quyết định-5530-QĐ-BYT.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.0. CV. Chuyên nghành Vi sinh/QĐ.5530.2015.Hướng dẫn xây dựng quy trình thực hành chuẩn trong quản lý chất lượng xét nghiệm/Quyết định-5530-QĐ-BYT.pdf",
     "category": "Quan_Ly_Chat_Luong_ISO",
@@ -339,12 +339,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/quyet_dinh-5530-qd-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/quyet_dinh-5530-qd-byt.pdf",
-    "keywords": "chất quyet & bo qđ te quản tế 5530 quan 15189 quyết qd pdf lý iso ly định chat 2015 luong lượng bộ dinh byt qđ.5530 y"
+    "keywords": "hiếu quyet qlcl quản 5530/qd-byt 5530/qd-byt: chat dựng 2015 chuan endotoxin thận định hành lọc chí máu iqc huong chạy ly luong thuc tố y nghiem 5530/qđ-byt trinh nước 5530/qđ-byt: 15189 dinh vi 2429 eqas độc (sop) ngoại thực quan chất hướng trong iso khí tai dan dinh-5530-qd-byt.pdf nội tế tiêu ro dung xet bộ te quy nghiệm hanh xây khuẩn xét cấy dẫn lý pdf kiểm định-5530-qđ-byt.pdf bo biến trình xay lượng chuẩn quyết"
   },
   {
     "id": "vb_017",
-    "code": "QĐ 3612",
-    "title": "3612 Hương dẫn lấy mẫu",
+    "code": "3612/QĐ-BYT",
+    "title": "Quyết định 3612/QĐ-BYT: Hướng dẫn chỉ định, lấy mẫu và sử dụng xét nghiệm Vi sinh lâm sàng",
     "filename": "3612 Hương dẫn lấy mẫu.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.0. CV. Chuyên nghành Vi sinh/2025. QĐ 3612 QĐ ban hành HD chỉ định và sử dụng XN Vi sinh lâm sàng. 2025.11.21.Ban hành/3612 Hương dẫn lấy mẫu.pdf",
     "category": "Chuyen_Mon_Vi_Sinh",
@@ -360,12 +360,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/3612_huong_dan_lay_mau.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/3612_huong_dan_lay_mau.pdf",
-    "keywords": "dẫn môn nghiem & bo qđ te lay mẫu nghiệm tế thuat vi 3612 sinh mau xét pdf kỹ 2025 thuật y chuyên lấy ky hương bộ mon dan huong xet chuyen"
+    "keywords": "và định, quyet sàng lam định huong 2025 hương 3612 chỉ y nghiem 3612/qđ-byt dụng sang dinh vi 3612/qđ-byt: mau.pdf hướng sinh su chi tế dinh, 3612/qd-byt dung xet mau lâm lay bộ nghiệm te sử 3612/qd-byt: xét dẫn pdf va bo mẫu lấy dan mẫu.pdf quyết"
   },
   {
     "id": "vb_018",
-    "code": "QĐ.127",
-    "title": "127QĐ BYT",
+    "code": "127/QĐ-BYT",
+    "title": "Quyết định 127/QĐ-BYT: Hướng dẫn thực hiện giám sát quốc gia về kháng kháng sinh trong các cơ sở y tế",
     "filename": "127QĐ-BYT.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.0. CV. Chuyên nghành Vi sinh/QĐ.127.2018. hướng dẫn thực hiện giám sát quốc gia về kháng kháng sinh”/127QĐ-BYT.doc",
     "category": "Chuyen_Mon_Vi_Sinh",
@@ -381,12 +381,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/127qd-byt.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/127qd-byt.doc",
-    "keywords": "127qd môn nghiem & bo te 127qđ nghiệm tế thuat vi sinh xét kỹ word thuật y qđ.127 chuyên 2018 ky bộ mon byt xet chuyen"
+    "keywords": "hiếu thanh định toán lọc sát dịch thuc bhyt nước bảo hướng 127/qd-byt 127qđ-byt.doc gia bộ cấy word phí ve quyet về máu kháng tố y sat vi sinh khí so khung các ro lâm te hiểm khuẩn khang cơ quyết 127/qđ-byt: endotoxin thận 127qd-byt.doc huong quoc 127/qđ-byt thực thuốc clsi chi co giám 127/qd-byt: mức sở biến chạy 2018 sàng dinh độc vụ trong tai cac nội tế quốc giam hiện dẫn giá hien bo ksd dan"
   },
   {
     "id": "vb_019",
-    "code": "QĐ.127",
-    "title": "127QĐ BYT",
+    "code": "127/QĐ-BYT",
+    "title": "Quyết định 127/QĐ-BYT: Hướng dẫn thực hiện giám sát quốc gia về kháng kháng sinh trong các cơ sở y tế",
     "filename": "127QĐ-BYT.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.0. CV. Chuyên nghành Vi sinh/QĐ.127.2018. hướng dẫn thực hiện giám sát quốc gia về kháng kháng sinh”/127QĐ-BYT.pdf",
     "category": "Chuyen_Mon_Vi_Sinh",
@@ -402,12 +402,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/127qd-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/127qd-byt.pdf",
-    "keywords": "127qd môn nghiem & bo te 127qđ nghiệm tế thuat vi sinh xét pdf kỹ thuật y qđ.127 chuyên 2018 ky bộ mon byt xet chuyen"
+    "keywords": "hiếu thanh định toán lọc sát dịch thuc bhyt nước bảo hướng 127/qd-byt gia 127qđ-byt.pdf bộ cấy phí ve quyet về máu kháng tố y sat vi sinh khí so khung các ro lâm te hiểm khuẩn khang cơ quyết 127/qđ-byt: endotoxin thận huong quoc 127/qđ-byt thực thuốc clsi chi co giám 127/qd-byt: mức sở 127qd-byt.pdf pdf biến chạy 2018 sàng dinh độc vụ trong tai cac nội tế quốc giam hiện dẫn giá hien bo ksd dan"
   },
   {
     "id": "vb_020",
-    "code": "NĐ 2023",
-    "title": "NQ 30:NQ NĐ 2023",
+    "code": "30/NQ-CP",
+    "title": "Nghị quyết 30/NQ-CP: Về việc tiếp tục thực hiện các giải pháp bảo đảm thuốc, trang thiết bị y tế",
     "filename": "NQ 30:NQ-NĐ 2023.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/NQ. 30.2023. Bảo đảm thuốc VT y tế/NQ 30:NQ-NĐ 2023.pdf",
     "category": "Van_Ban_Phap_Quy",
@@ -423,12 +423,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/nq_30_nq-nd_2023.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/nq_30_nq-nd_2023.pdf",
-    "keywords": "pháp thông 30:nq & thong van luat nđ luật bản 2023 quy, nd phủ pdf nq phap ban chính phu tu chinh văn byt tư"
+    "keywords": "quyet 2023.pdf về thiết 30/nq-cp thiet phap mua tục tiếp thuc y 30:nq-nđ trang nghi tiep bảo phủ vật dam 30/nq-cp: 2023 thực giải chất đấu chính sinh phẩm 30:nq-nd viec cac phu tế các tuc thuoc, thầu nghị hóa bi đảm giai te tư nghiệm hiện xét pháp pdf nq việc hien chinh sắm thuốc, bao ve quyết bị"
   },
   {
     "id": "vb_021",
-    "code": "TT 13",
-    "title": "TT 13. Vi sinh Giá",
+    "code": "TT13-BG-VS",
+    "title": "Thông tư 13/2023/TT-BYT: Bảng cơ cấu giá và chi phí xét nghiệm Vi sinh thực hiện theo yêu cầu",
     "filename": "TT 13. Vi sinh Giá.xlsx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT.13.2023. Quy định giá KKB theo yêu cầu/TT 13. Vi sinh Giá.xlsx",
     "category": "Chuyen_Mon_Vi_Sinh",
@@ -444,12 +444,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-excel",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/tt_13._vi_sinh_gia.xlsx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/tt_13._vi_sinh_gia.xlsx",
-    "keywords": "môn nghiem & bo te tt nghiệm tế thuat vi 2023 sinh 13 xét excel kỹ 13. thuật y gia chuyên ky bộ mon giá xet chuyen"
+    "keywords": "và thanh tu định thong toán tt13-bg-vs tt phi thuc dịch excel thông bang nghiem y bhyt bảo vi cau 13. yêu 2023 thực vụ sinh chi cầu yeu bảng khung gia tế theo co xet cấu gia.xlsx bộ te tư nghiệm hiện hiểm mức xét giá.xlsx giá va 13/2023/tt-byt: hien cơ bo phí"
   },
   {
     "id": "vb_022",
-    "code": "TT.13",
-    "title": "thong tu 13 2023 tt byt khung gia dv kham chua benh theo yeu cau",
+    "code": "13/2023/TT-BYT",
+    "title": "Thông tư 13/2023/TT-BYT: Khung giá và phương pháp định giá dịch vụ khám bệnh, chữa bệnh theo yêu cầu",
     "filename": "thong-tu-13-2023-tt-byt-khung-gia-dv-kham-chua-benh-theo-yeu-cau.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT.13.2023. Quy định giá KKB theo yêu cầu/thong-tu-13-2023-tt-byt-khung-gia-dv-kham-chua-benh-theo-yeu-cau.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -465,12 +465,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong-tu-13-2023-tt-byt-khung-gia-dv-kham-chua-benh-theo-yeu-cau.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong-tu-13-2023-tt-byt-khung-gia-dv-kham-chua-benh-theo-yeu-cau.doc",
-    "keywords": "pháp khung thông & bo te thong tt van luat luật tế bản yeu 2023 13 quy, chua dv benh word tt.13 phap ban gia kham cau bộ tu văn byt theo y tư"
+    "keywords": "và kham thanh tu chữa benh, phuong định thong phap chua toán dich bệnh, dịch bệnh thông benh y bhyt thong-tu-13-2023-tt-byt-khung-gia-dv-kham-chua-benh-theo-yeu-cau.doc bảo dinh vu cau yêu 2023 13/2023/tt-byt vụ cầu yeu khung chi gia tế theo mức bộ te tư khám hiểm phương pháp giá word va 13/2023/tt-byt: bo phí"
   },
   {
     "id": "vb_023",
-    "code": "TT.13",
-    "title": "thong tu 13 2023 tt byt khung gia dv kham chua benh theo yeu cau",
+    "code": "13/2023/TT-BYT",
+    "title": "Thông tư 13/2023/TT-BYT: Khung giá và phương pháp định giá dịch vụ khám bệnh, chữa bệnh theo yêu cầu",
     "filename": "thong-tu-13-2023-tt-byt-khung-gia-dv-kham-chua-benh-theo-yeu-cau.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT.13.2023. Quy định giá KKB theo yêu cầu/thong-tu-13-2023-tt-byt-khung-gia-dv-kham-chua-benh-theo-yeu-cau.pdf",
     "category": "Van_Ban_Phap_Quy",
@@ -486,18 +486,18 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong-tu-13-2023-tt-byt-khung-gia-dv-kham-chua-benh-theo-yeu-cau.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong-tu-13-2023-tt-byt-khung-gia-dv-kham-chua-benh-theo-yeu-cau.pdf",
-    "keywords": "pháp khung thông & bo te thong tt van luat luật tế bản yeu 2023 13 quy, pdf chua dv benh tt.13 phap ban gia kham cau bộ tu văn byt theo y tư"
+    "keywords": "và kham thanh tu chữa benh, phuong định thong phap chua toán dich bệnh, dịch bệnh thông benh y bhyt bảo dinh vu cau yêu thong-tu-13-2023-tt-byt-khung-gia-dv-kham-chua-benh-theo-yeu-cau.pdf 2023 13/2023/tt-byt vụ cầu yeu khung chi gia tế theo mức bộ te tư khám hiểm phương pháp giá pdf va 13/2023/tt-byt: bo phí"
   },
   {
     "id": "vb_024",
-    "code": "ND.04",
-    "title": "ND.04.2025 Sưa đổi một số điều trong NĐ 98.2022",
+    "code": "04/2025/NĐ-CP",
+    "title": "Nghị định 04/2025/NĐ-CP: Sửa đổi, bổ sung một số điều của Nghị định 98/2021/NĐ-CP về quản lý trang thiết bị y tế",
     "filename": "ND.04.2025 Sưa đổi một số điều trong NĐ 98.2022.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/NĐ 04. Sửa đổi một số điều ND 98/ND.04.2025 Sưa đổi một số điều trong NĐ 98.2022.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Bộ Y tế",
+    "issuer": "Chính phủ",
     "year": 2025,
     "size": 1293384,
     "sizeFormatted": "1.2 MB",
@@ -507,12 +507,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/nd.04.2025_sua_doi_mot_so_dieu_trong_nd_98.2022.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/nd.04.2025_sua_doi_mot_so_dieu_trong_nd_98.2022.pdf",
-    "keywords": "nd.04 pháp một thông 98.2022 & bo te thong số van nđ luật luat bản tế doi quy, điều mot dieu nd trong so pdf 2025 phap đổi ban sua sưa bộ tu văn nd.04.2025 byt y tư"
+    "keywords": "điều 04/2025/nđ-cp: quản mot đổi, về đổi thiết định thiet mua sửa 98/2021/nđ-cp cua ly sung 2025 y trang nghi doi, phủ dinh vật nđ ve sua quan chất đấu trong chính sinh phẩm so phu tế 04/2025/nđ-cp một bổ nd.04.2025 thầu nghị 98.2022.pdf bi hóa nd số của te tư nghiệm xét sưa lý pdf 04/2025/nd-cp bo 98/2021/nd-cp chinh sắm doi dieu 04/2025/nd-cp: bị"
   },
   {
     "id": "vb_025",
-    "code": "TT 43",
-    "title": "24. Vi sinh 2013",
+    "code": "TT43-CK.24",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Vi sinh",
     "filename": "24. Vi sinh 2013.docx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/24. Vi sinh 2013.docx",
     "category": "Chuyen_Mon_Vi_Sinh",
@@ -528,12 +528,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/24._vi_sinh_2013.docx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/24._vi_sinh_2013.docx",
-    "keywords": "43 môn nghiem & bo te tt nghiệm tế thuat vi sinh xét kỹ word thuật y 24. 2013 chuyên ky bộ mon xet chuyen"
+    "keywords": "tu ky tuyen thong 24. phan thuật mon 43/2013/tt-byt: thông y danh vi luc sinh muc phụ phân kỹ phu tế tuyến môn bộ lục te tư chuyen thuat 2013.docx word tt43-ck.24 bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_026",
-    "code": "TT 43",
-    "title": "43.2013 TT BYT",
+    "code": "43/2013/TT-BYT",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa 43.2013 TT-BYT.pdf",
     "filename": "43.2013 TT-BYT.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/43.2013 TT-BYT.pdf",
     "category": "Van_Ban_Phap_Quy",
@@ -549,7 +549,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/43.2013_tt-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/43.2013_tt-byt.pdf",
-    "keywords": "pháp 43 thông & bo te thong tt van luat luật tế bản quy, pdf phap ban 2013 bộ tu văn byt y tư 43.2013"
+    "keywords": "43/2013/tt-byt tu ky tuyen thong phan thuật 43.2013 mon 43/2013/tt-byt: thông y danh luc tt-byt.pdf muc phụ phân kỹ phu tế tuyến môn bộ lục te tư chuyen thuat pdf bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_027",
@@ -570,12 +570,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/qdb-2018-4442.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/qdb-2018-4442.pdf",
-    "keywords": "4442 pháp 43 thông & bo te thong tt van luat luật tế bản quy, pdf phap ban 2018 qdb bộ tu văn byt y tư"
+    "keywords": "te 4442 y tế pdf qdb bo 43 qdb-2018-4442.pdf tt 2018 bộ"
   },
   {
     "id": "vb_028",
-    "code": "TT 43",
-    "title": "1. Hoi suc cap cuu chong doc 2013",
+    "code": "TT43-CK.1",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Hồi sức cấp cứu và Chống độc",
     "filename": "1. Hoi suc cap cuu- chong doc 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/1. Hoi suc cap cuu- chong doc 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -591,12 +591,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/1._hoi_suc_cap_cuu-_chong_doc_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/1._hoi_suc_cap_cuu-_chong_doc_2013.doc",
-    "keywords": "pháp 43 thông chong & bo te thong tt cuu van doc luat luật tế bản quy, word suc 1. phap hoi ban 2013 bộ cap tu văn byt y tư"
+    "keywords": "và hoi tu ky 1. tuyen thong phan 2013.doc thuật mon 43/2013/tt-byt: cứu thông y danh chong sức luc độc cuu- muc cấp phụ phân kỹ hồi phu cap suc chống tuyến tế môn bộ lục doc tư te chuyen thuat tt43-ck.1 word va bo 2013 khoa cuu - chuyên mục"
   },
   {
     "id": "vb_029",
-    "code": "TT 43",
-    "title": "10. Ngoai khoa 2013",
+    "code": "TT43-CK.10",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Ngoai khoa",
     "filename": "10. Ngoai khoa 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/10. Ngoai khoa 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -612,12 +612,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/10._ngoai_khoa_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/10._ngoai_khoa_2013.doc",
-    "keywords": "pháp 43 khoa thông & bo te thong tt van luat luật tế bản quy, ngoai word phap ban 2013 bộ tu văn byt y tư 10."
+    "keywords": "tu ky tuyen ngoai thong phan 2013.doc thuật mon 43/2013/tt-byt: thông y danh luc 10. muc phụ phân kỹ phu tế tt43-ck.10 tuyến môn bộ lục te tư chuyen thuat word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_030",
-    "code": "TT 43",
-    "title": "11. Bong 2013",
+    "code": "TT43-CK.11",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Bỏng",
     "filename": "11. Bong 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/11. Bong 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -633,12 +633,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/11._bong_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/11._bong_2013.doc",
-    "keywords": "pháp 43 thông & bo te thong tt van luat luật tế bản quy, word phap ban 2013 11. bộ tu bong văn byt y tư"
+    "keywords": "tu ky tuyen thong phan 2013.doc bỏng thuật tt43-ck.11 mon 43/2013/tt-byt: thông y danh luc muc bong phụ phân kỹ phu tế tuyến 11. môn bộ lục te tư chuyen thuat word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_031",
-    "code": "TT 43",
-    "title": "12. Ung buou 2013",
+    "code": "TT43-CK.12",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Ung bướu",
     "filename": "12. Ung buou 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/12. Ung buou 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -654,12 +654,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/12._ung_buou_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/12._ung_buou_2013.doc",
-    "keywords": "pháp 43 thông & bo te thong tt van luat luật tế bản ung quy, 12. word phap ban 2013 bộ tu văn byt y tư buou"
+    "keywords": "tu ky tt43-ck.12 tuyen thong phan 2013.doc thuật ung mon 43/2013/tt-byt: thông y danh luc muc phụ phân kỹ phu tế bướu tuyến 12. môn bộ lục te tư chuyen thuat buou word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_032",
-    "code": "TT 43",
-    "title": "13. Phu san 2013",
+    "code": "TT43-CK.13",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Phụ sản",
     "filename": "13. Phu san 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/13. Phu san 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -675,12 +675,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/13._phu_san_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/13._phu_san_2013.doc",
-    "keywords": "pháp 43 thông & bo te thong tt van luat luật tế bản quy, 13. word san phap ban 2013 phu bộ tu văn byt y tư"
+    "keywords": "tu ky tuyen thong phan 2013.doc thuật mon 43/2013/tt-byt: thông y danh luc sản 13. tt43-ck.13 muc phụ phân kỹ phu tế tuyến môn bộ lục te tư chuyen thuat word bo 2013 khoa - chuyên mục san"
   },
   {
     "id": "vb_033",
-    "code": "TT 43",
-    "title": "14. Mat 2013",
+    "code": "TT43-CK.14",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Mắt",
     "filename": "14. Mat 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/14. Mat 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -696,12 +696,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/14._mat_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/14._mat_2013.doc",
-    "keywords": "pháp 43 thông & bo te thong tt van luat luật tế bản quy, 14. word phap ban 2013 bộ tu văn byt mat y tư"
+    "keywords": "tu ky tuyen thong phan 2013.doc thuật mắt mon 43/2013/tt-byt: thông y danh mat luc muc phụ phân kỹ phu tế tt43-ck.14 tuyến môn bộ lục te tư chuyen thuat 14. word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_034",
-    "code": "TT 43",
-    "title": "15. Tai Mui Hong 2013",
+    "code": "TT43-CK.15",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Tai Mũi Họng",
     "filename": "15. Tai Mui Hong 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/15. Tai Mui Hong 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -717,12 +717,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/15._tai_mui_hong_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/15._tai_mui_hong_2013.doc",
-    "keywords": "pháp 43 thông & bo te thong tt van luat luật tế bản quy, tai word phap ban hong mui 2013 15. bộ tu văn byt y tư"
+    "keywords": "tu ky tuyen thong phan 2013.doc thuật 15. mon 43/2013/tt-byt: mũi thông y danh họng luc muc tai phụ phân kỹ phu mui tế tuyến hong môn bộ lục te tư chuyen tt43-ck.15 thuat word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_035",
-    "code": "TT 43",
-    "title": "16. Rang Ham Mat 2013",
+    "code": "TT43-CK.16",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Răng Hàm Mặt",
     "filename": "16. Rang Ham Mat 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/16. Rang Ham Mat 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -738,12 +738,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/16._rang_ham_mat_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/16._rang_ham_mat_2013.doc",
-    "keywords": "pháp 43 thông & bo te thong tt van luat luật tế bản quy, word phap ban ham 2013 bộ rang tu 16. văn byt mat y tư"
+    "keywords": "rang tu ky tuyen thong phan 2013.doc thuật mon 43/2013/tt-byt: thông y mặt danh mat luc tt43-ck.16 muc phụ phân kỹ phu ham tế tuyến răng môn 16. lục bộ tư te chuyen thuat hàm word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_036",
-    "code": "TT 43",
-    "title": "17. Phuc hoi chuc nang 2013",
+    "code": "TT43-CK.17",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Phục hồi chức năng",
     "filename": "17. Phuc hoi chuc nang 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/17. Phuc hoi chuc nang 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -759,12 +759,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/17._phuc_hoi_chuc_nang_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/17._phuc_hoi_chuc_nang_2013.doc",
-    "keywords": "pháp 43 thông & bo te thong tt van luat luật tế bản quy, phuc word phap chuc hoi nang ban 2013 17. bộ tu văn byt y tư"
+    "keywords": "hoi chuc tu ky tuyen thong chức phan 2013.doc thuật mon 43/2013/tt-byt: thông y danh luc muc nang phụ phân kỹ phục hồi phu tế tt43-ck.17 tuyến phuc môn bộ lục te tư năng chuyen thuat 17. word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_037",
-    "code": "TT 43",
-    "title": "18. Dien quang 2013",
+    "code": "TT43-CK.18",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Điện quang - Chẩn đoán hình ảnh",
     "filename": "18. Dien quang 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/18. Dien quang 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -780,12 +780,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/18._dien_quang_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/18._dien_quang_2013.doc",
-    "keywords": "pháp 43 thông & bo te thong tt van 18. luat luật tế bản quy, word phap ban dien 2013 bộ tu văn byt quang y tư"
+    "keywords": "tu ky doan tuyen chan thong điện phan 2013.doc thuật tt43-ck.18 mon 43/2013/tt-byt: thông y danh đoán luc ảnh muc phụ phân kỹ phu 18. tế quang tuyến chẩn dien hình môn bộ lục te tư hinh chuyen thuat word bo 2013 khoa - chuyên mục anh"
   },
   {
     "id": "vb_038",
-    "code": "TT 43",
-    "title": "19. Y Hoc Hat Nhan 2013",
+    "code": "TT43-CK.19",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Y Hoc Hat Nhan",
     "filename": "19. Y Hoc Hat Nhan 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/19. Y Hoc Hat Nhan 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -801,12 +801,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/19._y_hoc_hat_nhan_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/19._y_hoc_hat_nhan_2013.doc",
-    "keywords": "pháp 43 thông & bo te thong tt van luat luật tế bản quy, 19. hat nhan word phap ban 2013 bộ tu văn byt y tư hoc"
+    "keywords": "tu ky tuyen thong phan 2013.doc thuật mon 43/2013/tt-byt: thông y danh tt43-ck.19 19. hoc luc muc phụ phân kỹ hat nhan phu tế tuyến môn bộ lục te tư chuyen thuat word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_039",
-    "code": "TT 43",
-    "title": "2. Noi khoa 2013",
+    "code": "TT43-CK.2",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Nội khoa",
     "filename": "2. Noi khoa 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/2. Noi khoa 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -822,12 +822,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/2._noi_khoa_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/2._noi_khoa_2013.doc",
-    "keywords": "pháp 43 khoa thông & bo 2. te thong tt van luat luật tế bản quy, word phap ban 2013 bộ tu văn noi byt y tư"
+    "keywords": "tu ky tuyen thong phan 2013.doc thuật mon 43/2013/tt-byt: thông y danh noi luc tt43-ck.2 muc 2. phụ phân kỹ nội phu tế tuyến môn bộ lục te tư chuyen thuat word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_040",
-    "code": "TT 43",
-    "title": "20. Noi soi chan doan can thiep 2013",
+    "code": "TT43-CK.20",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Noi soi chan doan can thiep",
     "filename": "20. Noi soi chan doan can thiep 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/20. Noi soi chan doan can thiep 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -843,12 +843,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/20._noi_soi_chan_doan_can_thiep_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/20._noi_soi_chan_doan_can_thiep_2013.doc",
-    "keywords": "pháp thiep 43 thông & bo te thong tt van luat luật tế bản quy, can doan word phap ban 2013 soi chan bộ tu văn noi 20. byt y tư"
+    "keywords": "can tu ky doan chan tuyen thong phan 2013.doc thuật tt43-ck.20 20. mon 43/2013/tt-byt: thông y danh soi noi luc muc phụ phân kỹ phu tế tuyến môn thiep bộ lục te tư chuyen thuat word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_041",
-    "code": "TT 43",
-    "title": "21. Tham do chuc nang 2013",
+    "code": "TT43-CK.21",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Thăm dò chức năng",
     "filename": "21. Tham do chuc nang 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/21. Tham do chuc nang 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -864,12 +864,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/21._tham_do_chuc_nang_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/21._tham_do_chuc_nang_2013.doc",
-    "keywords": "pháp 43 thông & bo te thong tt van luat luật tế bản quy, do 21. tham word phap chuc nang ban 2013 bộ tu văn byt y tư"
+    "keywords": "chuc tu ky tuyen thong chức phan 21. 2013.doc thuật mon 43/2013/tt-byt: thông y danh tt43-ck.21 tham luc muc nang phụ phân kỹ phu tế do tuyến dò môn bộ lục te tư năng chuyen thuat thăm word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_042",
-    "code": "TT 43",
-    "title": "22. Huyet hoc truyen mau 2013",
+    "code": "TT43-CK.22",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Huyết học - Truyền máu",
     "filename": "22. Huyet hoc truyen mau 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/22. Huyet hoc truyen mau 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -885,12 +885,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/22._huyet_hoc_truyen_mau_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/22._huyet_hoc_truyen_mau_2013.doc",
-    "keywords": "pháp 43 thông & bo te thong tt van luat luật tế bản quy, mau truyen huyet word phap ban 2013 22. bộ tu văn byt y tư hoc"
+    "keywords": "22. tu ky tuyen thong máu phan 2013.doc thuật truyền mon 43/2013/tt-byt: thông y danh hoc luc muc phụ phân kỹ phu tế tuyến huyết tt43-ck.22 môn mau bộ lục te tư chuyen thuat truyen học word bo 2013 khoa - chuyên huyet mục"
   },
   {
     "id": "vb_043",
-    "code": "TT 43",
-    "title": "23. Hoa sinh 2013",
+    "code": "TT43-CK.23",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Hóa sinh",
     "filename": "23. Hoa sinh 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/23. Hoa sinh 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -906,12 +906,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/23._hoa_sinh_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/23._hoa_sinh_2013.doc",
-    "keywords": "pháp 43 thông & bo te thong tt van luat luật tế bản hoa 23. sinh quy, word phap ban 2013 bộ tu văn byt y tư"
+    "keywords": "tu ky tuyen hoa thong phan 2013.doc tt43-ck.23 thuật mon 43/2013/tt-byt: thông y danh 23. luc sinh muc phụ phân kỹ phu tế tuyến hóa môn bộ lục te tư chuyen thuat word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_044",
-    "code": "TT 43",
-    "title": "24. Vi sinh 2013",
+    "code": "TT43-CK.24",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Vi sinh",
     "filename": "24. Vi sinh 2013.docx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/24. Vi sinh 2013.docx",
     "category": "Chuyen_Mon_Vi_Sinh",
@@ -927,12 +927,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/24._vi_sinh_2013.docx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/24._vi_sinh_2013.docx",
-    "keywords": "43 môn nghiem & bo te tt nghiệm tế thuat vi sinh xét kỹ word thuật y 24. 2013 chuyên ky bộ mon xet chuyen"
+    "keywords": "tu ky tuyen thong 24. phan thuật mon 43/2013/tt-byt: thông y danh vi luc sinh muc phụ phân kỹ phu tế tuyến môn bộ lục te tư chuyen thuat 2013.docx word tt43-ck.24 bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_045",
-    "code": "TT 43",
-    "title": "25. Giai phau benh 2013",
+    "code": "TT43-CK.25",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Giải phẫu bệnh",
     "filename": "25. Giai phau benh 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/25. Giai phau benh 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -948,12 +948,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/25._giai_phau_benh_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/25._giai_phau_benh_2013.doc",
-    "keywords": "pháp 43 giai thông & bo te thong tt van luat luật tế bản quy, benh word phap ban phau 2013 25. bộ tu văn byt y tư"
+    "keywords": "25. tu ky tuyen thong phan phau 2013.doc thuật mon bệnh 43/2013/tt-byt: thông benh y danh luc giải muc phụ phân kỹ phu tế tuyến giai môn bộ lục te tư chuyen thuat phẫu word bo 2013 khoa - chuyên tt43-ck.25 mục"
   },
   {
     "id": "vb_046",
-    "code": "TT 43",
-    "title": "26. Vi phau 2013",
+    "code": "TT43-CK.26",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Vi phau",
     "filename": "26. Vi phau 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/26. Vi phau 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -969,12 +969,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/26._vi_phau_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/26._vi_phau_2013.doc",
-    "keywords": "pháp 43 thông & bo te thong tt van luat luật 26. bản tế vi quy, word phap ban phau 2013 bộ tu văn byt y tư"
+    "keywords": "tu ky tuyen thong phan phau 2013.doc thuật mon 43/2013/tt-byt: thông y danh vi luc tt43-ck.26 muc phụ phân kỹ phu tế tuyến môn bộ lục te tư chuyen thuat 26. word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_047",
-    "code": "TT 43",
-    "title": "27. Phau thuat noi soi 2013",
+    "code": "TT43-CK.27",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Phau thuat noi soi",
     "filename": "27. Phau thuat noi soi 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/27. Phau thuat noi soi 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -990,12 +990,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/27._phau_thuat_noi_soi_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/27._phau_thuat_noi_soi_2013.doc",
-    "keywords": "pháp 43 thông & bo te thong tt van luat luật tế bản thuat quy, word phap phau ban 27. 2013 soi bộ tu văn noi byt y tư"
+    "keywords": "tu ky tuyen thong phan phau 2013.doc thuật mon 43/2013/tt-byt: thông y danh soi noi luc muc 27. phụ phân kỹ phu tế tuyến môn bộ lục te tư thuat chuyen word bo 2013 khoa tt43-ck.27 - chuyên mục"
   },
   {
     "id": "vb_048",
-    "code": "TT 43",
-    "title": "28.Phau thuat tao hinh tham my 2013",
+    "code": "TT43-CK.28",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Phau thuat tao hinh tham my",
     "filename": "28.Phau thuat tao hinh tham my 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/28.Phau thuat tao hinh tham my 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -1011,12 +1011,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/28.phau_thuat_tao_hinh_tham_my_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/28.phau_thuat_tao_hinh_tham_my_2013.doc",
-    "keywords": "pháp 43 thông & bo te thong tt van 28.phau luat luật tế bản thuat quy, tao tham word phap ban my 2013 bộ hinh tu văn byt y tư"
+    "keywords": "tu ky tuyen thong phan phau 2013.doc thuật my tao mon 43/2013/tt-byt: thông y danh tham luc muc phụ phân kỹ phu 28.phau tế tuyến môn bộ lục te tư hinh thuat chuyen tt43-ck.28 word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_049",
-    "code": "TT 43",
-    "title": "3. Nhi 2013",
+    "code": "TT43-CK.3",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Nhi",
     "filename": "3. Nhi 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/3. Nhi 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -1032,12 +1032,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/3._nhi_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/3._nhi_2013.doc",
-    "keywords": "pháp 43 3. thông & bo te thong tt van luat luật nhi bản tế quy, word phap ban 2013 bộ tu văn byt y tư"
+    "keywords": "tu ky tuyen thong phan 2013.doc thuật mon 43/2013/tt-byt: thông y danh nhi luc muc phụ phân kỹ phu tế tuyến 3. môn tt43-ck.3 bộ lục te tư chuyen thuat word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_050",
-    "code": "TT 43",
-    "title": "4. Lao 2013",
+    "code": "TT43-CK.4",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Lao",
     "filename": "4. Lao 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/4. Lao 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -1053,12 +1053,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/4._lao_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/4._lao_2013.doc",
-    "keywords": "pháp phổi 43 thông & bo te thong tt van luat luật tế bản mgit quy, lao nuôi word phap ban 2013 bộ cấy bệnh tu văn 4. byt y tư afb"
+    "keywords": "tu ky lao tuyen thong phan nhuộm 2013.doc thuật mon mgit bệnh 43/2013/tt-byt: thông y danh vi luc afb muc phụ phân kỹ phu 4. tế mtb ziehl-neelsen tuyến rif môn bộ lục te tư genexpert chuyen thuat khuẩn tt43-ck.4 cấy word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_051",
-    "code": "TT 43",
-    "title": "5. Da lieu 2013",
+    "code": "TT43-CK.5",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Da liễu",
     "filename": "5. Da lieu 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/5. Da lieu 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -1074,12 +1074,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/5._da_lieu_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/5._da_lieu_2013.doc",
-    "keywords": "pháp 43 thông & bo te thong tt van luat luật 5. bản tế da quy, lieu word phap ban 2013 bộ tu văn byt y tư"
+    "keywords": "tu ky tt43-ck.5 tuyen thong phan 2013.doc lieu thuật mon 43/2013/tt-byt: thông y danh luc muc liễu phụ phân kỹ phu tế tuyến da môn 5. lục bộ tư te chuyen thuat word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_052",
-    "code": "TT 43",
-    "title": "6. Tam than 2013",
+    "code": "TT43-CK.6",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Tâm thần",
     "filename": "6. Tam than 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/6. Tam than 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -1095,12 +1095,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/6._tam_than_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/6._tam_than_2013.doc",
-    "keywords": "pháp 43 thông 6. & bo te thong tt van luat luật tế bản than quy, word phap ban 2013 bộ tu tam văn byt y tư"
+    "keywords": "tu tâm ky thần tuyen thong phan 2013.doc thuật tt43-ck.6 mon 43/2013/tt-byt: thông y danh luc muc phụ phân kỹ phu tế tuyến môn bộ lục than tư 6. te chuyen thuat tam word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_053",
-    "code": "TT 43",
-    "title": "7. Noi tiet 2013",
+    "code": "TT43-CK.7",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Noi tiet",
     "filename": "7. Noi tiet 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/7. Noi tiet 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -1116,12 +1116,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/7._noi_tiet_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/7._noi_tiet_2013.doc",
-    "keywords": "pháp 43 thông & bo te thong tt van luat luật tế bản quy, 7. word phap ban 2013 bộ tu văn tiet noi byt y tư"
+    "keywords": "tu ky tuyen thong 7. phan 2013.doc thuật mon 43/2013/tt-byt: thông y danh noi luc muc phụ phân kỹ phu tế tt43-ck.7 tuyến môn bộ lục te tư chuyen thuat word bo 2013 khoa - chuyên mục tiet"
   },
   {
     "id": "vb_054",
-    "code": "TT 43",
-    "title": "8. Y hoc co truyen 2013",
+    "code": "TT43-CK.8",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Y học cổ truyền",
     "filename": "8. Y hoc co truyen 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/8. Y hoc co truyen 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -1137,12 +1137,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/8._y_hoc_co_truyen_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/8._y_hoc_co_truyen_2013.doc",
-    "keywords": "pháp 43 8. thông co & bo te thong tt van luat luật tế bản quy, truyen word phap ban 2013 bộ tu văn byt y tư hoc"
+    "keywords": "tu ky tuyen thong phan 2013.doc thuật truyền mon 43/2013/tt-byt: thông y danh cổ hoc luc muc phụ phân kỹ phu 8. tế co tuyến tt43-ck.8 môn bộ lục te tư chuyen thuat truyen học word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_055",
-    "code": "TT 43",
-    "title": "9. Gay me hoi suc 2013",
+    "code": "TT43-CK.9",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Gây mê hồi sức",
     "filename": "9. Gay me hoi suc 2013.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/9. Gay me hoi suc 2013.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -1158,12 +1158,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/9._gay_me_hoi_suc_2013.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/9._gay_me_hoi_suc_2013.doc",
-    "keywords": "pháp 43 thông & bo te thong tt van luat luật tế bản quy, word suc gay phap 9. hoi ban me 2013 bộ tu văn byt y tư"
+    "keywords": "hoi tu ky tuyen thong phan gây me 9. thuật 2013.doc mon mê 43/2013/tt-byt: thông y danh sức luc gay muc phụ phân kỹ hồi phu tt43-ck.9 suc tế tuyến môn bộ lục te tư chuyen thuat word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_056",
-    "code": "TT 43",
-    "title": "Ban excel thong tu 43 theo phan tuyen",
+    "code": "43/2013/TT-BYT",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Ban excel thong tu 43 theo phan tuyen.xls",
     "filename": "Ban excel thong tu 43 theo phan tuyen.xls",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/Ban excel thong tu 43 theo phan tuyen.xls",
     "category": "Van_Ban_Phap_Quy",
@@ -1179,12 +1179,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-excel",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/ban_excel_thong_tu_43_theo_phan_tuyen.xls",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/ban_excel_thong_tu_43_theo_phan_tuyen.xls",
-    "keywords": "pháp 43 thông & bo te thong tt tuyen van luat luật tế bản quy, excel phap ban phan 2013 bộ tu văn byt theo y tư"
+    "keywords": "43/2013/tt-byt tu ky tuyen thong phan thuật mon 43/2013/tt-byt: excel thông y danh luc chuyên muc phụ phân kỹ phu tế theo tuyến 43 môn bộ lục te tư chuyen thuat tuyen.xls bo 2013 khoa - ban mục"
   },
   {
     "id": "vb_057",
-    "code": "TT 43",
-    "title": "Muc luc",
+    "code": "43/2013/TT-BYT",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Muc luc.doc",
     "filename": "Muc luc.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/Muc luc.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -1200,12 +1200,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/muc_luc.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/muc_luc.doc",
-    "keywords": "pháp 43 thông & bo te thong tt van luat luật tế bản quy, luc word muc phap ban 2013 bộ tu văn byt y tư"
+    "keywords": "43/2013/tt-byt tu ky tuyen thong luc.doc phan thuật mon 43/2013/tt-byt: thông y danh luc muc phụ phân kỹ phu tế tuyến môn bộ lục te tư chuyen thuat word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_058",
-    "code": "TT 43",
-    "title": "TT 43 file excel (BHXH)",
+    "code": "43/2013/TT-BYT",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa TT 43 file excel (BHXH).xls",
     "filename": "TT 43 file excel (BHXH).xls",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/TT 43 file excel (BHXH).xls",
     "category": "Van_Ban_Phap_Quy",
@@ -1221,12 +1221,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-excel",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/tt_43_file_excel_bhxh_.xls",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/tt_43_file_excel_bhxh_.xls",
-    "keywords": "pháp (bhxh) 43 thông & bo te thong tt van luat luật tế bản quy, file excel phap ban 2013 bộ tu văn byt y tư"
+    "keywords": "(bhxh).xls 43/2013/tt-byt tu ky tuyen thong phan thuật tt mon 43/2013/tt-byt: excel thông y danh luc muc phụ phân kỹ phu tế tuyến 43 môn bộ lục te tư chuyen thuat file bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_059",
-    "code": "TT 43",
-    "title": "Thong tu 43",
+    "code": "43/2013/TT-BYT",
+    "title": "Thông tư 43/2013/TT-BYT: Phụ lục danh mục phân tuyến chuyên môn kỹ thuật - Chuyên khoa Thong tu 43.doc",
     "filename": "Thong tu 43.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 43.2013/Phu luc Thong tu 43/Thong tu 43.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -1242,12 +1242,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong_tu_43.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong_tu_43.doc",
-    "keywords": "pháp 43 thông & bo te thong tt van luat luật tế bản quy, word phap ban 2013 bộ tu văn byt y tư"
+    "keywords": "43/2013/tt-byt tu ky tuyen thong phan thuật 43.doc mon 43/2013/tt-byt: thông y danh luc muc phụ phân kỹ phu tế tuyến môn bộ lục te tư chuyen thuat word bo 2013 khoa - chuyên mục"
   },
   {
     "id": "vb_060",
-    "code": "NĐ 96",
-    "title": "nghi dinh 96 2023 nd cp quy dinh chi tiet mot so dieu luat kham benh chua benh",
+    "code": "96/2023/NĐ-CP",
+    "title": "Nghị định 96/2023/NĐ-CP: Quy định chi tiết một số điều của Luật Khám bệnh, chữa bệnh 2023",
     "filename": "nghi-dinh-96-2023-nd-cp-quy-dinh-chi-tiet-mot-so-dieu-luat-kham-benh-chua-benh.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/NĐ 96.2023. Quy định một số điều của Luật Khám bệnh, chữa bệnh/nghi-dinh-96-2023-nd-cp-quy-dinh-chi-tiet-mot-so-dieu-luat-kham-benh-chua-benh.pdf",
     "category": "Van_Ban_Phap_Quy",
@@ -1263,12 +1263,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/nghi-dinh-96-2023-nd-cp-quy-dinh-chi-tiet-mot-so-dieu-luat-kham-benh-chua-benh.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/nghi-dinh-96-2023-nd-cp-quy-dinh-chi-tiet-mot-so-dieu-luat-kham-benh-chua-benh.pdf",
-    "keywords": "pháp thông & nghi thong van nđ luat 96 bản luật 2023 quy, quy mot dieu nd phủ so pdf chua benh phap ban cp chính kham phu tu chinh dinh văn tiet byt chi tư"
+    "keywords": "kham điều chữa nghi-dinh-96-2023-nd-cp-quy-dinh-chi-tiet-mot-so-dieu-luat-kham-benh-chua-benh.pdf mot benh, luat định chua cua bệnh, 96/2023/nd-cp bệnh benh nghi phủ dinh 96/2023/nd-cp: 2023 chính chi so phu một 96/2023/nđ-cp: 96/2023/nđ-cp nghị số của quy khám pdf tiết luật chinh dieu tiet"
   },
   {
     "id": "vb_061",
-    "code": "TT.22",
-    "title": "22 byt kem",
+    "code": "22/2023/TT-BYT",
+    "title": "Thông tư 22/2023/TT-BYT: Bảng giá chi tiết dịch vụ khám bệnh, chữa bệnh BHYT chuyên ngành Xét nghiệm",
     "filename": "22-byt-kem.xls",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT.22.2023.giá dịch vụ khám bệnh, chữa bệnh bảo hiểm y tế /22-byt-kem.xls",
     "category": "Van_Ban_Phap_Quy",
@@ -1284,12 +1284,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-excel",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/22-byt-kem.xls",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/22-byt-kem.xls",
-    "keywords": "pháp thông & bo te thong van luat luật tế bản 2023 22 quy, excel tt.22 kem phap ban bộ tu văn byt y tư"
+    "keywords": "kham thanh tu chữa benh, chua thong 22-byt-kem.xls toán định dich bệnh, nganh dịch bệnh excel thông bhyt bang benh nghiem y bảo 22/2023/tt-byt: vu 22/2023/tt-byt 2023 vụ chi khung bảng gia tế xet mức bộ te tư khám nghiệm chuyen hiểm xét giá tiết ngành bo phí chuyên tiet"
   },
   {
     "id": "vb_062",
-    "code": "THÔNG TƯ-22",
-    "title": "Thông tư 22 2023 TT BYT",
+    "code": "22/2023/TT-BYT",
+    "title": "Thông tư 22/2023/TT-BYT: Quy định giá dịch vụ khám bệnh, chữa bệnh bảo hiểm y tế",
     "filename": "Thông tư-22-2023-TT-BYT.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT.22.2023.giá dịch vụ khám bệnh, chữa bệnh bảo hiểm y tế /Thông tư-22-2023-TT-BYT.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -1305,12 +1305,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong_tu-22-2023-tt-byt.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong_tu-22-2023-tt-byt.doc",
-    "keywords": "pháp thông & bo te thong tt van luat luật tế bản tư-22 2023 22 quy, word phap ban bộ tu văn byt y tư"
+    "keywords": "kham thanh tu chữa benh, định thong chua hiem toán dich bệnh, dịch bệnh thông y benh bhyt phí bảo 22/2023/tt-byt: dinh vu 22/2023/tt-byt 2023 vụ chi khung tế gia tu-22-2023-tt-byt.doc mức bộ hiểm tư quy khám te giá word bo bao tư-22-2023-tt-byt.doc"
   },
   {
     "id": "vb_063",
-    "code": "2016.QĐ",
-    "title": "Giam sat khang thuoc BYT qdb 2016 6211 1",
+    "code": "6211/QĐ-BYT",
+    "title": "Quyết định 6211/QĐ-BYT: Quy định thiết lập và vận hành hệ thống giám sát kháng thuốc tại các bệnh viện",
     "filename": "Giam sat khang thuoc BYT-qdb-2016-6211-1.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/6211.2016.QĐ.BYT/Giam sat khang thuoc BYT-qdb-2016-6211-1.pdf",
     "category": "Van_Ban_Phap_Quy",
@@ -1326,19 +1326,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/giam_sat_khang_thuoc_byt-qdb-2016-6211-1.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/giam_sat_khang_thuoc_byt-qdb-2016-6211-1.pdf",
-    "keywords": "6211 pháp giam thông & bo te thong van luat luật tế bản khang quy, pdf thuoc phap 1 ban 2016 sat qdb bộ tu văn byt 2016.qđ y tư"
+    "keywords": "và thanh quyet sàng viện thiết định hành thiet thong toán lap tại thuoc sát bệnh kháng dịch benh y bhyt sat phí 6211/qd-byt: van bảo hệ dinh vi he vụ sinh thuốc tai clsi chi khung cac byt-qdb-2016-6211-1.pdf tế các giám 6211/qđ-byt thống giam 6211/qd-byt bộ lâm te quy hiểm mức hanh vien 6211/qđ-byt: 2016 pdf vận giá va khang bo ksd lập quyết"
   },
   {
     "id": "vb_064",
-    "code": "2016.QĐ",
-    "title": "Phu luc Quy dinh he thong gia m sat khang thuoc 2016.10.12 final",
+    "code": "GS-KT-BYT",
+    "title": "Tài liệu hướng dẫn quy định thiết lập hệ thống giám sát vi sinh vật kháng thuốc trong bệnh viện",
     "filename": "Phu-luc-Quy-dinh-he-thong-gia m-sat-khang-thuoc-2016.10.12-final.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/6211.2016.QĐ.BYT/2020 - KHÁNG THUOC DUC GIANG/Phu-luc-Quy-dinh-he-thong-gia m-sat-khang-thuoc-2016.10.12-final.doc",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "BVĐK Đức Giang",
-    "year": 2020,
+    "issuer": "Bộ Y tế",
+    "year": 2016,
     "size": 1777152,
     "sizeFormatted": "1.7 MB",
     "format": "word",
@@ -1347,12 +1347,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/phu-luc-quy-dinh-he-thong-gia_m-sat-khang-thuoc-2016.10.12-final.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/phu-luc-quy-dinh-he-thong-gia_m-sat-khang-thuoc-2016.10.12-final.doc",
-    "keywords": "duc pháp thông & thong m tư van luat luật bản khang final quy, quy bvđk 2020 đức giang thuoc 2016.10.12 word phap ban gia bvdk he phu sat tu dinh văn byt 2016.qđ luc"
+    "keywords": "hiếu thanh định toán lọc lieu sát dịch benh bhyt nước bảo gs-kt-byt hướng bộ 2016 cấy word phí thiet thong máu bệnh kháng tố y sat vi sinh khí khung ro lâm te hiểm vien khuẩn khang lập thiết endotoxin thận huong lap thuoc m-sat-khang-thuoc-2016.10.12-final.doc vat he thuốc clsi chi giám mức tài quy biến chạy sàng viện hệ dinh vật độc vụ trong tai nội tế liệu thống giam dẫn giá phu-luc-quy-dinh-he-thong-gia bo ksd dan"
   },
   {
     "id": "vb_065",
-    "code": "2016.QĐ",
-    "title": "Quy dinh he thong gia m sat khang thuoc 20161012 final",
+    "code": "GS-KT-BYT",
+    "title": "Tài liệu hướng dẫn quy định thiết lập hệ thống giám sát vi sinh vật kháng thuốc trong bệnh viện",
     "filename": "Quy-dinh-he-thong-gia m-sat-khang-thuoc-20161012-final.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/6211.2016.QĐ.BYT/Hệ thống giám sát kháng thuốc/Quy-dinh-he-thong-gia m-sat-khang-thuoc-20161012-final.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -1368,7 +1368,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/quy-dinh-he-thong-gia_m-sat-khang-thuoc-20161012-final.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/quy-dinh-he-thong-gia_m-sat-khang-thuoc-20161012-final.doc",
-    "keywords": "pháp thông & bo te thong m van luat luật tế bản khang final quy, quy 20161012 thuoc word phap ban gia 2016 he sat bộ tu dinh văn byt 2016.qđ y tư"
+    "keywords": "hiếu thanh định toán lọc lieu sát dịch benh bhyt nước bảo gs-kt-byt hướng bộ 2016 cấy word phí m-sat-khang-thuoc-20161012-final.doc thiet thong máu bệnh kháng tố y sat vi sinh khí khung ro lâm te hiểm vien khuẩn khang lập thiết endotoxin thận huong lap thuoc quy-dinh-he-thong-gia vat he thuốc clsi chi giám mức tài quy biến chạy sàng viện hệ dinh vật độc vụ trong tai nội tế liệu thống giam dẫn giá bo ksd dan"
   },
   {
     "id": "vb_066",
@@ -1389,12 +1389,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/quyet-dinh---bo-y-te.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/quyet-dinh---bo-y-te.doc",
-    "keywords": "pháp thông quyet bo & te thong van luat luật tế bản quy, word phap ban 2016 bộ tu dinh văn byt 2016.qđ y tư"
+    "keywords": "te 2016.qđ quyet 2016.qd y 2016 tế word quyet-dinh---bo-y-te.doc bo dinh bộ"
   },
   {
     "id": "vb_067",
-    "code": "2016.QĐ",
-    "title": "qdb 2016 6211 1",
+    "code": "6211/QĐ-BYT",
+    "title": "Quyết định 6211/QĐ-BYT: Quy định thiết lập và vận hành hệ thống giám sát kháng thuốc tại các bệnh viện",
     "filename": "qdb-2016-6211-1.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/6211.2016.QĐ.BYT/Hệ thống giám sát kháng thuốc/qdb-2016-6211-1.pdf",
     "category": "Van_Ban_Phap_Quy",
@@ -1410,12 +1410,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/qdb-2016-6211-1.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/qdb-2016-6211-1.pdf",
-    "keywords": "6211 pháp thông & bo te thong van luat luật tế bản quy, pdf phap 1 ban 2016 qdb bộ tu văn byt 2016.qđ y tư"
+    "keywords": "và thanh quyet ksd sàng viện thiết định hành thiet thong toán lap tại thuoc sát bệnh kháng dịch benh y bhyt sat phí 6211/qd-byt: van bảo hệ dinh vi he vụ sinh thuốc tai clsi chi khung cac tế các giám 6211/qđ-byt thống giam 6211/qd-byt bộ lâm te quy hiểm mức hanh vien 6211/qđ-byt: 2016 pdf vận giá va khang bo qdb-2016-6211-1.pdf lập quyết"
   },
   {
     "id": "vb_068",
-    "code": "VBYT-068",
-    "title": "103.2016.NĐ CP",
+    "code": "103/2016/NĐ-CP",
+    "title": "Nghị định 103/2016/NĐ-CP: Quy định về bảo đảm an toàn sinh học tại phòng xét nghiệm",
     "filename": "103.2016.NĐ-CP.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/THÔNG TƯ ATSH/103.2016.NĐ-CP.doc",
     "category": "An_Toan_Sinh_Hoc",
@@ -1431,12 +1431,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/An_Toan_Sinh_Hoc/103.2016.nd-cp.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/An_Toan_Sinh_Hoc/103.2016.nd-cp.doc",
-    "keywords": "an môi & truong 103.2016.nd sinh moi phủ toan word 2016 pxn trường 103.2016.nđ cp chính phu chinh toàn học hoc"
+    "keywords": "toàn 2 về 103/2016/nđ-cp: định phòng thải tại toan nhân nhiễm nghiem nghi bảo dinh hoc phủ dam 103/2016/nđ-cp phong sinh 103.2016.nđ-cp.doc tai chính an cấp lây 103/2016/nd-cp phu 103.2016.nd-cp.doc nghị rác đảm hấp xet quy nghiệm nồi 103/2016/nd-cp: hộ xét 2016 cá học word atsh chinh bao ve"
   },
   {
     "id": "vb_069",
-    "code": "VBYT-069",
-    "title": "103.2016.NĐ CP",
+    "code": "103/2016/NĐ-CP",
+    "title": "Nghị định 103/2016/NĐ-CP: Quy định về bảo đảm an toàn sinh học tại phòng xét nghiệm",
     "filename": "103.2016.NĐ-CP.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/THÔNG TƯ ATSH/103.2016.NĐ-CP.pdf",
     "category": "An_Toan_Sinh_Hoc",
@@ -1452,12 +1452,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/An_Toan_Sinh_Hoc/103.2016.nd-cp.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/An_Toan_Sinh_Hoc/103.2016.nd-cp.pdf",
-    "keywords": "an môi & truong 103.2016.nd sinh moi phủ pdf toan 2016 pxn trường 103.2016.nđ cp chính phu chinh toàn học hoc"
+    "keywords": "toàn 2 về 103/2016/nđ-cp: định phòng thải tại toan nhân 103.2016.nđ-cp.pdf nhiễm nghiem nghi bảo dinh hoc phủ dam 103/2016/nđ-cp phong sinh chính tai cấp an lây 103/2016/nd-cp phu nghị rác đảm hấp xet quy nghiệm 103.2016.nd-cp.pdf 103/2016/nd-cp: nồi hộ xét 2016 pdf học cá atsh chinh bao ve"
   },
   {
     "id": "vb_070",
-    "code": "VBYT-070",
-    "title": "155.2018.NĐ CP",
+    "code": "155/2018/NĐ-CP",
+    "title": "Nghị định 155/2018/NĐ-CP: Sửa đổi, bổ sung quy định về an toàn sinh học phòng xét nghiệm y học",
     "filename": "155.2018.NĐ-CP.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/THÔNG TƯ ATSH/155.2018.NĐ-CP.doc",
     "category": "An_Toan_Sinh_Hoc",
@@ -1473,12 +1473,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/An_Toan_Sinh_Hoc/155.2018.nd-cp.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/An_Toan_Sinh_Hoc/155.2018.nd-cp.doc",
-    "keywords": "an môi & truong sinh moi phủ toan word 155.2018.nd pxn trường cp chính 2018 phu chinh toàn học 155.2018.nđ hoc"
+    "keywords": "toàn 155/2018/nđ-cp: 2 đổi, về 155.2018.nđ-cp.doc định phòng thải sửa sung 155.2018.nd-cp.doc toan nhân y 155/2018/nd-cp: nghiem nhiễm nghi doi, phủ dinh hoc bảo 155/2018/nđ-cp sua phong sinh chính cấp lây an phu bổ nghị rác hấp xet 155/2018/nd-cp quy nghiệm nồi hộ xét cá học word atsh bo chinh ve 2018"
   },
   {
     "id": "vb_071",
-    "code": "VBYT-071",
-    "title": "155.2018.NĐ CP",
+    "code": "155/2018/NĐ-CP",
+    "title": "Nghị định 155/2018/NĐ-CP: Sửa đổi, bổ sung quy định về an toàn sinh học phòng xét nghiệm y học",
     "filename": "155.2018.NĐ-CP.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/THÔNG TƯ ATSH/155.2018.NĐ-CP.pdf",
     "category": "An_Toan_Sinh_Hoc",
@@ -1494,19 +1494,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/An_Toan_Sinh_Hoc/155.2018.nd-cp.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/An_Toan_Sinh_Hoc/155.2018.nd-cp.pdf",
-    "keywords": "an môi & truong sinh moi phủ pdf toan 155.2018.nd pxn trường cp chính 2018 phu chinh toàn học 155.2018.nđ hoc"
+    "keywords": "toàn 155/2018/nđ-cp: 2 đổi, về định phòng thải sửa sung toan nhân y 155/2018/nd-cp: nghiem nhiễm nghi doi, phủ dinh hoc bảo 155/2018/nđ-cp sua phong sinh 155.2018.nd-cp.pdf chính cấp an lây phu bổ 155.2018.nđ-cp.pdf nghị rác hấp xet 155/2018/nd-cp quy nghiệm nồi hộ xét pdf học cá atsh bo chinh ve 2018"
   },
   {
     "id": "vb_072",
-    "code": "VBYT-072",
-    "title": "37 2017 TT BYT 326101",
+    "code": "37/2017/TT-BYT",
+    "title": "Thông tư 37/2017/TT-BYT: Quy định về thực hành xét nghiệm an toàn sinh học tại các cơ sở y tế",
     "filename": "37_2017_TT-BYT_326101.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/THÔNG TƯ ATSH/37_2017_TT-BYT_326101.doc",
     "category": "An_Toan_Sinh_Hoc",
     "categoryName": "An Toàn Sinh Học & Môi Trường PXN",
     "folderName": "An_Toan_Sinh_Hoc",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2017,
     "size": 60857,
     "sizeFormatted": "59 KB",
     "format": "word",
@@ -1515,12 +1515,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/An_Toan_Sinh_Hoc/37_2017_tt-byt_326101.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/An_Toan_Sinh_Hoc/37_2017_tt-byt_326101.doc",
-    "keywords": "an môi & bo te tt truong tế 2024 sinh moi 326101 37 toan word pxn trường 2017 bộ toàn học byt y hoc"
+    "keywords": "toàn tu 2 về 37/2017/tt-byt định hành thong thải tại 37_2017_tt-byt_326101.doc thuc toan nhân thông y nghiem nhiễm bảo 37/2017/tt-byt: dinh hoc thực sinh cấp tai lây an so cac tế các co rác hấp xet bộ sở tư quy nghiệm hanh te 2017 nồi hộ xét cá học word atsh bo cơ ve"
   },
   {
     "id": "vb_073",
-    "code": "VBYT-073",
-    "title": "41:2016:TT BYT",
+    "code": "41/2016/TT-BYT",
+    "title": "Thông tư 41/2016/TT-BYT: Ban hành Danh mục vi sinh vật gây bệnh truyền nhiễm theo nhóm nguy cơ và cấp độ ATSH",
     "filename": "41:2016:TT-BYT.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/THÔNG TƯ ATSH/41:2016:TT-BYT.doc",
     "category": "An_Toan_Sinh_Hoc",
@@ -1536,12 +1536,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/An_Toan_Sinh_Hoc/41_2016_tt-byt.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/An_Toan_Sinh_Hoc/41_2016_tt-byt.doc",
-    "keywords": "an môi & bo te truong tế sinh moi toan word 41:2016:tt 2016 pxn trường bộ toàn học byt y hoc"
+    "keywords": "và toàn tu 2 41/2016/tt-byt hành thong thải gây nhóm truyền bệnh nhân thông nhiễm benh danh y vat bảo vi vật nhiem gay sinh cấp muc lây an cap 41/2016/tt-byt: tế do theo co độ rác nguy hấp bộ 41:2016:tt-byt.doc te tư nồi hanh hộ truyen nhom 2016 cá học atsh va word bo cơ ban mục"
   },
   {
     "id": "vb_074",
-    "code": "VBYT-074",
-    "title": "43 :2011:TT BYT",
+    "code": "43/2011/TT-BYT",
+    "title": "Thông tư 43/2011/TT-BYT: Quy định chế độ quản lý mẫu bệnh phẩm bệnh truyền nhiễm",
     "filename": "43 :2011:TT-BYT.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/THÔNG TƯ ATSH/43 :2011:TT-BYT.doc",
     "category": "An_Toan_Sinh_Hoc",
@@ -1557,19 +1557,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/An_Toan_Sinh_Hoc/43_2011_tt-byt.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/An_Toan_Sinh_Hoc/43_2011_tt-byt.doc",
-    "keywords": "an môi 43 2011 :2011:tt & bo te truong tế sinh moi toan word pxn trường bộ toàn học byt y hoc"
+    "keywords": "tu quản định thong ly truyền bệnh thông nhiễm benh y chế dinh che nhiem 43/2011/tt-byt: phẩm quan tế 43/2011/tt-byt do độ :2011:tt-byt.doc 43 mau bộ te tư quy truyen pham lý 2011 word bo mẫu"
   },
   {
     "id": "vb_075",
-    "code": "VBYT-075",
-    "title": "NIHE Tong quan về ATSH",
+    "code": "TL-NIHE-ATSH",
+    "title": "Tài liệu Viện Vệ sinh Dịch tễ Trung ương (NIHE): Tổng quan An toàn sinh học phòng xét nghiệm",
     "filename": "NIHE- Tong quan về ATSH.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/THÔNG TƯ ATSH/NIHE- Tong quan về ATSH.pdf",
     "category": "An_Toan_Sinh_Hoc",
     "categoryName": "An Toàn Sinh Học & Môi Trường PXN",
     "folderName": "An_Toan_Sinh_Hoc",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "Viện VSDTTW",
+    "year": 2019,
     "size": 1268403,
     "sizeFormatted": "1.2 MB",
     "format": "pdf",
@@ -1578,19 +1578,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/An_Toan_Sinh_Hoc/nihe-_tong_quan_ve_atsh.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/An_Toan_Sinh_Hoc/nihe-_tong_quan_ve_atsh.pdf",
-    "keywords": "an môi & bo te về truong tế 2024 quan sinh moi pdf toan atsh pxn ve trường bộ tong toàn học nihe y hoc"
+    "keywords": "toàn 2 viện về phòng thải lieu trung dich tong dịch vệ toan nhân nhiễm nghiem bảo hoc (nihe): tl-nihe-atsh quan phong sinh cấp tai lây an liệu tễ rác tổng xet hấp uong tài nghiệm te atsh.pdf 2019 vien nồi hộ xét pdf học cá atsh vsdttw nihe- ve ương"
   },
   {
     "id": "vb_076",
-    "code": "VBYT-076",
-    "title": "New Microsoft Word Document",
+    "code": "43/2011/TT-BYT",
+    "title": "Thông tư 43/2011/TT-BYT: Quy định chế độ quản lý mẫu bệnh phẩm bệnh truyền nhiễm",
     "filename": "New Microsoft Word Document.docx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/THÔNG TƯ ATSH/New Microsoft Word Document.docx",
     "category": "An_Toan_Sinh_Hoc",
     "categoryName": "An Toàn Sinh Học & Môi Trường PXN",
     "folderName": "An_Toan_Sinh_Hoc",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2011,
     "size": 13250,
     "sizeFormatted": "13 KB",
     "format": "word",
@@ -1599,19 +1599,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/An_Toan_Sinh_Hoc/new_microsoft_word_document.docx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/An_Toan_Sinh_Hoc/new_microsoft_word_document.docx",
-    "keywords": "an môi & bo te truong tế 2024 sinh moi microsoft toan word new pxn trường document bộ toàn học y hoc"
+    "keywords": "tu quản định thong ly truyền bệnh thông nhiễm benh new y chế dinh che nhiem 43/2011/tt-byt: phẩm quan tế 43/2011/tt-byt do document.docx microsoft độ mau bộ te tư quy truyen pham lý 2011 word bo mẫu"
   },
   {
     "id": "vb_077",
-    "code": "VBYT-077",
-    "title": "Quy định nồi hấp",
+    "code": "QĐ-NH-VS",
+    "title": "Hướng dẫn chuyên môn: Quy định xử lý tiệt trùng rác thải y tế và vận hành nồi hấp tại Khoa Vi sinh",
     "filename": "Quy định nồi hấp.docx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/THÔNG TƯ ATSH/Quy định nồi hấp.docx",
     "category": "An_Toan_Sinh_Hoc",
     "categoryName": "An Toàn Sinh Học & Môi Trường PXN",
     "folderName": "An_Toan_Sinh_Hoc",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2021,
     "size": 15150,
     "sizeFormatted": "15 KB",
     "format": "word",
@@ -1620,18 +1620,18 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/An_Toan_Sinh_Hoc/quy_dinh_noi_hap.docx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/An_Toan_Sinh_Hoc/quy_dinh_noi_hap.docx",
-    "keywords": "an môi & bo te truong tế 2024 sinh quy moi nồi toan hap word định pxn trường bộ dinh toàn học noi hấp y hoc"
+    "keywords": "và trùng rac hap 2021 duc hap.docx xử định hành thải xu bvđk huong tại ly y thai bvdk van noi dinh vi đức hướng sinh tai qđ-nh-vs qd-nh-vs tế giang rác hấp te quy nồi chuyen mon: hanh môn: dẫn lý vận tiệt word va hấp.docx khoa dan chuyên trung tiet"
   },
   {
     "id": "vb_078",
-    "code": "TT58",
-    "title": "TT58.2015",
+    "code": "58/2015/TTLT-BYT-BTNMT",
+    "title": "Thông tư liên tịch 58/2015/TTLT-BYT-BTNMT: Quy định về quản lý chất thải y tế",
     "filename": "TT58.2015.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/THÔNG TƯ ATSH/TT58.2015.doc",
     "category": "An_Toan_Sinh_Hoc",
     "categoryName": "An Toàn Sinh Học & Môi Trường PXN",
     "folderName": "An_Toan_Sinh_Hoc",
-    "issuer": "Bộ Y tế",
+    "issuer": "Bộ Y tế & Bộ TNMT",
     "year": 2015,
     "size": 443392,
     "sizeFormatted": "433 KB",
@@ -1641,7 +1641,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/An_Toan_Sinh_Hoc/tt58.2015.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/An_Toan_Sinh_Hoc/tt58.2015.doc",
-    "keywords": "an môi & bo te truong tế tt58.2015 sinh moi toan word 2015 pxn trường bộ toàn học tt58 y hoc"
+    "keywords": "tu quản chat về 2015 định thong thải ly thông y thai liên tich dinh & tịch quan chất tế 58/2015/ttlt-byt-btnmt: bộ te tư quy tt58.2015.doc lien lý word bo tnmt ve 58/2015/ttlt-byt-btnmt"
   },
   {
     "id": "vb_079",
@@ -1662,7 +1662,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/nghi-quyet-30-nq-cp-2023-tiep-tuc-thuc-hien-cac-giai-phap-bao-dam-thuoc-trang-thiet-bi-y-te.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/nghi-quyet-30-nq-cp-2023-tiep-tuc-thuc-hien-cac-giai-phap-bao-dam-thuoc-trang-thiet-bi-y-te.pdf",
-    "keywords": "pháp giai thông quyet tiep & nghi te thong van luat luật bản trang 2023 quy, dam bao phủ pdf thuoc nq bi cac phap ban 30 hien thiet cp tuc chính phu nq.30 thuc tu chinh văn byt y tư"
+    "keywords": "quyet thiet phap thuoc cp thuc y trang nghi tiep phủ dam 30 2023 chính cac phu nq.30 tuc bi giai te nghi-quyet-30-nq-cp-2023-tiep-tuc-thuc-hien-cac-giai-phap-bao-dam-thuoc-trang-thiet-bi-y-te.pdf pdf nq hien chinh bao"
   },
   {
     "id": "vb_080",
@@ -1683,19 +1683,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/An_Toan_Sinh_Hoc/thong-tu-20-2021-tt-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/An_Toan_Sinh_Hoc/thong-tu-20-2021-tt-byt.pdf",
-    "keywords": "an 2021 môi thông & bo te thong tt truong tế sinh moi pdf toan pxn trường 20 bộ tu toàn học byt y tư hoc"
+    "keywords": "te tư tu byt thông 20 y 2021 thông-tư-20-2021-tt-byt.pdf thong-tu-20-2021-tt-byt.pdf tế pdf thong bo tt bộ"
   },
   {
     "id": "vb_081",
-    "code": "TT 32",
-    "title": "0. thong tu huong dan luat kbcb 31.12.2023.signed",
+    "code": "32/2023/TT-BYT",
+    "title": "Thông tư 32/2023/TT-BYT: Quy định chi tiết một số điều của Luật Khám bệnh, chữa bệnh 2023",
     "filename": "0.-thong-tu-huong-dan-luat-kbcb-31.12.2023.signed.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/0.-thong-tu-huong-dan-luat-kbcb-31.12.2023.signed.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 897081,
     "sizeFormatted": "876 KB",
     "format": "pdf",
@@ -1704,19 +1704,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/0.-thong-tu-huong-dan-luat-kbcb-31.12.2023.signed.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/0.-thong-tu-huong-dan-luat-kbcb-31.12.2023.signed.pdf",
-    "keywords": "pháp quốc thông 31.12.2023.signed & quoc thong tt van luat luật bản 2024 32 quy, pdf phap hoi ban kbcb hội 0. tu dan văn huong byt tư"
+    "keywords": "kham điều tu chữa mot benh, luat định thong chua cua bệnh, 32/2023/tt-byt bệnh 32/2023/tt-byt: thông benh 0.-thong-tu-huong-dan-luat-kbcb-31.12.2023.signed.pdf y dinh 2023 chi so tế một số của bộ te tư quy khám pdf tiết luật bo dieu tiet"
   },
   {
     "id": "vb_082",
-    "code": "TT 32",
-    "title": "1. phu luc i iv cap nhat kien thuc y khoa",
+    "code": "TT32-PL.I-IV",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục I-IV: Quy định cập nhật kiến thức y khoa liên tục (CME) trong KBCB",
     "filename": "1.-phu-luc-i-iv-cap-nhat-kien-thuc-y-khoa.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/1.-phu-luc-i-iv-cap-nhat-kien-thuc-y-khoa.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 396295,
     "sizeFormatted": "387 KB",
     "format": "pdf",
@@ -1725,19 +1725,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/1.-phu-luc-i-iv-cap-nhat-kien-thuc-y-khoa.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/1.-phu-luc-i-iv-cap-nhat-kien-thuc-y-khoa.pdf",
-    "keywords": "pháp quốc i nhat khoa thông & quoc thong tt tư van luat luật bản 2024 32 quy, pdf 1. phap hoi ban hội phu thuc cap tu kien iv văn byt y luc"
+    "keywords": "hiếu tu 1.-phu-luc-i-iv-cap-nhat-kien-thuc-y-khoa.pdf (cme) thận định thong lọc endotoxin máu tục tt32-pl.i-iv thức 32/2023/tt-byt kiến thuc tố thông y liên kbcb nước nhật dinh vi luc i-iv: độc 2023 trong khí tai phụ cap phu nội tế tuc ro bộ lục te tư quy cập lien khuẩn cấy pdf kien nhat bo biến khoa - chạy"
   },
   {
     "id": "vb_083",
-    "code": "TT 32",
-    "title": "10. phu luc x y sy da khoa",
+    "code": "TT32-PL.X",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục X: Danh mục kỹ thuật chuyên môn của Người hành nghề Y sỹ đa khoa",
     "filename": "10.-phu-luc-x-y-sy-da-khoa.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/10.-phu-luc-x-y-sy-da-khoa.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 606122,
     "sizeFormatted": "592 KB",
     "format": "pdf",
@@ -1746,19 +1746,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/10.-phu-luc-x-y-sy-da-khoa.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/10.-phu-luc-x-y-sy-da-khoa.pdf",
-    "keywords": "pháp quốc khoa thông & quoc thong tt van luat luật bản 2024 sy da 32 quy, pdf luc phap hoi ban x hội phu tu văn byt y tư 10."
+    "keywords": "người đa 10.-phu-luc-x-y-sy-da-khoa.pdf tu ky nguoi tt32-pl.x hành thong thuật cua 32/2023/tt-byt mon nghề thông y danh sy luc 2023 muc sỹ phụ kỹ phu tế da x: môn của lục bộ tư te thuat chuyen hanh pdf bo khoa - chuyên mục nghe"
   },
   {
     "id": "vb_084",
-    "code": "TT 32",
-    "title": "11. phu luc xi y sy yhct",
+    "code": "TT32-PL.XI",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục XI: Danh mục kỹ thuật chuyên môn của Y sỹ Y học cổ truyền",
     "filename": "11.-phu-luc-xi-y-sy-yhct.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/11.-phu-luc-xi-y-sy-yhct.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 1018486,
     "sizeFormatted": "995 KB",
     "format": "pdf",
@@ -1767,19 +1767,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/11.-phu-luc-xi-y-sy-yhct.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/11.-phu-luc-xi-y-sy-yhct.pdf",
-    "keywords": "pháp quốc xi thông & quoc thong tt van luat luật bản 2024 sy 32 quy, pdf yhct luc phap hoi ban hội phu 11. tu văn byt y tư"
+    "keywords": "tu ky 11.-phu-luc-xi-y-sy-yhct.pdf thong thuật cua truyền 32/2023/tt-byt mon thông y danh cổ xi: sy hoc luc 2023 muc sỹ phụ kỹ phu tế co môn của lục tt32-pl.xi tư bộ te thuat chuyen truyen pdf học bo - chuyên mục"
   },
   {
     "id": "vb_085",
-    "code": "TT 32",
-    "title": "12. phu luc xii dieu duong",
+    "code": "TT32-PL.XII",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục XII: Danh mục kỹ thuật chuyên môn chức danh Điều dưỡng",
     "filename": "12.-phu-luc-xii-dieu-duong.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/12.-phu-luc-xii-dieu-duong.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 2706429,
     "sizeFormatted": "2.6 MB",
     "format": "pdf",
@@ -1788,19 +1788,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/12.-phu-luc-xii-dieu-duong.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/12.-phu-luc-xii-dieu-duong.pdf",
-    "keywords": "pháp quốc thông & quoc thong tt van luat luật bản 2024 duong 32 quy, dieu 12. pdf luc xii phap hoi ban hội phu tu văn byt tư"
+    "keywords": "điều 12.-phu-luc-xii-dieu-duong.pdf chuc tu ky dieu thong chức xii: thuật 32/2023/tt-byt mon duong thông y danh luc 2023 muc phụ kỹ dưỡng phu tế môn bộ lục te tt32-pl.xii tư thuat chuyen pdf bo - chuyên mục"
   },
   {
     "id": "vb_086",
-    "code": "TT 32",
-    "title": "13. phu luc xiii ho sinh",
+    "code": "TT32-PL.XII",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục XII: Danh mục kỹ thuật chuyên môn chức danh Điều dưỡng",
     "filename": "13.-phu-luc-xiii-ho-sinh.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/13.-phu-luc-xiii-ho-sinh.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 419421,
     "sizeFormatted": "410 KB",
     "format": "pdf",
@@ -1809,19 +1809,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/13.-phu-luc-xiii-ho-sinh.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/13.-phu-luc-xiii-ho-sinh.pdf",
-    "keywords": "pháp quốc thông xiii & quoc thong tt van luat luật bản 2024 32 sinh quy, pdf 13. luc phap hoi ban hội phu tu văn byt ho tư"
+    "keywords": "điều chuc 13.-phu-luc-xiii-ho-sinh.pdf tu ky dieu thong chức xii: thuật 32/2023/tt-byt mon duong thông y danh luc 2023 muc phụ kỹ dưỡng phu tế môn bộ lục te tt32-pl.xii tư thuat chuyen pdf bo - chuyên mục"
   },
   {
     "id": "vb_087",
-    "code": "TT 32",
-    "title": "14. phu luc xiv ky thuat y",
+    "code": "TT32-PL.XIV",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục XIV: Danh mục kỹ thuật chuyên môn Kỹ thuật y (Xét nghiệm, Chẩn đoán hình ảnh)",
     "filename": "14.-phu-luc-xiv-ky-thuat-y.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/14.-phu-luc-xiv-ky-thuat-y.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 2770805,
     "sizeFormatted": "2.6 MB",
     "format": "pdf",
@@ -1830,19 +1830,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/14.-phu-luc-xiv-ky-thuat-y.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/14.-phu-luc-xiv-ky-thuat-y.pdf",
-    "keywords": "pháp quốc thông & quoc thong tt van luat luật bản 2024 thuat 32 quy, 14. pdf luc phap hoi ban hội phu ky tu văn byt xiv y tư"
+    "keywords": "tu ky (xet xiv: doan chan 14.-phu-luc-xiv-ky-thuat-y.pdf thong ảnh) thuật nghiệm, 32/2023/tt-byt mon thông y danh nghiem, đoán luc 2023 muc phụ kỹ (xét phu tế tt32-pl.xiv chẩn hình môn anh) lục bộ tư hinh te thuat chuyen pdf bo - chuyên mục"
   },
   {
     "id": "vb_088",
-    "code": "TT 32",
-    "title": "15. phu luc xv dinh duong lam sang",
+    "code": "TT32-PL.XV",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục XV: Danh mục kỹ thuật chuyên môn chức danh Dinh dưỡng lâm sàng",
     "filename": "15.-phu-luc-xv-dinh-duong-lam-sang.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/15.-phu-luc-xv-dinh-duong-lam-sang.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 275837,
     "sizeFormatted": "269 KB",
     "format": "pdf",
@@ -1851,19 +1851,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/15.-phu-luc-xv-dinh-duong-lam-sang.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/15.-phu-luc-xv-dinh-duong-lam-sang.pdf",
-    "keywords": "pháp quốc xv thông & quoc thong tt van luat luật bản 2024 duong 32 quy, pdf luc phap lam hoi ban hội sang phu 15. tu dinh văn byt tư"
+    "keywords": "sàng chuc tu ky lam thong chức thuật xv: 32/2023/tt-byt mon duong thông y danh 15.-phu-luc-xv-dinh-duong-lam-sang.pdf sang dinh luc 2023 muc phụ kỹ dưỡng phu tế môn lâm lục bộ tư te thuat chuyen pdf tt32-pl.xv bo - chuyên mục"
   },
   {
     "id": "vb_089",
-    "code": "TT 32",
-    "title": "16. phu luc xvi tam ly lam sang",
+    "code": "TT32-PL.XV",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục XV: Danh mục kỹ thuật chuyên môn chức danh Dinh dưỡng lâm sàng",
     "filename": "16.-phu-luc-xvi-tam-ly-lam-sang-.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/16.-phu-luc-xvi-tam-ly-lam-sang-.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 338837,
     "sizeFormatted": "331 KB",
     "format": "pdf",
@@ -1872,19 +1872,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/16.-phu-luc-xvi-tam-ly-lam-sang-.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/16.-phu-luc-xvi-tam-ly-lam-sang-.pdf",
-    "keywords": "pháp quốc thông & quoc thong tt van luat luật bản xvi 2024 32 quy, pdf luc ly phap lam hoi ban hội sang phu tu 16. tam văn byt tư"
+    "keywords": "16.-phu-luc-xvi-tam-ly-lam-sang-.pdf sàng chuc tu ky lam thong chức thuật xv: 32/2023/tt-byt mon duong thông y danh sang dinh luc 2023 muc phụ kỹ dưỡng phu tế môn lâm lục bộ tư te thuat chuyen pdf tt32-pl.xv bo - chuyên mục"
   },
   {
     "id": "vb_090",
-    "code": "TT 32",
-    "title": "17. phu luc xvii luong y 1",
+    "code": "TT32-PL.XV",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục XV: Danh mục kỹ thuật chuyên môn chức danh Dinh dưỡng lâm sàng",
     "filename": "17.-phu-luc-xvii-luong-y-1-.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/17.-phu-luc-xvii-luong-y-1-.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 678881,
     "sizeFormatted": "663 KB",
     "format": "pdf",
@@ -1893,19 +1893,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/17.-phu-luc-xvii-luong-y-1-.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/17.-phu-luc-xvii-luong-y-1-.pdf",
-    "keywords": "pháp quốc xvii thông & quoc thong tt van luat luật bản 2024 32 quy, pdf luc phap 1 hoi ban hội luong phu 17. tu văn byt y tư"
+    "keywords": "sàng chuc tu ky lam thong chức thuật xv: 32/2023/tt-byt mon duong thông y danh sang dinh luc 2023 muc phụ kỹ dưỡng phu tế môn lâm lục bộ tư te thuat chuyen pdf 17.-phu-luc-xvii-luong-y-1-.pdf tt32-pl.xv bo - chuyên mục"
   },
   {
     "id": "vb_091",
-    "code": "TT 32",
-    "title": "18. phu luc xviii cap cuu ngoai vien 1 1",
+    "code": "TT32-PL.XV",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục XV: Danh mục kỹ thuật chuyên môn chức danh Dinh dưỡng lâm sàng",
     "filename": "18.-phu-luc-xviii-cap-cuu-ngoai-vien-1-1-.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/18.-phu-luc-xviii-cap-cuu-ngoai-vien-1-1-.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 583878,
     "sizeFormatted": "570 KB",
     "format": "pdf",
@@ -1914,19 +1914,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/18.-phu-luc-xviii-cap-cuu-ngoai-vien-1-1-.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/18.-phu-luc-xviii-cap-cuu-ngoai-vien-1-1-.pdf",
-    "keywords": "pháp quốc thông & quoc thong tt cuu 18. van luat luật bản 2024 32 quy, vien pdf ngoai luc phap 1 hoi ban hội phu cap tu văn byt xviii tư"
+    "keywords": "sàng chuc tu ky lam thong chức thuật xv: 32/2023/tt-byt mon duong thông y danh sang dinh luc 2023 muc phụ kỹ dưỡng phu tế 18.-phu-luc-xviii-cap-cuu-ngoai-vien-1-1-.pdf môn lâm lục bộ tư te thuat chuyen pdf tt32-pl.xv bo - chuyên mục"
   },
   {
     "id": "vb_092",
-    "code": "TT 32",
-    "title": "19. phu luc xix mau giay phep hanh nghe",
+    "code": "TT32-PL.XIX",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục XIX: Danh mục kỹ thuật chuyên môn chức danh Khúc xạ nhãn khoa",
     "filename": "19.-phu-luc-xix-mau-giay-phep-hanh-nghe.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/19.-phu-luc-xix-mau-giay-phep-hanh-nghe.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 283911,
     "sizeFormatted": "277 KB",
     "format": "pdf",
@@ -1935,19 +1935,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/19.-phu-luc-xix-mau-giay-phep-hanh-nghe.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/19.-phu-luc-xix-mau-giay-phep-hanh-nghe.pdf",
-    "keywords": "pháp quốc thông hanh & quoc thong tt van luat luật bản 2024 xix 32 quy, 19. mau giay pdf luc phap hoi nghe ban hội phu tu văn byt phep tư"
+    "keywords": "19.-phu-luc-xix-mau-giay-phep-hanh-nghe.pdf chuc tu ky xạ thong chức thuật tt32-pl.xix 32/2023/tt-byt mon thông y danh luc khuc 2023 khúc muc phụ kỹ phu nhan tế nhãn môn bộ lục te tư thuat xix: chuyen pdf xa bo khoa - chuyên mục"
   },
   {
     "id": "vb_093",
-    "code": "TT 32",
-    "title": "20. phu luc xx thua nhan chat luong",
+    "code": "TT32-PL.XX",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục XX: Quy định hồ sơ, thủ tục cấp giấy phép hành nghề khám chữa bệnh",
     "filename": "20.-phu-luc-xx-thua-nhan-chat-luong.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/20.-phu-luc-xx-thua-nhan-chat-luong.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 4279514,
     "sizeFormatted": "4.1 MB",
     "format": "pdf",
@@ -1956,19 +1956,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/20.-phu-luc-xx-thua-nhan-chat-luong.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/20.-phu-luc-xx-thua-nhan-chat-luong.pdf",
-    "keywords": "pháp quốc thông & quoc thong tt van luat luật bản 2024 32 quy, pdf luc nhan chat phap hoi ban hội luong phu tu thua xx văn byt 20. tư"
+    "keywords": "kham tu chữa sơ, định hành thong chua tục 32/2023/tt-byt nghề bệnh thông benh y giấy dinh so, luc 2023 cấp phụ cap phu phep tế tuc giay phép bộ lục te tư quy khám hanh 20.-phu-luc-xx-thua-nhan-chat-luong.pdf tt32-pl.xx pdf hồ thủ ho thu bo - xx: nghe"
   },
   {
     "id": "vb_094",
-    "code": "TT 32",
-    "title": "21.phu luc xxi thu nghiem lam sang",
+    "code": "TT32-PL.XX",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục XX: Quy định hồ sơ, thủ tục cấp giấy phép hành nghề khám chữa bệnh",
     "filename": "21.phu-luc-xxi-thu-nghiem-lam-sang.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/21.phu-luc-xxi-thu-nghiem-lam-sang.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 1553235,
     "sizeFormatted": "1.5 MB",
     "format": "pdf",
@@ -1977,19 +1977,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/21.phu-luc-xxi-thu-nghiem-lam-sang.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/21.phu-luc-xxi-thu-nghiem-lam-sang.pdf",
-    "keywords": "pháp quốc thu thông nghiem & quoc thong tt van luat luật bản 2024 21.phu 32 quy, pdf luc phap lam hoi ban hội sang xxi tu văn byt tư"
+    "keywords": "kham tu chữa sơ, định hành thong chua tục 32/2023/tt-byt nghề bệnh thông benh y giấy dinh so, luc 2023 cấp phụ cap phu phep tế tuc giay phép bộ lục te tư quy khám hanh tt32-pl.xx pdf hồ thủ ho thu 21.phu-luc-xxi-thu-nghiem-lam-sang.pdf bo - xx: nghe"
   },
   {
     "id": "vb_095",
-    "code": "TT 32",
-    "title": "24. phu luc xxiv xxvi kham suc khoe",
+    "code": "TT32-PL.XX",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục XX: Quy định hồ sơ, thủ tục cấp giấy phép hành nghề khám chữa bệnh",
     "filename": "24.-phu-luc-xxiv-xxvi-kham-suc-khoe.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/24.-phu-luc-xxiv-xxvi-kham-suc-khoe.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 415405,
     "sizeFormatted": "406 KB",
     "format": "pdf",
@@ -1998,19 +1998,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/24.-phu-luc-xxiv-xxvi-kham-suc-khoe.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/24.-phu-luc-xxiv-xxvi-kham-suc-khoe.pdf",
-    "keywords": "khoe pháp quốc thông & quoc thong tt van luat luật bản 2024 32 quy, pdf luc suc phap hoi ban hội xxiv 24. kham phu tu xxvi văn byt tư"
+    "keywords": "kham 24.-phu-luc-xxiv-xxvi-kham-suc-khoe.pdf tu chữa sơ, định hành thong chua tục 32/2023/tt-byt nghề bệnh thông benh y giấy dinh so, luc 2023 cấp phụ cap phu phep tế tuc giay phép bộ lục te tư quy khám hanh tt32-pl.xx pdf hồ thủ ho thu bo - xx: nghe"
   },
   {
     "id": "vb_096",
-    "code": "TT 32",
-    "title": "27. phu luc xxvii dieu dong huy dong nhan luc",
+    "code": "TT32-PL.XX",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục XX: Quy định hồ sơ, thủ tục cấp giấy phép hành nghề khám chữa bệnh",
     "filename": "27.-phu-luc-xxvii-dieu-dong-huy-dong-nhan-luc.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/27.-phu-luc-xxvii-dieu-dong-huy-dong-nhan-luc.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 153268,
     "sizeFormatted": "150 KB",
     "format": "pdf",
@@ -2019,19 +2019,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/27.-phu-luc-xxvii-dieu-dong-huy-dong-nhan-luc.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/27.-phu-luc-xxvii-dieu-dong-huy-dong-nhan-luc.pdf",
-    "keywords": "pháp quốc thông & quoc thong tt van luat luật bản 2024 xxvii 32 quy, dieu huy pdf luc nhan phap hoi ban hội 27. phu tu văn byt dong tư"
+    "keywords": "kham tu chữa sơ, định hành thong chua tục 32/2023/tt-byt nghề bệnh thông benh y 27.-phu-luc-xxvii-dieu-dong-huy-dong-nhan-luc.pdf giấy dinh so, luc 2023 cấp phụ cap phu phep tế tuc giay phép bộ lục te tư quy khám hanh tt32-pl.xx pdf hồ thủ ho thu bo - xx: nghe"
   },
   {
     "id": "vb_097",
-    "code": "TT 32",
-    "title": "28. phu luc xviii. mau benh an",
+    "code": "TT32-PL.XV",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục XV: Danh mục kỹ thuật chuyên môn chức danh Dinh dưỡng lâm sàng",
     "filename": "28.-phu-luc-xviii.-mau-benh-an.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/28.-phu-luc-xviii.-mau-benh-an.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 6147306,
     "sizeFormatted": "5.9 MB",
     "format": "pdf",
@@ -2040,19 +2040,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/28.-phu-luc-xviii.-mau-benh-an.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/28.-phu-luc-xviii.-mau-benh-an.pdf",
-    "keywords": "an pháp quốc thông & quoc thong tt xviii. van luat luật bản 2024 32 quy, mau pdf benh luc phap hoi ban hội 28. phu tu văn byt tư"
+    "keywords": "sàng chuc tu ky lam thong chức thuật xv: 32/2023/tt-byt mon duong thông y danh sang dinh luc 2023 muc phụ kỹ dưỡng phu tế 28.-phu-luc-xviii.-mau-benh-an.pdf môn lâm lục bộ tư te thuat chuyen pdf tt32-pl.xv bo - chuyên mục"
   },
   {
     "id": "vb_098",
-    "code": "TT 32",
-    "title": "29. phu luc xix. mau giay phieu",
+    "code": "TT32-PL.XIX",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục XIX: Danh mục kỹ thuật chuyên môn chức danh Khúc xạ nhãn khoa",
     "filename": "29.-phu-luc-xix.-mau-giay-phieu.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/29.-phu-luc-xix.-mau-giay-phieu.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 4619402,
     "sizeFormatted": "4.4 MB",
     "format": "pdf",
@@ -2061,19 +2061,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/29.-phu-luc-xix.-mau-giay-phieu.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/29.-phu-luc-xix.-mau-giay-phieu.pdf",
-    "keywords": "pháp quốc 29. thông & quoc thong tt van luat luật bản 2024 32 quy, mau giay pdf xix. phieu luc phap hoi ban hội phu tu văn byt tư"
+    "keywords": "chuc tu ky xạ thong chức thuật tt32-pl.xix 32/2023/tt-byt mon 29.-phu-luc-xix.-mau-giay-phieu.pdf thông y danh luc khuc 2023 khúc muc phụ kỹ phu nhan tế nhãn môn bộ lục te tư thuat xix: chuyen pdf xa bo khoa - chuyên mục"
   },
   {
     "id": "vb_099",
-    "code": "TT 32",
-    "title": "5. phu luc v bac sy y khoa",
+    "code": "TT32-PL.V",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục V: Danh mục kỹ thuật chuyên môn của Người hành nghề Bác sỹ Y khoa",
     "filename": "5.-phu-luc-v-bac-sy-y-khoa.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/5.-phu-luc-v-bac-sy-y-khoa.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 903711,
     "sizeFormatted": "883 KB",
     "format": "pdf",
@@ -2082,19 +2082,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/5.-phu-luc-v-bac-sy-y-khoa.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/5.-phu-luc-v-bac-sy-y-khoa.pdf",
-    "keywords": "pháp quốc khoa thông & quoc thong tt van luat luật 5. bản 2024 v sy 32 quy, pdf luc phap hoi ban hội bac phu tu văn byt y tư"
+    "keywords": "người tu ky bác nguoi hành thong thuật cua 5.-phu-luc-v-bac-sy-y-khoa.pdf 32/2023/tt-byt mon nghề thông y danh sy luc bac 2023 muc sỹ phụ kỹ phu tế tt32-pl.v môn của lục bộ tư te thuat chuyen hanh pdf bo khoa - chuyên mục nghe v:"
   },
   {
     "id": "vb_100",
-    "code": "TT 32",
-    "title": "6. phu luc vi bac sy yhct",
+    "code": "TT32-PL.V",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục V: Danh mục kỹ thuật chuyên môn của Người hành nghề Bác sỹ Y khoa",
     "filename": "6.-phu-luc-vi-bac-sy-yhct.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/6.-phu-luc-vi-bac-sy-yhct.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 2261617,
     "sizeFormatted": "2.2 MB",
     "format": "pdf",
@@ -2103,19 +2103,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/6.-phu-luc-vi-bac-sy-yhct.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/6.-phu-luc-vi-bac-sy-yhct.pdf",
-    "keywords": "pháp quốc thông 6. & quoc thong tt van luat luật bản 2024 vi sy 32 quy, pdf yhct luc phap hoi ban hội bac phu tu văn byt tư"
+    "keywords": "người tu ky bác nguoi hành thong thuật cua 32/2023/tt-byt mon nghề thông y danh sy luc bac 2023 muc sỹ phụ kỹ phu tế tt32-pl.v môn của lục bộ tư te thuat chuyen hanh pdf 6.-phu-luc-vi-bac-sy-yhct.pdf bo khoa - chuyên mục nghe v:"
   },
   {
     "id": "vb_101",
-    "code": "TT 32",
-    "title": "7. phu luc vii bac sy y hoc du phong",
+    "code": "TT32-PL.V",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục V: Danh mục kỹ thuật chuyên môn của Người hành nghề Bác sỹ Y khoa",
     "filename": "7.-phu-luc-vii-bac-sy-y-hoc-du-phong.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/7.-phu-luc-vii-bac-sy-y-hoc-du-phong.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 635408,
     "sizeFormatted": "621 KB",
     "format": "pdf",
@@ -2124,19 +2124,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/7.-phu-luc-vii-bac-sy-y-hoc-du-phong.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/7.-phu-luc-vii-bac-sy-y-hoc-du-phong.pdf",
-    "keywords": "pháp quốc thông & quoc thong tt tư van luat luật bản 2024 vii sy du 32 quy, 7. pdf phong phap hoi ban hội bac phu tu văn byt y luc hoc"
+    "keywords": "người tu ky bác nguoi hành thong 7.-phu-luc-vii-bac-sy-y-hoc-du-phong.pdf thuật cua 32/2023/tt-byt mon nghề thông y danh sy luc bac 2023 muc sỹ phụ kỹ phu tế tt32-pl.v môn của lục bộ tư te thuat chuyen hanh pdf bo khoa - chuyên mục nghe v:"
   },
   {
     "id": "vb_102",
-    "code": "TT 32",
-    "title": "8. phu luc viii bac sy rang ham mat",
+    "code": "TT32-PL.V",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục V: Danh mục kỹ thuật chuyên môn của Người hành nghề Bác sỹ Y khoa",
     "filename": "8.-phu-luc-viii-bac-sy-rang-ham-mat.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/8.-phu-luc-viii-bac-sy-rang-ham-mat.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 397359,
     "sizeFormatted": "388 KB",
     "format": "pdf",
@@ -2145,19 +2145,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/8.-phu-luc-viii-bac-sy-rang-ham-mat.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/8.-phu-luc-viii-bac-sy-rang-ham-mat.pdf",
-    "keywords": "pháp quốc 8. thông & quoc thong tt van luat luật bản 2024 sy 32 quy, pdf luc phap hoi ban hội ham bac phu rang tu văn viii byt mat tư"
+    "keywords": "người tu ky bác nguoi hành thong thuật cua 32/2023/tt-byt mon nghề thông y danh sy luc bac 2023 8.-phu-luc-viii-bac-sy-rang-ham-mat.pdf muc sỹ phụ kỹ phu tế tt32-pl.v môn của lục bộ tư te thuat chuyen hanh pdf bo khoa - chuyên mục nghe v:"
   },
   {
     "id": "vb_103",
-    "code": "TT 32",
-    "title": "9. phu luc ix bac sy chuyen khoa",
+    "code": "TT32-PL.IX",
+    "title": "Thông tư 32/2023/TT-BYT - Phụ lục IX: Danh mục kỹ thuật chuyên môn của Bác sỹ Chuyên khoa",
     "filename": "9.-phu-luc-ix-bac-sy-chuyen-khoa.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 32.2024. Quy định một số điều của Luật Khám bệnh, chữa bệnh/9.-phu-luc-ix-bac-sy-chuyen-khoa.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Quốc hội",
-    "year": 2024,
+    "issuer": "Bộ Y tế",
+    "year": 2023,
     "size": 13248587,
     "sizeFormatted": "12.6 MB",
     "format": "pdf",
@@ -2166,12 +2166,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/9.-phu-luc-ix-bac-sy-chuyen-khoa.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/9.-phu-luc-ix-bac-sy-chuyen-khoa.pdf",
-    "keywords": "pháp quốc khoa thông & quoc thong tt van luat luật bản 2024 sy 32 quy, pdf luc phap 9. hoi ban hội bac phu ix tu văn byt chuyen tư"
+    "keywords": "tu ky bác ix: thong 9.-phu-luc-ix-bac-sy-chuyen-khoa.pdf thuật cua 32/2023/tt-byt mon thông y danh sy luc bac 2023 muc sỹ phụ kỹ phu tế môn của lục bộ tư te thuat chuyen pdf bo khoa - chuyên tt32-pl.ix mục"
   },
   {
     "id": "vb_104",
-    "code": "NĐ24",
-    "title": "nghi dinh 24 2024 nd cp huong dan luat dau thau ve lua chon nha thau",
+    "code": "24/2024/NĐ-CP",
+    "title": "Nghị định 24/2024/NĐ-CP: Quy định chi tiết một số điều và biện pháp thi hành Luật Đấu thầu về lựa chọn nhà thầu",
     "filename": "nghi-dinh-24-2024-nd-cp-huong-dan-luat-dau-thau-ve-lua-chon-nha-thau.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/NĐ24.02.24. Luật đấu thầu về lựa chọn nhà thầu/nghi-dinh-24-2024-nd-cp-huong-dan-luat-dau-thau-ve-lua-chon-nha-thau.pdf",
     "category": "Van_Ban_Phap_Quy",
@@ -2187,12 +2187,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/nghi-dinh-24-2024-nd-cp-huong-dan-luat-dau-thau-ve-lua-chon-nha-thau.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/nghi-dinh-24-2024-nd-cp-huong-dan-luat-dau-thau-ve-lua-chon-nha-thau.pdf",
-    "keywords": "pháp thông & nghi thong van luat luật nha 2024 bản nđ24 thau quy, dau nd phủ pdf lua phap ban ve cp chính phu chon tu chinh dinh dan văn 24 huong byt tư"
+    "keywords": "và điều mot về thiết luat định hành phap mua 2024 nha biện nghi-dinh-24-2024-nd-cp-huong-dan-luat-dau-thau-ve-lua-chon-nha-thau.pdf trang nghi bị phủ dinh bien thau dau vật 24/2024/nđ-cp: phẩm lựa đấu chính chất sinh chi so phu nhà một 24/2024/nd-cp lua thầu nghị hóa chon số quy tư thi hanh nghiệm 24/2024/nd-cp: xét chọn 24/2024/nđ-cp pháp tiết pdf va luật chinh sắm dieu ve tiet"
   },
   {
     "id": "vb_105",
-    "code": "TT 40",
-    "title": "thong tu 40 2018 tt byt ve quan ly mau benh pham benh truyen nhiem",
+    "code": "40/2018/TT-BYT",
+    "title": "Thông tư 40/2018/TT-BYT: Quy định về quản lý mẫu bệnh phẩm bệnh truyền nhiễm",
     "filename": "thong-tu-40-2018-tt-byt-ve-quan-ly-mau-benh-pham-benh-truyen-nhiem.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 40.2018/thong-tu-40-2018-tt-byt-ve-quan-ly-mau-benh-pham-benh-truyen-nhiem.pdf",
     "category": "An_Toan_Sinh_Hoc",
@@ -2208,7 +2208,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/An_Toan_Sinh_Hoc/thong-tu-40-2018-tt-byt-ve-quan-ly-mau-benh-pham-benh-truyen-nhiem.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/An_Toan_Sinh_Hoc/thong-tu-40-2018-tt-byt-ve-quan-ly-mau-benh-pham-benh-truyen-nhiem.pdf",
-    "keywords": "an pham môi & bo te thong tt truong tế quan 40 sinh moi mau truyen pdf toan benh ly trường ve pxn 2018 bộ tu toàn học byt nhiem y hoc"
+    "keywords": "tu quản về định thong ly truyền bệnh thông nhiễm benh y dinh nhiem phẩm quan tế thong-tu-40-2018-tt-byt-ve-quan-ly-mau-benh-pham-benh-truyen-nhiem.pdf mau bộ te tư quy 40/2018/tt-byt: 40/2018/tt-byt pham truyen lý pdf bo mẫu ve 2018"
   },
   {
     "id": "vb_106",
@@ -2229,7 +2229,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong-tu-14-2020-tt-byt-noi-dung-dau-thau-trang-thiet-bi-y-te-tai-co-so-y-te.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong-tu-14-2020-tt-byt-noi-dung-dau-thau-trang-thiet-bi-y-te-tai-co-so-y-te.doc",
-    "keywords": "pháp thông co & bo te thong tt van luat luật tế bản trang thau quy, 2020 dau so tai word bi phap ban thiet dung bộ tu văn 14 byt noi y tư"
+    "keywords": "tu 14 thiet thong tt y trang noi thau dau tai so tế co bi dung bộ te byt 2020 word thong-tu-14-2020-tt-byt-noi-dung-dau-thau-trang-thiet-bi-y-te-tai-co-so-y-te.doc bo"
   },
   {
     "id": "vb_107",
@@ -2250,7 +2250,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-excel",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/tt_15_byt.xlsx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/tt_15_byt.xlsx",
-    "keywords": "pháp thông & bo te thong tt van luat luật 15 bản tế quy, excel phap ban 2018 bộ tu văn byt y tư"
+    "keywords": "te byt excel y tế 15 bo byt.xlsx 2018 tt bộ"
   },
   {
     "id": "vb_108",
@@ -2271,7 +2271,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong-tu-15-2018-tt-byt-thong-nhat-gia-kham-chua-benh-bhyt-giua-cac-benh-vien-cung-hang.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong-tu-15-2018-tt-byt-thong-nhat-gia-kham-chua-benh-bhyt-giua-cac-benh-vien-cung-hang.doc",
-    "keywords": "pháp nhat thông & bo te thong tt van bhyt luật 15 bản luat tế quy, vien chua benh word giua cac tt.15 phap ban gia hang cung 2018 kham bộ tu văn byt y tư"
+    "keywords": "kham thanh tu tt.15 chua thong cung toán định giua tt hang dịch benh bhyt y bảo 15 vụ chi khung cac gia tế thong-tu-15-2018-tt-byt-thong-nhat-gia-kham-chua-benh-bhyt-giua-cac-benh-vien-cung-hang.doc mức bộ te hiểm vien byt giá word nhat bo phí 2018"
   },
   {
     "id": "vb_109",
@@ -2292,7 +2292,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/luat_43_qh_dauthau.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/luat_43_qh_dauthau.pdf",
-    "keywords": "pháp quốc 43 thông & quoc thong van luat luật bản 2024 quy, pdf phap hoi ban hội dauthau tu văn byt 43:qh tư"
+    "keywords": "quoc hội hoi dauthau pdf 43:qh_dauthau.pdf luat luật quốc 43 2024 43:qh"
   },
   {
     "id": "vb_110",
@@ -2313,19 +2313,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong-tu-25-2026-tt-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong-tu-25-2026-tt-byt.pdf",
-    "keywords": "pháp thông & bo te thong tt van luat luật tế bản 2026 quy, 25 pdf phap ban bộ tu văn byt y tư"
+    "keywords": "te tư tu 2026 thông byt y thong-tu-25-2026-tt-byt.pdf tế pdf 25 thong thông-tư-25-2026-tt-byt.pdf bo tt bộ"
   },
   {
     "id": "vb_111",
-    "code": "2482QĐ",
-    "title": "2482QĐ BYT",
+    "code": "2482/QĐ-BYT",
+    "title": "Quyết định 2482/QĐ-BYT: Hướng dẫn quy trình kỹ thuật thận nhân tạo và tiêu chuẩn kiểm soát chất lượng nước RO",
     "filename": "2482QĐ-BYT.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/2482QĐ-BYT.pdf",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2018,
     "size": 4538700,
     "sizeFormatted": "4.3 MB",
     "format": "pdf",
@@ -2334,19 +2334,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/2482qd-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/2482qd-byt.pdf",
-    "keywords": "môn nghiem & bo te nghiệm tế 2024 thuat vi sinh xét pdf kỹ thuật y chuyên 2482qđ ky bộ mon byt 2482qd xet chuyen"
+    "keywords": "và hiếu quyet 2482qđ-byt.pdf 2482/qđ-byt: ky 2482/qd-byt: chat quản qlcl chuan endotoxin thận định lọc chí máu iqc huong thuật chạy tao luong nhân tố y trinh nước tạo kiem dinh soat 15189 2429 eqas 2482qd-byt.pdf vi độc ngoại iso chất hướng khí tai dan kỹ nhan nội tế trình tiêu 2482/qđ-byt 2482/qd-byt ro 2018 bộ than te quy thuat khuẩn cấy dẫn pdf lý nuoc kiểm va tieu bo biến soát lượng chuẩn quyết"
   },
   {
     "id": "vb_112",
-    "code": "VBYT-112",
-    "title": "Hướng dẫn xác định tổng số vi khuẩn hiếu khí (1)",
+    "code": "QT-VKHK-RO",
+    "title": "Quy trình kỹ thuật: Hướng dẫn xác định tổng số vi khuẩn hiếu khí trong mẫu nước lọc thận nhân tạo",
     "filename": "Hướng dẫn xác định tổng số vi khuẩn hiếu khí (1).docx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/Hướng dẫn xác định tổng số vi khuẩn hiếu khí (1).docx",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2018,
     "size": 29749,
     "sizeFormatted": "29 KB",
     "format": "word",
@@ -2355,19 +2355,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/huong_dan_xac_dinh_tong_so_vi_khuan_hieu_khi_1_.docx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/huong_dan_xac_dinh_tong_so_vi_khuan_hieu_khi_1_.docx",
-    "keywords": "hướng (1) dẫn môn khuẩn nghiem & bo te khuan số nghiệm tế 2024 thuat vi hiếu sinh xét so kỹ khí word thuật y định xac tổng chuyên khi tong ky bộ dinh dan hieu mon huong xác xet chuyen"
+    "keywords": "hiếu loc ky thuat: endotoxin thận định lọc máu khuan huong (1).docx chạy tao tong khi nhân tố y trinh xác nước tạo hieu dinh vi độc hướng trong khí tai dan kỹ so qt-vkhk-ro nhan tế nội ro xac tổng số mau thuật: than bộ quy te khuẩn cấy dẫn nuoc word bo mẫu biến trình 2018"
   },
   {
     "id": "vb_113",
-    "code": "VBYT-113",
-    "title": "19145951 10213391128832688 6253214388134878038 n",
+    "code": "TL-RO-113",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (19145951_10213391128832688_6253214388134878038_n.jpg)",
     "filename": "19145951_10213391128832688_6253214388134878038_n.jpg",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/19145951_10213391128832688_6253214388134878038_n.jpg",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 1730,
     "sizeFormatted": "2 KB",
     "format": "image",
@@ -2376,19 +2376,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/19145951_10213391128832688_6253214388134878038_n.jpg",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/19145951_10213391128832688_6253214388134878038_n.jpg",
-    "keywords": "môn nghiem & bo te nghiệm tế 2024 thuat vi sinh 6253214388134878038 xét ảnh kỹ thuật y 10213391128832688 19145951 chuyên ky bộ n mon xet chuyen"
+    "keywords": "hiếu thanh qlcl chat định toán lọc lieu sát dịch nhân bhyt nước tạo bảo & 2429 truc ngoại hướng than cấy phí lượng iqc máu tao luong trực tố y sat chay (19145951_10213391128832688_6253214388134878038_n.jpg) vi đức iso sinh khí khung ro tl-ro-113 hiểm khuẩn lý nuoc duc 19145951_10213391128832688_6253214388134878038_n.jpg endotoxin thận huong ảnh chi nhan giám tiêu mức tài biến chuẩn 2018 chạy quản bvđk chí bvdk 15189 eqas độc chất vụ tai nội quan: giang tế liệu giam dẫn giá kiểm dan"
   },
   {
     "id": "vb_114",
-    "code": "VBYT-114",
-    "title": "31381238 448576372260276 2969953289430368256 n",
+    "code": "TL-RO-114",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (31381238_448576372260276_2969953289430368256_n.jpg)",
     "filename": "31381238_448576372260276_2969953289430368256_n.jpg",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/31381238_448576372260276_2969953289430368256_n.jpg",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 10092,
     "sizeFormatted": "10 KB",
     "format": "image",
@@ -2397,19 +2397,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/31381238_448576372260276_2969953289430368256_n.jpg",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/31381238_448576372260276_2969953289430368256_n.jpg",
-    "keywords": "448576372260276 môn nghiem & bo te nghiệm tế 2024 thuat vi sinh xét ảnh 31381238 kỹ thuật y 2969953289430368256 chuyên ky bộ n mon xet chuyen"
+    "keywords": "hiếu thanh qlcl chat định toán lọc lieu sát dịch nhân bhyt nước tạo bảo & 2429 truc ngoại hướng than cấy phí lượng iqc máu tao luong trực tố y sat chay vi đức iso sinh khí khung ro hiểm khuẩn lý nuoc duc endotoxin thận (31381238_448576372260276_2969953289430368256_n.jpg) huong ảnh chi nhan giám tiêu mức tài biến chuẩn 2018 chạy tl-ro-114 quản bvđk chí 31381238_448576372260276_2969953289430368256_n.jpg bvdk 15189 eqas độc chất vụ tai nội quan: giang tế liệu giam dẫn giá kiểm dan"
   },
   {
     "id": "vb_115",
-    "code": "VBYT-115",
-    "title": "31958335 452832375168009 7352616438860873728 n",
+    "code": "TL-RO-115",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (31958335_452832375168009_7352616438860873728_n.jpg)",
     "filename": "31958335_452832375168009_7352616438860873728_n.jpg",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/31958335_452832375168009_7352616438860873728_n.jpg",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 2011,
     "sizeFormatted": "2 KB",
     "format": "image",
@@ -2418,19 +2418,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/31958335_452832375168009_7352616438860873728_n.jpg",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/31958335_452832375168009_7352616438860873728_n.jpg",
-    "keywords": "môn nghiem & bo te 452832375168009 31958335 nghiệm tế 2024 thuat vi sinh xét ảnh kỹ thuật y 7352616438860873728 chuyên ky bộ n mon xet chuyen"
+    "keywords": "hiếu thanh qlcl chat định toán lọc lieu sát dịch nhân bhyt nước tạo bảo & 2429 truc ngoại hướng than cấy phí lượng iqc máu tao luong trực tố y sat chay vi đức iso sinh khí khung ro hiểm khuẩn lý nuoc duc endotoxin thận 31958335_452832375168009_7352616438860873728_n.jpg huong ảnh chi nhan giám tiêu mức tài biến chuẩn 2018 chạy quản bvđk chí (31958335_452832375168009_7352616438860873728_n.jpg) bvdk 15189 eqas độc chất vụ tai nội quan: giang tế liệu giam tl-ro-115 dẫn giá kiểm dan"
   },
   {
     "id": "vb_116",
-    "code": "VBYT-116",
-    "title": "CSKH Nhiem doc chi 1503473140 banner",
+    "code": "TL-RO-116",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (CSKH - Nhiem doc chi-1503473140-banner.jpg)",
     "filename": "CSKH - Nhiem doc chi-1503473140-banner.jpg",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/CSKH - Nhiem doc chi-1503473140-banner.jpg",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 62088,
     "sizeFormatted": "61 KB",
     "format": "image",
@@ -2439,19 +2439,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/cskh_-_nhiem_doc_chi-1503473140-banner.jpg",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/cskh_-_nhiem_doc_chi-1503473140-banner.jpg",
-    "keywords": "môn nghiem & bo te doc nghiệm tế 2024 thuat vi sinh banner xét ảnh 1503473140 kỹ thuật y cskh chuyên ky bộ mon nhiem xet chuyen chi"
+    "keywords": "hiếu thanh qlcl chat định toán lọc lieu sát dịch nhân bhyt nước tạo bảo & 2429 nhiem truc ngoại hướng than cấy phí - lượng iqc máu tao luong trực tố y sat chay vi đức iso sinh khí khung ro hiểm chi-1503473140-banner.jpg) khuẩn lý nuoc duc endotoxin thận huong ảnh chi nhan giám tiêu mức tài tl-ro-116 cskh biến chuẩn 2018 chạy quản chi-1503473140-banner.jpg bvđk chí bvdk 15189 (cskh eqas độc chất vụ tai nội quan: giang tế liệu giam doc dẫn giá kiểm dan"
   },
   {
     "id": "vb_117",
-    "code": "VBYT-117",
-    "title": "DSC 0319",
+    "code": "TL-RO-117",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (DSC_0319.JPG)",
     "filename": "DSC_0319.JPG",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/DSC_0319.JPG",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 96713,
     "sizeFormatted": "94 KB",
     "format": "image",
@@ -2460,19 +2460,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/dsc_0319.jpg",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/dsc_0319.jpg",
-    "keywords": "môn nghiem & bo te 0319 nghiệm tế 2024 thuat vi sinh xét ảnh kỹ thuật dsc chuyen chuyên ky bộ mon xet y"
+    "keywords": "hiếu thanh qlcl chat định toán lọc lieu sát dịch nhân bhyt nước tạo bảo & 2429 truc ngoại hướng than cấy phí lượng iqc máu tao dsc_0319.jpg luong trực tố y sat chay vi đức iso sinh khí khung ro hiểm khuẩn lý nuoc duc endotoxin thận huong ảnh chi nhan giám tiêu mức tài biến chuẩn 2018 chạy quản bvđk chí (dsc_0319.jpg) bvdk 15189 eqas độc chất vụ tai nội quan: giang tế liệu giam dẫn giá kiểm dan tl-ro-117"
   },
   {
     "id": "vb_118",
-    "code": "VBYT-118",
-    "title": "Dichvukhamsuckhoedinhky 1517299413 banner",
+    "code": "TL-RO-118",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (Dichvukhamsuckhoedinhky-1517299413-banner.jpg)",
     "filename": "Dichvukhamsuckhoedinhky-1517299413-banner.jpg",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/Dichvukhamsuckhoedinhky-1517299413-banner.jpg",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 65891,
     "sizeFormatted": "64 KB",
     "format": "image",
@@ -2481,19 +2481,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/dichvukhamsuckhoedinhky-1517299413-banner.jpg",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/dichvukhamsuckhoedinhky-1517299413-banner.jpg",
-    "keywords": "môn nghiem & bo te nghiệm tế 2024 thuat vi sinh banner xét ảnh dichvukhamsuckhoedinhky kỹ 1517299413 thuật y chuyên ky bộ mon xet chuyen"
+    "keywords": "hiếu thanh qlcl chat định toán lọc lieu sát dịch nhân bhyt nước tạo bảo & 2429 tl-ro-118 truc ngoại hướng than cấy phí lượng iqc máu tao luong trực tố y sat chay vi đức iso sinh khí khung ro hiểm dichvukhamsuckhoedinhky-1517299413-banner.jpg khuẩn lý nuoc duc endotoxin thận huong ảnh chi nhan giám tiêu mức tài biến chuẩn 2018 chạy quản bvđk chí (dichvukhamsuckhoedinhky-1517299413-banner.jpg) bvdk 15189 eqas độc chất vụ tai nội quan: giang tế liệu giam dẫn giá kiểm dan"
   },
   {
     "id": "vb_119",
-    "code": "VBYT-119",
-    "title": "He thong dao tao truc tuyen 1531221474 banner",
+    "code": "TL-RO-119",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (He thong dao tao truc tuyen-1531221474-banner.jpg)",
     "filename": "He thong dao tao truc tuyen-1531221474-banner.jpg",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/He thong dao tao truc tuyen-1531221474-banner.jpg",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 32115,
     "sizeFormatted": "31 KB",
     "format": "image",
@@ -2502,19 +2502,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/he_thong_dao_tao_truc_tuyen-1531221474-banner.jpg",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/he_thong_dao_tao_truc_tuyen-1531221474-banner.jpg",
-    "keywords": "môn nghiem dao & bo te thong tuyen nghiệm tế 2024 1531221474 thuat vi sinh banner xét ảnh kỹ tao thuật y chuyên he truc ky bộ mon xet chuyen"
+    "keywords": "hiếu thanh qlcl chat định toán lọc lieu sát dịch nhân bhyt nước tạo bảo & 2429 truc ngoại hướng dao tuyen-1531221474-banner.jpg) than cấy phí lượng iqc thong máu tao luong trực tố y sat chay vi đức tl-ro-119 iso sinh khí khung ro hiểm khuẩn lý nuoc duc endotoxin thận huong he ảnh chi nhan giám tiêu mức tài biến chuẩn 2018 chạy quản bvđk chí bvdk 15189 eqas độc chất vụ tai nội quan: giang tế liệu tuyen-1531221474-banner.jpg giam dẫn giá kiểm (he dan"
   },
   {
     "id": "vb_120",
-    "code": "VBYT-120",
-    "title": "SOT XUAT HUYET 1503471739 banner",
+    "code": "TL-RO-120",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (SOT XUAT HUYET-1503471739-banner.jpg)",
     "filename": "SOT XUAT HUYET-1503471739-banner.jpg",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/SOT XUAT HUYET-1503471739-banner.jpg",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 68758,
     "sizeFormatted": "67 KB",
     "format": "image",
@@ -2523,19 +2523,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/sot_xuat_huyet-1503471739-banner.jpg",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/sot_xuat_huyet-1503471739-banner.jpg",
-    "keywords": "môn nghiem & bo te nghiệm tế 2024 thuat vi sinh xuat banner xét ảnh kỹ huyet thuật y sot chuyên 1503471739 ky bộ mon xet chuyen"
+    "keywords": "hiếu thanh qlcl chat (sot định toán lọc lieu sát dịch nhân bhyt nước tạo bảo & 2429 truc ngoại hướng than cấy phí lượng iqc máu tao luong trực tố y sat chay vi đức iso sinh xuat khí khung ro huyet-1503471739-banner.jpg) hiểm khuẩn lý nuoc huyet-1503471739-banner.jpg sot duc endotoxin thận huong tl-ro-120 ảnh chi nhan giám tiêu mức tài biến chuẩn 2018 chạy quản bvđk chí bvdk 15189 eqas độc chất vụ tai nội quan: giang tế liệu giam dẫn giá kiểm dan"
   },
   {
     "id": "vb_121",
-    "code": "VBYT-121",
-    "title": "Thu vien dien tu 1499061934 banner",
+    "code": "TL-RO-121",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (Thu vien dien tu-1499061934-banner.jpg)",
     "filename": "Thu vien dien tu-1499061934-banner.jpg",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/Thu vien dien tu-1499061934-banner.jpg",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 19536,
     "sizeFormatted": "19 KB",
     "format": "image",
@@ -2544,19 +2544,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/thu_vien_dien_tu-1499061934-banner.jpg",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/thu_vien_dien_tu-1499061934-banner.jpg",
-    "keywords": "thu môn nghiem & bo te nghiệm tế 2024 thuat vi 1499061934 sinh vien banner xét ảnh kỹ thuật y dien chuyên ky bộ tu mon xet chuyen"
+    "keywords": "hiếu thanh qlcl chat định toán lọc lieu sát dịch nhân bhyt nước tạo bảo & 2429 truc ngoại hướng than cấy (thu thu phí lượng iqc máu tao luong trực tố y sat tu-1499061934-banner.jpg) chay vi đức iso sinh khí khung ro hiểm tu-1499061934-banner.jpg vien khuẩn lý nuoc duc endotoxin thận huong ảnh chi nhan giám tiêu mức tài biến chuẩn 2018 chạy quản bvđk chí bvdk 15189 eqas độc chất vụ tai nội quan: giang tế liệu dien giam dẫn giá kiểm dan tl-ro-121"
   },
   {
     "id": "vb_122",
-    "code": "VBYT-122",
-    "title": "VAN PHONG DIEN TU 1499063016 banner",
+    "code": "TL-RO-122",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (VAN PHONG DIEN TU-1499063016-banner.png)",
     "filename": "VAN PHONG DIEN TU-1499063016-banner.png",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/VAN PHONG DIEN TU-1499063016-banner.png",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 51663,
     "sizeFormatted": "50 KB",
     "format": "image",
@@ -2565,19 +2565,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/van_phong_dien_tu-1499063016-banner.png",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/van_phong_dien_tu-1499063016-banner.png",
-    "keywords": "1499063016 môn nghiem & bo te van nghiệm tế 2024 thuat vi sinh banner xét ảnh kỹ phong thuật y dien chuyên ky bộ tu mon xet chuyen"
+    "keywords": "hiếu thanh qlcl chat định toán tl-ro-122 lọc tu-1499063016-banner.png) lieu sát dịch nhân bhyt nước tạo bảo & 2429 truc ngoại hướng than cấy phí lượng iqc máu tao luong trực tố y sat chay van vi đức iso sinh khí khung ro hiểm khuẩn lý nuoc tu-1499063016-banner.png duc endotoxin thận huong (van phong ảnh chi nhan giám tiêu mức tài biến chuẩn 2018 chạy quản bvđk chí bvdk 15189 eqas độc chất vụ tai nội quan: giang tế liệu dien giam dẫn giá kiểm dan"
   },
   {
     "id": "vb_123",
-    "code": "VBYT-123",
-    "title": "XET NGHIEM NUOC 1499334485 banner",
+    "code": "TL-RO-123",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (XET NGHIEM NUOC-1499334485-banner.jpg)",
     "filename": "XET NGHIEM NUOC-1499334485-banner.jpg",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/XET NGHIEM NUOC-1499334485-banner.jpg",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 9178,
     "sizeFormatted": "9 KB",
     "format": "image",
@@ -2586,19 +2586,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/xet_nghiem_nuoc-1499334485-banner.jpg",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/xet_nghiem_nuoc-1499334485-banner.jpg",
-    "keywords": "môn nghiem & bo te 1499334485 nghiệm tế 2024 thuat vi sinh banner xét ảnh kỹ thuật y chuyên ky bộ mon xet chuyen nuoc"
+    "keywords": "hiếu thanh qlcl chat định toán lọc lieu sát dịch nhân bhyt nước tạo bảo & 2429 truc ngoại hướng than cấy tl-ro-123 phí lượng iqc máu tao luong trực tố y sat chay vi đức iso sinh khí khung ro hiểm khuẩn lý nuoc duc endotoxin thận huong nuoc-1499334485-banner.jpg nghiem ảnh chi nhan giám tiêu mức tài biến chuẩn 2018 chạy (xet quản nuoc-1499334485-banner.jpg) bvđk chí bvdk 15189 eqas độc chất vụ tai nội quan: giang tế liệu giam xet dẫn giá kiểm dan"
   },
   {
     "id": "vb_124",
-    "code": "VBYT-124",
-    "title": "ba right banner",
+    "code": "TL-RO-124",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (ba_right-banner.jpg)",
     "filename": "ba_right-banner.jpg",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/ba_right-banner.jpg",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 42506,
     "sizeFormatted": "42 KB",
     "format": "image",
@@ -2607,19 +2607,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/ba_right-banner.jpg",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/ba_right-banner.jpg",
-    "keywords": "môn nghiem & bo right te nghiệm ba tế 2024 thuat vi sinh banner xét ảnh kỹ thuật y chuyên ky bộ mon xet chuyen"
+    "keywords": "hiếu thanh qlcl chat định toán lọc lieu sát dịch nhân bhyt nước tạo bảo & 2429 truc ngoại hướng tl-ro-124 than cấy phí lượng iqc máu tao luong trực tố y sat chay ba_right-banner.jpg vi đức iso sinh khí khung ro hiểm khuẩn lý nuoc duc endotoxin thận huong ảnh chi nhan giám (ba_right-banner.jpg) tiêu mức tài biến chuẩn 2018 chạy quản bvđk chí bvdk 15189 eqas độc chất vụ tai nội quan: giang tế liệu giam dẫn giá kiểm dan"
   },
   {
     "id": "vb_125",
-    "code": "VBYT-125",
-    "title": "css",
+    "code": "TL-RO-125",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (css)",
     "filename": "css",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/css",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 9570,
     "sizeFormatted": "9 KB",
     "format": "pdf",
@@ -2628,19 +2628,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/css",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/css",
-    "keywords": "môn nghiem & bo te nghiệm tế 2024 thuat vi sinh xét pdf kỹ thuật chuyen css chuyên ky bộ mon xet y"
+    "keywords": "hiếu thanh qlcl chat định toán lọc lieu sát dịch nhân bhyt nước tạo bảo & 2429 truc ngoại hướng than cấy phí lượng iqc máu tao luong trực tố y sat chay vi đức tl-ro-125 iso sinh khí khung ro hiểm khuẩn lý nuoc duc endotoxin thận huong chi nhan giám tiêu mức tài pdf css biến chuẩn 2018 chạy quản bvđk chí bvdk 15189 eqas (css) độc chất vụ tai nội quan: giang tế liệu giam dẫn giá kiểm dan"
   },
   {
     "id": "vb_126",
-    "code": "VBYT-126",
-    "title": "css(1)",
+    "code": "TL-RO-126",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (css(1))",
     "filename": "css(1)",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/css(1)",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 5214,
     "sizeFormatted": "5 KB",
     "format": "pdf",
@@ -2649,19 +2649,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/css_1",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/css_1",
-    "keywords": "môn nghiem & bo te nghiệm tế 2024 css(1) thuat vi sinh xét pdf kỹ thuật chuyen chuyên ky bộ mon xet y"
+    "keywords": "hiếu thanh qlcl chat định toán lọc lieu sát dịch nhân bhyt nước tạo bảo & 2429 truc ngoại hướng than cấy phí lượng iqc máu tao luong trực tố y sat chay vi đức iso sinh khí khung ro hiểm khuẩn lý nuoc duc endotoxin thận tl-ro-126 css(1) huong chi nhan giám tiêu mức tài pdf biến chuẩn 2018 chạy quản bvđk chí (css(1)) bvdk 15189 eqas độc chất vụ tai nội quan: giang tế liệu giam dẫn giá kiểm dan"
   },
   {
     "id": "vb_127",
-    "code": "VBYT-127",
-    "title": "dao tao 1503472750 banner",
+    "code": "TL-RO-127",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (dao tao-1503472750-banner.jpg)",
     "filename": "dao tao-1503472750-banner.jpg",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/dao tao-1503472750-banner.jpg",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 70585,
     "sizeFormatted": "69 KB",
     "format": "image",
@@ -2670,19 +2670,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/dao_tao-1503472750-banner.jpg",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/dao_tao-1503472750-banner.jpg",
-    "keywords": "môn nghiem dao & bo te nghiệm tế 2024 thuat vi sinh banner xét ảnh kỹ tao thuật y chuyên ky bộ 1503472750 mon xet chuyen"
+    "keywords": "hiếu thanh qlcl chat định toán lọc lieu sát dịch nhân bhyt nước tạo bảo & 2429 truc ngoại hướng dao than cấy phí lượng iqc máu tao luong trực tố y sat chay vi đức iso sinh khí khung ro hiểm khuẩn lý nuoc tl-ro-127 duc endotoxin thận huong ảnh chi nhan giám tiêu mức tài tao-1503472750-banner.jpg biến chuẩn 2018 chạy quản bvđk chí tao-1503472750-banner.jpg) bvdk 15189 eqas độc chất vụ tai nội quan: giang tế liệu (dao giam dẫn giá kiểm dan"
   },
   {
     "id": "vb_128",
-    "code": "VBYT-128",
-    "title": "ho tro suc khoe tam than logo",
+    "code": "TL-RO-128",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (ho-tro-suc-khoe-tam-than-logo.png)",
     "filename": "ho-tro-suc-khoe-tam-than-logo.png",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/ho-tro-suc-khoe-tam-than-logo.png",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 51249,
     "sizeFormatted": "50 KB",
     "format": "image",
@@ -2691,19 +2691,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/ho-tro-suc-khoe-tam-than-logo.png",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/ho-tro-suc-khoe-tam-than-logo.png",
-    "keywords": "khoe môn nghiem & bo te nghiệm tế 2024 thuat vi than sinh xét ảnh kỹ thuật suc y logo chuyên tro ky bộ mon tam xet chuyen ho"
+    "keywords": "hiếu thanh qlcl chat định toán lọc lieu sát dịch nhân bhyt nước tạo bảo & 2429 truc ngoại hướng than cấy phí lượng iqc máu tao luong trực tố y sat chay vi đức iso sinh khí khung ro hiểm khuẩn lý nuoc duc endotoxin thận huong (ho-tro-suc-khoe-tam-than-logo.png) ảnh chi nhan giám tiêu mức tài ho-tro-suc-khoe-tam-than-logo.png biến chuẩn 2018 chạy tl-ro-128 quản bvđk chí bvdk 15189 eqas độc chất vụ tai nội quan: giang tế liệu giam dẫn giá kiểm dan"
   },
   {
     "id": "vb_129",
-    "code": "VBYT-129",
-    "title": "huy hieu",
+    "code": "TL-RO-129",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (huy-hieu.png)",
     "filename": "huy-hieu.png",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/huy-hieu.png",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 31730,
     "sizeFormatted": "31 KB",
     "format": "image",
@@ -2712,19 +2712,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/huy-hieu.png",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/huy-hieu.png",
-    "keywords": "môn nghiem & bo te nghiệm tế 2024 thuat vi sinh xét huy ảnh kỹ thuật chuyen chuyên ky bộ mon hieu xet y"
+    "keywords": "hiếu thanh qlcl chat định toán lọc lieu sát dịch nhân bhyt nước tạo bảo & 2429 truc ngoại hướng than cấy phí lượng tl-ro-129 iqc máu tao luong huy-hieu.png trực tố y sat chay vi đức iso sinh khí khung ro hiểm khuẩn lý nuoc duc endotoxin thận huong ảnh chi nhan giám tiêu mức tài (huy-hieu.png) biến chuẩn 2018 chạy quản bvđk chí bvdk 15189 eqas độc chất vụ tai nội quan: giang tế liệu giam dẫn giá kiểm dan"
   },
   {
     "id": "vb_130",
-    "code": "VBYT-130",
-    "title": "nang cao suc khoe noi lam viec logo",
+    "code": "TL-RO-130",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (nang-cao-suc-khoe-noi-lam-viec-logo.jpg)",
     "filename": "nang-cao-suc-khoe-noi-lam-viec-logo.jpg",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/nang-cao-suc-khoe-noi-lam-viec-logo.jpg",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 13313,
     "sizeFormatted": "13 KB",
     "format": "image",
@@ -2733,19 +2733,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/nang-cao-suc-khoe-noi-lam-viec-logo.jpg",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/nang-cao-suc-khoe-noi-lam-viec-logo.jpg",
-    "keywords": "khoe môn nghiem & bo te viec nghiệm tế cao 2024 thuat vi sinh xét ảnh kỹ thuật suc y lam nang logo chuyên ky bộ mon noi xet chuyen"
+    "keywords": "hiếu thanh qlcl chat định toán lọc lieu sát dịch nhân bhyt nước tạo bảo & 2429 truc ngoại hướng tl-ro-130 than cấy phí lượng iqc máu tao luong trực tố y (nang-cao-suc-khoe-noi-lam-viec-logo.jpg) sat chay vi đức iso sinh khí khung nang-cao-suc-khoe-noi-lam-viec-logo.jpg ro hiểm khuẩn lý nuoc duc endotoxin thận huong ảnh chi nhan giám tiêu mức tài biến chuẩn 2018 chạy quản bvđk chí bvdk 15189 eqas độc chất vụ tai nội quan: giang tế liệu giam dẫn giá kiểm dan"
   },
   {
     "id": "vb_131",
-    "code": "VBYT-131",
-    "title": "quan trac 1503472550 banner",
+    "code": "TL-RO-131",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (quan trac-1503472550-banner.jpg)",
     "filename": "quan trac-1503472550-banner.jpg",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/quan trac-1503472550-banner.jpg",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 72947,
     "sizeFormatted": "71 KB",
     "format": "image",
@@ -2754,19 +2754,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/quan_trac-1503472550-banner.jpg",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/quan_trac-1503472550-banner.jpg",
-    "keywords": "môn nghiem & bo te trac nghiệm tế 2024 thuat vi quan 1503472550 sinh banner xét ảnh kỹ thuật y chuyên ky bộ mon xet chuyen"
+    "keywords": "hiếu thanh qlcl chat định toán lọc lieu sát dịch nhân bhyt nước tạo bảo & 2429 truc ngoại hướng than cấy phí lượng iqc máu tao luong trực tố y sat chay vi đức iso sinh khí khung ro hiểm khuẩn trac-1503472550-banner.jpg lý nuoc duc endotoxin thận huong ảnh chi nhan giám tiêu mức tài biến chuẩn 2018 chạy quản trac-1503472550-banner.jpg) bvđk chí bvdk 15189 eqas độc quan chất vụ tai nội quan: giang tế liệu giam dẫn tl-ro-131 giá kiểm (quan dan"
   },
   {
     "id": "vb_132",
-    "code": "VBYT-132",
-    "title": "test 1493869628 banner",
+    "code": "TL-RO-132",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (test-1493869628-banner.png)",
     "filename": "test-1493869628-banner.png",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/test-1493869628-banner.png",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 16136,
     "sizeFormatted": "16 KB",
     "format": "image",
@@ -2775,19 +2775,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/test-1493869628-banner.png",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/test-1493869628-banner.png",
-    "keywords": "môn nghiem & bo te nghiệm tế 2024 test thuat vi sinh banner 1493869628 xét ảnh kỹ thuật y chuyên ky bộ mon xet chuyen"
+    "keywords": "hiếu thanh qlcl chat định toán lọc lieu sát dịch nhân bhyt nước tạo bảo & test-1493869628-banner.png 2429 truc ngoại hướng than cấy phí lượng iqc máu tao luong trực tố y sat chay vi đức iso sinh khí khung ro hiểm khuẩn lý nuoc duc endotoxin thận huong ảnh chi nhan giám tiêu mức tài biến chuẩn 2018 chạy quản bvđk chí bvdk 15189 eqas độc chất vụ tai nội quan: (test-1493869628-banner.png) giang tế liệu giam dẫn tl-ro-132 giá kiểm dan"
   },
   {
     "id": "vb_133",
-    "code": "VBYT-133",
-    "title": "xet nghiem nuoc 1502764680 banner",
+    "code": "TL-RO-133",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (xet nghiem nuoc-1502764680-banner.jpg)",
     "filename": "xet nghiem nuoc-1502764680-banner.jpg",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/xet nghiem nuoc-1502764680-banner.jpg",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 75130,
     "sizeFormatted": "73 KB",
     "format": "image",
@@ -2796,19 +2796,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/xet_nghiem_nuoc-1502764680-banner.jpg",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/xet_nghiem_nuoc-1502764680-banner.jpg",
-    "keywords": "môn nghiem & bo te nghiệm tế 2024 1502764680 thuat vi sinh banner xét ảnh kỹ thuật y chuyên ky bộ mon xet chuyen nuoc"
+    "keywords": "hiếu thanh qlcl chat định toán lọc lieu sát dịch nhân bhyt nước tạo bảo & tl-ro-133 2429 truc ngoại hướng than cấy phí lượng iqc nuoc-1502764680-banner.jpg máu tao luong trực tố y sat chay vi đức iso sinh khí khung ro hiểm khuẩn lý nuoc duc endotoxin thận huong nghiem ảnh chi nhan giám tiêu mức tài nuoc-1502764680-banner.jpg) biến chuẩn 2018 chạy (xet quản bvđk chí bvdk 15189 eqas độc chất vụ tai nội quan: giang tế liệu giam xet dẫn giá kiểm dan"
   },
   {
     "id": "vb_134",
-    "code": "VBYT-134",
-    "title": "y kien chuyen gia 1525772986 banner",
+    "code": "TL-RO-134",
+    "title": "Tài liệu hướng dẫn trực quan: Giám sát vi sinh & chất lượng nước chạy thận nhân tạo (y kien chuyen gia-1525772986-banner.jpg)",
     "filename": "y kien chuyen gia-1525772986-banner.jpg",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/Công văn Cấy khuẩn Thận nhân tao/XÉT NGHIỆM GIÁM SÁT CHẤT LƯỢNG NƯỚC LỌC THẬN PHÒNG TRÁNH TAI BIẾN TRONG QUY TRÌNH CHẠY THẬN NHÂN TẠO_files/y kien chuyen gia-1525772986-banner.jpg",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BVĐK Đức Giang",
+    "year": 2018,
     "size": 16596,
     "sizeFormatted": "16 KB",
     "format": "image",
@@ -2817,7 +2817,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/y_kien_chuyen_gia-1525772986-banner.jpg",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/y_kien_chuyen_gia-1525772986-banner.jpg",
-    "keywords": "môn nghiem & bo te nghiệm tế 2024 thuat vi sinh banner xét ảnh kỹ thuật y gia 1525772986 chuyên ky bộ mon kien xet chuyen"
+    "keywords": "hiếu thanh qlcl chat định toán lọc lieu sát dịch nhân bhyt nước tạo bảo & 2429 truc ngoại hướng (y gia-1525772986-banner.jpg) than cấy phí lượng iqc máu tao luong trực tố y sat chay vi đức iso sinh khí khung ro hiểm khuẩn lý nuoc duc endotoxin thận huong ảnh chi nhan giám tiêu mức tài chuyen kien biến chuẩn 2018 chạy quản tl-ro-134 bvđk chí bvdk 15189 eqas độc chất vụ tai gia-1525772986-banner.jpg nội quan: giang tế liệu giam dẫn giá kiểm dan"
   },
   {
     "id": "vb_135",
@@ -2838,7 +2838,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong-tu-13-2019-tt-byt-sua-doi-thong-tu-39-2018-tt-byt-quy-dinh-thong-nhat-gia-kham-chua-benh.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong-tu-13-2019-tt-byt-sua-doi-thong-tu-39-2018-tt-byt-quy-dinh-thong-nhat-gia-kham-chua-benh.doc",
-    "keywords": "pháp nhat 39 thông & bo te thong tt van luat luật tế bản doi 13 quy, quy 2019 chua benh word phap ban gia sua 2018 kham bộ tu dinh văn byt y tư"
+    "keywords": "kham tu chua thong 39 tt benh y thong-tu-13-2019-tt-byt-sua-doi-thong-tu-39-2018-tt-byt-quy-dinh-thong-nhat-gia-kham-chua-benh.doc dinh sua 13 gia tế bộ te 2019 quy byt word nhat bo doi 2018"
   },
   {
     "id": "vb_136",
@@ -2859,19 +2859,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong-tu-13-2019-tt-byt-sua-doi-thong-tu-39-2018-tt-byt-quy-dinh-thong-nhat-gia-kham-chua-benh.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong-tu-13-2019-tt-byt-sua-doi-thong-tu-39-2018-tt-byt-quy-dinh-thong-nhat-gia-kham-chua-benh.pdf",
-    "keywords": "pháp nhat 39 thông & bo te thong tt van luat luật tế bản doi 13 quy, quy 2019 pdf chua benh phap ban gia sua 2018 kham bộ tu dinh văn byt y tư"
+    "keywords": "kham tu chua thong 39 tt benh y dinh sua 13 thong-tu-13-2019-tt-byt-sua-doi-thong-tu-39-2018-tt-byt-quy-dinh-thong-nhat-gia-kham-chua-benh.pdf gia tế bộ te 2019 quy byt pdf nhat bo doi 2018"
   },
   {
     "id": "vb_137",
-    "code": "2538. QD",
-    "title": "2538:BYT.VI SINH. xlsx",
+    "code": "2538/QĐ-BYT",
+    "title": "Quyết định 2538/QĐ-BYT: Ban hành Danh mục chuyên môn kỹ thuật trong khám bệnh, chữa bệnh",
     "filename": "2538:BYT.VI SINH. xlsx.xlsx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/2538. QD.BYT/ 2538:BYT.VI SINH. xlsx.xlsx",
     "category": "Chuyen_Mon_Vi_Sinh",
     "categoryName": "Chuyên Môn Vi Sinh & Kỹ Thuật Xét Nghiệm",
     "folderName": "Chuyen_Mon_Vi_Sinh",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2023,
     "size": 32637,
     "sizeFormatted": "32 KB",
     "format": "excel",
@@ -2880,19 +2880,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-excel",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/2538_byt.vi_sinh._xlsx.xlsx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/2538_byt.vi_sinh._xlsx.xlsx",
-    "keywords": "môn nghiem & bo te 2538:byt.vi nghiệm tế 2024 thuat vi sinh 2538. xét excel qd kỹ xlsx thuật y chuyên sinh. ky bộ mon xet chuyen"
+    "keywords": "kham hiếu quyet ky chữa benh, 2538/qd-byt: endotoxin thận định hành chua lọc máu xlsx.xlsx thuật chạy bệnh, mon bệnh tố excel benh y 2538/qd-byt danh 2538/qđ-byt ban nước dinh vi độc 2023 trong muc khí tai kỹ nội tế ro môn bộ te khám hanh chuyen thuat khuẩn 2538/qđ-byt: 2538:byt.vi sinh. cấy bo biến chuyên mục quyết"
   },
   {
     "id": "vb_138",
-    "code": "2538. QD",
-    "title": "Mẫu Excel",
+    "code": "2538/QĐ-BYT",
+    "title": "Quyết định 2538/QĐ-BYT: Ban hành Danh mục chuyên môn kỹ thuật trong khám bệnh, chữa bệnh",
     "filename": "Mẫu Excel.xlsx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/2538. QD.BYT/Mẫu Excel.xlsx",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2023,
     "size": 32559,
     "sizeFormatted": "32 KB",
     "format": "excel",
@@ -2901,19 +2901,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-excel",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/mau_excel.xlsx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/mau_excel.xlsx",
-    "keywords": "pháp thông & bo te thong van luat luật mẫu bản tế 2024 quy, 2538. mau excel qd phap ban bộ tu văn byt y tư"
+    "keywords": "kham hiếu quyet ky chữa benh, 2538/qd-byt: endotoxin thận định hành chua lọc máu thuật chạy bệnh, mon bệnh tố excel benh y 2538/qd-byt danh 2538/qđ-byt ban nước dinh vi excel.xlsx độc 2023 trong muc khí tai kỹ nội tế ro môn mau bộ te khám hanh chuyen thuat khuẩn 2538/qđ-byt: cấy bo mẫu biến chuyên mục quyết"
   },
   {
     "id": "vb_139",
-    "code": "2538. QD",
-    "title": "QĐ DMKT 2538. 30 chương",
+    "code": "2538/QĐ-BYT",
+    "title": "Quyết định 2538/QĐ-BYT: Ban hành Danh mục chuyên môn kỹ thuật trong khám bệnh, chữa bệnh",
     "filename": "QĐ DMKT 2538. 30 chương.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/2538. QD.BYT/QĐ DMKT 2538. 30 chương.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2023,
     "size": 20826285,
     "sizeFormatted": "19.9 MB",
     "format": "pdf",
@@ -2922,12 +2922,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/qd_dmkt_2538._30_chuong.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/qd_dmkt_2538._30_chuong.pdf",
-    "keywords": "pháp chương thông dmkt & qđ bo te thong van luat luật tế bản 2024 quy, 2538. qd pdf y phap ban 30 bộ tu văn byt chuong tư"
+    "keywords": "kham hiếu quyet ky chữa benh, 2538/qd-byt: endotoxin chương.pdf định hành chua chuong.pdf thận lọc qd máu thuật chạy bệnh, mon bệnh tố benh y 2538/qd-byt danh 2538/qđ-byt ban nước dinh vi 30 độc 2023 trong muc khí tai kỹ nội qđ tế 2538. ro môn bộ te khám hanh chuyen thuat khuẩn 2538/qđ-byt: cấy pdf dmkt bo biến chuyên mục quyết"
   },
   {
     "id": "vb_140",
-    "code": "2538-QD",
-    "title": "quyet dinh 2538 qd byt 2023 danh muc chuyen mon ky thuat trong kcb de co so xay dung dinh muc ktkt",
+    "code": "2538/QĐ-BYT",
+    "title": "Quyết định 2538/QĐ-BYT: Ban hành Danh mục chuyên môn kỹ thuật trong khám bệnh, chữa bệnh",
     "filename": "quyet-dinh-2538-qd-byt-2023-danh-muc-chuyen-mon-ky-thuat-trong-kcb-de-co-so-xay-dung-dinh-muc-ktkt.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/2538. QD.BYT/quyet-dinh-2538-qd-byt-2023-danh-muc-chuyen-mon-ky-thuat-trong-kcb-de-co-so-xay-dung-dinh-muc-ktkt.pdf",
     "category": "Van_Ban_Phap_Quy",
@@ -2943,12 +2943,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/quyet-dinh-2538-qd-byt-2023-danh-muc-chuyen-mon-ky-thuat-trong-kcb-de-co-so-xay-dung-dinh-muc-ktkt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/quyet-dinh-2538-qd-byt-2023-danh-muc-chuyen-mon-ky-thuat-trong-kcb-de-co-so-xay-dung-dinh-muc-ktkt.pdf",
-    "keywords": "pháp thông quyet co & bo te thong ktkt van kcb luat luật tế bản thuat 2538 2023 quy, de 2538-qd qd trong so pdf y muc phap ban xay danh dung ky bộ tu dinh mon văn byt chuyen tư"
+    "keywords": "kham hiếu quyet ky chữa benh, 2538/qd-byt: endotoxin thận định hành chua lọc máu thuật chạy bệnh, mon bệnh tố benh y 2538/qd-byt danh 2538/qđ-byt ban nước dinh vi độc 2023 trong muc khí tai kỹ nội tế ro môn bộ quyet-dinh-2538-qd-byt-2023-danh-muc-chuyen-mon-ky-thuat-trong-kcb-de-co-so-xay-dung-dinh-muc-ktkt.pdf khám te hanh chuyen thuat khuẩn 2538/qđ-byt: cấy pdf bo biến chuyên mục quyết"
   },
   {
     "id": "vb_141",
-    "code": "NGHỊ ĐỊNH-116",
-    "title": "Nghị định 116 2024 NĐ CP",
+    "code": "116/2024/NĐ-CP",
+    "title": "Nghị định 116/2024/NĐ-CP: Sửa đổi, bổ sung một số điều về tuyển dụng, sử dụng và quản lý công chức, viên chức",
     "filename": "Nghị định-116-2024-NĐ-CP.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/NĐ 116.2024 sửa đổi NĐ 138 và ND 06/Nghị định-116-2024-NĐ-CP.pdf",
     "category": "Van_Ban_Phap_Quy",
@@ -2964,12 +2964,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/nghi_dinh-116-2024-nd-cp.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/nghi_dinh-116-2024-nd-cp.pdf",
-    "keywords": "định-116 116 pháp thông & nghi thong van nđ luật luat bản 2024 quy, nd phủ pdf nghị định phap ban cp chính phu tu chinh dinh văn byt tư"
+    "keywords": "và 116/2024/nd-cp: điều chuc cong quản mot đổi, về định chuc, chức sửa 116/2024/nđ-cp dung, tuyển ly 2024 sung dinh-116-2024-nd-cp.pdf 116/2024/nđ-cp: dụng nghi doi, phủ dinh 116/2024/nd-cp công sua quan su chính dụng, so phu một bổ nghị dung số sử vien lý pdf định-116-2024-nđ-cp.pdf viên va chức, bo chinh dieu ve tuyen"
   },
   {
     "id": "vb_142",
-    "code": "VBYT-142",
-    "title": "49.2018.TT.BYT",
+    "code": "49/2018/TT-BYT",
+    "title": "Thông tư 49/2018/TT-BYT: Hướng dẫn hoạt động xét nghiệm trong khám bệnh, chữa bệnh",
     "filename": "49.2018.TT.BYT.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/49.2018.TT-BYT/49.2018.TT.BYT.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -2985,12 +2985,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/49.2018.tt.byt.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/49.2018.tt.byt.doc",
-    "keywords": "pháp thông & bo te thong van luat luật tế bản quy, 49.2018.tt.byt word phap ban 2018 bộ tu văn byt y tư"
+    "keywords": "kham hiếu hoạt tu chữa benh, endotoxin thận chua thong lọc 49/2018/tt-byt: máu huong chạy bệnh, bệnh tố thông benh nghiem y nước vi độc hướng trong khí tai nội 49/2018/tt-byt tế 49.2018.tt.byt.doc ro dong xet bộ te tư nghiệm khám khuẩn xét cấy dẫn word bo biến dan 2018 hoat động"
   },
   {
     "id": "vb_143",
-    "code": "VBYT-143",
-    "title": "49.2018TT BYT",
+    "code": "49/2018/TT-BYT",
+    "title": "Thông tư 49/2018/TT-BYT: Hướng dẫn hoạt động xét nghiệm trong khám bệnh, chữa bệnh",
     "filename": "49.2018TT-BYT.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/49.2018.TT-BYT/49.2018TT-BYT.pdf",
     "category": "Van_Ban_Phap_Quy",
@@ -3006,12 +3006,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/49.2018tt-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/49.2018tt-byt.pdf",
-    "keywords": "pháp thông & bo te thong van luat luật tế bản quy, pdf phap ban 2018 bộ tu 49.2018tt văn byt y tư"
+    "keywords": "kham hiếu hoạt tu chữa benh, endotoxin thận chua thong lọc 49/2018/tt-byt: máu huong chạy bệnh, bệnh tố thông benh nghiem y nước vi độc 49.2018tt-byt.pdf hướng trong khí tai nội 49/2018/tt-byt tế ro dong xet bộ te tư nghiệm khám khuẩn xét cấy dẫn pdf bo biến dan 2018 hoat động"
   },
   {
     "id": "vb_144",
-    "code": "TT37",
-    "title": "1550 triển khai thực hiện TT37 và TT 39",
+    "code": "TT37/39-BYT",
+    "title": "Thông tư 37 & 39/2018/TT-BYT: Quy định mức giá tối đa dịch vụ kỹ thuật y tế và khám chữa bệnh BHYT",
     "filename": "1550 triển khai thực hiện TT37 và TT 39.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 37.39.2018./1550 triển khai thực hiện TT37 và TT 39.pdf",
     "category": "Van_Ban_Phap_Quy",
@@ -3027,12 +3027,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/1550_trien_khai_thuc_hien_tt37_va_tt_39.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/1550_trien_khai_thuc_hien_tt37_va_tt_39.pdf",
-    "keywords": "pháp 39 thông triển hiện & bo te thong tt van luat luật tế bản và quy, va tt37 pdf trien phap ban hien 2018 bộ thuc khai tu 1550 thực văn byt y tư"
+    "keywords": "và kham thanh đa tu ky chữa tt37 toi định thong chua toán tối dich thuật tt dịch bệnh 1550 thuc thông y bhyt benh bảo dinh & vu thực vụ tt37/39-byt muc chi kỹ khung tế gia da 37 trien mức bộ te tư quy khám thuat hiện 39/2018/tt-byt: triển hiểm pdf giá va 39.pdf hien bo phí khai 2018"
   },
   {
     "id": "vb_145",
-    "code": "TT 37",
-    "title": "37.39.VI SINH (TONG HOP)",
+    "code": "TT37/39-BYT",
+    "title": "Bảng tổng hợp danh mục giá dịch vụ kỹ thuật xét nghiệm Vi sinh theo Thông tư 37 và 39/2018/TT-BYT",
     "filename": "37.39.VI SINH (TONG HOP).xlsx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 37.39.2018./37.39.VI SINH (TONG HOP).xlsx",
     "category": "Chuyen_Mon_Vi_Sinh",
@@ -3048,12 +3048,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-excel",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/37.39.vi_sinh_tong_hop_.xlsx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/37.39.vi_sinh_tong_hop_.xlsx",
-    "keywords": "môn nghiem & bo te tt nghiệm tế thuat vi sinh xét excel 37 kỹ thuật y 37.39.vi (tong chuyên 2018 ky bộ mon hop) xet chuyen"
+    "keywords": "và thanh ky tu 39/2018/tt-byt định thong 37.39.vi toán dich thuật tong dịch excel thông bang nghiem danh y bhyt bảo vi vu vụ tt37/39-byt sinh muc chi kỹ khung bảng gia tế theo (tong 37 hợp tổng xet 2018 mức bộ te nghiệm tư hiểm thuat xét giá hop).xlsx va bo phí hop mục"
   },
   {
     "id": "vb_146",
-    "code": "TT 37",
-    "title": "37.2018TT BYT",
+    "code": "TT37/39-BYT",
+    "title": "Thông tư 37 & 39/2018/TT-BYT: Quy định mức giá tối đa dịch vụ kỹ thuật y tế và khám chữa bệnh BHYT",
     "filename": "37.2018TT-BYT.docx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 37.39.2018./37.2018.TT-BYT/37.2018TT-BYT.docx",
     "category": "Van_Ban_Phap_Quy",
@@ -3069,12 +3069,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/37.2018tt-byt.docx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/37.2018tt-byt.docx",
-    "keywords": "pháp thông & bo te thong tt van luat luật tế bản 37.2018tt quy, 37 word phap ban 2018 bộ tu văn byt y tư"
+    "keywords": "và kham thanh đa tu ky chữa toi định thong chua toán tối dich thuật dịch bệnh 37.2018tt-byt.docx thông y bhyt benh bảo dinh & vu vụ tt37/39-byt muc chi kỹ khung tế gia da 37 mức bộ te tư quy khám thuat hiểm 39/2018/tt-byt: giá word va bo phí 2018"
   },
   {
     "id": "vb_147",
-    "code": "TT37",
-    "title": "Giá BHYT theo TT37.2015",
+    "code": "TT37/39-BYT",
+    "title": "Thông tư 37 & 39/2018/TT-BYT: Quy định mức giá tối đa dịch vụ kỹ thuật y tế và khám chữa bệnh BHYT",
     "filename": "Giá BHYT theo TT37.2015.xlsx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 37.39.2018./37.2018.TT-BYT/Giá BHYT theo TT37.2015.xlsx",
     "category": "Van_Ban_Phap_Quy",
@@ -3090,12 +3090,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-excel",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/gia_bhyt_theo_tt37.2015.xlsx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/gia_bhyt_theo_tt37.2015.xlsx",
-    "keywords": "pháp tt37.2015 thông & bo te thong van luat luật bhyt bản tế quy, excel tt37 phap ban gia 2018 bộ tu văn byt giá theo y tư"
+    "keywords": "và kham thanh đa tu ky chữa toi định thong chua toán tối dich thuật tt37.2015.xlsx dịch bệnh excel thông y bhyt benh bảo dinh & vu vụ tt37/39-byt muc chi kỹ khung tế gia theo da 37 mức bộ te tư quy khám thuat hiểm 39/2018/tt-byt: giá va bo phí 2018"
   },
   {
     "id": "vb_148",
-    "code": "THÔNG TƯ 37",
-    "title": "Phu luc Thông tư 37 2018 TT BYT (thay thế Thông tư 02 theo lương 1390)",
+    "code": "TT37/39-BYT",
+    "title": "Thông tư 37 & 39/2018/TT-BYT: Quy định mức giá tối đa dịch vụ kỹ thuật y tế và khám chữa bệnh BHYT",
     "filename": "Phu luc_Thông tư 37_2018_TT_BYT (thay thế Thông tư 02 theo lương 1390).xls",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 37.39.2018./37.2018.TT-BYT/Phu luc_Thông tư 37_2018_TT_BYT (thay thế Thông tư 02 theo lương 1390).xls",
     "category": "Van_Ban_Phap_Quy",
@@ -3111,12 +3111,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-excel",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/phu_luc_thong_tu_37_2018_tt_byt_thay_the_thong_tu_02_theo_luong_1390_.xls",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/phu_luc_thong_tu_37_2018_tt_byt_thay_the_thong_tu_02_theo_luong_1390_.xls",
-    "keywords": "pháp lương thông & bo te thong tt thế tư van luật luat bản tế quy, excel 37 (thay 02 1390) phap the ban luong 2018 phu bộ tu văn byt theo y luc"
+    "keywords": "và kham thanh đa tu ky chữa toi (thay định thong chua toán tối dich thuật luong dịch bệnh excel thông y bhyt benh bảo dinh & vu thế vụ tt37/39-byt muc chi kỹ khung phu tế gia theo da 37 luc_thong 37_2018_tt_byt luc_thông mức 1390).xls the te tư quy khám thuat 02 39/2018/tt-byt: lương hiểm giá va bo phí 2018 bộ"
   },
   {
     "id": "vb_149",
-    "code": "TT 37",
-    "title": "39.2018.TT BYT",
+    "code": "TT37/39-BYT",
+    "title": "Thông tư 37 & 39/2018/TT-BYT: Quy định mức giá tối đa dịch vụ kỹ thuật y tế và khám chữa bệnh BHYT",
     "filename": "39.2018.TT-BYT.docx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 37.39.2018./39.2018.TT-BYT/39.2018.TT-BYT.docx",
     "category": "Van_Ban_Phap_Quy",
@@ -3132,12 +3132,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/39.2018.tt-byt.docx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/39.2018.tt-byt.docx",
-    "keywords": "pháp thông & bo te thong tt van luat luật tế bản 39.2018.tt quy, 37 word phap ban 2018 bộ tu văn byt y tư"
+    "keywords": "và kham thanh đa tu ky chữa toi định thong chua toán tối dich thuật dịch bệnh thông y bhyt benh bảo dinh & vu vụ tt37/39-byt muc chi kỹ khung tế gia da 37 mức bộ te tư quy khám thuat hiểm 39/2018/tt-byt: giá word va 39.2018.tt-byt.docx bo phí 2018"
   },
   {
     "id": "vb_150",
-    "code": "TT 39",
-    "title": "DM TƯƠNG TƯƠNG TT 39",
+    "code": "TT37/39-BYT",
+    "title": "Thông tư 37 & 39/2018/TT-BYT: Quy định mức giá tối đa dịch vụ kỹ thuật y tế và khám chữa bệnh BHYT",
     "filename": "DM TƯƠNG TƯƠNG TT 39.xlsx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 37.39.2018./39.2018.TT-BYT/DM TƯƠNG TƯƠNG TT 39.xlsx",
     "category": "Van_Ban_Phap_Quy",
@@ -3153,7 +3153,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-excel",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/dm_tuong_tuong_tt_39.xlsx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/dm_tuong_tuong_tt_39.xlsx",
-    "keywords": "pháp 39 thông & bo te thong tt van luat luật tế bản quy, excel tương phap ban tuong 2018 bộ tu văn byt dm y tư"
+    "keywords": "và kham thanh đa tu ky chữa tương toi định thong chua toán tối dich thuật tt dm dịch bệnh excel thông y bhyt benh bảo dinh & vu 39.xlsx vụ tt37/39-byt muc chi kỹ khung tuong tế gia da 37 mức bộ te tư quy khám thuat hiểm 39/2018/tt-byt: giá va bo phí 2018"
   },
   {
     "id": "vb_151",
@@ -3174,7 +3174,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-excel",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/danh_muc_thong_tu_21_bo_sung_them_ngoai_tt_43.xls",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/danh_muc_thong_tu_21_bo_sung_them_ngoai_tt_43.xls",
-    "keywords": "pháp 43 sung thông bổ ngoài bo & them thong te tt van luat luật tế bản quy, mục excel ngoai 21 muc phap ban danh thêm 2017 bộ tu văn byt y tư"
+    "keywords": "tu ngoai thong tt sung excel thông y danh 21 43.xls muc tế bổ 43 bộ te tư them 2017 ngoài bo thêm mục"
   },
   {
     "id": "vb_152",
@@ -3195,7 +3195,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/vanbangoc_21_2017_tt-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/vanbangoc_21_2017_tt-byt.pdf",
-    "keywords": "pháp thông & bo te thong tt van luat luật tế bản quy, pdf 21 phap ban vanbangoc 2017 bộ tu văn byt y tư"
+    "keywords": "te 2017 vanbangoc byt vanbangoc_21_2017_tt-byt.pdf y 21 tế pdf bo tt bộ"
   },
   {
     "id": "vb_153",
@@ -3216,7 +3216,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/6328qd-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/6328qd-byt.pdf",
-    "keywords": "pháp thông & bo te thong van luat luật tế bản 2024 6328qđ quy, pdf phap ban bộ tu văn 6328qd byt y tư"
+    "keywords": "te byt y tế pdf 6328qđ-byt.pdf bo 6328qd 6328qđ 2024 6328qd-byt.pdf bộ"
   },
   {
     "id": "vb_154",
@@ -3237,7 +3237,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/quyet-dinh-6328-qd-byt-2018-noi-dung-kiem-tra-danh-gia-chat-luong-benh-vien-2018.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/quyet-dinh-6328-qd-byt-2018-noi-dung-kiem-tra-danh-gia-chat-luong-benh-vien-2018.doc",
-    "keywords": "pháp kiem thông quyet & bo te thong van luat luật tế bản tra quy, vien 6328 qd benh 6328-qd word chat phap ban gia luong dung danh 2018 bộ tu dinh văn byt noi y tư"
+    "keywords": "quyet chat 6328 qd luong benh y danh noi quyet-dinh-6328-qd-byt-2018-noi-dung-kiem-tra-danh-gia-chat-luong-benh-vien-2018.doc kiem dinh 6328-qd tra gia tế dung bộ te vien byt word bo 2018"
   },
   {
     "id": "vb_155",
@@ -3258,7 +3258,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/4286qd-byt.docx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/4286qd-byt.docx",
-    "keywords": "4286qd pháp 4286qđ thông & bo te thong van luat luật tế bản 4286 quy, word phap ban 2018 bộ tu qđ. văn byt y tư"
+    "keywords": "te 4286 4286qđ byt y qd. tế qđ. word 4286qd-byt.docx bo 4286qd 4286qđ-byt.docx 2018 bộ"
   },
   {
     "id": "vb_156",
@@ -3279,19 +3279,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong_tu_08-bkhdt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong_tu_08-bkhdt.pdf",
-    "keywords": "pháp thông hoạch đầu & bo thong van luat luật bản 2024 bkhdt kế quy, ke hoach dau pdf phap 08 ban bộ tu văn byt tư"
+    "keywords": "kế tư tu đầu thông hoach 08 pdf ke bkhdt thong hoạch bo & dau 2024 bộ 08-bkhdt.pdf"
   },
   {
     "id": "vb_157",
-    "code": "NĐ 98",
-    "title": "NĐ 98:NĐ 2022",
+    "code": "98/2021/NĐ-CP",
+    "title": "Nghị định 98/2021/NĐ-CP: Quy định về quản lý trang thiết bị y tế",
     "filename": "NĐ 98:NĐ-2022.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/NĐ 98. Quản lý TTB y tế/NĐ 98:NĐ-2022.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Bộ Y tế",
-    "year": 2022,
+    "issuer": "Chính phủ",
+    "year": 2021,
     "size": 3324795,
     "sizeFormatted": "3.2 MB",
     "format": "pdf",
@@ -3300,12 +3300,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/nd_98_nd-2022.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/nd_98_nd-2022.pdf",
-    "keywords": "pháp thông & bo 2022 te thong 98:nđ van nđ luat 98:nd bản luật tế quy, nd pdf phap ban bộ tu văn byt 98 y tư"
+    "keywords": "98:nd-2022.pdf quản về 2021 thiết định thiet mua 98/2021/nđ-cp ly y trang nghi phủ dinh vật nđ 98/2021/nđ-cp: phẩm quan chất đấu chính sinh 98:nđ-2022.pdf phu tế 98/2021/nd-cp: thầu nghị hóa bi nd te quy tư nghiệm xét lý pdf 98/2021/nd-cp chinh sắm ve bị"
   },
   {
     "id": "vb_158",
-    "code": "NĐ 98",
-    "title": "nghi dinh 98 2021 nd cp quan ly trang thiet bi y te",
+    "code": "98/2021/NĐ-CP",
+    "title": "Nghị định 98/2021/NĐ-CP: Quy định về quản lý trang thiết bị y tế",
     "filename": "nghi-dinh-98-2021-nd-cp-quan-ly-trang-thiet-bi-y-te.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/NĐ 98. Quản lý TTB y tế/nghi-dinh-98-2021-nd-cp-quan-ly-trang-thiet-bi-y-te.pdf",
     "category": "Van_Ban_Phap_Quy",
@@ -3321,12 +3321,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/nghi-dinh-98-2021-nd-cp-quan-ly-trang-thiet-bi-y-te.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/nghi-dinh-98-2021-nd-cp-quan-ly-trang-thiet-bi-y-te.pdf",
-    "keywords": "pháp 2021 thông & nghi te thong van nđ luật luat bản quan trang quy, nd phủ pdf ly bi phap ban thiet cp chính phu tu chinh dinh văn byt 98 y tư"
+    "keywords": "quản về 2021 thiết định thiet nghi-dinh-98-2021-nd-cp-quan-ly-trang-thiet-bi-y-te.pdf mua 98/2021/nđ-cp ly y trang nghi phủ dinh vật 98/2021/nđ-cp: phẩm quan chất đấu chính sinh phu tế 98/2021/nd-cp: thầu nghị hóa bi te quy tư nghiệm xét lý pdf 98/2021/nd-cp chinh sắm ve bị"
   },
   {
     "id": "vb_159",
-    "code": "NĐ 103",
-    "title": "103.2016.NĐ CP",
+    "code": "103/2016/NĐ-CP",
+    "title": "Nghị định 103/2016/NĐ-CP: Quy định về bảo đảm an toàn sinh học tại phòng xét nghiệm",
     "filename": "103.2016.NĐ-CP.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/NĐ 103. 2016. Quy định về bảo đảm an toàn sinh học tại phòng xét nghiệm/103.2016.NĐ-CP.doc",
     "category": "An_Toan_Sinh_Hoc",
@@ -3342,12 +3342,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/An_Toan_Sinh_Hoc/103.2016.nd-cp.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/An_Toan_Sinh_Hoc/103.2016.nd-cp.doc",
-    "keywords": "an môi & truong nđ 103 103.2016.nd sinh moi phủ toan word 2016 pxn trường 103.2016.nđ cp chính phu chinh toàn học hoc"
+    "keywords": "toàn 2 về 103/2016/nđ-cp: định phòng thải tại toan nhân nhiễm nghiem nghi bảo dinh hoc phủ dam 103/2016/nđ-cp phong sinh 103.2016.nđ-cp.doc tai chính an cấp lây 103/2016/nd-cp phu 103.2016.nd-cp.doc nghị rác đảm hấp xet quy nghiệm nồi 103/2016/nd-cp: hộ xét 2016 cá học word atsh chinh bao ve"
   },
   {
     "id": "vb_160",
-    "code": "NĐ.155",
-    "title": "155.2018.NĐ CP",
+    "code": "155/2018/NĐ-CP",
+    "title": "Nghị định 155/2018/NĐ-CP: Sửa đổi, bổ sung quy định về an toàn sinh học phòng xét nghiệm y học",
     "filename": "155.2018.NĐ-CP.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/NĐ.155.2018.sửa đổi, bổ sung một số quy định liên quan đến điều kiện đầu tư kinh doanh thuộc phạm vi quản lý nhà nước của bộ y tế/155.2018.NĐ-CP.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -3363,19 +3363,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/155.2018.nd-cp.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/155.2018.nd-cp.doc",
-    "keywords": "pháp thông & thong van luat luật bản quy, phủ nđ.155 word 155.2018.nd phap ban cp chính 2018 phu tu chinh văn byt 155.2018.nđ tư"
+    "keywords": "toàn 155/2018/nđ-cp: 2 đổi, về 155.2018.nđ-cp.doc định phòng thải sửa sung 155.2018.nd-cp.doc toan nhân y 155/2018/nd-cp: nghiem nhiễm nghi doi, phủ dinh hoc bảo 155/2018/nđ-cp sua phong sinh chính cấp lây an phu bổ nghị rác hấp xet 155/2018/nd-cp quy nghiệm nồi hộ xét cá học word atsh bo chinh ve 2018"
   },
   {
     "id": "vb_161",
-    "code": "TT. 21",
-    "title": "TT. 21.2023. Giá BHYT",
+    "code": "21/2023/TT-BYT",
+    "title": "Thông tư 21/2023/TT-BYT: Quy định khung giá và định mức kinh tế kỹ thuật dịch vụ khám chữa bệnh",
     "filename": "TT. 21.2023. Giá BHYT.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 21. 2024 xây dựng cơ cấu giá/TT. 21.2023. Giá BHYT.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2023,
     "size": 65300598,
     "sizeFormatted": "62.3 MB",
     "format": "pdf",
@@ -3384,12 +3384,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/tt._21.2023._gia_bhyt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/tt._21.2023._gia_bhyt.pdf",
-    "keywords": "pháp thông & bo te thong van luat bhyt luật bản tế 2024 quy, pdf 21 phap ban gia tt. bộ tu 21.2023. văn byt giá y tư"
+    "keywords": "và kham thanh tu ky chữa tt. định thong chua toán dich thuật 21/2023/tt-byt dịch bệnh kinh thông benh y bhyt bảo dinh vu 2023 vụ muc 21.2023. chi kỹ khung tế gia mức bộ bhyt.pdf te tư quy khám thuat hiểm pdf giá va bo 21/2023/tt-byt: phí"
   },
   {
     "id": "vb_162",
-    "code": "TT. 21",
-    "title": "TT. 21.2024. Giá TYC. ve phuong phap dinh gia KBCB",
+    "code": "21/2024/TT-BYT",
+    "title": "Thông tư 21/2024/TT-BYT: Quy định phương pháp định giá dịch vụ khám bệnh, chữa bệnh",
     "filename": "TT. 21.2024. Giá TYC.  ve phuong phap dinh gia KBCB.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 21. 2024 xây dựng cơ cấu giá/TT. 21.2024. Giá TYC.  ve phuong phap dinh gia KBCB.pdf",
     "category": "Van_Ban_Phap_Quy",
@@ -3405,12 +3405,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/tt._21.2024._gia_tyc._ve_phuong_phap_dinh_gia_kbcb.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/tt._21.2024._gia_tyc._ve_phuong_phap_dinh_gia_kbcb.pdf",
-    "keywords": "pháp tyc. thông & bo te thong van luat luật tế bản 2024 quy, phuong pdf 21 phap ban kbcb gia ve 21.2024. tt. bộ tu dinh văn byt giá y tư"
+    "keywords": "kham thanh tu chữa benh, tt. phuong định thong phap chua toán dich 2024 bệnh, dịch bệnh thông benh y bhyt 21.2024. bảo dinh vu tyc. ve vụ chi khung gia tế mức bộ te tư quy khám hiểm phương kbcb.pdf pháp giá pdf bo 21/2024/tt-byt phí 21/2024/tt-byt:"
   },
   {
     "id": "vb_163",
-    "code": "TT. 50",
-    "title": "50.2017TT BYT",
+    "code": "50/2017/TT-BYT",
+    "title": "Thông tư 50/2017/TT-BYT: Sửa đổi, bổ sung quy định liên quan đến thanh toán chi phí khám chữa bệnh BHYT",
     "filename": "50.2017TT-BYT.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT. 50.2017.sửa đổi, bổ sung các quy định liên quan đến thanh toán chi phí khám bệnh, chữa bệnh./50.2017TT-BYT.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -3426,7 +3426,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/50.2017tt-byt.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/50.2017tt-byt.doc",
-    "keywords": "pháp thông & bo te thong van luat luật tế bản 50.2017tt quy, word phap ban 2017 tt. bộ tu văn byt 50 y tư"
+    "keywords": "thanh kham tu chữa đổi, định toán thong chua sửa sung bệnh toan phi dịch thông bhyt benh y liên 50/2017/tt-byt: doi, bảo dinh sua quan vụ chi khung tế bổ mức bộ te tư quy khám lien 2017 50/2017/tt-byt hiểm đến giá word bo den 50.2017tt-byt.doc phí"
   },
   {
     "id": "vb_164",
@@ -3447,12 +3447,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/tt_01.docx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/tt_01.docx",
-    "keywords": "pháp thông & bo te thong tt van luat luật tế bản quy, word phap ban 01 2013 bộ tu văn byt y tư"
+    "keywords": "te 01.docx 01 y tế word bo 2013 tt bộ"
   },
   {
     "id": "vb_165",
-    "code": "TT 33",
-    "title": "thong tu 33 2016 tt byt quy dinh to chuc va hoat dong xet nghiem vi sinh trong benh vien",
+    "code": "33/2016/TT-BYT",
+    "title": "Thông tư 33/2016/TT-BYT: Quy định về tổ chức và hoạt động xét nghiệm vi sinh trong bệnh viện",
     "filename": "thong-tu-33-2016-tt-byt-quy-dinh-to-chuc-va-hoat-dong-xet-nghiem-vi-sinh-trong-benh-vien.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/TT 33.2016/thong-tu-33-2016-tt-byt-quy-dinh-to-chuc-va-hoat-dong-xet-nghiem-vi-sinh-trong-benh-vien.pdf",
     "category": "Van_Ban_Phap_Quy",
@@ -3468,7 +3468,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong-tu-33-2016-tt-byt-quy-dinh-to-chuc-va-hoat-dong-xet-nghiem-vi-sinh-trong-benh-vien.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong-tu-33-2016-tt-byt-quy-dinh-to-chuc-va-hoat-dong-xet-nghiem-vi-sinh-trong-benh-vien.pdf",
-    "keywords": "pháp thông nghiem & bo te 33 thong tt van luat luật tế bản vi to sinh quy, quy vien trong va pdf benh y phap chuc ban 2016 bộ tu dinh văn byt dong xet hoat tư"
+    "keywords": "và hiếu hoạt chuc thong-tu-33-2016-tt-byt-quy-dinh-to-chuc-va-hoat-dong-xet-nghiem-vi-sinh-trong-benh-vien.pdf tu 33/2016/tt-byt về 33/2016/tt-byt: viện endotoxin thận định thong lọc chức máu tổ bệnh tố thông benh nghiem y nước dinh vi độc to sinh trong khí tai nội tế ro dong xet bộ te tư quy nghiệm vien khuẩn xét 2016 cấy pdf va bo biến ve chạy hoat động"
   },
   {
     "id": "vb_166",
@@ -3489,7 +3489,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/phu_luc_so_01._danh_muc_ky_thuat_hien_den_ngay_30.6.2026.docx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/phu_luc_so_01._danh_muc_ky_thuat_hien_den_ngay_30.6.2026.docx",
-    "keywords": "pháp thông 01. 30.6.2026 & bo te thong ngay tt tư van luat luật tế bản 2026 thuat quy, so word muc phap ban 23 hien danh phu ky den bộ tu văn byt y luc"
+    "keywords": "30.6.2026.docx ky tt 01. 2026 y danh 30.6.2026 luc ngay muc so phu tế 23 bộ te thuat word hien den bo"
   },
   {
     "id": "vb_167",
@@ -3510,7 +3510,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/phu_luc_so_02._danh_muc_ky_thuat_thuc_hien_tu_ngay_01.7.2026.docx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/phu_luc_so_02._danh_muc_ky_thuat_thuc_hien_tu_ngay_01.7.2026.docx",
-    "keywords": "pháp thông 02. & bo te thong ngay tt tư van luat luật tế bản 2026 thuat quy, so word muc phap ban 23 hien danh phu ky bộ thuc tu văn byt 01.7.2026 y luc"
+    "keywords": "01.7.2026 ky tu tt 01.7.2026.docx 02. thuc 2026 y danh luc ngay muc so phu tế 23 bộ te thuat word hien bo"
   },
   {
     "id": "vb_168",
@@ -3531,18 +3531,18 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong_tu-23-2024-tt-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/thong_tu-23-2024-tt-byt.pdf",
-    "keywords": "pháp tư-23 thông & bo te thong tt van luat luật tế bản 2024 quy, pdf phap ban 23 bộ tu văn byt y tư"
+    "keywords": "te tư tư-23-2024-tt-byt.pdf tu byt thông y tế tu-23 pdf 23 thong bo tu-23-2024-tt-byt.pdf 2024 tt tư-23 bộ"
   },
   {
     "id": "vb_169",
-    "code": "NĐ 07",
-    "title": "NĐ 07.2023 Sửa đổi một số điều trong NĐ 98",
+    "code": "07/2023/NĐ-CP",
+    "title": "Nghị định 07/2023/NĐ-CP: Sửa đổi, bổ sung một số điều của Nghị định 98/2021/NĐ-CP về trang thiết bị y tế",
     "filename": "NĐ 07.2023 Sửa đổi một số điều trong NĐ 98.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/NĐ. 07 sửa đổi một số điều NĐ 98/NĐ 07.2023 Sửa đổi một số điều trong NĐ 98.pdf",
     "category": "Van_Ban_Phap_Quy",
     "categoryName": "Văn Bản Pháp Quy, Luật & Thông Tư BYT",
     "folderName": "Van_Ban_Phap_Quy",
-    "issuer": "Bộ Y tế",
+    "issuer": "Chính phủ",
     "year": 2023,
     "size": 4748792,
     "sizeFormatted": "4.5 MB",
@@ -3552,12 +3552,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/nd_07.2023_sua_doi_mot_so_dieu_trong_nd_98.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/nd_07.2023_sua_doi_mot_so_dieu_trong_nd_98.pdf",
-    "keywords": "pháp một thông & bo te thong số tư nđ luật van bản luat tế doi 2023 quy, điều mot dieu nd trong so pdf phap đổi ban sua bộ tu 07 văn byt 07.2023 98 y sửa"
+    "keywords": "điều mot đổi, 07/2023/nđ-cp về đổi thiết định 07/2023/nđ-cp: thiet mua sửa 98/2021/nđ-cp cua 98.pdf sung y trang 07.2023 nghi doi, phủ dinh vật nđ 2023 07/2023/nd-cp sua phẩm chất đấu trong chính sinh so phu tế 07/2023/nd-cp: một bổ thầu nghị hóa bi nd số của te tư nghiệm xét pdf bo 98/2021/nd-cp chinh sắm doi dieu ve bị"
   },
   {
     "id": "vb_170",
-    "code": "NĐ. 07",
-    "title": "nghi dinh 07 2023 nd cp chinh phu",
+    "code": "07/2023/NĐ-CP",
+    "title": "Nghị định 07/2023/NĐ-CP: Sửa đổi, bổ sung một số điều của Nghị định 98/2021/NĐ-CP về trang thiết bị y tế",
     "filename": "nghi-dinh-07-2023-nd-cp-chinh-phu.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/NĐ. 07 sửa đổi một số điều NĐ 98/nghi-dinh-07-2023-nd-cp-chinh-phu.pdf",
     "category": "Van_Ban_Phap_Quy",
@@ -3573,12 +3573,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/nghi-dinh-07-2023-nd-cp-chinh-phu.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/nghi-dinh-07-2023-nd-cp-chinh-phu.pdf",
-    "keywords": "pháp thông & nghi thong van luat luật bản 2023 quy, nd phủ pdf phap ban nđ. cp chính phu chinh tu dinh 07 văn byt tư"
+    "keywords": "điều nghi-dinh-07-2023-nd-cp-chinh-phu.pdf mot đổi, 07/2023/nđ-cp về thiết định 07/2023/nđ-cp: thiet mua sửa 98/2021/nđ-cp cua sung y trang nghi doi, phủ dinh vật 2023 07/2023/nd-cp sua phẩm chất đấu chính sinh so phu tế 07/2023/nd-cp: một bổ thầu nghị hóa bi số của te tư nghiệm xét pdf bo 98/2021/nd-cp chinh sắm dieu ve bị"
   },
   {
     "id": "vb_171",
-    "code": "2538-QD",
-    "title": "quyet dinh 2538 qd byt 2023 danh muc chuyen mon ky thuat trong kcb de co so xay dung dinh muc ktkt",
+    "code": "2538/QĐ-BYT",
+    "title": "Quyết định 2538/QĐ-BYT: Ban hành Danh mục chuyên môn kỹ thuật trong khám bệnh, chữa bệnh",
     "filename": "quyet-dinh-2538-qd-byt-2023-danh-muc-chuyen-mon-ky-thuat-trong-kcb-de-co-so-xay-dung-dinh-muc-ktkt.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.1 Văn Bản Y Tế (Full)/2538:QĐ-Danh mục kỹ thuật 2023 /quyet-dinh-2538-qd-byt-2023-danh-muc-chuyen-mon-ky-thuat-trong-kcb-de-co-so-xay-dung-dinh-muc-ktkt.doc",
     "category": "Van_Ban_Phap_Quy",
@@ -3594,12 +3594,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Van_Ban_Phap_Quy/quyet-dinh-2538-qd-byt-2023-danh-muc-chuyen-mon-ky-thuat-trong-kcb-de-co-so-xay-dung-dinh-muc-ktkt.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Van_Ban_Phap_Quy/quyet-dinh-2538-qd-byt-2023-danh-muc-chuyen-mon-ky-thuat-trong-kcb-de-co-so-xay-dung-dinh-muc-ktkt.doc",
-    "keywords": "pháp thông quyet co & bo te thong ktkt van kcb luat luật tế bản thuat 2538 2023 quy, de 2538-qd qd trong so word y muc phap ban xay danh dung ky bộ tu dinh mon văn byt chuyen tư"
+    "keywords": "kham hiếu quyet ky chữa benh, 2538/qd-byt: endotoxin thận định hành chua lọc máu quyet-dinh-2538-qd-byt-2023-danh-muc-chuyen-mon-ky-thuat-trong-kcb-de-co-so-xay-dung-dinh-muc-ktkt.doc thuật chạy bệnh, mon bệnh tố benh y 2538/qd-byt danh 2538/qđ-byt ban nước dinh vi độc 2023 trong muc khí tai kỹ nội tế ro môn bộ te khám hanh chuyen thuat khuẩn 2538/qđ-byt: cấy word bo biến chuyên mục quyết"
   },
   {
     "id": "vb_172",
-    "code": "VBYT-172",
-    "title": "100 vv triển khai rà soát, bổ sung quy hoạch cán bộ",
+    "code": "VB-172",
+    "title": "Văn bản y tế: 100 vv triển khai rà soát, bổ sung quy hoạch cán bộ",
     "filename": "100 vv triển khai rà soát, bổ sung quy hoạch cán bộ.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2024/100 vv triển khai rà soát, bổ sung quy hoạch cán bộ.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -3615,12 +3615,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/100_vv_trien_khai_ra_soat_bo_sung_quy_hoach_can_bo.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/100_vv_trien_khai_ra_soat_bo_sung_quy_hoach_can_bo.pdf",
-    "keywords": "duc ra soát, sung bổ triển hoạch bo & te van cán bản tế 2024 sở rà quy can bvđk hoach đức giang so pdf vv 100 trien ban bvdk bộ soat, khai văn y"
+    "keywords": "can vb-172 duc te: hoạch bvđk 2024 100 sung cán hoach y bvdk van đức soat, vv rà bộ.pdf bản giang bổ ra bo.pdf trien khai bộ quy triển pdf văn bo tế: ban soát,"
   },
   {
     "id": "vb_173",
-    "code": "VBYT-173",
-    "title": "101 vv triệu tập và lịch tổ chức các Hội nghị rà soát, bổ sung quy hoạch cán bộ",
+    "code": "VB-173",
+    "title": "Văn bản y tế: 101 vv triệu tập và lịch tổ chức các Hội nghị rà soát, bổ sung quy hoạch cán bộ",
     "filename": "101 vv triệu tập và lịch tổ chức các Hội nghị rà soát, bổ sung quy hoạch cán bộ.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2024/101 vv triệu tập và lịch tổ chức các Hội nghị rà soát, bổ sung quy hoạch cán bộ.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -3636,12 +3636,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/101_vv_trieu_tap_va_lich_to_chuc_cac_hoi_nghi_ra_soat_bo_sung_quy_hoach_can_bo.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/101_vv_trieu_tap_va_lich_to_chuc_cac_hoi_nghi_ra_soat_bo_sung_quy_hoach_can_bo.pdf",
-    "keywords": "duc ra soát, tập bổ sung tổ hoạch bo & 101 nghi te van cán bản tế 2024 và to sở rà chức quy can bvđk hoach các đức giang lich va so pdf vv nghị lịch triệu cac chuc hoi ban bvdk hội trieu bộ soat, văn tap y"
+    "keywords": "triệu và can chuc hoi duc te: hoạch chức bvđk lich 2024 sung cán tổ hoach y bvdk van nghi đức soat, hội vv to lịch rà vb-173 bộ.pdf cac bản các bổ ra giang bo.pdf 101 nghị bộ quy tập trieu pdf văn va bo tế: ban soát, tap"
   },
   {
     "id": "vb_174",
-    "code": "VBYT-174",
-    "title": "106 vv điều động nhân lực cho Bệnh viện Nhi Hà Nội",
+    "code": "VB-174",
+    "title": "Văn bản y tế: 106 vv điều động nhân lực cho Bệnh viện Nhi Hà Nội",
     "filename": "106 vv điều động nhân lực cho Bệnh viện Nhi Hà Nội.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2024/106 vv điều động nhân lực cho Bệnh viện Nhi Hà Nội.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -3657,12 +3657,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/106_vv_dieu_dong_nhan_luc_cho_benh_vien_nhi_ha_noi.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/106_vv_dieu_dong_nhan_luc_cho_benh_vien_nhi_ha_noi.pdf",
-    "keywords": "duc nội & 106 động te van nhi tế bản 2024 nhân sở điều bvđk vien lực dieu đức cho giang ha so vv pdf benh nhan ban bvdk viện bệnh văn noi dong hà y luc"
+    "keywords": "điều lực hà viện duc te: dieu bvđk 2024 bệnh nhân benh y nhi bvdk van noi nội.pdf đức luc 106 ha vv nội nhan bản giang dong noi.pdf vien pdf văn vb-174 cho tế: ban động"
   },
   {
     "id": "vb_175",
-    "code": "VBYT-175",
-    "title": "2244 triển khai kỹ thuật mới trên máy Realtime PCR",
+    "code": "VB-175",
+    "title": "Văn bản y tế: 2244 triển khai kỹ thuật mới trên máy Realtime   PCR",
     "filename": "2244 triển khai kỹ thuật mới trên máy Realtime - PCR.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2024/2244 triển khai kỹ thuật mới trên máy Realtime - PCR.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -3678,12 +3678,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/2244_trien_khai_ky_thuat_moi_tren_may_realtime_-_pcr.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/2244_trien_khai_ky_thuat_moi_tren_may_realtime_-_pcr.pdf",
-    "keywords": "duc triển máy & te realtime van tế bản 2024 thuat pcr mới sở may tren moi bvđk đức giang 2244 so pdf kỹ trien thuật ban bvdk trên ky khai văn y"
+    "keywords": "ky may duc te: bvđk thuật 2024 y máy bvdk van 2244 đức pcr kỹ bản giang trien pcr.pdf khai thuat mới triển moi realtime pdf văn trên tế: - ban vb-175 tren"
   },
   {
     "id": "vb_176",
-    "code": "VBYT-176",
-    "title": "2455 cập nhật một số nội dung trong Sổ tay khách hàng khối Xét nghiệm",
+    "code": "VB-176",
+    "title": "Văn bản y tế: 2455 cập nhật một số nội dung trong Sổ tay khách hàng khối Xét nghiệm",
     "filename": "2455 cập nhật một số nội dung trong Sổ tay khách hàng khối Xét nghiệm.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2024/2455 cập nhật một số nội dung trong Sổ tay khách hàng khối Xét nghiệm.pdf",
     "category": "Quan_Ly_Chat_Luong_ISO",
@@ -3699,12 +3699,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/2455_cap_nhat_mot_so_noi_dung_trong_so_tay_khach_hang_khoi_xet_nghiem.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/2455_cap_nhat_mot_so_noi_dung_trong_so_tay_khach_hang_khoi_xet_nghiem.pdf",
-    "keywords": "duc nhat tay hàng một nội chất khach nghiem & sổ số quản nghiệm 2024 khách quan 15189 nhật mot bvđk đức xét giang trong so pdf lý iso ly chat bvdk hang khoi dung luong lượng 2455 khối cap noi cập xet"
+    "keywords": "hiếu mot duc vb-176 endotoxin te: thận lọc bvđk máu 2024 tay sổ hang hàng tố y nghiem nghiem.pdf nước nhật van noi khoi bvdk đức vi độc trong khí tai 2455 cap nội so bản một giang ro khối khách dung số xet cập nghiệm khuẩn xét cấy pdf văn nhat nghiệm.pdf biến tế: ban chạy khach"
   },
   {
     "id": "vb_177",
-    "code": "VBYT-177",
-    "title": "513 vv cấy vi sinh định kỳ tại các khoa lâm sàng trọng điểm năm 2024",
+    "code": "VB-177",
+    "title": "Văn bản y tế: 513 vv cấy vi sinh định kỳ tại các khoa lâm sàng trọng điểm năm 2024",
     "filename": "513 vv cấy vi sinh định kỳ tại các khoa lâm sàng trọng điểm năm 2024.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2024/513 vv cấy vi sinh định kỳ tại các khoa lâm sàng trọng điểm năm 2024.pdf",
     "category": "Chuyen_Mon_Vi_Sinh",
@@ -3720,12 +3720,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/513_vv_cay_vi_sinh_dinh_ky_tai_cac_khoa_lam_sang_trong_diem_nam_2024.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/513_vv_cay_vi_sinh_dinh_ky_tai_cac_khoa_lam_sang_trong_diem_nam_2024.pdf",
-    "keywords": "tại duc khoa lâm môn nghiem & nam nghiệm 2024 thuat vi sàng sinh bvđk các đức xét giang kỳ trong pdf vv kỹ tai thuật định 513 cac lam bvdk diem điểm sang chuyên cấy ky dinh mon cay năm xet chuyen trọng"
+    "keywords": "sàng ky lam duc te: định trọng bvđk kỳ nam 2024 tại diem y năm điểm bvdk van sang dinh vi đức vv sinh trong tai 2024.pdf cac bản các giang vb-177 lâm cấy pdf cay văn khoa tế: ban 513"
   },
   {
     "id": "vb_178",
-    "code": "VBYT-178",
-    "title": "BIÊN BẢN PHÂN CÔNG NHIỆM VỤ BAN QLCL XN",
+    "code": "BB-QLCL-ĐG",
+    "title": "Biên bản phân công nhiệm vụ thành viên Ban Quản lý Chất lượng Khối Xét nghiệm - BVĐK Đức Giang",
     "filename": "BIÊN BẢN PHÂN CÔNG NHIỆM VỤ BAN QLCL XN.docx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2024/BIÊN BẢN PHÂN CÔNG NHIỆM VỤ BAN QLCL XN.docx",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -3741,12 +3741,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/bien_ban_phan_cong_nhiem_vu_ban_qlcl_xn.docx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/bien_ban_phan_cong_nhiem_vu_ban_qlcl_xn.docx",
-    "keywords": "duc qlcl & cong biên te công van bien tế bản xn 2024 phân sở bvđk đức giang vu so word nhiệm ban bvdk phan vụ văn nhiem y"
+    "keywords": "thanh cong qlcl quản chat duc bvđk phan chí 2024 ly luong nghiem bb-qlcl-đg ban thành bvdk khoi 15189 đức vu 2429 eqas công nhiem ngoại iso quan chất vụ phân nội bản giang tiêu khối xet nghiệm vien nhiệm bb-qlcl-dg xét lý viên word kiểm biên - lượng xn.docx chuẩn iqc bien"
   },
   {
     "id": "vb_179",
-    "code": "QĐ 302",
-    "title": "QĐ 302 Bổ nhiệm Phụ trách KSNK",
+    "code": "302/QĐ-BVĐKĐG",
+    "title": "Quyết định 302/QĐ-BVĐKĐG: Về việc bổ nhiệm phụ trách Khoa Kiểm soát nhiễm khuẩn - BVĐK Đức Giang",
     "filename": "QĐ 302 Bổ nhiệm Phụ trách KSNK.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2024/QĐ 302 Bổ nhiệm Phụ trách KSNK.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -3762,19 +3762,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/qd_302_bo_nhiem_phu_trach_ksnk.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/qd_302_bo_nhiem_phu_trach_ksnk.pdf",
-    "keywords": "duc bổ bo & qđ te van tế bản 2024 sở trach bvđk đức ksnk giang qd so pdf nhiệm ban bvdk phụ phu trách văn nhiem y 302"
+    "keywords": "quyet 302 về 302/qd-bvdkdg duc định bvđk khuan qd 2024 nhiễm bvdk kiem dinh đức soat trách nhiem phụ viec phu qđ giang 302/qđ-bvđkđg bổ trach 302/qd-bvdkdg: ksnk.pdf nhiệm khuẩn pdf 302/qđ-bvđkđg: kiểm việc bo khoa soát - ve quyết"
   },
   {
     "id": "vb_180",
-    "code": "VBYT-180",
-    "title": "QĐ SYT Bổ nhiệm 1568 2023",
+    "code": "1568/QĐ-SYT",
+    "title": "Quyết định 1568/QĐ-SYT: Về công tác cán bộ và kiện toàn nhân sự lãnh đạo y tế của Sở Y tế Hà Nội",
     "filename": "QĐ-SYT Bổ nhiệm 1568 2023.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2024/QĐ-SYT Bổ nhiệm 1568 2023.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
     "categoryName": "Văn Bản BVĐK Đức Giang & Sở Y Tế",
     "folderName": "Benh_Vien_Va_So_Y_Te",
     "issuer": "Sở Y tế Hà Nội",
-    "year": 2024,
+    "year": 2023,
     "size": 23490623,
     "sizeFormatted": "22.4 MB",
     "format": "pdf",
@@ -3783,12 +3783,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/qd-syt_bo_nhiem_1568_2023.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/qd-syt_bo_nhiem_1568_2023.pdf",
-    "keywords": "duc bổ nội bo & qđ te van tế bản 2024 sở 2023 bvđk đức giang qd so ha pdf nhiệm 1568 ban bvdk syt văn noi nhiem hà y"
+    "keywords": "và toàn quyet can hà cong qđ-syt 2023.pdf về định cua tac cán toan nhân 1568/qđ-syt: y tác noi 1568/qd-syt dinh ha công nhiem 2023 1568/qđ-syt su so nội nhan tế bổ dao bộ của sở 1568/qd-syt: sự lanh te 1568 nhiệm lãnh pdf kien qd-syt kiện va bo ve quyết đạo"
   },
   {
     "id": "vb_181",
-    "code": "VBYT-181",
-    "title": "quyết định thành lập ban quản lý chất lượng khối xét nghiệm",
+    "code": "QĐ-QLCL-ĐG",
+    "title": "Quyết định thành lập Ban Quản lý Chất lượng Khối Xét nghiệm (Vi sinh, Hóa sinh, Huyết học) - BVĐK Đức Giang",
     "filename": "quyết định thành lập ban quản lý chất lượng khối xét nghiệm.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2024/quyết định thành lập ban quản lý chất lượng khối xét nghiệm.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -3804,12 +3804,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/quyet_dinh_thanh_lap_ban_quan_ly_chat_luong_khoi_xet_nghiem.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/quyet_dinh_thanh_lap_ban_quan_ly_chat_luong_khoi_xet_nghiem.pdf",
-    "keywords": "duc lap thanh chất quyet nghiem & te van nghiệm bản tế 2024 quan quyết sở lập bvđk đức xét giang so pdf lý ly định chat xet ban bvdk luong khoi lượng thành khối dinh văn quản y"
+    "keywords": "thanh quyet (vi qlcl quản chat duc định hoa bvđk chí iqc lap 2024 ly luong nghiem nghiem.pdf ban thành bvdk khoi 15189 dinh đức qd-qlcl-dg 2429 eqas ngoại iso quan chất nội qđ-qlcl-đg giang huyết hoc) tiêu hóa khối xet nghiệm xét lý pdf học) kiểm sinh, nghiệm.pdf lập - lượng huyet chuẩn quyết"
   },
   {
     "id": "vb_182",
-    "code": "VBYT-182",
-    "title": "751 điều động Hương",
+    "code": "VB-182",
+    "title": "Văn bản y tế: 751  điều động Hương",
     "filename": "751  điều động Hương.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2024/Quyết định luân chuyển Hương Thuỷ/751  điều động Hương.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -3825,12 +3825,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/751_dieu_dong_huong.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/751_dieu_dong_huong.pdf",
-    "keywords": "duc & động te van tế bản 2024 sở điều bvđk đức dieu giang so 751 pdf ban bvdk hương văn huong dong y"
+    "keywords": "điều duc te: bvđk huong 2024 hương hương.pdf y ban 751 bvdk van đức bản giang dong pdf văn huong.pdf vb-182 tế: dieu động"
   },
   {
     "id": "vb_183",
-    "code": "VBYT-183",
-    "title": "1095 Vv bố trí vị trí đỗ xe ô tô tạo khuôn viên tại BV",
+    "code": "VB-183",
+    "title": "Văn bản y tế: 1095 Vv bố trí vị trí đỗ xe ô tô tạo khuôn viên tại BV",
     "filename": "1095 Vv bố trí vị trí đỗ xe ô tô tạo khuôn viên tại BV.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2023/1095 Vv bố trí vị trí đỗ xe ô tô tạo khuôn viên tại BV.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -3846,12 +3846,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/1095_vv_bo_tri_vi_tri_do_xe_o_to_tao_khuon_vien_tai_bv.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/1095_vv_bo_tri_vi_tri_do_xe_o_to_tao_khuon_vien_tai_bv.pdf",
-    "keywords": "tại duc bố bo & te ô van vị bản tế tô vi to o khuôn sở 2023 bv tri bvđk vien đức do giang so pdf vv viên tao 1095 tai ban bvdk trí đỗ xe văn y khuon tạo"
+    "keywords": "đỗ vb-183 ô duc te: bv bvđk tại khuôn tao bố y o tạo van bvdk vi đức 2023 vv to vị tai bv.pdf bản do giang xe 1095 trí vien khuon tô tri pdf văn viên bo tế: ban"
   },
   {
     "id": "vb_184",
-    "code": "VBYT-184",
-    "title": "2015 vv tuân thủ quy trình nhận dạng NB, quy trình giao nhận mẫu xét nghiệm",
+    "code": "2015/CV-BVĐKĐG",
+    "title": "Công văn 2015/CV-BVĐKĐG: Tuân thủ quy trình nhận dạng người bệnh và quy trình giao nhận mẫu xét nghiệm",
     "filename": "2015 vv tuân thủ quy trình nhận dạng NB, quy trình giao nhận mẫu xét nghiệm.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2023/2015 vv tuân thủ quy trình nhận dạng NB, quy trình giao nhận mẫu xét nghiệm.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -3867,12 +3867,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/2015_vv_tuan_thu_quy_trinh_nhan_dang_nb_quy_trinh_giao_nhan_mau_xet_nghiem.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/2015_vv_tuan_thu_quy_trinh_nhan_dang_nb_quy_trinh_giao_nhan_mau_xet_nghiem.pdf",
-    "keywords": "duc giao thu nghiem & te van dạng trình tuân mẫu nghiệm bản tế sở 2023 quy bvđk mau đức dang xét giang so pdf vv tuan nhan nb, 2015 ban bvdk trinh thủ nhận văn xet y"
+    "keywords": "và người cong nguoi tuan 2015 duc dạng bvđk nb, bệnh benh nghiem nghiem.pdf 2015/cv-bvđkđg: trinh bvdk van đức nhận công 2023 vv 2015/cv-bvdkdg: nhan dang giao giang xet mau 2015/cv-bvdkdg quy nghiệm xét pdf 2015/cv-bvđkđg văn thủ thu va tuân mẫu nghiệm.pdf trình"
   },
   {
     "id": "vb_185",
-    "code": "VBYT-185",
-    "title": "366 vv bổ sung quy chế dân chủ nội bộ cơ quan năm 2023",
+    "code": "VB-185",
+    "title": "Văn bản y tế: 366 vv bổ sung quy chế dân chủ nội bộ cơ quan năm 2023",
     "filename": "366 vv bổ sung quy chế dân chủ nội bộ cơ quan năm 2023.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2023/366 vv bổ sung quy chế dân chủ nội bộ cơ quan năm 2023.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -3888,12 +3888,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/366_vv_bo_sung_quy_che_dan_chu_noi_bo_co_quan_nam_2023.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/366_vv_bo_sung_quy_che_dan_chu_noi_bo_co_quan_nam_2023.pdf",
-    "keywords": "duc 366 sung bổ nội co bo & te chủ chế nam van tế bản quan cơ 2023 sở quy bvđk che đức giang so pdf vv chu ban bvdk bộ dan văn năm noi y dân"
+    "keywords": "chủ 2023.pdf duc te: dân bvđk chu nam sung y năm vb-185 bvdk van chế noi đức 2023 che vv quan dan nội bản 366 bổ co giang bộ quy pdf văn bo cơ tế: ban"
   },
   {
     "id": "vb_186",
-    "code": "VBYT-186",
-    "title": "543 .1 vv ban hành quy chế chấm công bằng quét vân tay",
+    "code": "VB-186",
+    "title": "Văn bản y tế: 543 .1 vv ban hành quy chế chấm công  bằng quét vân tay",
     "filename": "543 .1 vv ban hành quy chế chấm công  bằng quét vân tay.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2023/543 .1 vv ban hành quy chế chấm công  bằng quét vân tay.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -3909,12 +3909,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/543_.1_vv_ban_hanh_quy_che_cham_cong_bang_quet_van_tay.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/543_.1_vv_ban_hanh_quy_che_cham_cong_bang_quet_van_tay.pdf",
-    "keywords": "duc tay hanh & cong te chế công van tế bản sở 2023 543 quy bvđk quét che đức giang bang so pdf vv hành chấm ban bvdk quet bằng cham vân văn .1 y"
+    "keywords": "vân cong duc bằng chấm te: hành bvđk tay quet y bang cham bvdk 543 chế van đức công che 2023 vv tay.pdf bản giang .1 vb-186 quét quy hanh pdf văn tế: ban"
   },
   {
     "id": "vb_187",
-    "code": "VBYT-187",
-    "title": "543 vv ban hành quy chế chấm công bằng quét vân tay",
+    "code": "VB-187",
+    "title": "Văn bản y tế: 543 vv ban hành quy chế chấm công  bằng quét vân tay",
     "filename": "543 vv ban hành quy chế chấm công  bằng quét vân tay.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2023/543 vv ban hành quy chế chấm công  bằng quét vân tay.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -3930,12 +3930,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/543_vv_ban_hanh_quy_che_cham_cong_bang_quet_van_tay.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/543_vv_ban_hanh_quy_che_cham_cong_bang_quet_van_tay.pdf",
-    "keywords": "duc tay hanh & cong te chế công van tế bản sở 2023 543 quy bvđk quét che đức giang bang so pdf vv hành chấm ban bvdk quet bằng cham vân văn y"
+    "keywords": "vân cong duc bằng chấm te: hành bvđk tay quet y bang cham bvdk 543 chế van đức công che 2023 vv tay.pdf bản giang vb-187 quét quy hanh pdf văn tế: ban"
   },
   {
     "id": "vb_188",
-    "code": "VBYT-188",
-    "title": "Dự thảo Quy chế công tác Dân số 2023",
+    "code": "VB-188",
+    "title": "Văn bản y tế: Dự thảo Quy chế công tác Dân số 2023",
     "filename": "Dự thảo Quy chế công tác Dân số 2023.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2023/Dự thảo Quy chế công tác Dân số 2023.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -3951,12 +3951,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/du_thao_quy_che_cong_tac_dan_so_2023.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/du_thao_quy_che_cong_tac_dan_so_2023.pdf",
-    "keywords": "duc tác thảo & cong te chế công số van tế bản sở 2023 du dự quy bvđk che đức giang so pdf ban bvdk tac dan văn thao y dân"
+    "keywords": "cong 2023.pdf duc vb-188 te: thảo dân bvđk tac dự y tác bvdk van chế thao đức công 2023 che dan so bản giang số quy pdf văn tế: ban du"
   },
   {
     "id": "vb_189",
-    "code": "VBYT-189",
-    "title": "Dự thảo Quy chế dân chủ 2023",
+    "code": "VB-189",
+    "title": "Văn bản y tế: Dự thảo Quy chế dân chủ 2023",
     "filename": "Dự thảo Quy chế dân chủ 2023.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2023/Dự thảo Quy chế dân chủ 2023.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -3972,12 +3972,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/du_thao_quy_che_dan_chu_2023.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/du_thao_quy_che_dan_chu_2023.pdf",
-    "keywords": "duc thảo & te chủ chế van tế bản sở 2023 du dự quy bvđk che đức giang so pdf chu ban bvdk dan văn thao y dân"
+    "keywords": "chủ 2023.pdf duc te: thảo dân bvđk chu dự y bvdk van chế thao đức che 2023 tế: vb-189 bản giang quy pdf văn dan ban du"
   },
   {
     "id": "vb_190",
-    "code": "VBYT-190",
-    "title": "Dự thảo quy chế chi tiêu nội bộ 2023",
+    "code": "VB-190",
+    "title": "Văn bản y tế: Dự thảo quy chế chi tiêu nội bộ 2023",
     "filename": "Dự thảo quy chế chi tiêu nội bộ 2023.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2023/Dự thảo quy chế chi tiêu nội bộ 2023.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -3993,12 +3993,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/du_thao_quy_che_chi_tieu_noi_bo_2023.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/du_thao_quy_che_chi_tieu_noi_bo_2023.pdf",
-    "keywords": "duc thảo nội tieu bo & te chế van tế bản sở 2023 du dự quy bvđk che đức giang tiêu so pdf ban bvdk bộ văn noi thao y chi"
+    "keywords": "2023.pdf duc te: thảo bvđk dự y bvdk van chế noi thao đức 2023 che chi nội bản giang vb-190 tiêu bộ quy pdf văn tieu bo tế: ban du"
   },
   {
     "id": "vb_191",
-    "code": "VBYT-191",
-    "title": "Lap ke hoach du toan 2024",
+    "code": "VB-191",
+    "title": "Văn bản y tế: Lap ke hoach du toan 2024",
     "filename": "Lap ke hoach du toan 2024.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2023/Lap ke hoach du toan 2024.doc",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -4014,12 +4014,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/lap_ke_hoach_du_toan_2024.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/lap_ke_hoach_du_toan_2024.doc",
-    "keywords": "duc lap & te van tế bản 2024 sở du ke bvđk hoach đức giang so toan word ban bvdk văn y"
+    "keywords": "duc te: bvđk lap 2024 toan hoach y ke van bvdk đức bản giang 2024.doc văn word tế: ban du vb-191"
   },
   {
     "id": "vb_192",
-    "code": "VBYT-192",
-    "title": "z3974886497051 8538d1e362d08af69df7b05765291dae",
+    "code": "VB-192",
+    "title": "Văn bản y tế: z3974886497051 8538d1e362d08af69df7b05765291dae",
     "filename": "z3974886497051_8538d1e362d08af69df7b05765291dae.jpg",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2023/z3974886497051_8538d1e362d08af69df7b05765291dae.jpg",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -4035,12 +4035,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/z3974886497051_8538d1e362d08af69df7b05765291dae.jpg",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/z3974886497051_8538d1e362d08af69df7b05765291dae.jpg",
-    "keywords": "duc z3974886497051 & te van tế bản sở 2023 8538d1e362d08af69df7b05765291dae bvđk đức giang ảnh so ban bvdk văn y"
+    "keywords": "ảnh 8538d1e362d08af69df7b05765291dae 2023 y vb-192 bản ban đức văn te: van giang bvdk duc bvđk tế: z3974886497051 z3974886497051_8538d1e362d08af69df7b05765291dae.jpg"
   },
   {
     "id": "vb_193",
-    "code": "VBYT-193",
-    "title": "Đơn xin nghỉ phép",
+    "code": "VB-193",
+    "title": "Văn bản y tế: Đơn xin nghỉ phép",
     "filename": "Đơn xin nghỉ phép.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2023/Đơn xin nghỉ phép.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -4056,12 +4056,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/don_xin_nghi_phep.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/don_xin_nghi_phep.pdf",
-    "keywords": "duc đơn & nghỉ nghi te van tế bản sở 2023 don bvđk đức giang so pdf ban bvdk xin văn phep y phép"
+    "keywords": "xin duc te: bvđk y nghỉ van nghi bvdk đức don 2023 đơn phép.pdf phep vb-193 bản giang phép pdf phep.pdf văn tế: ban"
   },
   {
     "id": "vb_194",
-    "code": "VBYT-194",
-    "title": "QĐ XN F0 29.8.",
+    "code": "29/QĐ",
+    "title": "Quyết định 29/QĐ: Văn bản chuyên môn y tế (QĐ XN F0 - 29.8..doc)",
     "filename": "QĐ XN F0 - 29.8..doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/CV mẫu tự soạn/Công Văn/QĐ XN F0 - 29.8..doc",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -4077,12 +4077,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/qd_xn_f0_-_29.8..doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/qd_xn_f0_-_29.8..doc",
-    "keywords": "duc & qđ te van tế xn bản 2024 sở f0 bvđk đức giang qd so word ban bvdk 29.8. văn y"
+    "keywords": "quyet (qd duc định bvđk qd (qđ 2024 mon y ban bvdk van 29.8..doc) dinh đức 29.8..doc xn tế bản qđ giang 29/qd 29/qđ môn 29/qđ: te chuyen f0 văn word 29/qd: - chuyên quyết"
   },
   {
     "id": "vb_195",
-    "code": "VBYT-195",
-    "title": "QĐ phát MTVC và Que tỵ hầu 7.9",
+    "code": "195/QĐ",
+    "title": "Quyết định 195/QĐ: Văn bản chuyên môn y tế (QĐ phát MTVC và Que tỵ hầu 7.9.doc)",
     "filename": "QĐ phát MTVC và Que tỵ hầu 7.9.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/CV mẫu tự soạn/Công Văn/Chuyển phòng phát que tỵ hầu/QĐ phát MTVC và Que tỵ hầu 7.9.doc",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -4098,12 +4098,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/qd_phat_mtvc_va_que_ty_hau_7.9.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/qd_phat_mtvc_va_que_ty_hau_7.9.doc",
-    "keywords": "duc tỵ ty phát & qđ te van hầu tế bản 2024 và sở bvđk đức giang 7.9 qd va so word ban bvdk que văn mtvc y phat hau"
+    "keywords": "và quyet hầu (qd 7.9.doc) duc định bvđk qd (qđ 2024 phát tỵ mon y hau mtvc ban 7.9.doc 195/qđ: van bvdk dinh đức tế bản 195/qd qđ giang 195/qd: môn phat te 195/qđ chuyen ty quyết văn va word chuyên que"
   },
   {
     "id": "vb_196",
-    "code": "VBYT-196",
-    "title": "QĐ phát MTVC và Que tỵ hầu",
+    "code": "196/QĐ",
+    "title": "Quyết định 196/QĐ: Văn bản chuyên môn y tế (QĐ phát MTVC và Que tỵ hầu.doc)",
     "filename": "QĐ phát MTVC và Que tỵ hầu.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/CV mẫu tự soạn/Công Văn/Chuyển phòng phát que tỵ hầu/QĐ phát MTVC và Que tỵ hầu.doc",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -4119,19 +4119,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/qd_phat_mtvc_va_que_ty_hau.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/qd_phat_mtvc_va_que_ty_hau.doc",
-    "keywords": "duc tỵ ty phát & qđ te van hầu tế bản 2024 và sở bvđk đức giang qd va so word ban bvdk que văn mtvc y phat hau"
+    "keywords": "và quyet 196/qđ (qd duc định bvđk 196/qđ: qd (qđ 2024 hầu.doc) phát tỵ mon y mtvc ban bvdk van dinh hau.doc đức 196/qd tế bản hau.doc) qđ giang 196/qd: hầu.doc môn phat te chuyen ty quyết văn va word chuyên que"
   },
   {
     "id": "vb_197",
-    "code": "VBYT-197",
-    "title": "1999 vv triển khai kỹ thuật mới trên máy Realtime PCR",
+    "code": "1999/TB-BVĐKĐG",
+    "title": "Thông báo 1999/TB-BVĐKĐG: Triển khai kỹ thuật xét nghiệm mới trên hệ thống máy Real-time PCR",
     "filename": "1999 vv triển khai kỹ thuật mới trên máy Realtime -PCR.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/CV mẫu tự soạn/Công Văn/Thông báo triển khai kỹ thuật/1999 vv triển khai kỹ thuật mới trên máy Realtime -PCR.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
     "categoryName": "Văn Bản BVĐK Đức Giang & Sở Y Tế",
     "folderName": "Benh_Vien_Va_So_Y_Te",
     "issuer": "BVĐK Đức Giang",
-    "year": 2024,
+    "year": 2020,
     "size": 102607,
     "sizeFormatted": "100 KB",
     "format": "pdf",
@@ -4140,12 +4140,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/1999_vv_trien_khai_ky_thuat_moi_tren_may_realtime_-pcr.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/1999_vv_trien_khai_ky_thuat_moi_tren_may_realtime_-pcr.pdf",
-    "keywords": "duc triển máy & te realtime van tế bản 2024 thuat pcr mới sở may tren moi bvđk 1999 đức giang so pdf vv kỹ trien thuật ban bvdk trên ky khai văn y"
+    "keywords": "real-time 1999/tb-bvđkđg: ky may duc thong bvđk thuật thông nghiem máy bvdk hệ đức he vv báo pcr kỹ giang trien 1999/tb-bvdkdg: thống 1999/tb-bvđkđg xet 1999/tb-bvdkdg nghiệm thuat mới triển moi realtime xét 2020 pdf trên 1999 bao -pcr.pdf khai tren"
   },
   {
     "id": "vb_198",
-    "code": "VBYT-198",
-    "title": "2.11.2020 trien khai rt pcr VGB",
+    "code": "TB-KT-ĐG",
+    "title": "Thông báo triển khai danh mục kỹ thuật xét nghiệm mới tại Khoa Vi sinh BVĐK Đức Giang (2.11.2020 trien khai rt-pcr VGB.doc)",
     "filename": "2.11.2020 trien khai rt-pcr VGB.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/CV mẫu tự soạn/Công Văn/Thông báo triển khai kỹ thuật/2.11.2020 trien khai rt-pcr VGB.doc",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -4161,12 +4161,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/2.11.2020_trien_khai_rt-pcr_vgb.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/2.11.2020_trien_khai_rt-pcr_vgb.doc",
-    "keywords": "duc & te van tế bản pcr sở bvđk 2020 đức giang so trien word ban bvdk rt khai 2.11.2020 văn vgb y"
+    "keywords": "ky (2.11.2020 duc thong bvđk thuật tại thông nghiem danh bvdk đức vi tb-kt-đg tb-kt-dg báo sinh muc tai kỹ giang vgb.doc) trien xet nghiệm vgb.doc thuat mới triển moi 2020 xét rt-pcr 2.11.2020 word khoa bao khai mục"
   },
   {
     "id": "vb_199",
-    "code": "VBYT-199",
-    "title": "20.11.2020 trien khai rt pcr VGB copy",
+    "code": "TB-KT-ĐG",
+    "title": "Thông báo triển khai danh mục kỹ thuật xét nghiệm mới tại Khoa Vi sinh BVĐK Đức Giang (20.11.2020 trien khai rt-pcr VGB copy.doc)",
     "filename": "20.11.2020 trien khai rt-pcr VGB copy.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/CV mẫu tự soạn/Công Văn/Thông báo triển khai kỹ thuật/20.11.2020 trien khai rt-pcr VGB copy.doc",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -4182,19 +4182,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/20.11.2020_trien_khai_rt-pcr_vgb_copy.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/20.11.2020_trien_khai_rt-pcr_vgb_copy.doc",
-    "keywords": "duc & te copy van tế bản pcr sở bvđk 2020 đức giang so trien word ban bvdk rt 20.11.2020 khai văn vgb y"
+    "keywords": "ky vgb copy.doc) duc thong bvđk thuật tại thông nghiem danh bvdk đức vi tb-kt-đg (20.11.2020 tb-kt-dg báo sinh muc tai kỹ giang 20.11.2020 trien xet nghiệm thuat mới triển moi 2020 xét rt-pcr word khoa bao khai copy.doc mục"
   },
   {
     "id": "vb_200",
-    "code": "VBYT-200",
-    "title": "201124.Triển khai XN HPV gennotype Real Time PCR",
+    "code": "TB-PCR-HPV",
+    "title": "Thông báo triển khai kỹ thuật xét nghiệm HPV Genotype Real-time PCR chẩn đoán sàng lọc ung thư CTC",
     "filename": "201124.Triển khai XN HPV gennotype Real-Time PCR.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/CV mẫu tự soạn/Công Văn/Thông báo triển khai kỹ thuật/201124.Triển khai XN HPV gennotype Real-Time PCR.doc",
     "category": "Benh_Vien_Va_So_Y_Te",
     "categoryName": "Văn Bản BVĐK Đức Giang & Sở Y Tế",
     "folderName": "Benh_Vien_Va_So_Y_Te",
     "issuer": "BVĐK Đức Giang",
-    "year": 2024,
+    "year": 2020,
     "size": 68096,
     "sizeFormatted": "66 KB",
     "format": "word",
@@ -4203,19 +4203,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/201124.trien_khai_xn_hpv_gennotype_real-time_pcr.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/201124.trien_khai_xn_hpv_gennotype_real-time_pcr.doc",
-    "keywords": "duc & real te van tế xn bản 2024 pcr time sở bvđk 201124.trien đức giang so word hpv 201124.triển ban bvdk khai gennotype văn y"
+    "keywords": "loc sàng real-time ky doan duc chan thong lọc bvđk thuật ung 201124.trien hpv thông nghiem genotype 201124.triển bvdk đoán sang đức báo pcr xn kỹ gennotype giang chẩn pcr.doc tb-pcr-hpv trien xet thư nghiệm thuat triển 2020 xét thu word ctc bao khai"
   },
   {
     "id": "vb_201",
-    "code": "VBYT-201",
-    "title": "2063 vv Hoá sinh chỉ định xét nghiệm tại khoa Hóa sinh",
+    "code": "2063/TB-BVĐKĐG",
+    "title": "Thông báo 2063/TB-BVĐKĐG: Hướng dẫn chỉ định xét nghiệm và phối hợp liên khoa Hóa sinh - Vi sinh",
     "filename": "2063 vv Hoá sinh- chỉ định xét nghiệm tại khoa Hóa sinh.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/CV mẫu tự soạn/Công Văn/Thông báo triển khai kỹ thuật/2063 vv Hoá sinh- chỉ định xét nghiệm tại khoa Hóa sinh.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
     "categoryName": "Văn Bản BVĐK Đức Giang & Sở Y Tế",
     "folderName": "Benh_Vien_Va_So_Y_Te",
     "issuer": "BVĐK Đức Giang",
-    "year": 2024,
+    "year": 2020,
     "size": 114059,
     "sizeFormatted": "111 KB",
     "format": "pdf",
@@ -4224,19 +4224,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/2063_vv_hoa_sinh-_chi_dinh_xet_nghiem_tai_khoa_hoa_sinh.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/2063_vv_hoa_sinh-_chi_dinh_xet_nghiem_tai_khoa_hoa_sinh.pdf",
-    "keywords": "tại duc khoa nghiem & te van nghiệm bản tế 2024 sở hoa sinh hoá bvđk chỉ đức xét giang so pdf vv tai 2063 định ban bvdk dinh văn xet y chi hóa"
+    "keywords": "và phoi duc định thong hoa 2063/tb-bvđkđg: bvđk huong tại chỉ thông nghiem liên bvdk 2063 phối vi dinh đức vv hướng báo sinh tai 2063/tb-bvdkdg dan chi giang hợp hóa xet 2063/tb-bvdkdg: nghiệm hoá lien 2020 2063/tb-bvđkđg xét dẫn sinh.pdf pdf va khoa bao - hop sinh-"
   },
   {
     "id": "vb_202",
-    "code": "VBYT-202",
-    "title": "Mới. 2124 chỉ định làm kỹ thuật HBV đo tải lượng hệ thống tự động trên máy Realtime PCR",
+    "code": "2124/TB-BVĐKĐG",
+    "title": "Thông báo 2124/TB-BVĐKĐG: Triển khai kỹ thuật đo tải lượng HBV-DNA tự động trên hệ thống Real-time PCR",
     "filename": "Mới. 2124  chỉ định làm kỹ thuật HBV đo tải lượng hệ thống tự động trên máy Realtime - PCR.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/CV mẫu tự soạn/Công Văn/Thông báo triển khai kỹ thuật/Mới. 2124  chỉ định làm kỹ thuật HBV đo tải lượng hệ thống tự động trên máy Realtime - PCR.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
     "categoryName": "Văn Bản BVĐK Đức Giang & Sở Y Tế",
     "folderName": "Benh_Vien_Va_So_Y_Te",
     "issuer": "BVĐK Đức Giang",
-    "year": 2024,
+    "year": 2020,
     "size": 74325,
     "sizeFormatted": "73 KB",
     "format": "pdf",
@@ -4245,19 +4245,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/moi._2124_chi_dinh_lam_ky_thuat_hbv_do_tai_luong_he_thong_tu_dong_tren_may_realtime_-_pcr.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/moi._2124_chi_dinh_lam_ky_thuat_hbv_do_tai_luong_he_thong_tu_dong_tren_may_realtime_-_pcr.pdf",
-    "keywords": "duc tự tải máy & thống động thong te realtime van hệ đo bản tế 2024 mới. thuat pcr sở may tren hbv moi. bvđk chỉ đức do giang so pdf kỹ tai thuật định lam ban làm bvdk 2124 trên luong he lượng ky tu dinh văn dong y chi"
+    "keywords": "hcv-rna đo real-time ky tu mới. tải lam may duc gan hbv-dna định thong hbv bvđk thuật luong type chỉ làm thông hbeag máy bvdk hệ dinh 2124/tb-bvdkdg đức he tự hbsag báo tai pcr chi kỹ anti-hcv do giang 2124/tb-bvđkđg trien pcr.pdf tren dong viêm thống khai b 2124 thuat triển 2020 realtime 2124/tb-bvdkdg: pdf c trên moi. bao - lượng 2124/tb-bvđkđg: động"
   },
   {
     "id": "vb_203",
-    "code": "VBYT-203",
-    "title": "Thông báo toàn viện",
+    "code": "TB-KT-ĐG",
+    "title": "Thông báo triển khai danh mục kỹ thuật xét nghiệm mới tại Khoa Vi sinh BVĐK Đức Giang (Thông báo toàn viện.doc)",
     "filename": "Thông báo toàn viện.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/CV mẫu tự soạn/Công Văn/Thông báo triển khai kỹ thuật/Thông báo toàn viện.doc",
     "category": "Benh_Vien_Va_So_Y_Te",
     "categoryName": "Văn Bản BVĐK Đức Giang & Sở Y Tế",
     "folderName": "Benh_Vien_Va_So_Y_Te",
     "issuer": "BVĐK Đức Giang",
-    "year": 2024,
+    "year": 2020,
     "size": 58880,
     "sizeFormatted": "58 KB",
     "format": "word",
@@ -4266,12 +4266,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/thong_bao_toan_vien.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/thong_bao_toan_vien.doc",
-    "keywords": "duc thông & te thong báo van tế bản 2024 sở bvđk vien bao đức giang so toan word ban bvdk viện toàn văn y"
+    "keywords": "toàn vien.doc ky viện.doc duc thong (thong bvđk thuật tại (thông toan thông nghiem danh bvdk đức vi tb-kt-đg tb-kt-dg báo sinh muc tai kỹ giang viện.doc) trien xet nghiệm thuat mới triển moi 2020 xét word vien.doc) khoa bao khai mục"
   },
   {
     "id": "vb_204",
-    "code": "VBYT-204",
-    "title": "Mẫu phiếu yêu cầu XN",
+    "code": "VB-204",
+    "title": "Văn bản y tế: Mẫu phiếu yêu cầu XN",
     "filename": "Mẫu phiếu yêu cầu XN.xlsx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/CV mẫu tự soạn/Công Văn/BV gửi xét nghiệm RT-PCR 5.12.2021/Mẫu phiếu yêu cầu XN.xlsx",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -4287,12 +4287,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-excel",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/mau_phieu_yeu_cau_xn.xlsx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/mau_phieu_yeu_cau_xn.xlsx",
-    "keywords": "duc 2021 & te van yêu mẫu xn bản tế yeu sở bvđk mau đức giang excel so phieu cầu ban bvdk cau phiếu văn y"
+    "keywords": "vb-204 2021 duc te: bvđk excel y bvdk van cau đức yêu phiếu phieu cầu xn yeu bản xn.xlsx giang mau văn mẫu tế: ban"
   },
   {
     "id": "vb_205",
-    "code": "VBYT-205",
-    "title": "Thông báo về việc gửi mẫu XN Covid 19 (3.12.2021)",
+    "code": "VB-205",
+    "title": "Văn bản y tế: Thông báo về việc gửi mẫu XN Covid 19 (3.12.2021)",
     "filename": "Thông báo về việc gửi mẫu XN Covid-19 (3.12.2021).doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/CV mẫu tự soạn/Công Văn/BV gửi xét nghiệm RT-PCR 5.12.2021/Thông báo về việc gửi mẫu XN Covid-19 (3.12.2021).doc",
     "category": "Phong_Chong_Dich_Covid",
@@ -4308,12 +4308,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/thong_bao_ve_viec_gui_mau_xn_covid-19_3.12.2021_.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/thong_bao_ve_viec_gui_mau_xn_covid-19_3.12.2021_.doc",
-    "keywords": "duc sars-cov-2 2021 thông chống chong & việc viec thong báo 19 nhanh mẫu xn test pcr bvđk mau bao đức giang (3.12.2021) gửi covid phong word covid-19 bvdk ve bệnh dich dịch gui phòng về"
+    "keywords": "hầu về 2021 duc te: thong bvđk vb-205 tỵ gửi dịch bệnh thông y 19 gui bvdk van test covid-19 đức (3.12.2021) báo pcr xn viec bản giang bao sars-cov-2 nhanh mau (3.12.2021).doc rt-pcr văn việc word mẫu lấy tế: ban ve covid"
   },
   {
     "id": "vb_206",
-    "code": "VBYT-206",
-    "title": "Thông báo xét nghiệm COVID 10.10.2021",
+    "code": "VB-206",
+    "title": "Văn bản y tế: Thông báo xét nghiệm COVID 10.10.2021",
     "filename": "Thông báo xét nghiệm COVID 10.10.2021.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/CV mẫu tự soạn/Công Văn/XN  covid cho NVYT và BN/Thông báo xét nghiệm COVID 10.10.2021.doc",
     "category": "Phong_Chong_Dich_Covid",
@@ -4329,12 +4329,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/thong_bao_xet_nghiem_covid_10.10.2021.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/thong_bao_xet_nghiem_covid_10.10.2021.doc",
-    "keywords": "10.10.2021 duc sars-cov-2 2021 thông chống nghiem chong & thong báo nhanh nghiệm test pcr bvđk bao đức xét giang covid phong word xet covid-19 bvdk bệnh dich dịch phòng"
+    "keywords": "hầu 2021 duc te: thong bvđk 10.10.2021 10.10.2021.doc tỵ dịch bệnh thông y nghiem bvdk van test covid-19 đức tế: báo pcr vb-206 bản giang sars-cov-2 nhanh xet nghiệm xét rt-pcr văn word mẫu lấy bao ban covid"
   },
   {
     "id": "vb_207",
-    "code": "VBYT-207",
-    "title": "quy định xét nghiệm COVID 04.08.2021",
+    "code": "VB-207",
+    "title": "Văn bản y tế: quy định xét nghiệm COVID 04.08.2021",
     "filename": "quy định xét nghiệm COVID 04.08.2021.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/CV mẫu tự soạn/Công Văn/XN  covid cho NVYT và BN/quy định xét nghiệm COVID 04.08.2021.doc",
     "category": "Phong_Chong_Dich_Covid",
@@ -4350,12 +4350,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/quy_dinh_xet_nghiem_covid_04.08.2021.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/quy_dinh_xet_nghiem_covid_04.08.2021.doc",
-    "keywords": "duc sars-cov-2 2021 chống nghiem chong & nhanh nghiệm test pcr quy bvđk đức xét giang covid phong word định xet covid-19 bvdk 04.08.2021 bệnh dinh dich dịch phòng"
+    "keywords": "hầu 2021 duc te: định bvđk tỵ dịch bệnh y nghiem vb-207 bvdk van test covid-19 dinh đức 04.08.2021.doc pcr 04.08.2021 bản giang sars-cov-2 nhanh xet quy nghiệm xét rt-pcr văn word mẫu lấy tế: ban covid"
   },
   {
     "id": "vb_208",
-    "code": "VBYT-208",
-    "title": "quy định xét nghiệm COVID",
+    "code": "VB-208",
+    "title": "Văn bản y tế: quy định xét nghiệm COVID",
     "filename": "quy định xét nghiệm COVID.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/CV mẫu tự soạn/Công Văn/XN  covid cho NVYT và BN/quy định xét nghiệm COVID.doc",
     "category": "Phong_Chong_Dich_Covid",
@@ -4371,12 +4371,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/quy_dinh_xet_nghiem_covid.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/quy_dinh_xet_nghiem_covid.doc",
-    "keywords": "duc sars-cov-2 chống nghiem chong & nhanh nghiệm 2024 test pcr quy bvđk đức xét giang covid phong word định xet covid-19 bvdk bệnh dinh dich dịch phòng"
+    "keywords": "hầu duc te: định bvđk 2024 tỵ dịch bệnh y nghiem bvdk van test covid-19 dinh đức vb-208 pcr bản giang covid.doc sars-cov-2 nhanh xet quy nghiệm xét rt-pcr văn word mẫu lấy tế: ban covid"
   },
   {
     "id": "vb_209",
-    "code": "VBYT-209",
-    "title": "Báo cáo thực trạng Khoa KSNK 14.9",
+    "code": "VB-209",
+    "title": "Văn bản y tế: Báo cáo thực trạng Khoa KSNK 14.9",
     "filename": "Báo cáo thực trạng Khoa KSNK 14.9.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/CV mẫu tự soạn/Báo cáo mẫu/Báo cáo thực trạng Khoa KSNK 14.9.doc",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -4392,19 +4392,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/bao_cao_thuc_trang_khoa_ksnk_14.9.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/bao_cao_thuc_trang_khoa_ksnk_14.9.doc",
-    "keywords": "duc khoa & cáo te báo van tế bản cao 2024 trang sở bvđk bao đức ksnk giang so word ban bvdk trạng thuc thực văn 14.9 y"
+    "keywords": "trạng cao duc te: bvđk 2024 vb-209 thuc cáo y trang bvdk van ksnk 14.9 đức thực tế: báo bản giang 14.9.doc văn word khoa bao ban"
   },
   {
     "id": "vb_210",
-    "code": "VBYT-210",
-    "title": "báo cáo giải pháp cấy dương tính",
+    "code": "BC-VS-CDT",
+    "title": "Báo cáo thực trạng và các giải pháp nâng cao tỷ lệ cấy dương tính bệnh phẩm vi sinh - BVĐK Đức Giang",
     "filename": "báo cáo giải pháp cấy dương tính.docx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/CV mẫu tự soạn/Báo cáo mẫu/báo cáo giải pháp cấy dương tính.docx",
     "category": "Benh_Vien_Va_So_Y_Te",
     "categoryName": "Văn Bản BVĐK Đức Giang & Sở Y Tế",
     "folderName": "Benh_Vien_Va_So_Y_Te",
     "issuer": "BVĐK Đức Giang",
-    "year": 2024,
+    "year": 2021,
     "size": 33481,
     "sizeFormatted": "33 KB",
     "format": "word",
@@ -4413,12 +4413,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/bao_cao_giai_phap_cay_duong_tinh.docx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/bao_cao_giai_phap_cay_duong_tinh.docx",
-    "keywords": "duc pháp giai & cáo te báo van tế bản cao 2024 sở duong dương bvđk bao đức giang so tinh word phap ban bvdk giải cấy cay văn y tính"
+    "keywords": "và trạng cao 2021 duc phap tính.docx bvđk lệ bệnh thuc duong cáo benh tinh trang tinh.docx bvdk vi tỷ đức thực giải phẩm báo sinh nâng dương cac giang các giai le ty cấy pham pháp cay word va nang bao - bc-vs-cdt tính"
   },
   {
     "id": "vb_211",
-    "code": "VBYT-211",
-    "title": "họp ban điều trị covid 6.12",
+    "code": "VB-211",
+    "title": "Văn bản y tế: họp ban điều trị covid 6.12",
     "filename": "họp ban điều trị covid 6.12.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/CV mẫu tự soạn/Biên bản hop/6.12.21 BB họp tiểu bản điều trị/họp ban điều trị covid 6.12.doc",
     "category": "Phong_Chong_Dich_Covid",
@@ -4434,12 +4434,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/hop_ban_dieu_tri_covid_6.12.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/hop_ban_dieu_tri_covid_6.12.doc",
-    "keywords": "duc sars-cov-2 chống chong & nhanh 2024 test pcr tri điều bvđk đức dieu giang trị họp covid phong word covid-19 ban bvdk hop 6.12 bệnh dich dịch phòng"
+    "keywords": "điều hầu duc te: bvđk 2024 tỵ dịch bệnh 6.12.doc y ban bvdk van họp covid-19 test đức pcr bản giang 6.12 sars-cov-2 nhanh vb-211 trị rt-pcr tri văn word mẫu lấy tế: dieu hop covid"
   },
   {
     "id": "vb_212",
-    "code": "VBYT-212",
-    "title": "Mẫu biên bản họp khoa",
+    "code": "VB-212",
+    "title": "Văn bản y tế: Mẫu biên bản họp khoa",
     "filename": "Mẫu biên bản họp khoa.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/CV mẫu tự soạn/Biên bản hop/Biên bản họp khoa 12.2021/Mẫu biên bản họp khoa.doc",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -4455,12 +4455,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/mau_bien_ban_hop_khoa.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/mau_bien_ban_hop_khoa.doc",
-    "keywords": "duc 2021 khoa & biên te van bien mẫu bản tế sở bvđk mau đức giang so word ban bvdk hop văn họp y"
+    "keywords": "2021 duc te: bvđk y bvdk van họp đức khoa bản giang vb-212 mau khoa.doc văn word mẫu biên tế: ban hop bien"
   },
   {
     "id": "vb_213",
-    "code": "VBYT-213",
-    "title": "Mẫu phiếu yêu cầu XN",
+    "code": "VB-213",
+    "title": "Văn bản y tế: Mẫu phiếu yêu cầu XN",
     "filename": "Mẫu phiếu yêu cầu XN.xlsx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/CV mẫu tự soạn/Biên bản hop/CDC LB 3.12.2021 về xét nghiệm RT-PCR/Mẫu phiếu yêu cầu XN.xlsx",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -4476,12 +4476,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-excel",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/mau_phieu_yeu_cau_xn.xlsx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/mau_phieu_yeu_cau_xn.xlsx",
-    "keywords": "duc 2021 & te van yêu mẫu xn bản tế yeu sở bvđk mau đức giang excel so phieu cầu ban bvdk cau phiếu văn y"
+    "keywords": "2021 duc te: bvđk excel y bvdk van cau đức yêu phiếu phieu cầu xn yeu bản xn.xlsx giang mau vb-213 văn mẫu tế: ban"
   },
   {
     "id": "vb_214",
-    "code": "VBYT-214",
-    "title": "biên bản cuộc họp với TTYT Long Biên",
+    "code": "214/TT-BYT",
+    "title": "Thông tư 214/TT-BYT: Quy định chuyên môn y tế (biên bản cuộc họp với TTYT Long Biên.docx)",
     "filename": "biên bản cuộc họp với TTYT Long Biên.docx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/CV mẫu tự soạn/Biên bản hop/CDC LB 3.12.2021 về xét nghiệm RT-PCR/biên bản cuộc họp với TTYT Long Biên.docx",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -4497,12 +4497,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/bien_ban_cuoc_hop_voi_ttyt_long_bien.docx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/bien_ban_cuoc_hop_voi_ttyt_long_bien.docx",
-    "keywords": "duc 2021 ttyt & biên te van bien tế bản cuoc sở long bvđk cuộc đức giang so voi word ban bvdk hop với văn họp y"
+    "keywords": "(biên tu bien.docx 2021 duc định thong bvđk 214/tt-byt mon 214/tt-byt: cuộc thông y ban bvdk họp dinh đức ttyt biên.docx tế bản giang (bien cuoc môn biên.docx) te tư quy long chuyen bien.docx) voi word với biên chuyên hop bien"
   },
   {
     "id": "vb_215",
-    "code": "VBYT-215",
-    "title": "296 xây dựng gói dịch vụ Test Covid theo yêu cầu",
+    "code": "VB-215",
+    "title": "Văn bản y tế: 296  xây dựng gói dịch vụ Test Covid theo yêu cầu",
     "filename": "296  xây dựng gói dịch vụ Test Covid theo yêu cầu.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2021/296  xây dựng gói dịch vụ Test Covid theo yêu cầu.pdf",
     "category": "Phong_Chong_Dich_Covid",
@@ -4518,12 +4518,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/296_xay_dung_goi_dich_vu_test_covid_theo_yeu_cau.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/296_xay_dung_goi_dich_vu_test_covid_theo_yeu_cau.pdf",
-    "keywords": "duc sars-cov-2 2021 chống chong & gói yêu goi nhanh test pcr yeu bvđk đức theo giang vu pdf cầu covid phong covid-19 bvdk xay dung 296 cau bệnh dich vụ dựng xây dịch phòng"
+    "keywords": "296 hầu 2021 dựng duc te: bvđk dich tỵ dịch bệnh y vb-215 cầu.pdf bvdk van test covid-19 vu cau đức yêu cau.pdf vụ pcr gói cầu yeu bản theo goi giang sars-cov-2 dung nhanh xây rt-pcr pdf văn mẫu lấy tế: xay ban covid"
   },
   {
     "id": "vb_216",
-    "code": "VBYT-216",
-    "title": "1055 phê duyệt danh mục và bảng giá dịch vụ Test nhanh TYC",
+    "code": "VB-216",
+    "title": "Văn bản y tế: 1055  phê duyệt danh mục và bảng giá dịch vụ Test nhanh TYC",
     "filename": "1055  phê duyệt danh mục và bảng giá dịch vụ Test nhanh TYC.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2020/1055  phê duyệt danh mục và bảng giá dịch vụ Test nhanh TYC.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -4539,12 +4539,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/1055_phe_duyet_danh_muc_va_bang_gia_dich_vu_test_nhanh_tyc.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/1055_phe_duyet_danh_muc_va_bang_gia_dich_vu_test_nhanh_tyc.pdf",
-    "keywords": "duc phe & te van nhanh tế tyc bản test và sở bảng 1055 bvđk 2020 đức mục giang bang va vu so pdf muc ban gia bvdk danh duyệt duyet dich vụ văn giá dịch y phê"
+    "keywords": "và thanh duc te: duyet toán định bvđk dich dịch phê y bang danh bhyt phí bvdk van test bảo vu đức phe vụ muc vb-216 chi khung bảng gia bản giang tế nhanh tyc mức hiểm 2020 pdf giá văn va tyc.pdf duyệt tế: ban mục 1055"
   },
   {
     "id": "vb_217",
-    "code": "VBYT-217",
-    "title": "1601 tăng cường rà soát quản lý quy trình hđ xét nghiệm",
+    "code": "VB-217",
+    "title": "Văn bản y tế: 1601 tăng cường rà soát quản lý  quy trình hđ xét nghiệm",
     "filename": "1601 tăng cường rà soát quản lý  quy trình hđ xét nghiệm.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2020/1601 tăng cường rà soát quản lý  quy trình hđ xét nghiệm.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -4560,12 +4560,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/1601_tang_cuong_ra_soat_quan_ly_quy_trinh_hd_xet_nghiem.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/1601_tang_cuong_ra_soat_quan_ly_quy_trinh_hd_xet_nghiem.pdf",
-    "keywords": "duc ra nghiem & te van quản trình tăng nghiệm bản tế quan sở rà quy bvđk 2020 đức xét giang so pdf soat lý 1601 ly xet cường ban soát bvdk trinh hđ hd văn tang y cuong"
+    "keywords": "quản duc te: cuong bvđk ly hd y nghiem nghiem.pdf trinh vb-217 bvdk van soat cường đức tế: quan tang rà bản giang hđ ra trình xet quy nghiệm tăng 1601 2020 xét lý pdf văn nghiệm.pdf soát ban"
   },
   {
     "id": "vb_218",
-    "code": "VBYT-218",
-    "title": "1972 triển khai chữ ký số, chữ ký điện tử trên phần mềm XN, CĐHA",
+    "code": "VB-218",
+    "title": "Văn bản y tế: 1972  triển khai chữ ký số, chữ ký điện tử trên phần mềm XN, CĐHA",
     "filename": "1972  triển khai chữ ký số, chữ ký điện tử trên phần mềm XN, CĐHA.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2020/1972  triển khai chữ ký số, chữ ký điện tử trên phần mềm XN, CĐHA.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -4581,12 +4581,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/1972_trien_khai_chu_ky_so_chu_ky_dien_tu_tren_phan_mem_xn_cdha.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/1972_trien_khai_chu_ky_so_chu_ky_dien_tu_tren_phan_mem_xn_cdha.pdf",
-    "keywords": "duc chữ tử 1972 triển & te điện van tế mềm bản sở tren cdha xn, bvđk ký 2020 đức giang so pdf chu trien số, phần ban bvdk so, phan trên dien ky khai tu văn cđha y mem"
+    "keywords": "1972 phần ky tu duc te: mem điện phan cdha.pdf bvđk chu mềm vb-218 y cdha ban bvdk van so, đức ký chữ cđha.pdf cđha tử xn, bản giang dien trien số, triển 2020 pdf văn trên tế: khai tren"
   },
   {
     "id": "vb_219",
-    "code": "VBYT-219",
-    "title": "372 thành lập phòng xét nghiệm sinh học phân tử thuộc khoa Vi sinh",
+    "code": "372/QĐ-BVĐKĐG",
+    "title": "Quyết định 372/QĐ-BVĐKĐG: Thành lập Đơn vị Xét nghiệm Sinh học Phân tử (PCR) tại Khoa Vi sinh",
     "filename": "372 thành lập phòng xét nghiệm sinh học phân tử thuộc khoa Vi sinh.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2020/372 thành lập phòng xét nghiệm sinh học phân tử thuộc khoa Vi sinh.pdf",
     "category": "Chuyen_Mon_Vi_Sinh",
@@ -4602,12 +4602,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/372_thanh_lap_phong_xet_nghiem_sinh_hoc_phan_tu_thuoc_khoa_vi_sinh.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Chuyen_Mon_Vi_Sinh/372_thanh_lap_phong_xet_nghiem_sinh_hoc_phan_tu_thuoc_khoa_vi_sinh.pdf",
-    "keywords": "duc lap tử thanh khoa môn nghiem & nghiệm thuat vi phân lập sinh bvđk 2020 đức xét giang pdf kỹ thuoc phong thuật 372 bvdk phan thuộc chuyên ky thành tu mon học xet chuyen phòng hoc"
+    "keywords": "thanh quyet tu duc thuộc định phòng phan bvđk lap tại thuoc nghiem (pcr) thành bvdk dinh vi hoc đức don đơn phong vị sinh tai 372/qđ-bvđkđg: tử phân giang 372/qd-bvdkdg: xet nghiệm 2020 xét sinh.pdf pdf học 372 372/qd-bvdkdg khoa lập quyết 372/qđ-bvđkđg"
   },
   {
     "id": "vb_220",
-    "code": "VBYT-220",
-    "title": "761 khảo sát và hỗ trợ kỹ thuật tại BV đăng ký tham gia MH2",
+    "code": "VB-220",
+    "title": "Văn bản y tế: 761  khảo sát và hỗ trợ kỹ thuật tại BV đăng ký tham gia MH2",
     "filename": "761  khảo sát và hỗ trợ kỹ thuật tại BV đăng ký tham gia MH2.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2020/761  khảo sát và hỗ trợ kỹ thuật tại BV đăng ký tham gia MH2.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -4623,12 +4623,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/761_khao_sat_va_ho_tro_ky_thuat_tai_bv_dang_ky_tham_gia_mh2.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/761_khao_sat_va_ho_tro_ky_thuat_tai_bv_dang_ky_tham_gia_mh2.pdf",
-    "keywords": "khảo tại duc & mh2 te van tế bản thuat và hỗ sở 761 bv bvđk ký 2020 đức dang giang va so pdf kỹ khao tham tai sát thuật đăng trợ ban gia bvdk tro sat ky văn y ho"
+    "keywords": "và khảo ky đăng duc te: bv bvđk thuật tại sát y sat bvdk van đức ký 761 tai kỹ gia bản dang mh2 giang trợ vb-220 khao thuat 2020 pdf văn va ho mh2.pdf tro tế: ban hỗ tham"
   },
   {
     "id": "vb_221",
-    "code": "VBYT-221",
-    "title": "QĐ TEST NHANH",
+    "code": "221/QĐ",
+    "title": "Quyết định 221/QĐ: Văn bản chuyên môn y tế (QĐ TEST NHANH.doc)",
     "filename": "QĐ TEST NHANH.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2020/QĐ TEST NHANH.doc",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -4644,19 +4644,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/qd_test_nhanh.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/qd_test_nhanh.doc",
-    "keywords": "duc & qđ te van nhanh tế bản test sở bvđk 2020 đức giang qd so word ban bvdk văn y"
+    "keywords": "quyet (qd duc định bvđk qd 221/qđ (qđ nhanh.doc mon y ban bvdk van 221/qd test dinh đức 221/qđ: tế bản nhanh.doc) qđ giang môn te 221/qd: chuyen 2020 văn word chuyên quyết"
   },
   {
     "id": "vb_222",
-    "code": "VBYT-222",
-    "title": "công bố an toàn sinh học và báo cáo khắc phục",
+    "code": "CB-ATSH-ĐG",
+    "title": "Bản công bố cơ sở xét nghiệm đạt tiêu chuẩn an toàn sinh học cấp II - BVĐK Đức Giang",
     "filename": "công bố an toàn sinh học và báo cáo khắc phục.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2020/công bố an toàn sinh học và báo cáo khắc phục.pdf",
     "category": "An_Toan_Sinh_Hoc",
     "categoryName": "An Toàn Sinh Học & Môi Trường PXN",
     "folderName": "An_Toan_Sinh_Hoc",
     "issuer": "BVĐK Đức Giang",
-    "year": 2020,
+    "year": 2019,
     "size": 918384,
     "sizeFormatted": "897 KB",
     "format": "pdf",
@@ -4665,12 +4665,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/An_Toan_Sinh_Hoc/cong_bo_an_toan_sinh_hoc_va_bao_cao_khac_phuc.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/An_Toan_Sinh_Hoc/cong_bo_an_toan_sinh_hoc_va_bao_cao_khac_phuc.pdf",
-    "keywords": "an duc môi bố phục bo & cáo cong báo công truong cao và sinh moi bvđk bao 2020 đức phuc giang khắc va pdf toan bvdk trường pxn toàn học khac hoc"
+    "keywords": "toàn và cong cao 2 dat duc chuan khắc thải bvđk khac bố toan nhân cáo nhiễm nghiem cb-atsh-đg bvdk bảo hoc đức công sinh cấp báo phuc.pdf an lây so cap bản giang co đạt tiêu rác hấp xet cb-atsh-dg sở nghiệm 2019 nồi phục.pdf hộ xét pdf học cá atsh tieu va ii bo cơ bao - ban chuẩn"
   },
   {
     "id": "vb_223",
-    "code": "VBYT-223",
-    "title": "1078 kết quả đánh giá, xếp loại CB,VC, LĐHĐ tháng 3.2020",
+    "code": "VB-223",
+    "title": "Văn bản y tế: 1078 kết quả đánh giá, xếp loại CB,VC, LĐHĐ tháng 3.2020",
     "filename": "1078 kết quả đánh giá, xếp loại CB,VC, LĐHĐ tháng 3.2020.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2020/Tháng 6/1078 kết quả đánh giá, xếp loại CB,VC, LĐHĐ tháng 3.2020.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -4686,12 +4686,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/1078_ket_qua_danh_gia_xep_loai_cb_vc_ldhd_thang_3.2020.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/1078_ket_qua_danh_gia_xep_loai_cb_vc_ldhd_thang_3.2020.pdf",
-    "keywords": "duc cb,vc, quả xep xếp & te lđhđ van tế bản 1078 loại sở qua bvđk 2020 đức loai giang ldhd so pdf tháng gia, 3.2020 ban giá, bvdk thang danh kết văn đánh ket y"
+    "keywords": "thanh cb,vc, quả đánh lđhđ qua 1078 ket duc te: định toán bvđk vb-223 tháng thang dịch y bhyt danh xep phí bvdk van bảo đức kết vụ ldhd chi khung tế bản giang 3.2020.pdf 3.2020 giá, loai mức hiểm gia, 2020 pdf giá văn loại tế: ban xếp"
   },
   {
     "id": "vb_224",
-    "code": "VBYT-224",
-    "title": "570 thưởng tập thể đạt giải trong Hội thi Điều dưỡng giỏi 2020",
+    "code": "VB-224",
+    "title": "Văn bản y tế: 570 thưởng tập thể đạt giải trong Hội thi Điều dưỡng giỏi 2020",
     "filename": "570 thưởng tập thể đạt giải trong Hội thi Điều dưỡng giỏi 2020.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.2. CÔNG VĂN BỆNH VIỆN/2020/Tháng 6/570 thưởng tập thể đạt giải trong Hội thi Điều dưỡng giỏi 2020.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -4707,7 +4707,7 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/570_thuong_tap_the_dat_giai_trong_hoi_thi_dieu_duong_gioi_2020.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/570_thuong_tap_the_dat_giai_trong_hoi_thi_dieu_duong_gioi_2020.pdf",
-    "keywords": "duc đạt giai tập & te van tế bản sở duong dat điều bvđk 2020 dieu đức giang trong so pdf thuong thi hoi the ban bvdk hội giải 570 gioi dưỡng giỏi văn tap y thể thưởng"
+    "keywords": "hiếu điều hoi gioi duc endotoxin te: dieu thận lọc bvđk máu duong 570 vb-224 y tố thể giỏi van bvdk nước đức vi độc hội giải trong thuong khí tai dưỡng nội bản giang đạt ro giai the thi 2020.pdf khuẩn thưởng 2020 tập cấy pdf văn biến tế: dat ban chạy tap"
   },
   {
     "id": "vb_225",
@@ -4728,12 +4728,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/3916_qd_byt_vnras.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/3916_qd_byt_vnras.pdf",
-    "keywords": "vnras đoán & bo 3916 te đồ phác tế 2024 tri điều dieu do qd pdf trị benh doan chan bộ bệnh byt phac y chẩn"
+    "keywords": "te 3916 3916_qd_byt_vnras.pdf byt y tế pdf bo vnras qd 2024 bộ"
   },
   {
     "id": "vb_226",
-    "code": "QĐ. 5186",
-    "title": "QĐ. 5186. 2021.BYT",
+    "code": "5186/QĐ-BYT",
+    "title": "Quyết định 5186/QĐ-BYT: Hướng dẫn chẩn đoán và điều trị bệnh Giang mai (Kỹ thuật xét nghiệm RPR, TPHA, FTA-ABS)",
     "filename": "QĐ. 5186. 2021.BYT.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/20. Bệnh giang mai/QĐ. 5186. 2021.BYT.pdf",
     "category": "Phac_Do_Dieu_Tri",
@@ -4749,19 +4749,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/qd._5186._2021.byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/qd._5186._2021.byt.pdf",
-    "keywords": "2021 đoán & bo te đồ phác tế 5186 tri điều dieu do pdf trị benh doan 2021.byt qd. chan bộ 5186. bệnh qđ. phac y chẩn"
+    "keywords": "và điều quyet (kỹ doan tpha, qd. 2021 qđ. chan định huong thuật 5186/qđ-byt bệnh benh y 5186/qđ-byt: nghiem fta-abs) đoán dinh 5186/qd-byt: rpr, 5186. hướng 2021.byt.pdf (ky tế giang chẩn xet bộ trị te nghiệm thuat xét dẫn 5186/qd-byt quyết tri pdf va bo dan dieu mai"
   },
   {
     "id": "vb_227",
-    "code": "3429-QD",
-    "title": "quyet dinh 3429 qd byt bo y te",
+    "code": "3429/QĐ-BYT",
+    "title": "Quyết định 3429/QĐ-BYT: Hướng dẫn chẩn đoán và điều trị bệnh Nấm xâm lấn (Nhuộm soi, nuôi cấy và định danh nấm)",
     "filename": "quyet-dinh-3429-qd-byt-bo-y-te.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/6. Nấm/quyet-dinh-3429-qd-byt-bo-y-te.doc",
     "category": "Phac_Do_Dieu_Tri",
     "categoryName": "Phác Đồ Chẩn Đoán & Điều Trị Bệnh",
     "folderName": "Phac_Do_Dieu_Tri",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2021,
     "size": 1558130,
     "sizeFormatted": "1.5 MB",
     "format": "word",
@@ -4770,19 +4770,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-3429-qd-byt-bo-y-te.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-3429-qd-byt-bo-y-te.doc",
-    "keywords": "đoán quyet bo & te đồ phác tế 3429-qd 2024 tri điều dieu do qd 3429 trị benh doan word chan bộ bệnh dinh byt phac y chẩn"
+    "keywords": "và điều quyet xâm doan 2021 nấm chan định nam) huong nam 3429/qd-byt: 3429/qd-byt (nhuom 3429/qđ-byt bệnh 3429/qđ-byt: benh nuoi quyet-dinh-3429-qd-byt-bo-y-te.doc danh y lấn đoán dinh nấm) lan hướng nuôi tế chẩn (nhuộm bộ trị te cấy dẫn tri cay word va bo soi, dan dieu quyết xam"
   },
   {
     "id": "vb_228",
-    "code": "3429-QD",
-    "title": "quyet dinh 3429 qd byt bo y te",
+    "code": "3429/QĐ-BYT",
+    "title": "Quyết định 3429/QĐ-BYT: Hướng dẫn chẩn đoán và điều trị bệnh Nấm xâm lấn (Nhuộm soi, nuôi cấy và định danh nấm)",
     "filename": "quyet-dinh-3429-qd-byt-bo-y-te.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/6. Nấm/quyet-dinh-3429-qd-byt-bo-y-te.pdf",
     "category": "Phac_Do_Dieu_Tri",
     "categoryName": "Phác Đồ Chẩn Đoán & Điều Trị Bệnh",
     "folderName": "Phac_Do_Dieu_Tri",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2021,
     "size": 4454400,
     "sizeFormatted": "4.2 MB",
     "format": "pdf",
@@ -4791,19 +4791,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-3429-qd-byt-bo-y-te.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-3429-qd-byt-bo-y-te.pdf",
-    "keywords": "đoán quyet bo & te đồ phác tế 3429-qd 2024 tri điều dieu do qd 3429 pdf trị benh doan chan bộ bệnh dinh byt phac y chẩn"
+    "keywords": "và điều quyet xâm quyet-dinh-3429-qd-byt-bo-y-te.pdf doan 2021 nấm chan định nam) huong nam 3429/qd-byt: 3429/qd-byt (nhuom 3429/qđ-byt bệnh 3429/qđ-byt: benh nuoi y danh lấn đoán dinh nấm) lan hướng nuôi tế chẩn (nhuộm bộ trị te cấy dẫn tri pdf cay va bo soi, dan dieu quyết xam"
   },
   {
     "id": "vb_229",
-    "code": "5165-QD",
-    "title": "quyet dinh 5165 qd byt bo y te",
+    "code": "5165/QĐ-BYT",
+    "title": "Quyết định 5165/QĐ-BYT: Hướng dẫn chẩn đoán và điều trị bệnh Lậu (Nhuộm soi Gram, cấy Neisseria gonorrhoeae, Real-time PCR)",
     "filename": "quyet-dinh-5165-qd-byt-bo-y-te.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/8. Bệnh Lậu/quyet-dinh-5165-qd-byt-bo-y-te.pdf",
     "category": "Phac_Do_Dieu_Tri",
     "categoryName": "Phác Đồ Chẩn Đoán & Điều Trị Bệnh",
     "folderName": "Phac_Do_Dieu_Tri",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2021,
     "size": 303377,
     "sizeFormatted": "296 KB",
     "format": "pdf",
@@ -4812,19 +4812,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-5165-qd-byt-bo-y-te.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-5165-qd-byt-bo-y-te.pdf",
-    "keywords": "đoán quyet bo & te 5165-qd đồ phác tế 2024 tri điều dieu do qd pdf trị benh doan chan bộ bệnh dinh 5165 byt phac y chẩn"
+    "keywords": "và điều quyet real-time doan gram, 2021 chan định huong (nhuom gonorrhoeae, bệnh benh y soi pcr) 5165/qđ-byt: lau đoán dinh 5165/qd-byt hướng tế chẩn (nhuộm 5165/qd-byt: trị bộ te quyet-dinh-5165-qd-byt-bo-y-te.pdf cấy dẫn neisseria tri cay pdf va lậu bo dan dieu 5165/qđ-byt quyết"
   },
   {
     "id": "vb_230",
-    "code": "4815-QD",
-    "title": "quyet dinh 4815 qd byt huong dan chan doan viem phoi mac phai cong dong o nguoi lon",
+    "code": "4815/QĐ-BYT",
+    "title": "Quyết định 4815/QĐ-BYT: Hướng dẫn chẩn đoán và điều trị Viêm phổi mắc phải cộng đồng ở người lớn",
     "filename": "quyet-dinh-4815-qd-byt-huong-dan-chan-doan-viem-phoi-mac-phai-cong-dong-o-nguoi-lon.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/5. Viêm phổi/quyet-dinh-4815-qd-byt-huong-dan-chan-doan-viem-phoi-mac-phai-cong-dong-o-nguoi-lon.pdf",
     "category": "Phac_Do_Dieu_Tri",
     "categoryName": "Phác Đồ Chẩn Đoán & Điều Trị Bệnh",
     "folderName": "Phac_Do_Dieu_Tri",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2020,
     "size": 1822114,
     "sizeFormatted": "1.7 MB",
     "format": "pdf",
@@ -4833,12 +4833,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-4815-qd-byt-huong-dan-chan-doan-viem-phoi-mac-phai-cong-dong-o-nguoi-lon.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-4815-qd-byt-huong-dan-chan-doan-viem-phoi-mac-phai-cong-dong-o-nguoi-lon.pdf",
-    "keywords": "đoán phoi phai quyet & bo cong te đồ phác tế 2024 4815 mac o tri điều nguoi dieu do qd pdf trị benh viem doan chan bộ bệnh dinh dan 4815-qd byt huong dong phac y chẩn lon"
+    "keywords": "và điều người quyet phải cong phoi doan nguoi chan dieu định 4815/qd-byt lon cộng lớn huong phai quyet-dinh-4815-qd-byt-huong-dan-chan-doan-viem-phoi-mac-phai-cong-dong-o-nguoi-lon.pdf đồng mac y 4815/qđ-byt o đoán dinh ở mắc hướng tế viem 4815/qđ-byt: chẩn phổi viêm dong bộ trị te 2020 dẫn tri pdf va bo dan 4815/qd-byt: quyết"
   },
   {
     "id": "vb_231",
-    "code": "2760-QD",
-    "title": "quyet dinh 2760 qd byt 2023 huong dan chan doan dieu tri sot xuat huyet dengue",
+    "code": "2760/QĐ-BYT",
+    "title": "Quyết định 2760/QĐ-BYT: Hướng dẫn chẩn đoán và điều trị Sốt xuất huyết Dengue (Xét nghiệm NS1Ag, kháng thể IgM/IgG, RT-PCR)",
     "filename": "quyet-dinh-2760-qd-byt-2023-huong-dan-chan-doan-dieu-tri-sot-xuat-huyet-dengue.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/9. Sốt xuất huyết Dengue/quyet-dinh-2760-qd-byt-2023-huong-dan-chan-doan-dieu-tri-sot-xuat-huyet-dengue.pdf",
     "category": "Phac_Do_Dieu_Tri",
@@ -4854,19 +4854,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-2760-qd-byt-2023-huong-dan-chan-doan-dieu-tri-sot-xuat-huyet-dengue.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-2760-qd-byt-2023-huong-dan-chan-doan-dieu-tri-sot-xuat-huyet-dengue.pdf",
-    "keywords": "đoán quyet & bo te đồ phác tế 2760-qd 2023 tri điều xuat dieu do qd pdf trị benh huyet doan 2760 dengue sot chan bộ bệnh dinh dan byt huong phac y chẩn"
+    "keywords": "và điều quyet sot 2760/qđ-byt igm/igg, (xet doan chan định 2760/qd-byt: huong dengue xuất kháng 2760/qd-byt y nghiem thể đoán dinh 2023 hướng xuat cầu (xét tế rt-pcr) chẩn huyết sốt quyet-dinh-2760-qd-byt-2023-huong-dan-chan-doan-dieu-tri-sot-xuat-huyet-dengue.pdf bộ trị the nghiệm te ns1ag ns1ag, rt-pcr dẫn tri pdf va khang 2760/qđ-byt: bo igm tiểu dan dieu huyet igg quyết"
   },
   {
     "id": "vb_232",
-    "code": "5169-QD",
-    "title": "quyet dinh 5169 qd byt bo y te",
+    "code": "5169/QĐ-BYT",
+    "title": "Quyết định 5169/QĐ-BYT: Hướng dẫn chẩn đoán và điều trị bệnh Chlamydia trachomatis (Real-time PCR và test nhanh)",
     "filename": "quyet-dinh-5169-qd-byt-bo-y-te.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/15. bệnh Chlamydia /quyet-dinh-5169-qd-byt-bo-y-te.pdf",
     "category": "Phac_Do_Dieu_Tri",
     "categoryName": "Phác Đồ Chẩn Đoán & Điều Trị Bệnh",
     "folderName": "Phac_Do_Dieu_Tri",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2021,
     "size": 2043033,
     "sizeFormatted": "1.9 MB",
     "format": "pdf",
@@ -4875,19 +4875,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-5169-qd-byt-bo-y-te.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-5169-qd-byt-bo-y-te.pdf",
-    "keywords": "đoán quyet bo & te đồ phác tế 2024 tri điều dieu do qd pdf trị benh 5169-qd doan 5169 chan bệnh bộ dinh byt phac y chẩn"
+    "keywords": "và điều quyet chlamydia doan 2021 chan định huong bệnh (real-time benh y test đoán dinh nhanh) hướng 5169/qđ-byt pcr tế chẩn quyet-dinh-5169-qd-byt-bo-y-te.pdf trachomatis 5169/qd-byt bộ trị te 5169/qd-byt: dẫn tri pdf va bo 5169/qđ-byt: dan dieu quyết"
   },
   {
     "id": "vb_233",
-    "code": "2671-QĐ",
-    "title": "Quyết định 2671 QĐ BYT",
+    "code": "2671/QĐ-BYT",
+    "title": "Quyết định 2671/QĐ-BYT: Hướng dẫn chẩn đoán và điều trị Covid-19 ở trẻ em",
     "filename": "Quyết định-2671-QĐ-BYT.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/18. Covid/Quyết định-2671-QĐ-BYT.pdf",
     "category": "Phong_Chong_Dich_Covid",
     "categoryName": "Phòng Chống Dịch & Covid-19",
     "folderName": "Phong_Chong_Dich_Covid",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2021,
     "size": 12617782,
     "sizeFormatted": "12.0 MB",
     "format": "pdf",
@@ -4896,19 +4896,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/quyet_dinh-2671-qd-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/quyet_dinh-2671-qd-byt.pdf",
-    "keywords": "chống quyet chong & bo qđ te tế 2024 quyết qd pdf phong định covid-19 2671 2671-qđ bộ dinh dich byt dịch y phòng"
+    "keywords": "và điều quyet 2671/qd-byt: dinh-2671-qd-byt.pdf hầu 2671/qđ-byt: định-2671-qđ-byt.pdf doan 2021 chan định 2671/qđ-byt huong trẻ tỵ dịch bệnh y o test đoán dinh covid-19 em ở hướng pcr tế chẩn sars-cov-2 nhanh bộ trị te 2671/qd-byt rt-pcr dẫn tri tre pdf va bo mẫu lấy dan dieu quyết"
   },
   {
     "id": "vb_234",
-    "code": "VBYT-234",
-    "title": "Hướng dẫn chẩn đoán và điều trị bệnh viêm gan vi rút A",
+    "code": "3457/QĐ-BYT",
+    "title": "Quyết định 3457/QĐ-BYT: Hướng dẫn chẩn đoán và điều trị bệnh Viêm gan vi rút A (Xét nghiệm Anti-HAV IgM)",
     "filename": "Hướng-dẫn-chẩn-đoán-và-điều-trị-bệnh-viêm-gan-vi-rút-A.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/12. Viêm Gan A/Hướng-dẫn-chẩn-đoán-và-điều-trị-bệnh-viêm-gan-vi-rút-A.pdf",
     "category": "Phac_Do_Dieu_Tri",
     "categoryName": "Phác Đồ Chẩn Đoán & Điều Trị Bệnh",
     "folderName": "Phac_Do_Dieu_Tri",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2020,
     "size": 452374,
     "sizeFormatted": "442 KB",
     "format": "pdf",
@@ -4917,19 +4917,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/huong-dan-chan-doan-va-dieu-tri-benh-viem-gan-vi-rut-a.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/huong-dan-chan-doan-va-dieu-tri-benh-viem-gan-vi-rut-a.pdf",
-    "keywords": "hướng gan đoán dẫn rut rút & bo te đồ phác tế 2024 và vi viêm tri điều dieu do va pdf trị a benh viem doan chan bộ bệnh dan huong phac y chẩn"
+    "keywords": "và đo điều quyet hcv-rna lượng (xet tải doan gan chan hướng-dẫn-chẩn-đoán-và-điều-trị-bệnh-viêm-gan-vi-rút-a.pdf định hbv-dna huong bệnh type benh y nghiem hbeag 3457/qđ-byt anti-hav đoán dinh vi 3457/qđ-byt: hbsag hướng 3457/qd-byt: a (xét anti-hcv tế 3457/qd-byt viem chẩn viêm igm) huong-dan-chan-doan-va-dieu-tri-benh-viem-gan-vi-rut-a.pdf bộ trị te nghiệm b rút 2020 dẫn tri pdf va bo rut dan dieu quyết c"
   },
   {
     "id": "vb_235",
-    "code": "5642-QD",
-    "title": "quyet dinh 5642 qd byt",
+    "code": "5642/QĐ-BYT",
+    "title": "Quyết định 5642/QĐ-BYT: Hướng dẫn chẩn đoán và điều trị một số bệnh truyền nhiễm nguy hiểm",
     "filename": "quyet-dinh-5642-qd-byt.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/4. Điều trị một số bệnh truyền nhiễm/quyet-dinh-5642-qd-byt.pdf",
     "category": "Phac_Do_Dieu_Tri",
     "categoryName": "Phác Đồ Chẩn Đoán & Điều Trị Bệnh",
     "folderName": "Phac_Do_Dieu_Tri",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2015,
     "size": 515158,
     "sizeFormatted": "503 KB",
     "format": "pdf",
@@ -4938,19 +4938,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-5642-qd-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-5642-qd-byt.pdf",
-    "keywords": "đoán quyet & bo te đồ 5642 phác tế 2024 tri điều dieu do qd pdf trị benh 5642-qd doan chan bộ bệnh dinh byt phac y chẩn"
+    "keywords": "và điều quyet mot doan 2015 chan 5642/qđ-byt định hiem huong truyền quyet-dinh-5642-qd-byt.pdf bệnh benh nhiễm y đoán dinh nhiem hướng so tế một chẩn 5642/qd-byt: nguy số 5642/qđ-byt: bộ trị hiểm te truyen dẫn tri pdf va bo dan dieu 5642/qd-byt quyết"
   },
   {
     "id": "vb_236",
-    "code": "QĐ 2322",
-    "title": "QĐ 2322 bệnh viem nao",
+    "code": "2322/QĐ-BYT",
+    "title": "Quyết định 2322/QĐ-BYT: Hướng dẫn chẩn đoán, điều trị bệnh Viêm não Nhật Bản và viêm não vi rút",
     "filename": "QĐ 2322 bệnh viem nao.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/16. Viêm màng não/QĐ 2322 bệnh viem nao.doc",
     "category": "Phac_Do_Dieu_Tri",
     "categoryName": "Phác Đồ Chẩn Đoán & Điều Trị Bệnh",
     "folderName": "Phac_Do_Dieu_Tri",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2014,
     "size": 59904,
     "sizeFormatted": "58 KB",
     "format": "word",
@@ -4959,12 +4959,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/qd_2322_benh_viem_nao.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/qd_2322_benh_viem_nao.doc",
-    "keywords": "đoán & bo qđ te đồ phác tế 2024 2322 tri điều dieu do qd trị benh viem doan word nao chan bộ bệnh phac y chẩn"
+    "keywords": "và điều quyet 2322/qd-byt: nao.doc chan định qd não huong bệnh doan, nao benh y rut ban 2322 nhật dinh vi đoán, hướng qđ bản tế 2322/qđ-byt viem chẩn viêm bộ trị te 2014 rút dẫn tri 2322/qđ-byt: word va nhat bo 2322/qd-byt dan dieu quyết"
   },
   {
     "id": "vb_237",
-    "code": "QĐ.292",
-    "title": "QĐ.292.2024.BYT",
+    "code": "292/QĐ-BYT",
+    "title": "Quyết định 292/QĐ-BYT: Hướng dẫn chẩn đoán, điều trị bệnh Tay - Chân - Miệng (Cập nhật 2024)",
     "filename": "QĐ.292.2024.BYT.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/11. Chân tay miệng /QĐ.292.2024.BYT.pdf",
     "category": "Phac_Do_Dieu_Tri",
@@ -4980,19 +4980,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/qd.292.2024.byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/qd.292.2024.byt.pdf",
-    "keywords": "đoán & bo te đồ phác tế 2024 tri điều dieu do qđ.292.2024.byt pdf qd.292.2024.byt trị benh doan qđ.292 chan bộ bệnh phac y chẩn"
+    "keywords": "điều quyet qd.292.2024.byt.pdf mieng (cap chan định qđ.292.2024.byt.pdf 292/qđ-byt: huong 2024 tay bệnh doan, benh y nhật dinh 2024) miệng đoán, hướng tế chẩn 292/qd-byt: bộ trị te chân 292/qđ-byt dẫn tri pdf 292/qd-byt nhat bo dan - dieu quyết (cập"
   },
   {
     "id": "vb_238",
-    "code": "1003-QD",
-    "title": "quyet dinh 1003 qd byt bo y te",
+    "code": "1003/QĐ-BYT",
+    "title": "Quyết định 1003/QĐ-BYT: Hướng dẫn chẩn đoán, điều trị bệnh Tay - Chân - Miệng",
     "filename": "quyet-dinh-1003-qd-byt-bo-y-te.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/11. Chân tay miệng /quyet-dinh-1003-qd-byt-bo-y-te.pdf",
     "category": "Phac_Do_Dieu_Tri",
     "categoryName": "Phác Đồ Chẩn Đoán & Điều Trị Bệnh",
     "folderName": "Phac_Do_Dieu_Tri",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2012,
     "size": 2503704,
     "sizeFormatted": "2.4 MB",
     "format": "pdf",
@@ -5001,19 +5001,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-1003-qd-byt-bo-y-te.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-1003-qd-byt-bo-y-te.pdf",
-    "keywords": "đoán quyet bo & te đồ phác tế 2024 tri điều dieu do 1003-qd qd pdf trị benh doan chan bộ bệnh dinh 1003 byt phac y chẩn"
+    "keywords": "điều quyet mieng chan định 1003/qđ-byt: 1003/qd-byt: huong tay bệnh doan, benh y 1003/qd-byt 2012 dinh miệng đoán, hướng quyet-dinh-1003-qd-byt-bo-y-te.pdf tế chẩn bộ trị te chân dẫn quyết tri pdf bo dan - dieu 1003/qđ-byt"
   },
   {
     "id": "vb_239",
-    "code": "3451-QĐ",
-    "title": "3451 QĐ BYT",
+    "code": "3451/QĐ-BYT",
+    "title": "Quyết định 3451/QĐ-BYT: Hướng dẫn chẩn đoán, điều trị và phòng lây nhiễm bệnh do Adenovirus",
     "filename": "3451-QĐ-BYT.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/21. Adenovirus/3451-QĐ-BYT.pdf",
     "category": "Phac_Do_Dieu_Tri",
     "categoryName": "Phác Đồ Chẩn Đoán & Điều Trị Bệnh",
     "folderName": "Phac_Do_Dieu_Tri",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2022,
     "size": 16421608,
     "sizeFormatted": "15.7 MB",
     "format": "pdf",
@@ -5022,19 +5022,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/3451-qd-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/3451-qd-byt.pdf",
-    "keywords": "đoán & bo qđ te đồ phác tế 2024 3451 tri điều dieu do qd pdf trị benh doan 3451-qđ chan bộ bệnh byt phac y chẩn"
+    "keywords": "và điều quyet chan định 3451/qđ-byt phòng huong 3451-qđ-byt.pdf bệnh doan, benh nhiễm y adenovirus dinh nhiem đoán, hướng phong lây tế do chẩn 3451/qd-byt 3451/qđ-byt: 3451-qd-byt.pdf 3451/qd-byt: lay trị bộ te dẫn tri pdf va bo dan dieu 2022 quyết"
   },
   {
     "id": "vb_240",
-    "code": "5968-QĐ",
-    "title": "Quyết định 5968 QĐ BYT",
+    "code": "5968/QĐ-BYT",
+    "title": "Quyết định 5968/QĐ-BYT: Hướng dẫn điều trị và chăm sóc HIV/AIDS (Chiến lược xét nghiệm khẳng định HIV và đo tải lượng HIV-RNA)",
     "filename": "Quyết định-5968-QĐ-BYT.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/19. HIV/Quyết định-5968-QĐ-BYT.pdf",
     "category": "Phac_Do_Dieu_Tri",
     "categoryName": "Phác Đồ Chẩn Đoán & Điều Trị Bệnh",
     "folderName": "Phac_Do_Dieu_Tri",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2021,
     "size": 3797433,
     "sizeFormatted": "3.6 MB",
     "format": "pdf",
@@ -5043,19 +5043,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet_dinh-5968-qd-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet_dinh-5968-qd-byt.pdf",
-    "keywords": "5968-qđ đoán quyet & bo qđ te đồ phác tế 2024 quyết tri điều dieu do qd pdf trị benh doan định 5968 chan bệnh bộ dinh byt phac y chẩn"
+    "keywords": "và đo điều quyet lượng tải 2021 dieu định hiv định-5968-qđ-byt.pdf chăm huong luong y nghiem cham soc dinh 5968/qđ-byt luoc hiv/aids 5968/qđ-byt: hướng tai khẳng tế do dinh-5968-qd-byt.pdf (chiến xet bộ trị te nghiệm hiv-rna) 5968/qd-byt: xét dẫn tri pdf lược 5968/qd-byt va (chien khang bo dan sóc quyết"
   },
   {
     "id": "vb_241",
-    "code": "VBYT-241",
-    "title": "Huong dan chan doan dieu tri Da lieu",
+    "code": "75/QĐ-BYT",
+    "title": "Quyết định 75/QĐ-BYT: Hướng dẫn chẩn đoán và điều trị các bệnh Da liễu (Nhuộm soi vi nấm, ký sinh trùng)",
     "filename": "Huong-dan-chan-doan-dieu-tri-Da-lieu.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/7. Bệnh da liễu/Huong-dan-chan-doan-dieu-tri-Da-lieu.pdf",
     "category": "Phac_Do_Dieu_Tri",
     "categoryName": "Phác Đồ Chẩn Đoán & Điều Trị Bệnh",
     "folderName": "Phac_Do_Dieu_Tri",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2015,
     "size": 2551345,
     "sizeFormatted": "2.4 MB",
     "format": "pdf",
@@ -5064,19 +5064,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/huong-dan-chan-doan-dieu-tri-da-lieu.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/huong-dan-chan-doan-dieu-tri-da-lieu.pdf",
-    "keywords": "đoán & bo te đồ phác tế 2024 da tri điều dieu do pdf trị benh doan lieu chan bộ bệnh dan huong phac y chẩn"
+    "keywords": "và điều quyet ky doan 75/qđ-byt: 2015 chan định lieu huong (nhuom bệnh benh y soi 75/qđ-byt đoán vi dinh ký hướng sinh nam, liễu trung) cac tế các trùng) da chẩn (nhuộm 75/qd-byt huong-dan-chan-doan-dieu-tri-da-lieu.pdf bộ trị te nấm, dẫn tri pdf va bo dan dieu 75/qd-byt: quyết"
   },
   {
     "id": "vb_242",
-    "code": "1639 QĐ",
-    "title": "1639 QĐ BYT",
+    "code": "1639/QĐ-BYT",
+    "title": "Quyết định 1639/QĐ-BYT: Hướng dẫn kỹ thuật sàng lọc, phát hiện sớm ung thư cổ tử cung và xét nghiệm HPV",
     "filename": "1639 QĐ-BYT.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/17. HPV/1639 QĐ-BYT.pdf",
     "category": "Phac_Do_Dieu_Tri",
     "categoryName": "Phác Đồ Chẩn Đoán & Điều Trị Bệnh",
     "folderName": "Phac_Do_Dieu_Tri",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2021,
     "size": 11129506,
     "sizeFormatted": "10.6 MB",
     "format": "pdf",
@@ -5085,19 +5085,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/1639_qd-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/1639_qd-byt.pdf",
-    "keywords": "đoán & bo qđ te đồ phác tế 2024 tri điều dieu do qd pdf trị benh 1639 doan chan bộ bệnh byt phac y chẩn"
+    "keywords": "và quyet sàng ky tu 2021 định 1639/qd-byt: cung huong lọc, thuật ung phát hpv y 1639/qđ-byt nghiem cổ qd-byt.pdf 1639/qd-byt sang dinh hướng tử kỹ tế co xet bộ phat thư nghiệm loc, hiện thuat 1639 qđ-byt.pdf te xét sớm dẫn pdf thu va 1639/qđ-byt: hien bo dan som quyết"
   },
   {
     "id": "vb_243",
-    "code": "5185-QĐ",
-    "title": "Quyết định 5185 QĐ BYT",
+    "code": "5185/QĐ-BYT",
+    "title": "Quyết định 5185/QĐ-BYT: Hướng dẫn chẩn đoán và điều trị tổn thương tiền ung thư cổ tử cung & nhiễm HPV",
     "filename": "Quyết định-5185-QĐ-BYT.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/17. HPV/Quyết định-5185-QĐ-BYT.pdf",
     "category": "Phac_Do_Dieu_Tri",
     "categoryName": "Phác Đồ Chẩn Đoán & Điều Trị Bệnh",
     "folderName": "Phac_Do_Dieu_Tri",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2021,
     "size": 940114,
     "sizeFormatted": "918 KB",
     "format": "pdf",
@@ -5106,19 +5106,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet_dinh-5185-qd-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet_dinh-5185-qd-byt.pdf",
-    "keywords": "đoán quyet & bo qđ te đồ phác tế 2024 quyết 5185 tri điều dieu do qd pdf trị benh doan định chan bộ bệnh 5185-qđ dinh byt phac y chẩn"
+    "keywords": "và điều quyet tu doan 2021 5185/qđ-byt: chan định cung huong ung hpv nhiễm y 5185/qd-byt cổ ton đoán dinh & tien nhiem 5185/qđ-byt hướng thuong tử 5185/qd-byt: tế co chẩn tiền dinh-5185-qd-byt.pdf bộ trị tổn thương thư định-5185-qđ-byt.pdf te dẫn tri pdf thu va bo dan dieu quyết"
   },
   {
     "id": "vb_244",
-    "code": "1840-QĐ",
-    "title": "1840 QĐ BYT",
+    "code": "1840/QĐ-BYT",
+    "title": "Quyết định 1840/QĐ-BYT: Hướng dẫn chẩn đoán, điều trị bệnh Cúm mùa (Test nhanh Cúm A/B và RT-PCR)",
     "filename": "1840-QĐ-BYT.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/10.Cúm mùa/1840-QĐ-BYT.pdf",
     "category": "Phac_Do_Dieu_Tri",
     "categoryName": "Phác Đồ Chẩn Đoán & Điều Trị Bệnh",
     "folderName": "Phac_Do_Dieu_Tri",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2020,
     "size": 1439780,
     "sizeFormatted": "1.4 MB",
     "format": "pdf",
@@ -5127,19 +5127,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/1840-qd-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/1840-qd-byt.pdf",
-    "keywords": "đoán & bo qđ te đồ phác tế 2024 1840 tri điều dieu do qd pdf trị benh doan 1840-qđ chan bộ bệnh byt phac y chẩn"
+    "keywords": "và điều quyet 1840/qd-byt: chan định mua huong 1840/qđ-byt: bệnh doan, cum a/b benh y dinh mùa đoán, hướng tế rt-pcr) chẩn 1840-qd-byt.pdf nhanh 1840/qd-byt bộ trị te cúm 2020 dẫn 1840/qđ-byt tri pdf va (test bo dan dieu quyết 1840-qđ-byt.pdf"
   },
   {
     "id": "vb_245",
-    "code": "VBYT-245",
-    "title": "2078:QĐ BYT Cúm mùa",
+    "code": "2078/QĐ-BYT",
+    "title": "Quyết định 2078/QĐ-BYT: Hướng dẫn chuyên môn về giám sát và chẩn đoán bệnh Cúm mùa",
     "filename": "2078:QĐ-BYT Cúm mùa.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/10.Cúm mùa/2078:QĐ-BYT Cúm mùa.doc",
     "category": "Phac_Do_Dieu_Tri",
     "categoryName": "Phác Đồ Chẩn Đoán & Điều Trị Bệnh",
     "folderName": "Phac_Do_Dieu_Tri",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2020,
     "size": 57344,
     "sizeFormatted": "56 KB",
     "format": "word",
@@ -5148,19 +5148,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/2078_qd-byt_cum_mua.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/2078_qd-byt_cum_mua.doc",
-    "keywords": "mùa đoán & cúm bo te đồ phác tế 2024 2078:qđ tri điều 2078:qd dieu do trị benh doan word mua cum chan bộ bệnh byt phac y chẩn"
+    "keywords": "2078/qd-byt và quyet thanh về doan chan định 2078:qđ-byt toán mua.doc 2078/qd-byt: mua huong sát mon bệnh cum dịch benh y bhyt sat phí mùa.doc đoán dinh bảo 2078/qđ-byt: mùa hướng vụ 2078/qđ-byt chi khung tế giám chẩn giam môn 2078:qd-byt bộ mức te hiểm cúm chuyen 2020 dẫn giá word va bo dan chuyên ve quyết"
   },
   {
     "id": "vb_246",
-    "code": "5450-QD",
-    "title": "quyet dinh 5450 qd byt bo y te",
+    "code": "5450/QĐ-BYT",
+    "title": "Quyết định 5450/QĐ-BYT: Hướng dẫn chẩn đoán và điều trị bệnh Viêm gan vi rút E (Xét nghiệm Anti-HEV IgM/IgG)",
     "filename": "quyet-dinh-5450-qd-byt-bo-y-te.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/14. Viêm gan E/quyet-dinh-5450-qd-byt-bo-y-te.pdf",
     "category": "Phac_Do_Dieu_Tri",
     "categoryName": "Phác Đồ Chẩn Đoán & Điều Trị Bệnh",
     "folderName": "Phac_Do_Dieu_Tri",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2020,
     "size": 424946,
     "sizeFormatted": "415 KB",
     "format": "pdf",
@@ -5169,12 +5169,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-5450-qd-byt-bo-y-te.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-5450-qd-byt-bo-y-te.pdf",
-    "keywords": "đoán quyet bo & te đồ phác tế 2024 tri điều dieu do qd pdf trị benh doan 5450 5450-qd chan bộ bệnh dinh byt phac y chẩn"
+    "keywords": "và đo điều quyet hcv-rna lượng (xet tải doan gan igm/igg) chan hbv-dna định huong bệnh 5450/qd-byt: type benh y nghiem hbeag quyet-dinh-5450-qd-byt-bo-y-te.pdf đoán dinh vi hbsag e anti-hev hướng (xét anti-hcv tế viem chẩn viêm bộ 5450/qđ-byt: trị nghiệm te b rút 2020 dẫn tri pdf 5450/qđ-byt va 5450/qd-byt bo rut dan dieu quyết c"
   },
   {
     "id": "vb_247",
-    "code": "3310-QD",
-    "title": "quyet dinh 3310 qd byt 2019 huong dan chan doan dieu tri benh viem gan b",
+    "code": "3310/QĐ-BYT",
+    "title": "Quyết định 3310/QĐ-BYT: Hướng dẫn chẩn đoán, điều trị bệnh Viêm gan vi rút B (Đo tải lượng HBV-DNA, HBsAg định lượng)",
     "filename": "quyet-dinh-3310-qd-byt-2019-huong-dan-chan-doan-dieu-tri-benh-viem-gan-b.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/2. bệnh Viên gan B/quyet-dinh-3310-qd-byt-2019-huong-dan-chan-doan-dieu-tri-benh-viem-gan-b.doc",
     "category": "Phac_Do_Dieu_Tri",
@@ -5190,12 +5190,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-3310-qd-byt-2019-huong-dan-chan-doan-dieu-tri-benh-viem-gan-b.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-3310-qd-byt-2019-huong-dan-chan-doan-dieu-tri-benh-viem-gan-b.doc",
-    "keywords": "gan đoán quyet & b bo te đồ phác tế tri điều dieu 2019 do qd trị benh viem doan 3310 word 3310-qd chan bộ bệnh dinh dan byt huong phac y chẩn"
+    "keywords": "hcv-rna đo điều quyet 3310/qđ-byt: tải quyet-dinh-3310-qd-byt-2019-huong-dan-chan-doan-dieu-tri-benh-viem-gan-b.doc gan chan dieu định luong) hbv-dna 3310/qđ-byt huong lượng) luong bệnh doan, type benh y hbeag dinh vi hbsag đoán, hướng tai anti-hcv tế viem chẩn viêm hbv-dna, bộ trị b te 2019 3310/qd-byt rút dẫn tri 3310/qd-byt: word (đo (do bo rut dan lượng quyết c"
   },
   {
     "id": "vb_248",
-    "code": "3310-QD",
-    "title": "quyet dinh 3310 qd byt 2019 huong dan chan doan dieu tri benh viem gan b",
+    "code": "3310/QĐ-BYT",
+    "title": "Quyết định 3310/QĐ-BYT: Hướng dẫn chẩn đoán, điều trị bệnh Viêm gan vi rút B (Đo tải lượng HBV-DNA, HBsAg định lượng)",
     "filename": "quyet-dinh-3310-qd-byt-2019-huong-dan-chan-doan-dieu-tri-benh-viem-gan-b.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/2. bệnh Viên gan B/quyet-dinh-3310-qd-byt-2019-huong-dan-chan-doan-dieu-tri-benh-viem-gan-b.pdf",
     "category": "Phac_Do_Dieu_Tri",
@@ -5211,19 +5211,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-3310-qd-byt-2019-huong-dan-chan-doan-dieu-tri-benh-viem-gan-b.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-3310-qd-byt-2019-huong-dan-chan-doan-dieu-tri-benh-viem-gan-b.pdf",
-    "keywords": "gan đoán quyet & b bo te đồ phác tế tri điều dieu 2019 do qd pdf trị benh viem doan 3310 3310-qd chan bộ bệnh dinh dan byt huong phac y chẩn"
+    "keywords": "hcv-rna đo điều quyet 3310/qđ-byt: tải gan chan dieu định luong) hbv-dna 3310/qđ-byt huong lượng) luong bệnh doan, type benh y hbeag dinh vi hbsag đoán, hướng tai anti-hcv tế viem chẩn viêm hbv-dna, bộ trị b quyet-dinh-3310-qd-byt-2019-huong-dan-chan-doan-dieu-tri-benh-viem-gan-b.pdf te 3310/qd-byt 2019 rút dẫn tri pdf 3310/qd-byt: (đo (do bo rut dan lượng quyết c"
   },
   {
     "id": "vb_249",
-    "code": "2065-QD",
-    "title": "quyet dinh 2065 qd byt huong dan chan doan dieu tri benh viem gan vi rut c",
+    "code": "2065/QĐ-BYT",
+    "title": "Quyết định 2065/QĐ-BYT: Hướng dẫn chẩn đoán, điều trị bệnh Viêm gan vi rút C (Đo tải lượng HCV-RNA và định type HCV)",
     "filename": "quyet-dinh-2065-qd-byt-huong-dan-chan-doan-dieu-tri-benh-viem-gan-vi-rut-c.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/13. Viêm Gan C/quyet-dinh-2065-qd-byt-huong-dan-chan-doan-dieu-tri-benh-viem-gan-vi-rut-c.pdf",
     "category": "Phac_Do_Dieu_Tri",
     "categoryName": "Phác Đồ Chẩn Đoán & Điều Trị Bệnh",
     "folderName": "Phac_Do_Dieu_Tri",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2021,
     "size": 3961490,
     "sizeFormatted": "3.8 MB",
     "format": "pdf",
@@ -5232,12 +5232,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-2065-qd-byt-huong-dan-chan-doan-dieu-tri-benh-viem-gan-vi-rut-c.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-2065-qd-byt-huong-dan-chan-doan-dieu-tri-benh-viem-gan-vi-rut-c.pdf",
-    "keywords": "gan đoán rut quyet & bo te đồ phác tế 2024 vi tri điều dieu do qd 2065-qd pdf trị benh viem doan 2065 c chan bộ bệnh dinh dan byt huong phac y chẩn"
+    "keywords": "hcv-rna và điều quyet đo tải 2021 gan chan dieu định hbv-dna huong luong bệnh type doan, benh y hbeag 2065/qđ-byt quyet-dinh-2065-qd-byt-huong-dan-chan-doan-dieu-tri-benh-viem-gan-vi-rut-c.pdf 2065/qd-byt dinh vi hbsag đoán, hướng tai anti-hcv tế hcv) viem chẩn viêm 2065/qđ-byt: bộ trị te b rút dẫn tri pdf va (đo (do 2065/qd-byt: rut dan bo lượng quyết c"
   },
   {
     "id": "vb_250",
-    "code": "2024 -QĐ",
-    "title": "162.2024 QĐ BYT",
+    "code": "162/QĐ-BYT",
+    "title": "Quyết định 162/QĐ-BYT: Hướng dẫn chẩn đoán, điều trị và dự phòng bệnh Lao (Cập nhật 2024)",
     "filename": "162.2024 -QĐ-BYT.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/1. ĐIều trị Lao/162.2024 -QĐ-BYT.pdf",
     "category": "Phac_Do_Dieu_Tri",
@@ -5253,19 +5253,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/162.2024_-qd-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/162.2024_-qd-byt.pdf",
-    "keywords": "đoán & bo qđ te đồ phác tế 2024 tri điều dieu do 162.2024 qd pdf trị benh -qđ doan chan bộ bệnh byt phac y chẩn"
+    "keywords": "và điều quyet (cap lao chan định phòng nhuộm huong 2024 mgit bệnh doan, dự 162/qd-byt: benh y 162.2024 nhật -qd-byt.pdf dinh vi 2024) đoán, hướng phong afb 162/qđ-byt: tế mtb ziehl-neelsen 162/qd-byt chẩn rif bộ trị te genexpert khuẩn cấy dẫn 162/qđ-byt tri pdf va -qđ-byt.pdf nhat bo dan dieu du quyết (cập"
   },
   {
     "id": "vb_251",
-    "code": "4263-QD",
-    "title": "quyet dinh 4263 qd byt huong dan chan doan dieu tri va du phong benh lao",
+    "code": "4263/QĐ-BYT",
+    "title": "Quyết định 4263/QĐ-BYT: Hướng dẫn chẩn đoán, điều trị và dự phòng bệnh Lao (Kỹ thuật AFB, nuôi cấy MGIT và GeneXpert)",
     "filename": "quyet-dinh-4263-qd-byt-huong-dan-chan-doan-dieu-tri-va-du-phong-benh-lao.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.3. CV điều trị bệnh/1. ĐIều trị Lao/quyet-dinh-4263-qd-byt-huong-dan-chan-doan-dieu-tri-va-du-phong-benh-lao.pdf",
     "category": "Phac_Do_Dieu_Tri",
     "categoryName": "Phác Đồ Chẩn Đoán & Điều Trị Bệnh",
     "folderName": "Phac_Do_Dieu_Tri",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2020,
     "size": 2890460,
     "sizeFormatted": "2.8 MB",
     "format": "pdf",
@@ -5274,18 +5274,18 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-4263-qd-byt-huong-dan-chan-doan-dieu-tri-va-du-phong-benh-lao.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phac_Do_Dieu_Tri/quyet-dinh-4263-qd-byt-huong-dan-chan-doan-dieu-tri-va-du-phong-benh-lao.pdf",
-    "keywords": "phổi đoán quyet & bo te đồ phác tế 2024 du mgit tri điều dieu do lao qd va pdf trị benh nuôi doan phong 4263 chan bộ bệnh 4263-qd cấy dinh dan byt huong phac y afb chẩn"
+    "keywords": "và điều quyet (kỹ lao chan định phòng nhuộm huong thuật mgit bệnh doan, dự 4263/qđ-byt: 4263/qd-byt: benh nuoi y quyet-dinh-4263-qd-byt-huong-dan-chan-doan-dieu-tri-va-du-phong-benh-lao.pdf dinh vi genexpert) 4263/qđ-byt hướng đoán, nuôi phong (ky afb 4263/qd-byt tế mtb ziehl-neelsen chẩn rif bộ trị te genexpert thuat afb, khuẩn 2020 cấy dẫn tri pdf cay va bo dan dieu du quyết"
   },
   {
     "id": "vb_252",
-    "code": "VBYT-252",
-    "title": "bản công bố an toàn sinh học BV Đức Giang",
+    "code": "CB-ATSH-ĐG",
+    "title": "Bản công bố cơ sở xét nghiệm đạt tiêu chuẩn an toàn sinh học cấp II - BVĐK Đức Giang",
     "filename": "bản công bố an toàn sinh học- BV Đức Giang.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.4. CV Sở y tế/2019. Công bố ATSH/bản công bố an toàn sinh học- BV Đức Giang.pdf",
     "category": "An_Toan_Sinh_Hoc",
     "categoryName": "An Toàn Sinh Học & Môi Trường PXN",
     "folderName": "An_Toan_Sinh_Hoc",
-    "issuer": "Sở Y tế Hà Nội",
+    "issuer": "BVĐK Đức Giang",
     "year": 2019,
     "size": 1316510,
     "sizeFormatted": "1.3 MB",
@@ -5295,12 +5295,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/An_Toan_Sinh_Hoc/ban_cong_bo_an_toan_sinh_hoc-_bv_duc_giang.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/An_Toan_Sinh_Hoc/ban_cong_bo_an_toan_sinh_hoc-_bv_duc_giang.pdf",
-    "keywords": "an duc môi bố nội bo & cong te công truong tế bản sở sinh bv moi đức 2019 giang so ha pdf toan ban trường pxn toàn học noi hà y hoc"
+    "keywords": "toàn cong 2 dat duc chuan bv thải bvđk bố toan nhân nhiễm nghiem cb-atsh-đg bvdk học- bảo hoc đức công sinh cấp lây an so cap bản giang co đạt tiêu rác hấp xet hoc- cb-atsh-dg sở nghiệm 2019 nồi hộ xét pdf học cá atsh tieu ii bo cơ giang.pdf - ban chuẩn"
   },
   {
     "id": "vb_253",
-    "code": "VBYT-253",
-    "title": "403 tăng cường hoạt động đảm bảo ATSH trong phòng XN",
+    "code": "VB-253",
+    "title": "Văn bản y tế: 403 tăng cường hoạt động đảm bảo ATSH trong phòng XN",
     "filename": "403 tăng cường hoạt động đảm bảo ATSH trong phòng XN.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.4. CV Sở y tế/2020/403 tăng cường hoạt động đảm bảo ATSH trong phòng XN.pdf",
     "category": "An_Toan_Sinh_Hoc",
@@ -5316,12 +5316,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/An_Toan_Sinh_Hoc/403_tang_cuong_hoat_dong_dam_bao_atsh_trong_phong_xn.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/An_Toan_Sinh_Hoc/403_tang_cuong_hoat_dong_dam_bao_atsh_trong_phong_xn.pdf",
-    "keywords": "403 an hoc môi hà nội đảm & động te truong tế tăng xn sở sinh dam moi bao 2020 trong so ha pdf hoạt toan bảo phong y atsh cường trường pxn toàn học noi dong tang hoat phòng cuong"
+    "keywords": "toàn hiếu hoạt 403 hà 2 endotoxin te: phòng thận cuong thải lọc máu nhân tố y nhiễm nước van noi bảo cường xn.pdf dam ha vb-253 vi độc tang phong trong sinh cấp lây xn an so nội khí tế bản tai bao ro rác dong đảm hấp sở te nồi tăng hộ khuẩn 2020 cấy pdf học cá văn atsh biến tế: ban chạy hoat động"
   },
   {
     "id": "vb_254",
-    "code": "VBYT-254",
-    "title": "631 kiểm tra đánh giá mức chất lượng phòng XN",
+    "code": "VB-254",
+    "title": "Văn bản y tế: 631 kiểm tra đánh giá mức chất lượng phòng XN",
     "filename": "631 kiểm tra đánh giá mức chất lượng phòng XN.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.4. CV Sở y tế/2020/631 kiểm tra đánh giá mức chất lượng phòng XN.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -5337,12 +5337,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/631_kiem_tra_danh_gia_muc_chat_luong_phong_xn.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/631_kiem_tra_danh_gia_muc_chat_luong_phong_xn.pdf",
-    "keywords": "duc 631 kiểm kiem chất nội & te van tế xn bản tra sở bvđk 2020 đức giang so ha pdf phong muc chat mức ban gia bvdk luong danh lượng văn noi đánh giá hà y phòng"
+    "keywords": "thanh đánh hà lượng qlcl chat quản te: phòng 631 toán định chí luong dịch y bhyt danh phí van noi kiem 15189 bảo xn.pdf ha tra 2429 eqas ngoại iso chất phong muc vụ xn chi so nội khung gia bản tế tiêu mức sở te hiểm 2020 vb-254 pdf giá lý văn kiểm tế: ban chuẩn iqc"
   },
   {
     "id": "vb_255",
-    "code": "VBYT-255",
-    "title": "338 phê duyệt bổ sung danh mục kỹ thuật",
+    "code": "VB-255",
+    "title": "Văn bản y tế: 338 phê duyệt bổ sung danh mục kỹ thuật",
     "filename": "338 phê duyệt bổ sung danh mục kỹ thuật.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.4. CV Sở y tế/2020/Phê duyệt danh mục PCR/338 phê duyệt bổ sung danh mục kỹ thuật.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -5358,19 +5358,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/338_phe_duyet_bo_sung_danh_muc_ky_thuat.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/338_phe_duyet_bo_sung_danh_muc_ky_thuat.pdf",
-    "keywords": "duc phe sung bổ nội bo & te van tế bản thuat sở bvđk 2020 đức mục giang so ha pdf kỹ 338 thuật muc ban bvdk danh duyệt duyet ky văn noi hà y phê"
+    "keywords": "hà ky thuật.pdf 338 te: duyet thuật sung phê y danh van noi ha phe muc kỹ so nội tế bản bổ vb-255 sở te thuat 2020 pdf văn bo duyệt tế: ban mục thuat.pdf"
   },
   {
     "id": "vb_256",
-    "code": "VBYT-256",
-    "title": "155.2018.NĐ CP",
+    "code": "155/2018/NĐ-CP",
+    "title": "Nghị định 155/2018/NĐ-CP: Sửa đổi, bổ sung quy định về an toàn sinh học phòng xét nghiệm y học",
     "filename": "155.2018.NĐ-CP.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.4. CV Sở y tế/2020/TT Kèm 403/155.2018.NĐ-CP.doc",
     "category": "Benh_Vien_Va_So_Y_Te",
     "categoryName": "Văn Bản BVĐK Đức Giang & Sở Y Tế",
     "folderName": "Benh_Vien_Va_So_Y_Te",
-    "issuer": "Sở Y tế Hà Nội",
-    "year": 2020,
+    "issuer": "Chính phủ",
+    "year": 2018,
     "size": 1618944,
     "sizeFormatted": "1.5 MB",
     "format": "word",
@@ -5379,12 +5379,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/155.2018.nd-cp.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/155.2018.nd-cp.doc",
-    "keywords": "duc nội & te van tế bản sở bvđk 2020 đức giang so ha 155.2018.nđ word 155.2018.nd ban bvdk cp văn noi hà y"
+    "keywords": "toàn 155/2018/nđ-cp: 2 đổi, về 155.2018.nđ-cp.doc định phòng thải sửa sung 155.2018.nd-cp.doc toan nhân y 155/2018/nd-cp: nghiem nhiễm nghi doi, phủ dinh hoc bảo 155/2018/nđ-cp sua phong sinh chính cấp lây an phu bổ nghị rác hấp xet 155/2018/nd-cp quy nghiệm nồi hộ xét cá học word atsh bo chinh ve 2018"
   },
   {
     "id": "vb_257",
-    "code": "VBYT-257",
-    "title": "169.signed",
+    "code": "VB-257",
+    "title": "Văn bản y tế: 169.signed",
     "filename": "169.signed.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.4. CV Sở y tế/2020/TT Kèm 403/169.signed.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -5400,12 +5400,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/169.signed.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/169.signed.pdf",
-    "keywords": "duc nội & te van tế bản 169.signed sở bvđk 2020 đức giang so ha pdf ban bvdk văn noi hà y"
+    "keywords": "hà te: y van noi ha vb-257 so nội tế bản 169.signed sở te 169.signed.pdf 2020 pdf văn tế: ban"
   },
   {
     "id": "vb_258",
-    "code": "VBYT-258",
-    "title": "22 2013 tt byt",
+    "code": "22/TT-BYT",
+    "title": "Thông tư 22/TT-BYT: Quy định chuyên môn y tế (22-2013-tt-byt.pdf)",
     "filename": "22-2013-tt-byt.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.4. CV Sở y tế/2020/TT Kèm 403/22-2013-tt-byt.pdf",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -5421,18 +5421,18 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/22-2013-tt-byt.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/22-2013-tt-byt.pdf",
-    "keywords": "duc nội & te tt van tế bản sở 22 bvđk 2020 đức giang so ha pdf ban bvdk 2013 văn byt noi hà y"
+    "keywords": "hà tu định thong mon thông y 22/tt-byt: noi dinh ha so nội tế (22-2013-tt-byt.pdf) 22-2013-tt-byt.pdf môn te tư quy sở 22/tt-byt chuyen 2020 pdf chuyên"
   },
   {
     "id": "vb_259",
-    "code": "963-QD",
-    "title": "quyet dinh 963 qd byt huong dan tam thoi giam sat va phong chong covid 19",
+    "code": "963/QĐ-BYT",
+    "title": "Quyết định 963/QĐ-BYT: Hướng dẫn tạm thời giám sát và phòng, chống dịch bệnh Covid-19",
     "filename": "quyet-dinh-963-qd-byt-huong-dan-tam-thoi-giam-sat-va-phong-chong-covid-19.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.4. CV Sở y tế/2020/TT Kèm 403/quyet-dinh-963-qd-byt-huong-dan-tam-thoi-giam-sat-va-phong-chong-covid-19.doc",
     "category": "Phong_Chong_Dich_Covid",
     "categoryName": "Phòng Chống Dịch & Covid-19",
     "folderName": "Phong_Chong_Dich_Covid",
-    "issuer": "Sở Y tế Hà Nội",
+    "issuer": "Bộ Y tế",
     "year": 2020,
     "size": 921713,
     "sizeFormatted": "900 KB",
@@ -5442,19 +5442,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/quyet-dinh-963-qd-byt-huong-dan-tam-thoi-giam-sat-va-phong-chong-covid-19.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/quyet-dinh-963-qd-byt-huong-dan-tam-thoi-giam-sat-va-phong-chong-covid-19.doc",
-    "keywords": "sars-cov-2 giam hà nội chống quyet chong & te 19 nhanh tế test pcr sở 963-qd 963 2020 qd va so ha thoi covid phong word covid-19 sat bệnh dinh dan tam dich byt huong noi dịch y phòng"
+    "keywords": "và thanh quyet hầu quyet-dinh-963-qd-byt-huong-dan-tam-thoi-giam-sat-va-phong-chong-covid-19.doc 963/qd-byt định toán huong dich tỵ sát tạm dịch bệnh benh y bhyt sat phí phong, chong test covid-19 dinh bảo hướng vụ pcr chi khung tế chống giám 963/qđ-byt: sars-cov-2 963/qd-byt: nhanh giam mức thoi bộ te hiểm 2020 thời phòng, dẫn tam rt-pcr giá 963/qđ-byt va word bo mẫu lấy dan quyết"
   },
   {
     "id": "vb_260",
-    "code": "TT 40",
-    "title": "thong tu 40 2018 tt byt ve quan ly mau benh pham benh truyen nhiem",
+    "code": "40/2018/TT-BYT",
+    "title": "Thông tư 40/2018/TT-BYT: Quy định về quản lý mẫu bệnh phẩm bệnh truyền nhiễm",
     "filename": "thong-tu-40-2018-tt-byt-ve-quan-ly-mau-benh-pham-benh-truyen-nhiem.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.4. CV Sở y tế/2020/TT Kèm 403/TT 40/thong-tu-40-2018-tt-byt-ve-quan-ly-mau-benh-pham-benh-truyen-nhiem.doc",
     "category": "Benh_Vien_Va_So_Y_Te",
     "categoryName": "Văn Bản BVĐK Đức Giang & Sở Y Tế",
     "folderName": "Benh_Vien_Va_So_Y_Te",
-    "issuer": "Sở Y tế Hà Nội",
-    "year": 2020,
+    "issuer": "Bộ Y tế",
+    "year": 2018,
     "size": 810102,
     "sizeFormatted": "791 KB",
     "format": "word",
@@ -5463,12 +5463,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/thong-tu-40-2018-tt-byt-ve-quan-ly-mau-benh-pham-benh-truyen-nhiem.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/thong-tu-40-2018-tt-byt-ve-quan-ly-mau-benh-pham-benh-truyen-nhiem.doc",
-    "keywords": "duc pham nội & te thong tt van tế bản quan sở 40 bvđk mau 2020 đức giang truyen so ha benh word ly ban bvdk ve 2018 tu văn byt noi nhiem hà y"
+    "keywords": "thong-tu-40-2018-tt-byt-ve-quan-ly-mau-benh-pham-benh-truyen-nhiem.doc tu quản về định thong ly truyền bệnh thông nhiễm benh y dinh nhiem phẩm quan tế mau bộ te tư quy 40/2018/tt-byt: 40/2018/tt-byt pham truyen lý word bo mẫu ve 2018"
   },
   {
     "id": "vb_261",
-    "code": "1282-QD",
-    "title": "1282 qd byt 2020 huong dan tam thoi xet nghiem covid 19",
+    "code": "1282/QĐ-BYT",
+    "title": "Quyết định 1282/QĐ-BYT: Hướng dẫn tạm thời xét nghiệm Covid-19 trong cơ sở khám chữa bệnh",
     "filename": "1282-qd-byt-2020-huong-dan-tam-thoi-xet-nghiem-covid-19.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/1282-qd-byt-2020-huong-dan-tam-thoi-xet-nghiem-covid-19.pdf",
     "category": "Phong_Chong_Dich_Covid",
@@ -5484,19 +5484,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/1282-qd-byt-2020-huong-dan-tam-thoi-xet-nghiem-covid-19.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/1282-qd-byt-2020-huong-dan-tam-thoi-xet-nghiem-covid-19.pdf",
-    "keywords": "sars-cov-2 chống nghiem chong & bo te 19 nhanh tế test pcr 2020 qd 1282 pdf thoi covid phong xet covid-19 1282-qd bộ bệnh dich dan tam huong byt dịch y phòng"
+    "keywords": "kham hiếu quyet hầu chữa endotoxin thận định chua lấy lọc máu huong tỵ tạm bệnh dịch tố benh y nghiem 1282/qd-byt nước 1282/qđ-byt test covid-19 dinh vi độc hướng 1282/qđ-byt: trong khí pcr tai so nội tế co ro sars-cov-2 nhanh xet thoi bộ sở nghiệm khám te khuẩn 2020 thời xét dẫn 1282/qd-byt: tam pdf rt-pcr cấy bo cơ 1282-qd-byt-2020-huong-dan-tam-thoi-xet-nghiem-covid-19.pdf dan mẫu biến chạy quyết"
   },
   {
     "id": "vb_262",
-    "code": "VBYT-262",
-    "title": "1983 GIÁ THU XÉT NGHIEM COVID",
+    "code": "1983/CV-BCĐQG",
+    "title": "Công văn 1983/CV-BCĐQG: Hướng dẫn về mức giá và cơ chế thu xét nghiệm sàng lọc Covid-19",
     "filename": "1983_ GIÁ THU XÉT NGHIEM COVID.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/1983_ GIÁ THU XÉT NGHIEM COVID.pdf",
     "category": "Phong_Chong_Dich_Covid",
     "categoryName": "Phòng Chống Dịch & Covid-19",
     "folderName": "Phong_Chong_Dich_Covid",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BCĐ Quốc gia Covid-19",
+    "year": 2020,
     "size": 595515,
     "sizeFormatted": "582 KB",
     "format": "pdf",
@@ -5505,12 +5505,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/1983_gia_thu_xet_nghiem_covid.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/1983_gia_thu_xet_nghiem_covid.pdf",
-    "keywords": "sars-cov-2 thu chống nghiem chong & bo te nhanh tế 2024 test pcr 1983 xét pdf covid phong xet covid-19 gia bộ bệnh dich giá dịch y phòng"
+    "keywords": "và thanh loc sàng cong hầu 1983/cv-bcdqg: về định toán lọc bcd huong bcđ tỵ 1983/cv-bcđqg: dịch bệnh y nghiem bhyt phí 1983/cv-bcđqg van chế test covid-19 sang quoc bảo công che hướng muc covid.pdf vụ pcr chi khung gia tế co 1983/cv-bcdqg quốc sars-cov-2 nhanh xet mức hiểm nghiệm 1983_ 2020 xét rt-pcr dẫn pdf giá văn thu va cơ lấy dan mẫu ve"
   },
   {
     "id": "vb_263",
-    "code": "VBYT-263",
-    "title": "963 HD giam sat va phong chong 18.3.2020",
+    "code": "963/QĐ-BYT",
+    "title": "Quyết định 963/QĐ-BYT: Hướng dẫn tạm thời giám sát và phòng, chống dịch bệnh Covid-19",
     "filename": "963_HD giam sat va phong chong_18.3.2020.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/963_HD giam sat va phong chong_18.3.2020.pdf",
     "category": "Phong_Chong_Dich_Covid",
@@ -5526,19 +5526,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/963_hd_giam_sat_va_phong_chong_18.3.2020.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/963_hd_giam_sat_va_phong_chong_18.3.2020.pdf",
-    "keywords": "giam chống 18.3.2020 chong & bo te tế 963 2020 va pdf phong covid-19 sat bộ hd dich dịch y phòng"
+    "keywords": "và thanh quyet hầu 963/qd-byt định toán huong dich 963_hd tỵ sát tạm dịch bệnh benh y bhyt sat phí phong, chong test covid-19 dinh bảo phong hướng vụ pcr chi khung tế chống giám 963/qđ-byt: sars-cov-2 963/qd-byt: nhanh giam mức thoi bộ te hiểm chong_18.3.2020.pdf 2020 thời phòng, dẫn tam pdf rt-pcr 963/qđ-byt va giá bo mẫu lấy dan quyết"
   },
   {
     "id": "vb_264",
-    "code": "QĐ 272",
-    "title": "QĐ 272",
+    "code": "272/QĐ-SYT",
+    "title": "Quyết định 272/QĐ-SYT: Phân công nhiệm vụ các bệnh viện thực hiện xét nghiệm sàng lọc và điều trị Covid-19",
     "filename": "QĐ 272.jpg",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/QĐ 272.jpg",
     "category": "Phong_Chong_Dich_Covid",
     "categoryName": "Phòng Chống Dịch & Covid-19",
     "folderName": "Phong_Chong_Dich_Covid",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "Sở Y tế Hà Nội",
+    "year": 2020,
     "size": 398421,
     "sizeFormatted": "389 KB",
     "format": "image",
@@ -5547,19 +5547,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/qd_272.jpg",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/qd_272.jpg",
-    "keywords": "tế te 2024 bộ phong chống dich chong & 272 qđ covid-19 bo dịch y ảnh phòng qd"
+    "keywords": "và điều quyet sàng cong loc hà hầu viện định 272.jpg lọc phan qd 272/qd-syt tỵ bệnh thuc dịch benh y nghiem noi test covid-19 dinh vu sang ha công 272/qd-syt: nhiem thực ảnh vụ pcr phân cac nội qđ tế các so sars-cov-2 nhanh xet trị sở nghiệm te hiện vien nhiệm 2020 272/qđ-syt: xét rt-pcr tri 272/qđ-syt va hien mẫu lấy dieu quyết"
   },
   {
     "id": "vb_265",
-    "code": "QD 774",
-    "title": "Viet á QD 774 2020 03 04 19.06.17",
+    "code": "774/QĐ-BYT",
+    "title": "Quyết định 774/QĐ-BYT: Ban hành số đăng ký lưu hành sinh phẩm chẩn đoán in vitro xét nghiệm SARS-CoV-2",
     "filename": "Viet á QD 774_2020-03-04 19.06.17.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/Viet á QD 774_2020-03-04 19.06.17.pdf",
     "category": "Phong_Chong_Dich_Covid",
     "categoryName": "Phòng Chống Dịch & Covid-19",
     "folderName": "Phong_Chong_Dich_Covid",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2020,
     "size": 1359505,
     "sizeFormatted": "1.3 MB",
     "format": "pdf",
@@ -5568,19 +5568,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/viet_a_qd_774_2020-03-04_19.06.17.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/viet_a_qd_774_2020-03-04_19.06.17.pdf",
-    "keywords": "chống chong & bo te tế 2024 774 viet 03 19.06.17 2020 á qd pdf a phong covid-19 bộ 04 dich dịch y phòng"
+    "keywords": "hiếu quyet ky hầu đăng luu doan 774/qđ-byt chan thận định hành lọc endotoxin máu qd lưu tỵ dịch bệnh tố y nghiem vitro nước test đoán dinh covid-19 vi độc ký phẩm sinh khí 774/qd-byt pcr a so nội tai dang tế chẩn ro sars-cov-2 viet 774_2020-03-04 xet số nhanh á bộ 774/qd-byt: nghiệm te 774/qđ-byt: hanh khuẩn 2020 xét pham rt-pcr pdf cấy in 19.06.17.pdf bo mẫu lấy biến ban chạy quyết"
   },
   {
     "id": "vb_266",
-    "code": "VBYT-266",
-    "title": "cong dien 1898 cd bcdqg phong va kiem soat lay nhiem covid trong co so kham chua benh",
+    "code": "1898/CĐ-BCĐQG",
+    "title": "Công điện 1898/CĐ-BCĐQG: Tăng cường phòng và kiểm soát lây nhiễm Covid-19 trong các cơ sở khám chữa bệnh",
     "filename": "cong-dien-1898-cd-bcdqg-phong-va-kiem-soat-lay-nhiem-covid-trong-co-so-kham-chua-benh.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/cong-dien-1898-cd-bcdqg-phong-va-kiem-soat-lay-nhiem-covid-trong-co-so-kham-chua-benh.pdf",
     "category": "Phong_Chong_Dich_Covid",
     "categoryName": "Phòng Chống Dịch & Covid-19",
     "folderName": "Phong_Chong_Dich_Covid",
-    "issuer": "Bộ Y tế",
-    "year": 2024,
+    "issuer": "BCĐ Quốc gia Covid-19",
+    "year": 2020,
     "size": 1144356,
     "sizeFormatted": "1.1 MB",
     "format": "pdf",
@@ -5589,12 +5589,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/cong-dien-1898-cd-bcdqg-phong-va-kiem-soat-lay-nhiem-covid-trong-co-so-kham-chua-benh.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/cong-dien-1898-cd-bcdqg-phong-va-kiem-soat-lay-nhiem-covid-trong-co-so-kham-chua-benh.pdf",
-    "keywords": "sars-cov-2 kiem chống co chong & bo cong te lay cd nhanh tế 2024 test pcr trong so va chua bcdqg soat pdf benh covid phong 1898 covid-19 dien kham bộ bệnh dich nhiem dịch y phòng"
+    "keywords": "và kham hiếu cong hầu chữa endotoxin thận phòng chua điện cuong bcd 1898/cđ-bcđqg: lọc máu bcđ tỵ bệnh dịch tố benh nhiễm nước test covid-19 kiem cường 1898/cd-bcdqg soat quoc công vi nhiem độc tang phong trong lây khí pcr tai so cac nội gia các co dien ro quốc sars-cov-2 nhanh cong-dien-1898-cd-bcdqg-phong-va-kiem-soat-lay-nhiem-covid-trong-co-so-kham-chua-benh.pdf lay sở khám 1898/cđ-bcđqg tăng khuẩn 2020 rt-pcr cấy pdf kiểm va cơ lấy soát mẫu biến chạy 1898/cd-bcdqg:"
   },
   {
     "id": "vb_267",
-    "code": "VBYT-267",
-    "title": "15 4 sử dụng xét nghiệm test nhanh",
+    "code": "VB-267",
+    "title": "Văn bản y tế: 15 4 sử dụng xét nghiệm test nhanh",
     "filename": "15-4 sử dụng xét nghiệm test nhanh.docx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/CV COVID BÊNH VIỆN/15-4 sử dụng xét nghiệm test nhanh.docx",
     "category": "Phong_Chong_Dich_Covid",
@@ -5610,12 +5610,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/15-4_su_dung_xet_nghiem_test_nhanh.docx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/15-4_su_dung_xet_nghiem_test_nhanh.docx",
-    "keywords": "4 chống nghiem chong & bo te dụng nhanh 15 nghiệm tế test 2024 xét word phong xet covid-19 sử dung su bộ dich dịch y phòng"
+    "keywords": "15-4 te: 2024 y nghiem dụng van test nhanh.docx vb-267 15 su tế bản dung nhanh xet bộ te nghiệm 4 sử xét văn word bo tế: ban"
   },
   {
     "id": "vb_268",
-    "code": "VBYT-268",
-    "title": "24 4 sử dụng xét nghiệm test nhanh",
+    "code": "VB-268",
+    "title": "Văn bản y tế: 24 4 sử dụng xét nghiệm test nhanh",
     "filename": "24-4 sử dụng xét nghiệm test nhanh.docx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/CV COVID BÊNH VIỆN/24-4 sử dụng xét nghiệm test nhanh.docx",
     "category": "Phong_Chong_Dich_Covid",
@@ -5631,12 +5631,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/24-4_su_dung_xet_nghiem_test_nhanh.docx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/24-4_su_dung_xet_nghiem_test_nhanh.docx",
-    "keywords": "4 chống nghiem chong & bo te dụng nhanh nghiệm tế 2024 test xét word phong xet covid-19 sử dung su bộ dich 24 dịch y phòng"
+    "keywords": "te: 2024 y nghiem dụng van test nhanh.docx 24-4 24 su tế bản dung nhanh xet bộ te nghiệm 4 sử xét vb-268 văn word bo tế: ban"
   },
   {
     "id": "vb_269",
-    "code": "VBYT-269",
-    "title": "24.4 672 sử dụng Test nhanh GEN Covid 19",
+    "code": "VB-269",
+    "title": "Văn bản y tế: 24.4 672 sử dụng Test nhanh GEN Covid  19",
     "filename": "24.4 672 sử dụng Test nhanh GEN Covid -19.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/CV COVID BÊNH VIỆN/24.4 672 sử dụng Test nhanh GEN Covid -19.pdf",
     "category": "Phong_Chong_Dich_Covid",
@@ -5652,12 +5652,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/24.4_672_su_dung_test_nhanh_gen_covid_-19.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/24.4_672_su_dung_test_nhanh_gen_covid_-19.pdf",
-    "keywords": "sars-cov-2 chống chong & bo te dụng 19 nhanh 672 tế 2024 test pcr pdf 24.4 gen covid phong covid-19 sử dung su bộ bệnh dich dịch y phòng"
+    "keywords": "gen hầu te: 2024 tỵ dịch bệnh y 19 dụng van test covid-19 24.4 672 su -19.pdf pcr tế bản vb-269 sars-cov-2 dung nhanh bộ te sử rt-pcr pdf văn bo mẫu lấy tế: ban covid"
   },
   {
     "id": "vb_270",
-    "code": "VBYT-270",
-    "title": "271 phân bổ test nhanh Covid 19",
+    "code": "VB-270",
+    "title": "Văn bản y tế: 271 phân bổ test nhanh Covid  19",
     "filename": "271 phân bổ test nhanh Covid -19.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/CV COVID BÊNH VIỆN/271 phân bổ test nhanh Covid -19.pdf",
     "category": "Phong_Chong_Dich_Covid",
@@ -5673,12 +5673,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/271_phan_bo_test_nhanh_covid_-19.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/271_phan_bo_test_nhanh_covid_-19.pdf",
-    "keywords": "sars-cov-2 bổ chống 271 chong bo & te 19 nhanh tế 2024 test pcr phân pdf covid phong covid-19 phan bộ bệnh dich dịch y phòng"
+    "keywords": "hầu 271 te: phan 2024 tỵ dịch bệnh y 19 van test covid-19 -19.pdf pcr phân tế bản bổ sars-cov-2 nhanh bộ te vb-270 rt-pcr pdf văn bo mẫu lấy tế: ban covid"
   },
   {
     "id": "vb_271",
-    "code": "VBYT-271",
-    "title": "30.7 công văn xin test nhanh",
+    "code": "30/CV-ĐG",
+    "title": "Công văn 30/CV-ĐG: Hướng dẫn công tác chuyên môn y tế (30.7 công văn xin test nhanh.jpg)",
     "filename": "30.7 công văn xin test nhanh.jpg",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/CV COVID BÊNH VIỆN/30.7 công văn xin test nhanh.jpg",
     "category": "Phong_Chong_Dich_Covid",
@@ -5694,12 +5694,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-image",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/30.7_cong_van_xin_test_nhanh.jpg",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/30.7_cong_van_xin_test_nhanh.jpg",
-    "keywords": "chống chong & bo cong te công van nhanh tế 2024 test 30.7 ảnh phong covid-19 xin bộ dich văn dịch y phòng"
+    "keywords": "30/cv-dg: cong xin huong 2024 tac mon y tác 30/cv-đg: van test công ảnh hướng 30/cv-dg tế (30.7 môn nhanh.jpg bộ te chuyen 30/cv-đg dẫn 30.7 văn nhanh.jpg) bo dan chuyên"
   },
   {
     "id": "vb_272",
-    "code": "VBYT-272",
-    "title": "87 thành lập BCĐ phòng chống dịch bệnh viêm phổi cấp",
+    "code": "VB-272",
+    "title": "Văn bản y tế: 87 thành lập BCĐ phòng chống dịch bệnh viêm phổi cấp",
     "filename": "87 thành lập BCĐ phòng chống dịch bệnh viêm phổi cấp.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/CV COVID BÊNH VIỆN/87 thành lập BCĐ phòng chống dịch bệnh viêm phổi cấp.pdf",
     "category": "Phong_Chong_Dich_Covid",
@@ -5715,12 +5715,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/87_thanh_lap_bcd_phong_chong_dich_benh_viem_phoi_cap.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/87_thanh_lap_bcd_phong_chong_dich_benh_viem_phoi_cap.pdf",
-    "keywords": "phổi lap thanh phoi 87 chống chong & bo bcđ te tế 2024 bcd viêm lập pdf benh viem phong covid-19 cấp bộ thành bệnh cap dich dịch y phòng"
+    "keywords": "thanh 87 phoi te: phòng bcd lap bcđ dich 2024 dịch bệnh benh y thành van vb-272 chong tế: phong cấp.pdf cấp cap tế bản chống viem phổi viêm bộ te pdf văn bo lập ban cap.pdf"
   },
   {
     "id": "vb_273",
-    "code": "VBYT-273",
-    "title": "CV 462 xin hỗ trợ test xét nghiệm",
+    "code": "462/CV-ĐG",
+    "title": "Công văn 462/CV-ĐG: Hướng dẫn công tác chuyên môn y tế (CV 462 xin hỗ trợ test xét nghiệm.pdf)",
     "filename": "CV 462 xin hỗ trợ test xét nghiệm.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/CV COVID BÊNH VIỆN/CV 462 xin hỗ trợ test xét nghiệm.pdf",
     "category": "Phong_Chong_Dich_Covid",
@@ -5736,19 +5736,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/cv_462_xin_ho_tro_test_xet_nghiem.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/cv_462_xin_ho_tro_test_xet_nghiem.pdf",
-    "keywords": "chống nghiem chong & bo te nghiệm tế 2024 test hỗ xét pdf phong 462 trợ xet covid-19 xin tro cv bộ dich dịch y ho phòng"
+    "keywords": "cv 462/cv-đg: cong (cv xin huong 2024 tac mon nghiem.pdf) y tác nghiem.pdf nghiệm.pdf) van test 462/cv-đg công hướng tế 462/cv-dg: trợ 462/cv-dg xet môn bộ te chuyen xét dẫn pdf văn ho bo nghiệm.pdf 462 tro dan chuyên hỗ"
   },
   {
     "id": "vb_274",
-    "code": "VBYT-274",
-    "title": "(01.4) 209 phân bổ Test nhanh",
+    "code": "209/CV-SYT",
+    "title": "Công văn 209/CV-SYT: Sở Y tế Hà Nội phân bổ test nhanh chẩn đoán Covid-19 cho các cơ sở y tế",
     "filename": "(01.4) 209 phân bổ Test nhanh.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/CV COVID SỞ Y TẾ/(01.4) 209 phân bổ Test nhanh.pdf",
     "category": "Phong_Chong_Dich_Covid",
     "categoryName": "Phòng Chống Dịch & Covid-19",
     "folderName": "Phong_Chong_Dich_Covid",
     "issuer": "Sở Y tế Hà Nội",
-    "year": 2024,
+    "year": 2020,
     "size": 201599,
     "sizeFormatted": "197 KB",
     "format": "pdf",
@@ -5757,19 +5757,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/01.4_209_phan_bo_test_nhanh.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/01.4_209_phan_bo_test_nhanh.pdf",
-    "keywords": "hà bổ nội chống chong bo & te nhanh tế 2024 test phân sở so ha pdf phong (01.4) covid-19 phan dich noi 209 dịch y phòng"
+    "keywords": "209 hà cong hầu doan chan lấy phan 209/cv-syt tỵ dịch bệnh y van noi test đoán covid-19 ha công pcr phân nội so tế cac các bổ co chẩn sars-cov-2 nhanh 209/cv-syt: sở te (01.4) nhanh.pdf 2020 rt-pcr pdf văn bo cơ cho mẫu"
   },
   {
     "id": "vb_275",
-    "code": "VBYT-275",
-    "title": "(02.4) 365 thực hiện XN Covid 19 tại các cơ sở y tế",
+    "code": "365/CV-SYT",
+    "title": "Công văn 365/CV-SYT: Hướng dẫn thực hiện xét nghiệm sàng lọc Covid-19 tại các cơ sở khám chữa bệnh",
     "filename": "(02.4) 365 thực hiện XN Covid -19 tại các cơ sở y tế.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/CV COVID SỞ Y TẾ/(02.4) 365 thực hiện XN Covid -19 tại các cơ sở y tế.pdf",
     "category": "Phong_Chong_Dich_Covid",
     "categoryName": "Phòng Chống Dịch & Covid-19",
     "folderName": "Phong_Chong_Dich_Covid",
     "issuer": "Sở Y tế Hà Nội",
-    "year": 2024,
+    "year": 2020,
     "size": 498762,
     "sizeFormatted": "487 KB",
     "format": "pdf",
@@ -5778,19 +5778,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/02.4_365_thuc_hien_xn_covid_-19_tai_cac_co_so_y_te.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/02.4_365_thuc_hien_xn_covid_-19_tai_cac_co_so_y_te.pdf",
-    "keywords": "tại sars-cov-2 hà nội chống co hiện chong & (02.4) te 19 nhanh tế xn 2024 test pcr cơ sở các so ha pdf covid tai phong cac 365 covid-19 hien thuc bệnh thực dich noi dịch y phòng"
+    "keywords": "kham loc sàng cong hà hầu chữa chua lọc huong (02.4) tại tế.pdf tỵ bệnh thuc te.pdf dịch benh y nghiem van noi test covid-19 sang ha công thực hướng tai pcr xn so cac nội tế các co sars-cov-2 nhanh 365/cv-syt xet sở nghiệm 365/cv-syt: hiện khám 365 te 2020 -19 xét rt-pcr dẫn pdf văn hien cơ lấy dan mẫu covid"
   },
   {
     "id": "vb_276",
-    "code": "VBYT-276",
-    "title": "(15.4) 427 sử dụng XN nhanh phát hiện kháng thể",
+    "code": "427/CV-SYT",
+    "title": "Công văn 427/CV-SYT: Hướng dẫn chỉ định và sử dụng xét nghiệm nhanh phát hiện kháng thể SARS-CoV-2",
     "filename": "(15.4) 427 sử dụng XN nhanh phát hiện kháng thể.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/CV COVID SỞ Y TẾ/(15.4) 427 sử dụng XN nhanh phát hiện kháng thể.pdf",
     "category": "Phong_Chong_Dich_Covid",
     "categoryName": "Phòng Chống Dịch & Covid-19",
     "folderName": "Phong_Chong_Dich_Covid",
     "issuer": "Sở Y tế Hà Nội",
-    "year": 2024,
+    "year": 2020,
     "size": 160336,
     "sizeFormatted": "157 KB",
     "format": "pdf",
@@ -5799,19 +5799,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/15.4_427_su_dung_xn_nhanh_phat_hien_khang_the.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/15.4_427_su_dung_xn_nhanh_phat_hien_khang_the.pdf",
-    "keywords": "427 hà phát nội chống hiện chong & te dụng nhanh tế xn (15.4) 2024 sở khang kháng so ha pdf phong covid-19 the hien sử dung su dich noi dịch y phat thể phòng"
+    "keywords": "và cong hà hầu thể.pdf định huong (15.4) phát tỵ dịch kháng chỉ 427 bệnh y nghiem thể dụng van noi test covid-19 dinh ha công hướng su pcr chi xn so nội tế sars-cov-2 the.pdf nhanh dung xet phat the nghiệm sở hiện te sử 2020 xét rt-pcr 427/cv-syt dẫn pdf văn va khang hien mẫu lấy dan 427/cv-syt:"
   },
   {
     "id": "vb_277",
-    "code": "VBYT-277",
-    "title": "(22.4) 1868 cập nhật tài liệu HD công tác chẩn đoán và điều trị Covid 19",
+    "code": "1868/CV-SYT",
+    "title": "Công văn Sở Y tế Hà Nội: Cập nhật tài liệu hướng dẫn công tác chẩn đoán, xét nghiệm và điều trị Covid-19",
     "filename": "(22.4) 1868 cập nhật tài liệu HD công tác chẩn đoán và điều trị Covid -19.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/CV COVID SỞ Y TẾ/(22.4) 1868 cập nhật tài liệu HD công tác chẩn đoán và điều trị Covid -19.pdf",
     "category": "Phong_Chong_Dich_Covid",
     "categoryName": "Phòng Chống Dịch & Covid-19",
     "folderName": "Phong_Chong_Dich_Covid",
     "issuer": "Sở Y tế Hà Nội",
-    "year": 2024,
+    "year": 2020,
     "size": 7603413,
     "sizeFormatted": "7.3 MB",
     "format": "pdf",
@@ -5820,19 +5820,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/22.4_1868_cap_nhat_tai_lieu_hd_cong_tac_chan_doan_va_dieu_tri_covid_-19.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/22.4_1868_cap_nhat_tai_lieu_hd_cong_tac_chan_doan_va_dieu_tri_covid_-19.pdf",
-    "keywords": "sars-cov-2 nhat tác đoán hà nội chống chong & cong te công 19 nhanh tế 2024 1868 test và pcr sở tri nhật điều tài dieu liệu va so ha pdf trị lieu covid (22.4) tai doan phong covid-19 tac chan bệnh hd cap dich noi cập dịch y phòng chẩn"
+    "keywords": "và điều hà cong hầu doan chan 1868/cv-syt noi: lieu huong tac tỵ hd dịch bệnh y tác nghiem nhật van noi test covid-19 đoán ha công đoán, hướng tai -19.pdf pcr so cap nội tế liệu chẩn 1868 (22.4) sars-cov-2 nhanh xet nội: sở cập tài nghiệm trị te 2020 xét rt-pcr dẫn tri pdf văn va nhat mẫu lấy dan dieu covid doan,"
   },
   {
     "id": "vb_278",
-    "code": "VBYT-278",
-    "title": "(22.4) 453 cập nhật tài liệu HD công tác chẩn đoán và điều trị Covid 19",
+    "code": "453/CV-SYT",
+    "title": "Công văn Sở Y tế Hà Nội: Cập nhật tài liệu hướng dẫn công tác chẩn đoán, xét nghiệm và điều trị Covid-19",
     "filename": "(22.4) 453 cập nhật tài liệu HD công tác chẩn đoán và điều trị Covid -19.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/CV COVID SỞ Y TẾ/(22.4) 453 cập nhật tài liệu HD công tác chẩn đoán và điều trị Covid -19.pdf",
     "category": "Phong_Chong_Dich_Covid",
     "categoryName": "Phòng Chống Dịch & Covid-19",
     "folderName": "Phong_Chong_Dich_Covid",
     "issuer": "Sở Y tế Hà Nội",
-    "year": 2024,
+    "year": 2020,
     "size": 130719,
     "sizeFormatted": "128 KB",
     "format": "pdf",
@@ -5841,19 +5841,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/22.4_453_cap_nhat_tai_lieu_hd_cong_tac_chan_doan_va_dieu_tri_covid_-19.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/22.4_453_cap_nhat_tai_lieu_hd_cong_tac_chan_doan_va_dieu_tri_covid_-19.pdf",
-    "keywords": "sars-cov-2 nhat tác đoán hà nội chống chong & cong te công 19 nhanh tế 2024 test và pcr sở tri nhật điều tài 453 dieu liệu va so ha pdf trị lieu covid (22.4) tai doan phong covid-19 tac chan bệnh hd cap dich noi cập dịch y phòng chẩn"
+    "keywords": "và điều hà cong hầu doan chan 453/cv-syt noi: lieu huong 453 tac tỵ hd dịch bệnh y tác nghiem nhật van noi test covid-19 đoán ha công đoán, hướng tai -19.pdf pcr so cap nội tế liệu chẩn (22.4) sars-cov-2 nhanh xet nội: sở cập tài nghiệm trị te 2020 xét rt-pcr dẫn tri pdf văn va nhat mẫu lấy dan dieu covid doan,"
   },
   {
     "id": "vb_279",
-    "code": "VBYT-279",
-    "title": "KHAI BÁO XÉT NGHIỆM TEST NHANH",
+    "code": "BM-KB-XN",
+    "title": "Biểu mẫu thống kê và khai báo kết quả xét nghiệm test nhanh Covid-19 gửi Sở Y tế",
     "filename": "KHAI BÁO XÉT NGHIỆM TEST NHANH.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/CV COVID SỞ Y TẾ/KHAI BÁO XÉT NGHIỆM TEST NHANH.pdf",
     "category": "Phong_Chong_Dich_Covid",
     "categoryName": "Phòng Chống Dịch & Covid-19",
     "folderName": "Phong_Chong_Dich_Covid",
     "issuer": "Sở Y tế Hà Nội",
-    "year": 2024,
+    "year": 2020,
     "size": 368420,
     "sizeFormatted": "360 KB",
     "format": "pdf",
@@ -5862,19 +5862,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/khai_bao_xet_nghiem_test_nhanh.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/khai_bao_xet_nghiem_test_nhanh.pdf",
-    "keywords": "hà nội chống nghiem chong & te báo nhanh nghiệm tế 2024 test sở bao xét so ha pdf phong xet covid-19 khai dich noi dịch y phòng"
+    "keywords": "và quả qua hà hầu ket thong tỵ gửi dịch bệnh y nghiem gui ke bm-kb-xn biểu test covid-19 noi ha kết báo pcr so nội tế bieu kê sars-cov-2 nhanh thống xet mau sở nghiệm te nhanh.pdf 2020 xét rt-pcr pdf va mẫu lấy bao khai"
   },
   {
     "id": "vb_280",
-    "code": "NĐ 92",
-    "title": "10211272",
+    "code": "127/QĐ-BYT",
+    "title": "Quyết định 127/QĐ-BYT: Hướng dẫn thực hiện giám sát quốc gia về kháng kháng sinh trong các cơ sở y tế",
     "filename": "10211272.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/NĐ 92/10211272.doc",
     "category": "Phong_Chong_Dich_Covid",
     "categoryName": "Phòng Chống Dịch & Covid-19",
     "folderName": "Phong_Chong_Dich_Covid",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2018,
     "size": 95232,
     "sizeFormatted": "93 KB",
     "format": "word",
@@ -5883,12 +5883,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/10211272.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/10211272.doc",
-    "keywords": "tế 2024 bộ word phong chống dich chong nđ & covid-19 bo te dịch 92 y phòng 10211272"
+    "keywords": "hiếu thanh 10211272.doc định toán lọc sát dịch thuc bhyt nước bảo hướng 127/qd-byt gia bộ cấy word phí ve quyet về máu kháng tố y sat vi sinh khí so khung các ro lâm te hiểm khuẩn khang cơ quyết 127/qđ-byt: endotoxin thận huong quoc 127/qđ-byt thực thuốc clsi chi co giám 127/qd-byt: mức sở biến chạy 2018 sàng dinh độc vụ trong tai cac nội tế quốc giam hiện dẫn giá hien bo ksd dan"
   },
   {
     "id": "vb_281",
-    "code": "NĐ 92",
-    "title": "nghi dinh 92 2010 nd cp chinh phu",
+    "code": "92/2010/NĐ-CP",
+    "title": "Nghị định 92/2010/NĐ-CP: Quy định chi tiết thi hành Luật Bảo hiểm y tế",
     "filename": "nghi-dinh-92-2010-nd-cp-chinh-phu.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/NĐ 92/nghi-dinh-92-2010-nd-cp-chinh-phu.pdf",
     "category": "Phong_Chong_Dich_Covid",
@@ -5904,12 +5904,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/nghi-dinh-92-2010-nd-cp-chinh-phu.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/nghi-dinh-92-2010-nd-cp-chinh-phu.pdf",
-    "keywords": "chống chong & nghi nđ 2010 phủ nd pdf phong covid-19 cp chính phu chinh dinh dich dịch 92 phòng"
+    "keywords": "92/2010/nd-cp: 92/2010/nđ-cp: luat định hành hiem y nghi-dinh-92-2010-nd-cp-chinh-phu.pdf nghi 2010 bảo dinh phủ chính chi phu tế nghị 92/2010/nđ-cp hiểm quy te thi hanh pdf tiết luật chinh 92/2010/nd-cp bao tiet"
   },
   {
     "id": "vb_282",
-    "code": "NĐ 92",
-    "title": "nghi dinh 92 2010 nd cp chinh phu",
+    "code": "92/2010/NĐ-CP",
+    "title": "Nghị định 92/2010/NĐ-CP: Quy định chi tiết thi hành Luật Bảo hiểm y tế",
     "filename": "nghi-dinh-92-2010-nd-cp-chinh-phu.zip",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/NĐ 92/nghi-dinh-92-2010-nd-cp-chinh-phu.zip",
     "category": "Phong_Chong_Dich_Covid",
@@ -5925,19 +5925,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-zip",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/nghi-dinh-92-2010-nd-cp-chinh-phu.zip",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/nghi-dinh-92-2010-nd-cp-chinh-phu.zip",
-    "keywords": "zip chống chong & nghi nđ 2010 phủ nd phong covid-19 cp chính phu chinh dinh dich dịch 92 phòng"
+    "keywords": "92/2010/nd-cp: 92/2010/nđ-cp: luat định hành hiem zip y nghi nghi-dinh-92-2010-nd-cp-chinh-phu.zip 2010 bảo dinh phủ chính chi phu tế nghị 92/2010/nđ-cp hiểm quy te thi hanh tiết luật chinh 92/2010/nd-cp bao tiet"
   },
   {
     "id": "vb_283",
-    "code": "QĐ 468",
-    "title": "quyet dinh 468 qd byt phong va kiem soat lay nhiem benh viem duong ho hap cap",
+    "code": "468/QĐ-BYT",
+    "title": "Quyết định 468/QĐ-BYT: Hướng dẫn phòng và kiểm soát lây nhiễm bệnh viêm đường hô hấp cấp do SARS-CoV-2",
     "filename": "quyet-dinh-468-qd-byt-phong-va-kiem-soat-lay-nhiem-benh-viem-duong-ho-hap-cap.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/QĐ 468/quyet-dinh-468-qd-byt-phong-va-kiem-soat-lay-nhiem-benh-viem-duong-ho-hap-cap.doc",
     "category": "Phong_Chong_Dich_Covid",
     "categoryName": "Phòng Chống Dịch & Covid-19",
     "folderName": "Phong_Chong_Dich_Covid",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2020,
     "size": 1826929,
     "sizeFormatted": "1.7 MB",
     "format": "word",
@@ -5946,19 +5946,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/quyet-dinh-468-qd-byt-phong-va-kiem-soat-lay-nhiem-benh-viem-duong-ho-hap-cap.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/quyet-dinh-468-qd-byt-phong-va-kiem-soat-lay-nhiem-benh-viem-duong-ho-hap-cap.doc",
-    "keywords": "468 kiem chống quyet chong & bo qđ te lay tế 2024 duong qd va soat benh hap viem word phong covid-19 bộ cap dinh dich byt nhiem dịch y ho phòng"
+    "keywords": "và quyet 468/qđ-byt hầu hap định phòng huong tỵ 468/qđ-byt: 468/qd-byt bệnh dịch duong benh nhiễm y hô test kiem dinh soat covid-19 nhiem đường hướng phong lây cấp pcr dan cap tế do viem viêm sars-cov-2 hấp nhanh lay bộ te quyet-dinh-468-qd-byt-phong-va-kiem-soat-lay-nhiem-benh-viem-duong-ho-hap-cap.doc 2020 rt-pcr dẫn kiểm va ho bo word mẫu lấy soát 468/qd-byt: quyết"
   },
   {
     "id": "vb_284",
-    "code": "QĐ 468",
-    "title": "quyet dinh 468 qd byt phong va kiem soat lay nhiem benh viem duong ho hap cap",
+    "code": "468/QĐ-BYT",
+    "title": "Quyết định 468/QĐ-BYT: Hướng dẫn phòng và kiểm soát lây nhiễm bệnh viêm đường hô hấp cấp do SARS-CoV-2",
     "filename": "quyet-dinh-468-qd-byt-phong-va-kiem-soat-lay-nhiem-benh-viem-duong-ho-hap-cap.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/13.7. CV covid-19/QĐ 468/quyet-dinh-468-qd-byt-phong-va-kiem-soat-lay-nhiem-benh-viem-duong-ho-hap-cap.pdf",
     "category": "Phong_Chong_Dich_Covid",
     "categoryName": "Phòng Chống Dịch & Covid-19",
     "folderName": "Phong_Chong_Dich_Covid",
     "issuer": "Bộ Y tế",
-    "year": 2024,
+    "year": 2020,
     "size": 17252736,
     "sizeFormatted": "16.5 MB",
     "format": "pdf",
@@ -5967,19 +5967,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Phong_Chong_Dich_Covid/quyet-dinh-468-qd-byt-phong-va-kiem-soat-lay-nhiem-benh-viem-duong-ho-hap-cap.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Phong_Chong_Dich_Covid/quyet-dinh-468-qd-byt-phong-va-kiem-soat-lay-nhiem-benh-viem-duong-ho-hap-cap.pdf",
-    "keywords": "468 kiem chống quyet chong & bo qđ te lay tế 2024 duong qd va pdf soat benh hap viem phong covid-19 bộ cap dinh dich byt nhiem dịch y ho phòng"
+    "keywords": "và quyet 468/qđ-byt hầu hap định phòng huong tỵ 468/qđ-byt: 468/qd-byt bệnh dịch duong benh nhiễm y quyet-dinh-468-qd-byt-phong-va-kiem-soat-lay-nhiem-benh-viem-duong-ho-hap-cap.pdf hô test kiem dinh soat covid-19 nhiem đường hướng phong lây cấp pcr dan cap tế do viem viêm sars-cov-2 hấp nhanh lay bộ te 2020 rt-pcr dẫn pdf kiểm va ho bo mẫu lấy soát 468/qd-byt: quyết"
   },
   {
     "id": "vb_285",
-    "code": "VBYT-285",
-    "title": "Mấu đánh giá 2429 EXCELL 2022",
+    "code": "BM-2429",
+    "title": "Bảng kiểm đánh giá mức chất lượng phòng xét nghiệm y học (Theo QĐ 2429/QĐ-BYT)",
     "filename": "Mấu đánh giá 2429 EXCELL 2022.xlsx",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/Bản mẫu đánh giá/Mẫu đánh giá EXECL 2429 (2022)/Mấu đánh giá 2429 EXCELL 2022.xlsx",
     "category": "Quan_Ly_Chat_Luong_ISO",
     "categoryName": "Quản Lý Chất Lượng & ISO 15189",
     "folderName": "Quan_Ly_Chat_Luong_ISO",
     "issuer": "Bộ Y tế",
-    "year": 2022,
+    "year": 2017,
     "size": 756715,
     "sizeFormatted": "739 KB",
     "format": "excel",
@@ -5988,19 +5988,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-excel",
     "storageKey": "Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/mau_danh_gia_2429_excell_2022.xlsx",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/mau_danh_gia_2429_excell_2022.xlsx",
-    "keywords": "chất & bo 2022 te excell tế quan 15189 mấu mau excel 2429 lý iso ly chat gia luong danh lượng bộ đánh giá quản y"
+    "keywords": "thanh đánh qlcl chat quản mấu phòng toán định chí 2022.xlsx qd iqc luong (theo dịch excel y bang danh nghiem bhyt kiem hoc 15189 bảo 2429 eqas ngoại iso chất phong muc vụ chi khung bảng nội qđ gia tế tiêu xet mức mau bộ te nghiệm 2017 hiểm xét excell lý giá học kiểm bm-2429 bo 2429/qđ-byt) phí lượng chuẩn 2429/qd-byt)"
   },
   {
     "id": "vb_286",
-    "code": "VBYT-286",
-    "title": "BIỂU MẪU 2429",
+    "code": "BM-2429",
+    "title": "Bảng kiểm đánh giá mức chất lượng phòng xét nghiệm y học (Theo QĐ 2429/QĐ-BYT)",
     "filename": "BIỂU MẪU 2429.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/Bản mẫu đánh giá/MẪU ĐÁNH GIÁ 2020/BIỂU MẪU 2429.doc",
     "category": "Quan_Ly_Chat_Luong_ISO",
     "categoryName": "Quản Lý Chất Lượng & ISO 15189",
     "folderName": "Quan_Ly_Chat_Luong_ISO",
     "issuer": "Bộ Y tế",
-    "year": 2020,
+    "year": 2017,
     "size": 121344,
     "sizeFormatted": "118 KB",
     "format": "word",
@@ -6009,12 +6009,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/bieu_mau_2429.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/bieu_mau_2429.doc",
-    "keywords": "biểu chất & bo te mẫu tế quan 15189 bieu mau 2020 2429 lý iso word ly chat luong lượng bộ quản y"
+    "keywords": "thanh đánh qlcl chat quản phòng toán định chí qd iqc luong (theo dịch y bang danh nghiem bhyt biểu kiem hoc 15189 bảo 2429 eqas ngoại iso chất phong muc vụ chi khung bảng nội qđ gia tế bieu tiêu xet mức mau bộ 2429.doc nghiệm te 2017 hiểm xét lý giá học kiểm word bm-2429 bo 2429/qđ-byt) mẫu phí lượng chuẩn 2429/qd-byt)"
   },
   {
     "id": "vb_287",
-    "code": "VBYT-287",
-    "title": "MAU DG CHUAN (2020). 20.10",
+    "code": "VB-287",
+    "title": "Văn bản y tế: MAU DG CHUAN (2020). 20.10",
     "filename": "MAU DG CHUAN (2020). 20.10.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/Bản mẫu đánh giá/MẪU ĐÁNH GIÁ 2020/MAU DG CHUAN (2020). 20.10.doc",
     "category": "Quan_Ly_Chat_Luong_ISO",
@@ -6030,12 +6030,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/mau_dg_chuan_2020_._20.10.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/mau_dg_chuan_2020_._20.10.doc",
-    "keywords": "chuan chất 20.10 & bo te dg tế quan (2020). 15189 mau 2020 lý iso word ly chat luong lượng bộ quản y"
+    "keywords": "chuan te: vb-287 y ban van 20.10.doc (2020). tế bản dg mau bộ te 2020 văn word bo tế: 20.10"
   },
   {
     "id": "vb_288",
-    "code": "VBYT-288",
-    "title": "cũ 2017",
+    "code": "VB-288",
+    "title": "Văn bản y tế: cũ 2017",
     "filename": "cũ 2017.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/Bản mẫu đánh giá/ ĐÁNH GIÁ BYT/cũ 2017.pdf",
     "category": "Quan_Ly_Chat_Luong_ISO",
@@ -6051,12 +6051,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/cu_2017.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/cu_2017.pdf",
-    "keywords": "chất & bo te tế quan 15189 cu cũ pdf lý iso ly chat luong 2017 lượng bộ quản y"
+    "keywords": "te 2017 vb-288 y tế bản 2017.pdf pdf văn te: van bo tế: ban cu cũ bộ"
   },
   {
     "id": "vb_289",
-    "code": "VBYT-289",
-    "title": "BANG KIEM MAU Tieu chi danh gia muc CLPXBN",
+    "code": "VB-289",
+    "title": "Văn bản y tế: BANG KIEM MAU Tieu chi danh gia muc CLPXBN",
     "filename": "BANG KIEM MAU-Tieu chi danh gia muc CLPXBN.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/Bản mẫu đánh giá/Mẫu ĐG chuẩn 2021/BANG KIEM MAU-Tieu chi danh gia muc CLPXBN.doc",
     "category": "Quan_Ly_Chat_Luong_ISO",
@@ -6072,12 +6072,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/bang_kiem_mau-tieu_chi_danh_gia_muc_clpxbn.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/bang_kiem_mau-tieu_chi_danh_gia_muc_clpxbn.doc",
-    "keywords": "2021 kiem chất tieu & bo te tế quan 15189 mau bang lý iso word muc ly chat gia luong danh clpxbn lượng bộ quản y chi"
+    "keywords": "vb-289 2021 te: clpxbn y bang danh van kiem muc chi gia bản tế mau bộ clpxbn.doc te văn tieu word bo tế: ban mau-tieu"
   },
   {
     "id": "vb_290",
-    "code": "VBYT-290",
-    "title": "BANG KIEM MAU Tieu chi danh gia muc CLPXBN",
+    "code": "VB-290",
+    "title": "Văn bản y tế: BANG KIEM MAU Tieu chi danh gia muc CLPXBN",
     "filename": "BANG KIEM MAU-Tieu chi danh gia muc CLPXBN.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/Bản mẫu đánh giá/Mẫu ĐG chuẩn 2021/BANG KIEM MAU-Tieu chi danh gia muc CLPXBN.pdf",
     "category": "Quan_Ly_Chat_Luong_ISO",
@@ -6093,12 +6093,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/bang_kiem_mau-tieu_chi_danh_gia_muc_clpxbn.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/bang_kiem_mau-tieu_chi_danh_gia_muc_clpxbn.pdf",
-    "keywords": "2021 kiem chất tieu & bo te tế quan 15189 mau bang pdf lý iso muc ly chat gia luong danh clpxbn lượng bộ quản y chi"
+    "keywords": "2021 te: clpxbn y bang danh van kiem muc chi gia bản tế vb-290 mau bộ te pdf văn tieu bo clpxbn.pdf tế: ban mau-tieu"
   },
   {
     "id": "vb_291",
-    "code": "VBYT-291",
-    "title": "Bệnh viện phổi Hà Nội 15.6.2019",
+    "code": "VB-291",
+    "title": "Văn bản y tế: Bệnh viện phổi Hà Nội 15.6.2019",
     "filename": "Bệnh viện phổi Hà Nội 15.6.2019.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/TH. CV Cũ các đơn vị gửi/Bệnh viện phổi Hà Nội 15.6.2019.doc",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -6114,12 +6114,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/benh_vien_phoi_ha_noi_15.6.2019.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/benh_vien_phoi_ha_noi_15.6.2019.doc",
-    "keywords": "duc phổi 15.6.2019 phoi nội & te van tế bản sở bvđk vien đức 2019 giang ha so benh word ban bvdk viện bệnh văn noi hà y"
+    "keywords": "hà 15.6.2019.doc phoi viện duc te: bvđk vb-291 bệnh benh y bvdk van 15.6.2019 noi đức ha nội bản giang phổi 2019 vien văn word tế: ban"
   },
   {
     "id": "vb_292",
-    "code": "VBYT-292",
-    "title": "Gui Cty dien luc",
+    "code": "VB-292",
+    "title": "Văn bản y tế: Gui Cty dien luc",
     "filename": "Gui Cty dien luc.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/TH. CV Cũ các đơn vị gửi/Gui Cty dien luc.doc",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -6135,12 +6135,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/gui_cty_dien_luc.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/gui_cty_dien_luc.doc",
-    "keywords": "duc & bo te van tế bản 2024 sở bvđk đức giang so word ban bvdk cty dien bộ văn gui y luc"
+    "keywords": "te: luc.doc 2024 y gui van luc vb-292 tế bản cty dien bộ te word văn bo tế: ban"
   },
   {
     "id": "vb_293",
-    "code": "VBYT-293",
-    "title": "Gui vien ve sinh dich te",
+    "code": "VB-293",
+    "title": "Văn bản y tế: Gui vien ve sinh dich te",
     "filename": "Gui vien ve sinh dich te.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/TH. CV Cũ các đơn vị gửi/Gui vien ve sinh dich te.doc",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -6156,12 +6156,12 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/gui_vien_ve_sinh_dich_te.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/gui_vien_ve_sinh_dich_te.doc",
-    "keywords": "duc & bo te van tế bản 2024 sở sinh bvđk vien đức giang so word ban bvdk ve bộ dich văn gui y"
+    "keywords": "te.doc te: dich 2024 y gui van sinh vb-293 tế bản bộ te vien văn word bo tế: ban ve"
   },
   {
     "id": "vb_294",
-    "code": "VBYT-294",
-    "title": "Gui vien ve sinh dich te sửa",
+    "code": "VB-294",
+    "title": "Văn bản y tế: Gui vien ve sinh dich te sửa",
     "filename": "Gui vien ve sinh dich te_sửa.doc",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/TH. CV Cũ các đơn vị gửi/Gui vien ve sinh dich te_sửa.doc",
     "category": "Benh_Vien_Va_So_Y_Te",
@@ -6177,19 +6177,19 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-word",
     "storageKey": "Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/gui_vien_ve_sinh_dich_te_sua.doc",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Benh_Vien_Va_So_Y_Te/gui_vien_ve_sinh_dich_te_sua.doc",
-    "keywords": "duc & bo te van tế bản 2024 sở sinh bvđk vien đức giang so word ban bvdk sua ve bộ dich văn gui y sửa"
+    "keywords": "te: sửa dich 2024 vb-294 y gui van sua sinh te_sua.doc tế bản bộ te vien te_sửa.doc văn word bo tế: ban ve"
   },
   {
     "id": "vb_295",
     "code": "ISO 15189:2022",
-    "title": "ISO 15189 2022 AOSC",
+    "title": "Tiêu chuẩn Quốc tế ISO 15189:2022: Phòng xét nghiệm y tế - Yêu cầu về chất lượng và năng lực chuyên môn",
     "filename": "ISO-15189-2022_AOSC.pdf",
     "localPath": "/Users/user/Downloads/3. QL_Quy_Trinh/Tài Liệu/VĂN BẢN Y TẾ/ISO-15189-2022_AOSC.pdf",
     "category": "Quan_Ly_Chat_Luong_ISO",
     "categoryName": "Quản Lý Chất Lượng & ISO 15189",
     "folderName": "Quan_Ly_Chat_Luong_ISO",
     "issuer": "Tổ chức ISO / AOSC",
-    "year": 2024,
+    "year": 2022,
     "size": 949500,
     "sizeFormatted": "927 KB",
     "format": "pdf",
@@ -6198,18 +6198,17 @@ const MEDICAL_DOCUMENTS_DATA = [
     "formatClass": "format-pdf",
     "storageKey": "Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/iso-15189-2022_aosc.pdf",
     "storageUrl": "https://wbzjkwudiaeisujoimfi.supabase.co/storage/v1/object/public/tai-lieu/Van_Ban_Y_Te/Quan_Ly_Chat_Luong_ISO/iso-15189-2022_aosc.pdf",
-    "keywords": "quốc chất tổ & 2022 công / tế 2024 nghiệm quan to 15189 15189:2022 chức xét tiêu pdf lý iso ly aosc chat chuc luong lượng nhận quản chuẩn phòng"
+    "keywords": "và 15189:2022: chuc lực qlcl chat quản về chuan phòng chức chí 15189:2022 luong mon tổ / y nghiem aosc 15189 quoc cau luc yêu iso-15189-2022_aosc.pdf 2429 chuyên ngoại iso eqas chất phong to cầu yeu nội tế tiêu quốc xet môn te nghiệm năng chuyen xét lý pdf kiểm tieu va nang - lượng ve 2022 chuẩn iqc"
   }
 ];
 
-// Danh mục các nhóm phân loại chuyên môn
 const MEDICAL_DOC_CATEGORIES = [
-  { id: 'all', name: 'Tất Cả Văn Bản', icon: '📚' },
-  { id: 'Chuyen_Mon_Vi_Sinh', name: 'Chuyên Môn Vi Sinh & Kỹ Thuật XN', icon: '🔬' },
-  { id: 'Quan_Ly_Chat_Luong_ISO', name: 'Quản Lý Chất Lượng & ISO 15189', icon: '🏆' },
-  { id: 'An_Toan_Sinh_Hoc', name: 'An Toàn Sinh Học & Môi Trường PXN', icon: '☣️' },
-  { id: 'Phac_Do_Dieu_Tri', name: 'Phác Đồ Chẩn Đoán & Điều Trị Bệnh', icon: '💊' },
-  { id: 'Van_Ban_Phap_Quy', name: 'Văn Bản Pháp Quy, Luật & Thông Tư BYT', icon: '📜' },
-  { id: 'Benh_Vien_Va_So_Y_Te', name: 'Văn Bản BVĐK Đức Giang & Sở Y Tế', icon: '🏥' },
-  { id: 'Phong_Chong_Dich_Covid', name: 'Phòng Chống Dịch & Covid-19', icon: '🛡️' }
+  { "id": "all", "label": "Tất cả văn bản", "icon": "📚" },
+  { "id": "Chuyen_Mon_Vi_Sinh", "label": "Chuyên môn Vi sinh & Kỹ thuật", "icon": "🧫" },
+  { "id": "Quan_Ly_Chat_Luong_ISO", "label": "Quản lý chất lượng & ISO 15189", "icon": "📋" },
+  { "id": "An_Toan_Sinh_Hoc", "label": "An toàn sinh học & Môi trường", "icon": "☣️" },
+  { "id": "Phac_Do_Dieu_Tri", "label": "Phác đồ điều trị & Chẩn đoán", "icon": "🩺" },
+  { "id": "Van_Ban_Phap_Quy", "label": "Pháp quy, Luật & Thông tư", "icon": "⚖️" },
+  { "id": "Benh_Vien_Va_So_Y_Te", "label": "Văn bản BV Đức Giang & SYT", "icon": "🏥" },
+  { "id": "Phong_Chong_Dich_Covid", "label": "Phòng chống dịch & Covid-19", "icon": "🛡️" }
 ];
