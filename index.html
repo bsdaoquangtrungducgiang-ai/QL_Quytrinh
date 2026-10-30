@@ -383,6 +383,167 @@
           </div>
         </div>
 
+        <!-- ================================================================
+             KHU VỰC TÌM KIẾM TỔNG THỂ & HỎI ĐÁP AI THÔNG MINH (GOOGLE & GEMINI)
+             ================================================================ -->
+        <section class="universal-search-section" id="universalSearchSection" style="display:none">
+          
+          <!-- Universal Search Hero Header -->
+          <div class="univ-hero-card">
+            <div class="univ-hero-badge">
+              <span class="pulse-dot"></span>
+              <span>GOOGLE &amp; GEMINI AI SEARCH ENGINE • KHO TÀI LIỆU SUPABASE</span>
+            </div>
+            <h2>🔍 Tìm Kiếm Tổng Thể &amp; Hỏi Đáp AI Thông Minh</h2>
+            <p>
+              Tra cứu thông tin toàn diện trên <strong>409 tài liệu</strong> (114 quy trình xét nghiệm + 295 văn bản y tế) trong kho lưu trữ đám mây.
+              Hệ thống tổng hợp câu trả lời tự động chuẩn <strong>Google AI Overview</strong> và hỗ trợ <strong>Mở rộng tìm kiếm bằng Google Gemini AI</strong>.
+            </p>
+
+            <!-- Search Bar Wrapper -->
+            <div class="univ-search-bar-wrapper">
+              <div class="univ-search-bar">
+                <span class="univ-search-icon">🔍</span>
+                <input 
+                  type="text" 
+                  id="univSearchInput" 
+                  class="univ-search-input" 
+                  placeholder="Hỏi bất kỳ điều gì (ví dụ: Quy trình nội kiểm kháng sinh đồ, Tiêu chuẩn an toàn sinh học cấp II, Tiêu chí 2429 đánh giá PXN...)" 
+                  autocomplete="off"
+                >
+                <button type="button" class="univ-clear-btn" id="univClearBtn" title="Xóa tìm kiếm">✕</button>
+                <button type="button" class="univ-submit-btn" id="univSearchBtn">
+                  <span>Hỏi AI &amp; Tìm Kiếm</span>
+                  <span>🚀</span>
+                </button>
+              </div>
+
+              <!-- Scope filter pills -->
+              <div class="univ-scope-bar">
+                <div class="univ-scope-pills">
+                  <button type="button" class="univ-scope-pill active" data-scope="all">
+                    <span>🌐 Tất cả tài liệu</span>
+                    <span class="count" id="univCountAll">409</span>
+                  </button>
+                  <button type="button" class="univ-scope-pill" data-scope="procedures">
+                    <span>🧫 Quy trình xét nghiệm</span>
+                    <span class="count">114</span>
+                  </button>
+                  <button type="button" class="univ-scope-pill" data-scope="medical">
+                    <span>📜 Văn bản y tế &amp; Pháp quy</span>
+                    <span class="count">295</span>
+                  </button>
+                </div>
+
+                <!-- Gemini Account Status & Key Settings -->
+                <div class="gemini-account-badge" id="openGeminiKeyModalBtn" title="Cài đặt khóa API Google Gemini cho tài khoản bsdaoquangtrungducgiang@gmail.com">
+                  <span class="gemini-sparkle">✨</span>
+                  <span class="gemini-acc-text">Gemini AI (bsdaoquangtrungducgiang@gmail.com)</span>
+                  <span class="gemini-gear-btn">⚙️</span>
+                </div>
+              </div>
+
+              <!-- Quick Prompt Suggestions -->
+              <div class="univ-prompt-chips">
+                <span class="prompt-chip-label">Gợi ý câu hỏi:</span>
+                <button type="button" class="prompt-chip" data-prompt="Quy trình nội kiểm kháng sinh đồ Vitek 2">🔬 Nội kiểm kháng sinh đồ</button>
+                <button type="button" class="prompt-chip" data-prompt="Tiêu chuẩn an toàn sinh học cấp II phòng xét nghiệm">☣️ An toàn sinh học cấp II</button>
+                <button type="button" class="prompt-chip" data-prompt="Tiêu chí 2429 đánh giá mức chất lượng phòng xét nghiệm">📋 Tiêu chí 2429 PXN</button>
+                <button type="button" class="prompt-chip" data-prompt="Quy trình xét nghiệm cấy khuẩn nước chạy thận nhân tạo">🦠 Cấy khuẩn nước lọc thận</button>
+                <button type="button" class="prompt-chip" data-prompt="Kỹ thuật Real-time PCR đo tải lượng HBV-DNA">🧬 Đo tải lượng HBV PCR</button>
+                <button type="button" class="prompt-chip" data-prompt="Thông tư 32/2023 hướng dẫn Luật Khám bệnh chữa bệnh">📜 Thông tư 32/2023 BYT</button>
+                <button type="button" class="prompt-chip" data-prompt="Chẩn đoán và xét nghiệm Sốt xuất huyết Dengue">🩺 Chẩn đoán Sốt xuất huyết</button>
+                <button type="button" class="prompt-chip" data-prompt="Tiêu chuẩn ISO 15189:2022 phòng xét nghiệm y tế">🧪 ISO 15189:2022</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Loading State Animation -->
+          <div class="univ-loading-card" id="univLoadingCard" style="display:none">
+            <div class="univ-loading-spinner"></div>
+            <div class="univ-loading-text">
+              <h4>Đang đối soát &amp; tổng hợp thông tin từ Kho lưu trữ...</h4>
+              <p>Phân tích 409 quy trình &amp; văn bản y tế để trích xuất câu trả lời chuẩn xác nhất</p>
+            </div>
+          </div>
+
+          <!-- AI Synthesized Answer Card (AI Overview từ Kho Lưu Trữ) -->
+          <div class="univ-ai-answer-card" id="univAiOverviewCard" style="display:none">
+            <div class="ai-card-header">
+              <div class="ai-card-title">
+                <span class="ai-glow-icon">🤖</span>
+                <div>
+                  <h3>AI Overview • Trả Lời Tổng Hợp Từ Kho Lưu Trữ</h3>
+                  <p id="aiOverviewSubtitle">Tổng hợp tự động từ các quy trình &amp; văn bản y tế đã số hóa</p>
+                </div>
+              </div>
+              <div class="ai-confidence-badge" id="aiConfidenceBadge">
+                <span>⚡ Trích xuất từ kho nội bộ</span>
+              </div>
+            </div>
+
+            <div class="ai-card-body" id="aiOverviewContent">
+              <!-- Dynamically populated -->
+            </div>
+
+            <!-- Nút / Khu vực: Mở rộng tìm kiếm bằng AI Gemini -->
+            <div class="gemini-expansion-banner" id="geminiExpansionBanner">
+              <div class="gemini-banner-left">
+                <div class="gemini-icon-circle">✨</div>
+                <div>
+                  <h4>Mở rộng tìm kiếm &amp; hỏi đáp chuyên sâu với Google Gemini AI</h4>
+                  <p>Phân tích sâu rộng kiến thức y khoa, nguyên lý vi sinh và hướng dẫn thực hành lâm sàng liên kết tài khoản <code>bsdaoquangtrungducgiang@gmail.com</code></p>
+                </div>
+              </div>
+              <button type="button" class="btn-gemini-expand" id="btnTriggerGeminiExpand">
+                <span>✨ Mở Rộng Bằng Gemini AI</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Gemini Deep AI Result Card -->
+          <div class="gemini-result-card" id="geminiResultCard" style="display:none">
+            <div class="gemini-card-header">
+              <div style="display:flex; align-items:center; gap:10px">
+                <span style="font-size:24px">✨</span>
+                <div>
+                  <h3 style="color:#1e3a8a; font-size:16px">Phân Tích Chuyên Sâu Của Google Gemini AI</h3>
+                  <p style="font-size:12px; color:var(--text-muted)">Mô hình Gemini 1.5 Flash • Tài khoản: bsdaoquangtrungducgiang@gmail.com</p>
+                </div>
+              </div>
+              <span class="gemini-live-status-pill" id="geminiStatusPill">🟢 Gemini Ready</span>
+            </div>
+            <div class="gemini-card-body" id="geminiAiContent">
+              <!-- Dynamically filled -->
+            </div>
+          </div>
+
+          <!-- Document Results List from Storage -->
+          <div class="univ-results-section" id="univResultsSection" style="display:none">
+            <div class="univ-results-header">
+              <h3 id="univResultsCountText">Các tài liệu liên quan trong Kho Lưu Trữ (0)</h3>
+              <span style="font-size:12px; color:var(--text-muted)">Đồng bộ trực tiếp từ Supabase Storage Bucket tai-lieu</span>
+            </div>
+
+            <div class="univ-docs-grid" id="univDocsGrid">
+              <!-- Cards rendered by JS -->
+            </div>
+          </div>
+
+          <!-- Empty State -->
+          <div class="univ-empty-state" id="univEmptyState" style="display:none">
+            <div style="font-size:46px; margin-bottom:12px">🔎</div>
+            <h3>Kho lưu trữ chưa có thông tin khớp chính xác với từ khóa này</h3>
+            <p style="color:var(--text-muted); max-width:550px; margin:8px auto">
+              Bạn có thể sử dụng tính năng <strong>"Mở rộng tìm kiếm bằng AI"</strong> bên dưới để Gemini AI tra cứu và giải đáp chi tiết theo chuẩn Bộ Y tế.
+            </p>
+            <button type="button" class="btn-gemini-expand" id="btnEmptyTriggerGemini" style="margin-top:16px">
+              <span>✨ Mở Rộng Bằng AI (Gemini) Ngay</span>
+            </button>
+          </div>
+
+        </section>
+
         <!-- QUẢN LÝ CSDL KHO LƯU TRỮ TỆP (Chỉ dành cho Admin) -->
         <section class="tasks-section admin-only" id="storageDatabaseSection" style="display:none">
           <div class="tasks-header">
@@ -949,6 +1110,59 @@
             </thead>
             <tbody id="quickAccountModalTableBody"></tbody>
           </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       MODAL: CẤU HÌNH KHÓA GOOGLE GEMINI AI
+       ==================================================================== -->
+  <div class="modal-backdrop" id="geminiKeyModalBackdrop">
+    <div class="modal-box" style="max-width: 580px;">
+      <div class="modal-header">
+        <div style="display:flex; align-items:center; gap:10px">
+          <span style="font-size:24px">✨</span>
+          <div>
+            <h3 style="margin:0; font-size:17px">Cấu Hình Kết Nối Google Gemini AI</h3>
+            <p style="font-size:12.5px; color:var(--text-muted); margin-top:2px">
+              Tài khoản liên kết: <strong>bsdaoquangtrungducgiang@gmail.com</strong>
+            </p>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="closeGeminiKeyModalBtn">✕</button>
+      </div>
+
+      <div class="modal-body" style="padding:20px">
+        <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:8px; padding:12px 14px; margin-bottom:16px; font-size:13px; line-height:1.5">
+          <strong>💡 Hướng dẫn lấy khóa API Gemini miễn phí (Google AI Studio):</strong>
+          <ol style="margin:6px 0 0 18px; padding:0">
+            <li>Truy cập <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer" style="color:var(--primary); font-weight:700">Google AI Studio (aistudio.google.com)</a></li>
+            <li>Đăng nhập bằng Gmail <code>bsdaoquangtrungducgiang@gmail.com</code></li>
+            <li>Bấm nút <strong>"Create API Key"</strong> (Hoàn toàn miễn phí)</li>
+            <li>Sao chép khóa API và dán vào ô bên dưới:</li>
+          </ol>
+        </div>
+
+        <div style="margin-bottom:16px">
+          <label style="display:block; font-size:13px; font-weight:700; margin-bottom:6px">
+            Khóa API Google Gemini (Gemini API Key):
+          </label>
+          <input 
+            type="password" 
+            id="geminiApiKeyInput" 
+            class="search-input" 
+            style="height:44px; font-family:monospace; font-size:13px" 
+            placeholder="Dán khóa API bắt đầu bằng AIzaSy..."
+          >
+          <p style="font-size:11.5px; color:var(--text-muted); margin-top:4px">
+            Khóa API được lưu an toàn tại LocalStorage trình duyệt của bạn và chỉ gửi trực tiếp đến máy chủ Google Gemini.
+          </p>
+        </div>
+
+        <div style="display:flex; gap:10px; justify-content:flex-end">
+          <button type="button" class="btn btn-outline" id="clearGeminiKeyBtn">Xóa Khóa</button>
+          <button type="button" class="btn btn-primary" id="saveGeminiKeyBtn">💾 Lưu &amp; Kết Nối Ngay</button>
         </div>
       </div>
     </div>

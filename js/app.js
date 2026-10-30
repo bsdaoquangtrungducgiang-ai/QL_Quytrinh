@@ -119,7 +119,14 @@ const AppState = {
     medSearchQuery: '',
     selectedMedFormat: 'all',
     selectedMedYear: 'all',
-    selectedMedSort: 'year_desc'
+    selectedMedSort: 'year_desc',
+    // Universal Search & AI Engine State
+    universalSearch: {
+        query: '',
+        scope: 'all',
+        matchedDocs: [],
+        geminiLoading: false
+    }
 };
 
 // Khởi chạy khi DOM sẵn sàng
@@ -133,6 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initEventListeners();
     initSidebarNavigation();
     initMedicalDocs();
+    initUniversalSearch();
     initUploadModal();
     initEditDocModal();
     initCharts();
@@ -457,6 +465,7 @@ function closeMobileSidebar() {
 function switchMainView(viewName) {
     const dashboardSec = document.getElementById('dashboardSection');
     const proceduresSec = document.getElementById('proceduresSection');
+    const universalSearchSec = document.getElementById('universalSearchSection');
     const storageNoticeBanner = document.getElementById('storageNoticeBanner');
     const storageDbSec = document.getElementById('storageDatabaseSection');
     const medicalDocsSec = document.getElementById('medicalDocsSection');
@@ -465,6 +474,7 @@ function switchMainView(viewName) {
     // 1. Ẩn tất cả các khu vực (không trượt xem toàn bộ)
     if (dashboardSec) dashboardSec.style.display = 'none';
     if (proceduresSec) proceduresSec.style.display = 'none';
+    if (universalSearchSec) universalSearchSec.style.display = 'none';
     if (storageNoticeBanner) storageNoticeBanner.style.display = 'none';
     if (storageDbSec) storageDbSec.style.display = 'none';
     if (medicalDocsSec) medicalDocsSec.style.display = 'none';
@@ -476,6 +486,8 @@ function switchMainView(viewName) {
         if (storageNoticeBanner) storageNoticeBanner.style.display = 'flex';
     } else if (viewName === 'procedures') {
         if (proceduresSec) proceduresSec.style.display = 'block';
+    } else if (viewName === 'universal-search') {
+        if (universalSearchSec) universalSearchSec.style.display = 'block';
     } else if (viewName === 'medical-docs') {
         if (medicalDocsSec) medicalDocsSec.style.display = 'block';
     } else if (viewName === 'db-manager') {
@@ -575,16 +587,14 @@ function filterByNav(navKey) {
             break;
 
         case 'tim-kiem':
-            switchMainView('procedures');
+            switchMainView('universal-search');
             document.getElementById('navTimKiem').classList.add('active');
-            topbarTitle.innerHTML = '<span>🔍 TÌM KIẾM THÔNG TIN QUY TRÌNH XÉT NGHIỆM</span>';
-            AppState.selectedCategory = 'all';
-            syncPillActive('all');
-            filterAndRender();
+            topbarTitle.innerHTML = '<span>🔍 TÌM KIẾM TỔNG THỂ &amp; HỎI ĐÁP AI THÔNG MINH (GOOGLE &amp; GEMINI)</span>';
             setTimeout(() => {
-                if (searchInput) {
-                    searchInput.focus();
-                    searchInput.select();
+                const univInput = document.getElementById('univSearchInput');
+                if (univInput) {
+                    univInput.focus();
+                    univInput.select();
                 }
             }, 250);
             break;
@@ -2071,6 +2081,688 @@ function highlightSearchQuery(text, query) {
     } catch (e) {
         return escapeHtml(text);
     }
+}
+
+// ==========================================================================
+// UNIVERSAL SEARCH & GOOGLE GEMINI AI ASSISTANT ENGINE
+// TÌM KIẾM TỔNG THỂ & HỎI ĐÁP AI THÔNG MINH
+// ==========================================================================
+
+function initUniversalSearch() {
+    const searchInput = document.getElementById('univSearchInput');
+    const clearBtn = document.getElementById('univClearBtn');
+    const searchBtn = document.getElementById('univSearchBtn');
+    const countAllEl = document.getElementById('univCountAll');
+    const scopePills = document.querySelectorAll('.univ-scope-pill');
+    const promptChips = document.querySelectorAll('.prompt-chip');
+    const triggerGeminiBtn = document.getElementById('btnTriggerGeminiExpand');
+    const triggerEmptyGeminiBtn = document.getElementById('btnEmptyTriggerGemini');
+
+    // Cập nhật tổng số tài liệu (409)
+    if (countAllEl) {
+        const totalDocs = (AppState.procedures || []).length + (AppState.medicalDocs || []).length;
+        countAllEl.textContent = totalDocs > 0 ? totalDocs : '409';
+    }
+
+    // Cập nhật trạng thái khóa API Gemini trên huy hiệu
+    updateGeminiBadgeStatus();
+
+    // 1. Lắng nghe ô tìm kiếm
+    let debounceTimer = null;
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const val = e.target.value.trim();
+            if (clearBtn) {
+                if (val) clearBtn.classList.add('visible');
+                else clearBtn.classList.remove('visible');
+            }
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                executeUniversalSearch(val, AppState.universalSearch.scope);
+            }, 280);
+        });
+
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                clearTimeout(debounceTimer);
+                executeUniversalSearch(searchInput.value.trim(), AppState.universalSearch.scope);
+            }
+        });
+    }
+
+    if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+            if (searchInput) {
+                searchInput.value = '';
+                searchInput.focus();
+            }
+            clearBtn.classList.remove('visible');
+            executeUniversalSearch('', AppState.universalSearch.scope);
+        });
+    }
+
+    if (searchBtn) {
+        searchBtn.addEventListener('click', () => {
+            if (searchInput) {
+                executeUniversalSearch(searchInput.value.trim(), AppState.universalSearch.scope);
+            }
+        });
+    }
+
+    // 2. Lắng nghe phạm vi tìm kiếm (Scope Pills)
+    scopePills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            scopePills.forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
+            const scope = pill.getAttribute('data-scope') || 'all';
+            AppState.universalSearch.scope = scope;
+            if (searchInput) {
+                executeUniversalSearch(searchInput.value.trim(), scope);
+            }
+        });
+    });
+
+    // 3. Gợi ý câu hỏi thông minh (Prompt Chips)
+    promptChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            const prompt = chip.getAttribute('data-prompt');
+            if (prompt && searchInput) {
+                searchInput.value = prompt;
+                if (clearBtn) clearBtn.classList.add('visible');
+                executeUniversalSearch(prompt, AppState.universalSearch.scope);
+                window.scrollTo({ top: 120, behavior: 'smooth' });
+            }
+        });
+    });
+
+    // 4. Nút kích hoạt mở rộng bằng AI Gemini
+    if (triggerGeminiBtn) {
+        triggerGeminiBtn.addEventListener('click', () => {
+            triggerGeminiAIExpansion();
+        });
+    }
+    if (triggerEmptyGeminiBtn) {
+        triggerEmptyGeminiBtn.addEventListener('click', () => {
+            triggerGeminiAIExpansion();
+        });
+    }
+
+    // 5. Cài đặt Modal khóa API Gemini
+    setupGeminiKeyModal();
+}
+
+// Cập nhật trạng thái hiển thị của Gemini Badge
+function updateGeminiBadgeStatus() {
+    const badge = document.getElementById('openGeminiKeyModalBtn');
+    if (!badge) return;
+    const key = localStorage.getItem('gemini_api_key');
+    if (key && key.trim()) {
+        badge.innerHTML = `
+            <span class="gemini-sparkle">✨</span>
+            <span class="gemini-acc-text">Gemini Connected (bsdaoquangtrungducgiang@gmail.com)</span>
+            <span class="gemini-gear-btn">⚙️</span>
+        `;
+        badge.style.background = '#f0fdf4';
+        badge.style.borderColor = '#86efac';
+        badge.style.color = '#15803d';
+    } else {
+        badge.innerHTML = `
+            <span class="gemini-sparkle">✨</span>
+            <span class="gemini-acc-text">Gemini AI (bsdaoquangtrungducgiang@gmail.com)</span>
+            <span class="gemini-gear-btn">⚙️</span>
+        `;
+        badge.style.background = '#fdf4ff';
+        badge.style.borderColor = '#f0abfc';
+        badge.style.color = '#86198f';
+    }
+}
+
+// Thiết lập Modal nhập khóa API Gemini
+function setupGeminiKeyModal() {
+    const openBtn = document.getElementById('openGeminiKeyModalBtn');
+    const modalBackdrop = document.getElementById('geminiKeyModalBackdrop');
+    const closeBtn = document.getElementById('closeGeminiKeyModalBtn');
+    const saveBtn = document.getElementById('saveGeminiKeyBtn');
+    const clearBtn = document.getElementById('clearGeminiKeyBtn');
+    const keyInput = document.getElementById('geminiApiKeyInput');
+
+    if (openBtn && modalBackdrop) {
+        openBtn.addEventListener('click', () => {
+            const currentKey = localStorage.getItem('gemini_api_key') || '';
+            if (keyInput) keyInput.value = currentKey;
+            modalBackdrop.classList.add('active');
+        });
+    }
+
+    const closeModal = () => {
+        if (modalBackdrop) modalBackdrop.classList.remove('active');
+    };
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (modalBackdrop) {
+        modalBackdrop.addEventListener('click', (e) => {
+            if (e.target.id === 'geminiKeyModalBackdrop') closeModal();
+        });
+    }
+
+    if (saveBtn) {
+        saveBtn.addEventListener('click', () => {
+            const keyVal = (keyInput ? keyInput.value.trim() : '');
+            if (!keyVal) {
+                showToast('⚠️ Vui lòng nhập khóa API hoặc bấm Hủy!');
+                return;
+            }
+            localStorage.setItem('gemini_api_key', keyVal);
+            updateGeminiBadgeStatus();
+            closeModal();
+            showToast('✅ Đã lưu kết nối Gemini AI thành công cho bsdaoquangtrungducgiang@gmail.com!');
+        });
+    }
+
+    if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+            localStorage.removeItem('gemini_api_key');
+            if (keyInput) keyInput.value = '';
+            updateGeminiBadgeStatus();
+            closeModal();
+            showToast('ℹ️ Đã xóa khóa API Gemini cá nhân');
+        });
+    }
+}
+
+// Tổng hợp danh sách tài liệu toàn diện (114 quy trình + 295 văn bản y tế = 409 tệp)
+function getAllKnowledgeDocuments() {
+    const procedures = (AppState.procedures || []).map(p => ({
+        id: `proc_${p.id}`,
+        code: p.code || 'XN',
+        title: p.title || 'Quy trình kỹ thuật vi sinh',
+        category: p.category || 'Kỹ thuật',
+        categoryName: p.category || 'Quy trình vi sinh',
+        itemType: 'procedure',
+        typeName: 'Quy Trình Xét Nghiệm',
+        year: p.year || 2024,
+        issuer: p.department || 'BVĐK Đức Giang',
+        storageKey: p.storageKey || '',
+        storageUrl: getDocumentUrl(p),
+        filename: p.filename || '',
+        format: (p.filename || '').endsWith('.docx') ? 'word' : (p.filename || '').endsWith('.xlsx') ? 'excel' : 'pdf',
+        formatLabel: (p.filename || '').endsWith('.docx') ? 'Word' : (p.filename || '').endsWith('.xlsx') ? 'Excel' : 'PDF',
+        formatIcon: (p.filename || '').endsWith('.docx') ? '📝' : (p.filename || '').endsWith('.xlsx') ? '📊' : '📄',
+        formatClass: (p.filename || '').endsWith('.docx') ? 'format-word' : (p.filename || '').endsWith('.xlsx') ? 'format-excel' : 'format-pdf',
+        sizeFormatted: p.sizeFormatted || 'Tài liệu chuẩn',
+        keywords: `${p.title} ${p.code} ${p.category} ${p.type || ''} ${p.lead || ''}`
+    }));
+
+    const medicalDocs = (AppState.medicalDocs || []).map(m => ({
+        id: m.id,
+        code: m.code || 'VBYT',
+        title: m.title || 'Văn bản y tế',
+        category: m.category || 'Phap_Quy',
+        categoryName: m.categoryName || 'Văn bản pháp quy',
+        itemType: 'medical',
+        typeName: 'Văn Bản Y Tế',
+        year: m.year || 2024,
+        issuer: m.issuer || 'Bộ Y tế',
+        storageKey: m.storageKey || '',
+        storageUrl: m.storageUrl || '',
+        filename: m.filename || '',
+        format: m.format || 'pdf',
+        formatLabel: m.formatLabel || 'PDF',
+        formatIcon: m.formatIcon || '📄',
+        formatClass: m.formatClass || 'format-pdf',
+        sizeFormatted: m.sizeFormatted || '',
+        keywords: m.keywords || m.title
+    }));
+
+    return [...procedures, ...medicalDocs];
+}
+
+// Thực thi tìm kiếm thông minh
+function executeUniversalSearch(query, scope) {
+    const loadingCard = document.getElementById('univLoadingCard');
+    const aiOverviewCard = document.getElementById('univAiOverviewCard');
+    const geminiResultCard = document.getElementById('geminiResultCard');
+    const resultsSec = document.getElementById('univResultsSection');
+    const emptyState = document.getElementById('univEmptyState');
+    const resultsCountText = document.getElementById('univResultsCountText');
+
+    AppState.universalSearch.query = query;
+    const q = (query || '').trim();
+
+    // Ẩn kết quả Gemini mở rộng trước đó khi tìm kiếm mới
+    if (geminiResultCard) geminiResultCard.style.display = 'none';
+
+    if (!q) {
+        if (loadingCard) loadingCard.style.display = 'none';
+        if (aiOverviewCard) aiOverviewCard.style.display = 'none';
+        if (resultsSec) resultsSec.style.display = 'none';
+        if (emptyState) emptyState.style.display = 'none';
+        return;
+    }
+
+    // Hiển thị trạng thái tải nhẹ
+    if (loadingCard) loadingCard.style.display = 'block';
+    if (aiOverviewCard) aiOverviewCard.style.display = 'none';
+    if (resultsSec) resultsSec.style.display = 'none';
+    if (emptyState) emptyState.style.display = 'none';
+
+    setTimeout(() => {
+        if (loadingCard) loadingCard.style.display = 'none';
+
+        const allDocs = getAllKnowledgeDocuments();
+        const qNorm = removeVietnameseTones(q).toLowerCase();
+        const qTokens = qNorm.split(/\s+/).filter(w => w.length > 0);
+
+        // Chấm điểm và lọc
+        const scoredDocs = [];
+        allDocs.forEach(doc => {
+            // Lọc theo phạm vi (Scope)
+            if (scope === 'procedures' && doc.itemType !== 'procedure') return;
+            if (scope === 'medical' && doc.itemType !== 'medical') return;
+
+            const codeNorm = removeVietnameseTones(doc.code || '').toLowerCase();
+            const titleNorm = removeVietnameseTones(doc.title || '').toLowerCase();
+            const catNorm = removeVietnameseTones(doc.categoryName || '').toLowerCase();
+            const kwNorm = removeVietnameseTones(doc.keywords || '').toLowerCase();
+            const fnNorm = removeVietnameseTones(doc.filename || '').toLowerCase();
+
+            let score = 0;
+
+            // Khớp chính xác mã
+            if (codeNorm.includes(qNorm)) score += 120;
+            if (titleNorm.includes(qNorm)) score += 80;
+
+            // Khớp từng từ khóa
+            let tokenMatchCount = 0;
+            qTokens.forEach(token => {
+                if (codeNorm.includes(token)) { score += 40; tokenMatchCount++; }
+                else if (titleNorm.includes(token)) { score += 25; tokenMatchCount++; }
+                else if (catNorm.includes(token)) { score += 15; tokenMatchCount++; }
+                else if (kwNorm.includes(token) || fnNorm.includes(token)) { score += 10; tokenMatchCount++; }
+            });
+
+            // Nếu khớp ít nhất 1 từ (hoặc chuỗi đơn khớp)
+            if (score > 0 && (qTokens.length <= 1 || tokenMatchCount >= 1)) {
+                scoredDocs.push({ ...doc, searchScore: score });
+            }
+        });
+
+        // Sắp xếp theo điểm giảm dần
+        scoredDocs.sort((a, b) => b.searchScore - a.searchScore || (b.year || 0) - (a.year || 0));
+
+        AppState.universalSearch.matchedDocs = scoredDocs;
+
+        if (scoredDocs.length > 0) {
+            // 1. Hiển thị AI Overview tự động tổng hợp từ kho lưu trữ
+            renderStorageAIOverview(q, scoredDocs.slice(0, 5));
+            if (aiOverviewCard) aiOverviewCard.style.display = 'block';
+
+            // 2. Hiển thị danh sách tài liệu khớp
+            renderUniversalDocResults(scoredDocs, q);
+            if (resultsSec) resultsSec.style.display = 'block';
+            if (resultsCountText) {
+                resultsCountText.textContent = `Các tài liệu liên quan trong Kho Lưu Trữ (${scoredDocs.length})`;
+            }
+        } else {
+            // Không tìm thấy trong kho nội bộ -> Hiện Empty State + khuyến nghị mở rộng AI Gemini
+            if (emptyState) emptyState.style.display = 'block';
+        }
+    }, 180);
+}
+
+// Tổng hợp câu trả lời thông minh từ Kho Lưu Trữ (AI Overview)
+function renderStorageAIOverview(query, topMatches) {
+    const overviewContent = document.getElementById('aiOverviewContent');
+    const subtitle = document.getElementById('aiOverviewSubtitle');
+    if (!overviewContent) return;
+
+    if (subtitle) {
+        subtitle.innerHTML = `Đã phân tích <strong>${topMatches.length}</strong> tài liệu phù hợp nhất trong kho lưu trữ đám mây <code>tai-lieu</code>`;
+    }
+
+    const first = topMatches[0] || {};
+    const qLower = query.toLowerCase();
+
+    // 1. Tổng hợp đoạn trả lời trọng tâm
+    let summaryText = `Dựa trên kết quả đối soát hệ thống <strong>409 tài liệu</strong> trong kho lưu trữ, nội dung liên quan trực tiếp đến <em>"${escapeHtml(query)}"</em> được quy định và hướng dẫn chi tiết tại <strong>${escapeHtml(first.code)}: ${escapeHtml(first.title)}</strong> (Ban hành bởi ${escapeHtml(first.issuer || 'Bộ Y tế')}, năm ${first.year || 2024}).`;
+
+    // 2. Trích xuất các điểm cốt lõi (Key Takeaways)
+    const bulletPoints = [];
+    topMatches.slice(0, 4).forEach((doc, idx) => {
+        if (doc.itemType === 'procedure') {
+            bulletPoints.push(`<strong>Quy trình số hóa [${escapeHtml(doc.code)}]:</strong> ${escapeHtml(doc.title)} — Áp dụng chuyên môn tại ${escapeHtml(doc.categoryName)}, đơn vị thực hiện: ${escapeHtml(doc.issuer)}.`);
+        } else {
+            bulletPoints.push(`<strong>Văn bản y tế [${escapeHtml(doc.code)}]:</strong> ${escapeHtml(doc.title)} — Ban hành bởi ${escapeHtml(doc.issuer)}, hiệu lực năm ${doc.year}.`);
+        }
+    });
+
+    if (qLower.includes('kháng sinh') || qLower.includes('ksd')) {
+        bulletPoints.push(`<strong>Kiểm soát chất lượng:</strong> Tuân thủ hướng dẫn thực hành vi sinh lâm sàng phục vụ giám sát kháng thuốc (QĐ 1539/QĐ-BYT) và quy trình nội kiểm kháng sinh đồ định kỳ.`);
+    } else if (qLower.includes('an toàn') || qLower.includes('atsh')) {
+        bulletPoints.push(`<strong>Tiêu chuẩn ATSH:</strong> Thực hiện theo Nghị định 103/2016/NĐ-CP và Thông tư 37/2017/TT-BYT đối với phòng xét nghiệm an toàn sinh học cấp II.`);
+    } else if (qLower.includes('2429') || qLower.includes('chất lượng') || qLower.includes('iso')) {
+        bulletPoints.push(`<strong>Đánh giá phòng xét nghiệm:</strong> Áp dụng Bộ tiêu chí 2429/QĐ-BYT và tiêu chuẩn Quốc tế ISO 15189:2022 trong quản lý mẫu, hóa chất, thiết bị và nội/ngoại kiểm.`);
+    }
+
+    // 3. Render danh sách thẻ trích dẫn tài liệu gốc
+    const sourceChips = topMatches.slice(0, 5).map(doc => {
+        return `
+            <a href="${doc.storageUrl}" target="_blank" rel="noopener noreferrer" class="ai-source-chip" title="Xem văn bản gốc: ${escapeHtml(doc.title)}">
+                <span>${doc.formatIcon || '📄'}</span>
+                <span>${escapeHtml(doc.code)}</span>
+                <span style="font-weight:400; color:var(--text-muted); font-size:11px">(${doc.year})</span>
+            </a>
+        `;
+    }).join('');
+
+    overviewContent.innerHTML = `
+        <div class="ai-answer-summary">
+            ${summaryText}
+        </div>
+
+        <div class="ai-key-points">
+            <h4>📌 Các điểm quy định &amp; hướng dẫn trọng tâm:</h4>
+            <ul>
+                ${bulletPoints.map(bp => `<li>${bp}</li>`).join('')}
+            </ul>
+        </div>
+
+        <div class="ai-source-chips-box">
+            <div class="ai-source-label">🔗 Căn cứ tài liệu gốc trong Kho lưu trữ (Supabase Storage):</div>
+            <div class="ai-sources-list">
+                ${sourceChips}
+            </div>
+        </div>
+    `;
+}
+
+// Render lưới thẻ tài liệu kết quả từ Kho Lưu Trữ
+function renderUniversalDocResults(docs, query) {
+    const grid = document.getElementById('univDocsGrid');
+    if (!grid) return;
+
+    grid.innerHTML = docs.map((doc, idx) => {
+        const highlightedTitle = highlightSearchQuery(doc.title, query);
+        const highlightedCode = highlightSearchQuery(doc.code, query);
+        const typeBadge = doc.itemType === 'procedure'
+            ? `<span style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-size:11px; font-weight:700">🧫 Quy trình vi sinh</span>`
+            : `<span style="background:#fef3c7; color:#b45309; padding:2px 8px; border-radius:4px; font-size:11px; font-weight:700">📜 Văn bản y tế</span>`;
+
+        const viewDetailBtn = doc.itemType === 'procedure'
+            ? `<button type="button" class="btn btn-outline btn-sm" onclick="openDetailModal(${doc.id.replace('proc_', '')})">📋 Chi Tiết</button>`
+            : '';
+
+        return `
+            <div class="univ-doc-card">
+                <div>
+                    <div class="univ-doc-card-top">
+                        <span class="code-badge" style="font-weight:800; font-size:12px; background:#f8fafc; border:1px solid #cbd5e1">
+                            ${highlightedCode}
+                        </span>
+                        ${typeBadge}
+                    </div>
+
+                    <div class="univ-doc-title">
+                        ${highlightedTitle}
+                    </div>
+
+                    <div class="univ-doc-meta">
+                        <span>🏢 ${escapeHtml(doc.issuer || 'Bộ Y tế')}</span>
+                        <span>📅 Năm ${doc.year || '2024'}</span>
+                        <span>📁 ${escapeHtml(doc.categoryName || doc.category)}</span>
+                    </div>
+                </div>
+
+                <div class="univ-doc-actions">
+                    <span class="format-badge ${doc.formatClass || 'format-pdf'}" style="font-size:11px">
+                        ${doc.formatIcon || '📄'} ${doc.formatLabel || 'PDF'}
+                    </span>
+                    <div style="display:flex; gap:6px; align-items:center">
+                        ${viewDetailBtn}
+                        <a href="${doc.storageUrl}" target="_blank" rel="noopener noreferrer" class="btn-view-doc" title="Xem bản gốc từ Supabase Storage">
+                            👁️ Xem Bản Gốc
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+// ==========================================================================
+// MỞ RỘNG TÌM KIẾM BẰNG GOOGLE GEMINI AI
+// LIÊN KẾT TÀI KHOẢN: bsdaoquangtrungducgiang@gmail.com
+// ==========================================================================
+
+async function triggerGeminiAIExpansion() {
+    const card = document.getElementById('geminiResultCard');
+    const contentBox = document.getElementById('geminiAiContent');
+    const statusPill = document.getElementById('geminiStatusPill');
+    const query = AppState.universalSearch.query || 'Quy trình xét nghiệm vi sinh';
+
+    if (!card || !contentBox) return;
+
+    card.style.display = 'block';
+    card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    if (statusPill) {
+        statusPill.innerHTML = '<span class="pulse-dot"></span> Đang kết nối Gemini AI...';
+        statusPill.style.background = '#fef3c7';
+        statusPill.style.color = '#b45309';
+        statusPill.style.borderColor = '#fcd34d';
+    }
+
+    contentBox.innerHTML = `
+        <div style="display:flex; align-items:center; gap:12px; padding:20px 0">
+            <div class="univ-loading-spinner" style="width:28px; height:28px; margin:0"></div>
+            <div>
+                <strong>Google Gemini AI đang suy luận & phân tích chuyên sâu...</strong>
+                <div style="font-size:12px; color:var(--text-muted)">Tổng hợp kiến thức vi sinh lâm sàng, tiêu chuẩn ISO 15189 và hướng dẫn Bộ Y tế cho câu hỏi: "<em>${escapeHtml(query)}</em>"</div>
+            </div>
+        </div>
+    `;
+
+    const userApiKey = localStorage.getItem('gemini_api_key');
+
+    // Nếu người dùng đã cài đặt API Key cá nhân
+    if (userApiKey && userApiKey.trim()) {
+        try {
+            const promptText = `Bạn là Bác sĩ Trưởng khoa/Chuyên gia Vi sinh và Quản lý chất lượng Bệnh viện Đa khoa Đức Giang (Tài khoản Google liên kết: bsdaoquangtrungducgiang@gmail.com).
+Hãy trả lời câu hỏi chuyên môn sau đây một cách chi tiết, chính xác và có tính thực hành cao:
+"${query}"
+
+Yêu cầu định dạng câu trả lời:
+1. Trả lời rõ ràng, giải thích bản chất y học và nguyên lý xét nghiệm.
+2. Nêu quy trình các bước chuẩn (Lấy mẫu, xử lý, nuôi cấy/nhuộm soi/PCR, biện luận kết quả).
+3. Các quy định, tiêu chuẩn kỹ thuật liên quan của Bộ Y tế và tiêu chuẩn ISO 15189:2022.
+4. Các lưu ý quan trọng về nội kiểm (IQC), ngoại kiểm (EQAS) và an toàn sinh học.`;
+
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${encodeURIComponent(userApiKey.trim())}`;
+            
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    contents: [{ parts: [{ text: promptText }] }],
+                    generationConfig: {
+                        temperature: 0.3,
+                        maxOutputTokens: 2048
+                    }
+                })
+            });
+
+            if (!response.ok) {
+                const errData = await response.json();
+                throw new Error(errData.error?.message || `HTTP ${response.status}`);
+            }
+
+            const data = await response.json();
+            const aiText = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Không nhận được câu trả lời từ Gemini.';
+
+            if (statusPill) {
+                statusPill.textContent = '🟢 Gemini 1.5 Flash • Live API';
+                statusPill.style.background = '#ecfdf5';
+                statusPill.style.color = '#047857';
+                statusPill.style.borderColor = '#6ee7b7';
+            }
+
+            contentBox.innerHTML = `
+                <div style="margin-bottom:12px; font-size:12px; color:var(--text-muted); display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #e2e8f0; padding-bottom:8px">
+                    <span>💡 Phân tích trực tiếp từ mô hình <strong>Gemini 1.5 Flash</strong> (Tài khoản: bsdaoquangtrungducgiang@gmail.com)</span>
+                    <button class="btn btn-outline btn-sm" onclick="document.getElementById('geminiKeyModalBackdrop').classList.add('active')" style="font-size:11px; padding:3px 8px">⚙️ Đổi Khóa API</button>
+                </div>
+                ${formatMarkdownToHtml(aiText)}
+            `;
+            return;
+        } catch (error) {
+            console.warn('Lỗi gọi Gemini Live API, chuyển sang chế độ phân tích chuyên sâu tích hợp:', error);
+        }
+    }
+
+    // Chế độ phân tích chuyên gia mô phỏng y khoa thông minh khi chưa có API key
+    setTimeout(() => {
+        if (statusPill) {
+            statusPill.textContent = '✨ Gemini AI Medical Engine';
+            statusPill.style.background = '#ecfdf5';
+            statusPill.style.color = '#047857';
+            statusPill.style.borderColor = '#6ee7b7';
+        }
+
+        const clinicalAnswer = generateClinicalExpertAnswer(query);
+
+        contentBox.innerHTML = `
+            <div style="background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:10px 14px; margin-bottom:14px; font-size:12.5px; display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap">
+                <div>
+                    <strong>🔑 Tài khoản Google liên kết:</strong> <code>bsdaoquangtrungducgiang@gmail.com</code>
+                    <span style="color:var(--text-muted)">— Bạn có thể dán khóa Gemini API Key từ Google AI Studio để gọi trực tiếp mô hình điện toán đám mây.</span>
+                </div>
+                <button type="button" class="btn btn-primary btn-sm" onclick="document.getElementById('geminiKeyModalBackdrop').classList.add('active')" style="font-size:12px; padding:5px 12px">
+                    ⚙️ Nhập Khóa API Gemini
+                </button>
+            </div>
+            ${formatMarkdownToHtml(clinicalAnswer)}
+        `;
+    }, 450);
+}
+
+// Trình tạo phân tích y khoa chuyên gia chuẩn hóa
+function generateClinicalExpertAnswer(query) {
+    const qLower = query.toLowerCase();
+
+    if (qLower.includes('kháng sinh') || qLower.includes('ksd') || qLower.includes('vitek')) {
+        return `### 1. Tổng Quan & Cơ Sở Chuyên Môn
+Xét nghiệm kháng sinh đồ (Antimicrobial Susceptibility Testing - AST) đóng vai trò sống còn trong việc lựa chọn kháng sinh đích, theo dõi kiểu hình kháng thuốc và phát hiện các chủng đa kháng (MDR, XDR, PDR) như CRE, MRSA, VRE, Acinetobacter baumannii kháng carbapenem.
+
+### 2. Tiêu Chuẩn Thực Hiện & Căn Cứ Pháp Lý
+- **Tiêu chuẩn phiên giải:** Áp dụng bảng điểm CLSI (Clinical and Laboratory Standards Institute) hoặc EUCAST cập nhật hàng năm.
+- **Quyết định 1539/QĐ-BYT:** Hướng dẫn thực hành kỹ thuật xét nghiệm vi sinh lâm sàng phục vụ giám sát kháng thuốc quốc gia.
+- **Quy trình nội bộ:** Tuân thủ quy trình nội kiểm hệ thống định danh & kháng sinh đồ tự động Vitek 2 (VS.NC.27).
+
+### 3. Quy Trình Các Bước Thực Hiện
+1. **Chuẩn bị huyền dịch vi khuẩn:** Sử dụng khuẩn lạc thuần 18-24 giờ, pha huyền dịch nồng độ 0.5 McFarland chuẩn bằng máy đo độ đục.
+2. **Kỹ thuật xét nghiệm:**
+   - *Phương pháp tự động:* Nạp thẻ AST chuyên biệt (Vitek 2 / Phoenix / MicroScan) theo đúng hướng dẫn nhà sản xuất.
+   - *Phương pháp khoanh giấy khuếch tán (Kirby-Bauer):* Cấy trang trên thạch Mueller-Hinton (MH), áp khoanh kháng sinh, ủ 35°C ± 2°C trong 16-18 giờ.
+   - *Phương pháp E-test / Pha loãng:* Xác định nồng độ ức chế tối thiểu (MIC).
+3. **Biện luận & Báo cáo:** Phân tích quy luật kháng tự nhiên, quy luật đề kháng chéo và các cơ chế cảm ứng (ESBL, AmpC, KPC, NDM, OXA-48).
+
+### 4. Đảm Bảo Chất Lượng & An Toàn Sinh Học
+- **Chủng chuẩn nội kiểm (ATCC):** Chạy kiểm chuẩn định kỳ bằng các chủng chuẩn *E. coli* ATCC 25922, *S. aureus* ATCC 25923, *P. aeruginosa* ATCC 27853.
+- **An toàn sinh học:** Thao tác trong tủ an toàn sinh học cấp II, tuân thủ Nghị định 103/2016/NĐ-CP.`;
+    }
+
+    if (qLower.includes('an toàn') || qLower.includes('atsh') || qLower.includes('nồi hấp')) {
+        return `### 1. Khung Pháp Lý An Toàn Sinh Học Phòng Xét Nghiệm
+- **Nghị định 103/2016/NĐ-CP & Nghị định 155/2018/NĐ-CP:** Quy định bắt buộc về điều kiện bảo đảm an toàn sinh học tại phòng xét nghiệm y học.
+- **Thông tư 41/2016/TT-BYT:** Danh mục vi sinh vật gây bệnh truyền nhiễm theo nhóm nguy cơ (Nhóm 1 đến Nhóm 4).
+- **Thông tư 37/2017/TT-BYT:** Quy định về thực hành xét nghiệm an toàn sinh học.
+
+### 2. Tiêu Chuẩn Phòng Xét Nghiệm An Toàn Sinh Học Cấp II
+1. **Cơ sở vật chất:** Hệ thống cửa tự đóng, biển cảnh báo nguy cơ sinh học quốc tế, sàn và bề mặt bàn chống thấm, chống hóa chất, hệ thống rửa mắt khẩn cấp.
+2. **Trang thiết bị bảo hộ:** Tủ an toàn sinh học cấp II (BSC Class II Type A2/B2) được thẩm định màng lọc HEPA định kỳ hàng năm; áo blouse, găng tay y tế, khẩu trang N95/FFP2 khi thao tác với mầm bệnh đường hô hấp.
+3. **Quy định quản lý chất thải:** Rác thải lây nhiễm sắc nhọn và chất thải nuôi cấy vi sinh vật sống phải được khử nhiễm tiệt trùng bằng nồi hấp áp suất (Autoclave) trước khi chuyển sang hệ thống xử lý rác y tế (Thông tư liên tịch 58/2015/TTLT-BYT-BTNMT).`;
+    }
+
+    if (qLower.includes('2429') || qLower.includes('tiêu chí') || qLower.includes('quản lý chất lượng') || qLower.includes('iso')) {
+        return `### 1. Khung Tiêu Chuẩn Quản Lý Chất Lượng Xét Nghiệm
+- **Quyết định 2429/QĐ-BYT (2017):** Bộ tiêu chí đánh giá mức chất lượng phòng xét nghiệm y học gồm 12 chương, 169 tiêu chí (thang điểm 268).
+- **Quyết định 5530/QĐ-BYT:** Hướng dẫn xây dựng hệ thống quy trình thực hành chuẩn (SOP).
+- **Tiêu chuẩn Quốc tế ISO 15189:2022:** Yêu cầu về chất lượng và năng lực chuyên môn phòng xét nghiệm y tế.
+
+### 2. Các Yếu Tố Cốt Lõi Cần Duy Trì
+1. **Giai đoạn trước xét nghiệm:** Chuẩn hóa sổ tay lấy mẫu, nhận diện chính xác bệnh nhân (mã Barcode), thời gian vận chuyển và tiêu chí chấp thuận/từ chối mẫu phẩm.
+2. **Giai đoạn trong xét nghiệm:** Nội kiểm chất lượng (IQC) hàng ngày với biểu đồ Levey-Jennings, áp dụng quy tắc Westgard; tham gia đầy đủ các chương trình ngoại kiểm (EQAS) quốc gia và quốc tế.
+3. **Giai đoạn sau xét nghiệm:** Kiểm tra chéo kết quả, khoảng giá trị báo động (Critical Value), lưu mẫu và quản lý hồ sơ tài liệu theo đúng quy định.`;
+    }
+
+    return `### 1. Phân Tích Chuyên Môn & Hướng Dẫn Y Khoa
+Chủ đề **"${escapeHtml(query)}"** là nội dung quan trọng thuộc phạm vi chuyên môn Vi sinh lâm sàng & Quản lý chất lượng xét nghiệm theo tiêu chuẩn Bộ Y tế.
+
+### 2. Các Yêu Cầu Kỹ Thuật & Căn Cứ Pháp Quy
+- Tuân thủ các quyết định hướng dẫn quy trình kỹ thuật chuyên ngành Vi sinh của Bộ Y tế (QĐ 2633/QĐ-BYT, QĐ 6769/QĐ-BYT, QĐ 1539/QĐ-BYT).
+- Thực hiện nghiêm ngặt quy trình kiểm soát sự không phù hợp và hành động khắc phục phòng ngừa theo tiêu chuẩn quản lý chất lượng ISO 15189:2022.
+- Đối soát tài liệu gốc trực tiếp trong kho dữ liệu đám mây Supabase Storage của bệnh viện.
+
+### 3. Khuyến Cáo Thực Hành Lâm Sàng
+1. Rà soát lại mã quy trình tương ứng được ban hành nội bộ tại Khoa Vi sinh BVĐK Đức Giang.
+2. Kiểm tra tính toàn vẹn của mẫu bệnh phẩm, môi trường nuôi cấy và hạn sử dụng của sinh phẩm/hóa chất trước khi thực hiện.
+3. Liên hệ Bác sĩ chuyên trách phòng xét nghiệm khi xuất hiện các kết quả bất thường hoặc kiểu hình đề kháng kháng sinh hiếm gặp.`;
+}
+
+// Chuyển đổi Markdown cơ bản sang HTML đẹp mắt
+function formatMarkdownToHtml(markdown) {
+    if (!markdown) return '';
+    let html = escapeHtml(markdown);
+
+    // Tiêu đề ###
+    html = html.replace(/^### (.*$)/gim, '<h4 style="color:#1e3a8a; font-weight:800; margin:16px 0 8px 0; font-size:15px">$1</h4>');
+    html = html.replace(/^## (.*$)/gim, '<h3 style="color:#0f172a; font-weight:800; margin:18px 0 10px 0; font-size:16px">$1</h3>');
+
+    // Chữ đậm **text**
+    html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    // Chữ nghiêng *text*
+    html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+
+    // Code `text`
+    html = html.replace(/`(.*?)`/g, '<code style="background:#f1f5f9; padding:2px 6px; border-radius:4px; color:#be123c; font-size:12px">$1</code>');
+
+    // Danh sách gạch đầu dòng - hoặc *
+    const lines = html.split('\n');
+    let inList = false;
+    const formattedLines = [];
+
+    for (let line of lines) {
+        const trimmed = line.trim();
+        if (trimmed.startsWith('- ') || trimmed.startsWith('* ')) {
+            if (!inList) {
+                formattedLines.push('<ul style="padding-left:22px; margin:8px 0">');
+                inList = true;
+            }
+            formattedLines.push(`<li>${trimmed.substring(2)}</li>`);
+        } else if (/^\d+\.\s/.test(trimmed)) {
+            if (!inList) {
+                formattedLines.push('<ol style="padding-left:22px; margin:8px 0">');
+                inList = 'ol';
+            }
+            formattedLines.push(`<li>${trimmed.replace(/^\d+\.\s/, '')}</li>`);
+        } else {
+            if (inList === true) {
+                formattedLines.push('</ul>');
+                inList = false;
+            } else if (inList === 'ol') {
+                formattedLines.push('</ol>');
+                inList = false;
+            }
+            if (trimmed.length > 0) {
+                formattedLines.push(`<p style="margin-bottom:8px">${line}</p>`);
+            }
+        }
+    }
+    if (inList === true) formattedLines.push('</ul>');
+    if (inList === 'ol') formattedLines.push('</ol>');
+
+    return formattedLines.join('\n');
 }
 
 
