@@ -257,129 +257,134 @@
           </div>
         </section>
 
-        <!-- Section: Tra Cứu & Bộ Lọc Nâng Cao -->
-        <section class="controls-card" id="searchControlsSection">
-          <!-- Search Input -->
-          <div class="search-box-wrapper">
-            <span class="search-icon">🔍</span>
-            <input 
-              type="text" 
-              id="searchInput" 
-              class="search-input" 
-              placeholder="Tìm nhanh theo tên xét nghiệm, mã hiệu (VS.NC, XN.QL, VS.MD, VS.NS, VS.PCR...), vi khuẩn, virus, kháng sinh đồ..." 
-              autocomplete="off"
-            >
-            <button id="searchClearBtn" class="search-clear-btn" title="Xóa tìm kiếm">✕</button>
-          </div>
+        <!-- ================================================================
+             KHU VỰC QUY TRÌNH XÉT NGHIỆM (CHUYÊN MÔN & QUẢN LÝ)
+             ================================================================ -->
+        <div id="proceduresSection" style="display:none">
+          <!-- Section: Tra Cứu & Bộ Lọc Nâng Cao -->
+          <section class="controls-card" id="searchControlsSection">
+            <!-- Search Input -->
+            <div class="search-box-wrapper">
+              <span class="search-icon">🔍</span>
+              <input 
+                type="text" 
+                id="searchInput" 
+                class="search-input" 
+                placeholder="Tìm nhanh theo tên xét nghiệm, mã hiệu (VS.NC, XN.QL, VS.MD, VS.NS, VS.PCR...), vi khuẩn, virus, kháng sinh đồ..." 
+                autocomplete="off"
+              >
+              <button id="searchClearBtn" class="search-clear-btn" title="Xóa tìm kiếm">✕</button>
+            </div>
 
-          <!-- Category Filter Pills -->
-          <div class="category-pills">
-            <button class="cat-pill active" data-category="all">
-              <span>Tất cả</span>
-              <span class="count" id="pillCountAll">114</span>
-            </button>
-            <button class="cat-pill" data-category="Quản Lý Chất Lượng">
-              <span>Quản Lý Chất Lượng</span>
-              <span class="count" id="pillCountQL">31</span>
-            </button>
-            <button class="cat-pill" data-category="Nuôi Cấy">
-              <span>Nuôi Cấy</span>
-              <span class="count" id="pillCountNC">30</span>
-            </button>
-            <button class="cat-pill" data-category="Miễn Dịch">
-              <span>Miễn Dịch</span>
-              <span class="count" id="pillCountMD">28</span>
-            </button>
-            <button class="cat-pill" data-category="Nhuộm Soi">
-              <span>Nhuộm Soi</span>
-              <span class="count" id="pillCountNS">15</span>
-            </button>
-            <button class="cat-pill" data-category="Sinh Học Phân Tử (PCR)">
-              <span>Sinh Học Phân Tử (PCR)</span>
-              <span class="count" id="pillCountPCR">10</span>
-            </button>
-          </div>
-
-          <!-- Secondary Filters Bar -->
-          <div class="secondary-filters">
-            <div class="filter-group">
-              <!-- Filter by Type -->
-              <select id="typeFilterSelect" class="select-filter">
-                <option value="all">Tất cả loại quy trình</option>
-              </select>
-
-              <!-- Filter by Format / Extension -->
-              <select id="formatFilterSelect" class="select-filter">
-                <option value="all">Tất cả định dạng tệp</option>
-                <option value="pdf">📄 File PDF</option>
-                <option value="word">📝 File Word (.doc, .docx)</option>
-                <option value="excel">📊 File Excel (.xls, .xlsx)</option>
-                <option value="image">🖼️ File Ảnh (.png, .jpg)</option>
-              </select>
-
-              <!-- Filter by Year -->
-              <select id="yearFilterSelect" class="select-filter">
-                <option value="all">Tất cả năm hiệu lực</option>
-              </select>
-
-              <!-- Sort Order -->
-              <select id="sortFilterSelect" class="select-filter">
-                <option value="code_asc">Mã hiệu: A → Z</option>
-                <option value="code_desc">Mã hiệu: Z → A</option>
-                <option value="title_asc">Tên quy trình: A → Z</option>
-                <option value="year_desc">Năm: Mới nhất</option>
-                <option value="year_asc">Năm: Cũ nhất</option>
-              </select>
-
-              <button id="resetFilterBtn" class="btn btn-outline btn-sm">
-                🔄 Đặt lại
+            <!-- Category Filter Pills -->
+            <div class="category-pills">
+              <button class="cat-pill active" data-category="all">
+                <span>Tất cả</span>
+                <span class="count" id="pillCountAll">114</span>
+              </button>
+              <button class="cat-pill" data-category="Quản Lý Chất Lượng">
+                <span>Quản Lý Chất Lượng</span>
+                <span class="count" id="pillCountQL">31</span>
+              </button>
+              <button class="cat-pill" data-category="Nuôi Cấy">
+                <span>Nuôi Cấy</span>
+                <span class="count" id="pillCountNC">30</span>
+              </button>
+              <button class="cat-pill" data-category="Miễn Dịch">
+                <span>Miễn Dịch</span>
+                <span class="count" id="pillCountMD">28</span>
+              </button>
+              <button class="cat-pill" data-category="Nhuộm Soi">
+                <span>Nhuộm Soi</span>
+                <span class="count" id="pillCountNS">15</span>
+              </button>
+              <button class="cat-pill" data-category="Sinh Học Phân Tử (PCR)">
+                <span>Sinh Học Phân Tử (PCR)</span>
+                <span class="count" id="pillCountPCR">10</span>
               </button>
             </div>
 
-            <!-- View Switcher -->
-            <div class="view-modes">
-              <button id="viewGridBtn" class="view-btn active" title="Xem dạng lưới thẻ">🔲 Thẻ</button>
-              <button id="viewTableBtn" class="view-btn" title="Xem dạng bảng">📋 Bảng</button>
+            <!-- Secondary Filters Bar -->
+            <div class="secondary-filters">
+              <div class="filter-group">
+                <!-- Filter by Type -->
+                <select id="typeFilterSelect" class="select-filter">
+                  <option value="all">Tất cả loại quy trình</option>
+                </select>
+
+                <!-- Filter by Format / Extension -->
+                <select id="formatFilterSelect" class="select-filter">
+                  <option value="all">Tất cả định dạng tệp</option>
+                  <option value="pdf">📄 File PDF</option>
+                  <option value="word">📝 File Word (.doc, .docx)</option>
+                  <option value="excel">📊 File Excel (.xls, .xlsx)</option>
+                  <option value="image">🖼️ File Ảnh (.png, .jpg)</option>
+                </select>
+
+                <!-- Filter by Year -->
+                <select id="yearFilterSelect" class="select-filter">
+                  <option value="all">Tất cả năm hiệu lực</option>
+                </select>
+
+                <!-- Sort Order -->
+                <select id="sortFilterSelect" class="select-filter">
+                  <option value="code_asc">Mã hiệu: A → Z</option>
+                  <option value="code_desc">Mã hiệu: Z → A</option>
+                  <option value="title_asc">Tên quy trình: A → Z</option>
+                  <option value="year_desc">Năm: Mới nhất</option>
+                  <option value="year_asc">Năm: Cũ nhất</option>
+                </select>
+
+                <button id="resetFilterBtn" class="btn btn-outline btn-sm">
+                  🔄 Đặt lại
+                </button>
+              </div>
+
+              <!-- View Switcher -->
+              <div class="view-modes">
+                <button id="viewGridBtn" class="view-btn active" title="Xem dạng lưới thẻ">🔲 Thẻ</button>
+                <button id="viewTableBtn" class="view-btn" title="Xem dạng bảng">📋 Bảng</button>
+              </div>
             </div>
+          </section>
+
+          <!-- Danh Mục Quy Trình Kết Quả -->
+          <div class="results-meta">
+            <span id="resultsCount">Hiển thị 114 / 114 quy trình</span>
+            <span style="font-size:12px; color:var(--text-muted)">* Nhấp "Mở Tài Liệu" để xem hoặc tải tệp trực tiếp từ Supabase Storage</span>
           </div>
-        </section>
 
-        <!-- Danh Mục Quy Trình Kết Quả -->
-        <div class="results-meta">
-          <span id="resultsCount">Hiển thị 114 / 114 quy trình</span>
-          <span style="font-size:12px; color:var(--text-muted)">* Nhấp "Mở Tài Liệu" để xem hoặc tải tệp trực tiếp từ Supabase Storage</span>
-        </div>
+          <!-- View 1: Card Grid -->
+          <div id="proceduresGrid" class="procedures-grid"></div>
 
-        <!-- View 1: Card Grid -->
-        <div id="proceduresGrid" class="procedures-grid"></div>
+          <!-- View 2: Table Data -->
+          <div id="proceduresTableWrapper" class="table-wrapper" style="display:none">
+            <table class="proc-table">
+              <thead>
+                <tr>
+                  <th style="width:130px">Mã Hiệu</th>
+                  <th>Tên Quy Trình Xét Nghiệm / Quản Lý</th>
+                  <th style="width:160px">Chuyên Môn</th>
+                  <th style="width:160px">Phân Loại</th>
+                  <th style="width:80px">Định Dạng</th>
+                  <th style="width:80px">Năm</th>
+                  <th style="width:140px">Thao Tác</th>
+                </tr>
+              </thead>
+              <tbody id="proceduresTableBody"></tbody>
+            </table>
+          </div>
 
-        <!-- View 2: Table Data -->
-        <div id="proceduresTableWrapper" class="table-wrapper" style="display:none">
-          <table class="proc-table">
-            <thead>
-              <tr>
-                <th style="width:130px">Mã Hiệu</th>
-                <th>Tên Quy Trình Xét Nghiệm / Quản Lý</th>
-                <th style="width:160px">Chuyên Môn</th>
-                <th style="width:160px">Phân Loại</th>
-                <th style="width:80px">Định Dạng</th>
-                <th style="width:80px">Năm</th>
-                <th style="width:140px">Thao Tác</th>
-              </tr>
-            </thead>
-            <tbody id="proceduresTableBody"></tbody>
-          </table>
-        </div>
-
-        <!-- Empty State -->
-        <div id="emptyState" class="empty-state" style="display:none">
-          <div class="empty-icon">🔎</div>
-          <h3>Không tìm thấy quy trình phù hợp</h3>
-          <p style="margin-top:6px; font-size:13px">Vui lòng thử từ khóa khác hoặc bấm nút "Đặt lại" để xem toàn bộ danh mục.</p>
+          <!-- Empty State -->
+          <div id="emptyState" class="empty-state" style="display:none">
+            <div class="empty-icon">🔎</div>
+            <h3>Không tìm thấy quy trình phù hợp</h3>
+            <p style="margin-top:6px; font-size:13px">Vui lòng thử từ khóa khác hoặc bấm nút "Đặt lại" để xem toàn bộ danh mục.</p>
+          </div>
         </div>
 
         <!-- QUẢN LÝ CSDL KHO LƯU TRỮ TỆP (Chỉ dành cho Admin) -->
-        <section class="tasks-section admin-only" id="storageDatabaseSection">
+        <section class="tasks-section admin-only" id="storageDatabaseSection" style="display:none">
           <div class="tasks-header">
             <div>
               <h2 style="display:flex; align-items:center; gap:8px">
@@ -443,7 +448,7 @@
         <!-- ================================================================
              KHU VỰC THÔNG TIN VĂN BẢN Y TẾ & QUY ĐỊNH CHUYÊN MÔN
              ================================================================ -->
-        <section class="medical-docs-section" id="medicalDocsSection">
+        <section class="medical-docs-section" id="medicalDocsSection" style="display:none">
           <div class="tasks-header" style="flex-wrap:wrap; gap:16px; margin-bottom:18px">
             <div>
               <h2 style="display:flex; align-items:center; gap:10px">
@@ -556,7 +561,7 @@
         </section>
 
         <!-- BẢNG THÔNG TIN TÀI KHOẢN ĐĂNG NHẬP & PHÂN QUYỀN (12 NHÂN VIÊN) -->
-        <section class="tasks-section" id="accountsSection">
+        <section class="tasks-section" id="accountsSection" style="display:none">
           <div class="tasks-header">
             <div>
               <h2 style="display:flex; align-items:center; gap:8px">

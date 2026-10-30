@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initUploadModal();
     initEditDocModal();
     initCharts();
-    filterAndRender();
+    filterByNav('home');
     initSupabaseData();
     checkStorageBucketStatus();
 });
@@ -454,101 +454,153 @@ function closeMobileSidebar() {
     if (backdrop) backdrop.classList.remove('active');
 }
 
+function switchMainView(viewName) {
+    const dashboardSec = document.getElementById('dashboardSection');
+    const proceduresSec = document.getElementById('proceduresSection');
+    const storageNoticeBanner = document.getElementById('storageNoticeBanner');
+    const storageDbSec = document.getElementById('storageDatabaseSection');
+    const medicalDocsSec = document.getElementById('medicalDocsSection');
+    const accountsSec = document.getElementById('accountsSection');
+
+    // 1. Ẩn tất cả các khu vực (không trượt xem toàn bộ)
+    if (dashboardSec) dashboardSec.style.display = 'none';
+    if (proceduresSec) proceduresSec.style.display = 'none';
+    if (storageNoticeBanner) storageNoticeBanner.style.display = 'none';
+    if (storageDbSec) storageDbSec.style.display = 'none';
+    if (medicalDocsSec) medicalDocsSec.style.display = 'none';
+    if (accountsSec) accountsSec.style.display = 'none';
+
+    // 2. Chỉ hiện đúng duy nhất khu vực được chọn
+    if (viewName === 'dashboard') {
+        if (dashboardSec) dashboardSec.style.display = 'block';
+        if (storageNoticeBanner) storageNoticeBanner.style.display = 'flex';
+    } else if (viewName === 'procedures') {
+        if (proceduresSec) proceduresSec.style.display = 'block';
+    } else if (viewName === 'medical-docs') {
+        if (medicalDocsSec) medicalDocsSec.style.display = 'block';
+    } else if (viewName === 'db-manager') {
+        if (storageDbSec) storageDbSec.style.display = 'block';
+    } else if (viewName === 'accounts') {
+        if (accountsSec) accountsSec.style.display = 'block';
+    }
+
+    // Cuộn mượt lên đầu trang
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 function filterByNav(navKey) {
     document.querySelectorAll('.sidebar-nav .nav-link, .sidebar-nav .nav-sublink').forEach(el => {
         el.classList.remove('active');
     });
 
     const topbarTitle = document.getElementById('topbarTitle');
-    const dashboardSection = document.getElementById('dashboardSection');
-    const searchSection = document.getElementById('searchControlsSection');
     const searchInput = document.getElementById('searchInput');
 
     switch (navKey) {
         case 'home':
+            switchMainView('dashboard');
             document.getElementById('navHome').classList.add('active');
             topbarTitle.innerHTML = '<span>📊 DASHBOARD - QUẢN LÝ QUY TRÌNH XÉT NGHIỆM VI SINH</span>';
-            dashboardSection.style.display = 'block';
-            AppState.selectedCategory = 'all';
-            syncPillActive('all');
-            filterAndRender();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
             break;
 
         case 'quan-ly':
+            switchMainView('procedures');
             document.getElementById('navQL').classList.add('active');
-            topbarTitle.innerHTML = '<span>📋 QUY TRÌNH QUẢN LÝ CHẤT LƯỢNG (XN.QL)</span>';
-            dashboardSection.style.display = 'block';
+            topbarTitle.innerHTML = '<span>📋 QUY TRÌNH QUẢN LÝ CHẤT LƯỢNG (XN.QL) — 31 TÀI LIỆU</span>';
+            if (searchInput) searchInput.value = '';
+            AppState.searchQuery = '';
             AppState.selectedCategory = 'Quản Lý Chất Lượng';
             syncPillActive('Quản Lý Chất Lượng');
             filterAndRender();
-            searchSection.scrollIntoView({ behavior: 'smooth' });
             break;
 
         case 'tech':
+            switchMainView('procedures');
             document.getElementById('techGroup').classList.add('open');
-            topbarTitle.innerHTML = '<span>🧫 QUY TRÌNH KỸ THUẬT XÉT NGHIỆM VI SINH</span>';
-            dashboardSection.style.display = 'block';
-            AppState.selectedCategory = 'all';
+            topbarTitle.innerHTML = '<span>🧫 QUY TRÌNH KỸ THUẬT XÉT NGHIỆM VI SINH — 83 TÀI LIỆU</span>';
+            if (searchInput) searchInput.value = 'VS.';
             AppState.searchQuery = 'VS.';
-            searchInput.value = 'VS.';
+            AppState.selectedCategory = 'all';
+            syncPillActive('all');
             document.getElementById('searchClearBtn').classList.add('visible');
             filterAndRender();
-            searchSection.scrollIntoView({ behavior: 'smooth' });
             break;
 
         case 'nhuom-soi':
+            switchMainView('procedures');
             document.getElementById('navNhuomSoi').classList.add('active');
             document.getElementById('techGroup').classList.add('open');
-            topbarTitle.innerHTML = '<span>🔬 QUY TRÌNH NHUỘM SOI (VS.NS)</span>';
-            dashboardSection.style.display = 'none';
+            topbarTitle.innerHTML = '<span>🔬 QUY TRÌNH NHUỘM SOI (VS.NS) — 15 TÀI LIỆU</span>';
+            if (searchInput) searchInput.value = '';
+            AppState.searchQuery = '';
             AppState.selectedCategory = 'Nhuộm Soi';
             syncPillActive('Nhuộm Soi');
             filterAndRender();
-            searchSection.scrollIntoView({ behavior: 'smooth' });
             break;
 
         case 'nuoi-cay':
+            switchMainView('procedures');
             document.getElementById('navNuoiCay').classList.add('active');
             document.getElementById('techGroup').classList.add('open');
-            topbarTitle.innerHTML = '<span>🦠 QUY TRÌNH NUÔI CẤY (VS.NC)</span>';
-            dashboardSection.style.display = 'none';
+            topbarTitle.innerHTML = '<span>🦠 QUY TRÌNH NUÔI CẤY (VS.NC) — 30 TÀI LIỆU</span>';
+            if (searchInput) searchInput.value = '';
+            AppState.searchQuery = '';
             AppState.selectedCategory = 'Nuôi Cấy';
             syncPillActive('Nuôi Cấy');
             filterAndRender();
-            searchSection.scrollIntoView({ behavior: 'smooth' });
             break;
 
         case 'mien-dich':
+            switchMainView('procedures');
             document.getElementById('navMienDich').classList.add('active');
             document.getElementById('techGroup').classList.add('open');
-            topbarTitle.innerHTML = '<span>💉 QUY TRÌNH MIỄN DỊCH (VS.MD)</span>';
-            dashboardSection.style.display = 'none';
+            topbarTitle.innerHTML = '<span>💉 QUY TRÌNH MIỄN DỊCH (VS.MD) — 28 TÀI LIỆU</span>';
+            if (searchInput) searchInput.value = '';
+            AppState.searchQuery = '';
             AppState.selectedCategory = 'Miễn Dịch';
             syncPillActive('Miễn Dịch');
             filterAndRender();
-            searchSection.scrollIntoView({ behavior: 'smooth' });
             break;
 
         case 'sinh-hoc-pt':
+            switchMainView('procedures');
             document.getElementById('navSHPT').classList.add('active');
             document.getElementById('techGroup').classList.add('open');
-            topbarTitle.innerHTML = '<span>🧬 QUY TRÌNH SINH HỌC PHÂN TỬ - PCR (VS.PCR)</span>';
-            dashboardSection.style.display = 'none';
+            topbarTitle.innerHTML = '<span>🧬 QUY TRÌNH SINH HỌC PHÂN TỬ - PCR (VS.PCR) — 10 TÀI LIỆU</span>';
+            if (searchInput) searchInput.value = '';
+            AppState.searchQuery = '';
             AppState.selectedCategory = 'Sinh Học Phân Tử (PCR)';
             syncPillActive('Sinh Học Phân Tử (PCR)');
             filterAndRender();
-            searchSection.scrollIntoView({ behavior: 'smooth' });
             break;
 
         case 'tim-kiem':
+            switchMainView('procedures');
             document.getElementById('navTimKiem').classList.add('active');
-            topbarTitle.innerHTML = '<span>🔍 TÌM KIẾM THÔNG TIN QUY TRÌNH</span>';
-            searchSection.scrollIntoView({ behavior: 'smooth' });
+            topbarTitle.innerHTML = '<span>🔍 TÌM KIẾM THÔNG TIN QUY TRÌNH XÉT NGHIỆM</span>';
+            AppState.selectedCategory = 'all';
+            syncPillActive('all');
+            filterAndRender();
             setTimeout(() => {
-                searchInput.focus();
-                searchInput.select();
-            }, 300);
+                if (searchInput) {
+                    searchInput.focus();
+                    searchInput.select();
+                }
+            }, 250);
+            break;
+
+        case 'medical-docs':
+            switchMainView('medical-docs');
+            const navMed = document.getElementById('navMedicalDocs');
+            if (navMed) navMed.classList.add('active');
+            topbarTitle.innerHTML = '<span>📜 THÔNG TIN VĂN BẢN Y TẾ & QUY ĐỊNH CHUYÊN MÔN — 295 VĂN BẢN</span>';
+            setTimeout(() => {
+                const medSearch = document.getElementById('medSearchInput');
+                if (medSearch) {
+                    medSearch.focus();
+                    medSearch.select();
+                }
+            }, 250);
             break;
 
         case 'db-manager':
@@ -557,44 +609,25 @@ function filterByNav(navKey) {
                 filterByNav('home');
                 return;
             }
+            switchMainView('db-manager');
             const navDb = document.getElementById('navDbManager');
             if (navDb) navDb.classList.add('active');
             topbarTitle.innerHTML = '<span>🗄️ QUẢN LÝ CSDL KHO LƯU TRỮ TỆP (tai-lieu)</span>';
-            const dbSec = document.getElementById('storageDatabaseSection');
-            if (dbSec) dbSec.scrollIntoView({ behavior: 'smooth' });
-            break;
-
-        case 'medical-docs':
-            const navMed = document.getElementById('navMedicalDocs');
-            if (navMed) navMed.classList.add('active');
-            topbarTitle.innerHTML = '<span>📜 THÔNG TIN VĂN BẢN Y TẾ & QUY ĐỊNH CHUYÊN MÔN</span>';
-            const medSec = document.getElementById('medicalDocsSection');
-            if (medSec) {
-                medSec.scrollIntoView({ behavior: 'smooth' });
-                setTimeout(() => {
-                    const medSearch = document.getElementById('medSearchInput');
-                    if (medSearch) {
-                        medSearch.focus();
-                        medSearch.select();
-                    }
-                }, 350);
-            }
             break;
 
         case 'accounts':
+            switchMainView('accounts');
             const navAcc = document.getElementById('navAccounts');
             if (navAcc) navAcc.classList.add('active');
-            topbarTitle.innerHTML = '<span>👥 DANH SÁCH TÀI KHOẢN VÀ PHÂN QUYỀN TRUY CẬP</span>';
-            const accSec = document.getElementById('accountsSection');
-            if (accSec) accSec.scrollIntoView({ behavior: 'smooth' });
+            topbarTitle.innerHTML = '<span>👥 BẢNG DANH SÁCH TÀI KHOẢN & PHÂN QUYỀN TRUY CẬP</span>';
             break;
 
         case 'recent':
+            switchMainView('procedures');
             topbarTitle.innerHTML = '<span>⚡ CÁC QUY TRÌNH HIỆU LỰC MỚI (2025 - 2026)</span>';
             document.getElementById('yearFilterSelect').value = '2025';
             AppState.selectedYear = '2025';
             filterAndRender();
-            searchSection.scrollIntoView({ behavior: 'smooth' });
             break;
     }
 }
@@ -630,8 +663,12 @@ function initEventListeners() {
             AppState.selectedCategory = cat;
             syncPillActive(cat);
 
-            if (cat === 'all') filterByNav('home');
-            else if (cat === 'Quản Lý Chất Lượng') filterByNav('quan-ly');
+            if (cat === 'all') {
+                switchMainView('procedures');
+                const topbarTitle = document.getElementById('topbarTitle');
+                if (topbarTitle) topbarTitle.innerHTML = '<span>🗂️ TOÀN BỘ 114 QUY TRÌNH XÉT NGHIỆM VI SINH</span>';
+                filterAndRender();
+            } else if (cat === 'Quản Lý Chất Lượng') filterByNav('quan-ly');
             else if (cat === 'Nuôi Cấy') filterByNav('nuoi-cay');
             else if (cat === 'Miễn Dịch') filterByNav('mien-dich');
             else if (cat === 'Nhuộm Soi') filterByNav('nhuom-soi');
@@ -687,7 +724,10 @@ function initEventListeners() {
         AppState.selectedYear = 'all';
         AppState.sortBy = 'code_asc';
 
-        filterByNav('home');
+        switchMainView('procedures');
+        const topbarTitle = document.getElementById('topbarTitle');
+        if (topbarTitle) topbarTitle.innerHTML = '<span>🔍 TÌM KIẾM & TOÀN BỘ QUY TRÌNH XÉT NGHIỆM</span>';
+        syncPillActive('all');
         document.getElementById('typeFilterSelect').value = 'all';
         document.getElementById('formatFilterSelect').value = 'all';
         document.getElementById('yearFilterSelect').value = 'all';
